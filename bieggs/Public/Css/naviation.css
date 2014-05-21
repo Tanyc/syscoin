@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+BODY {
+	FONT: 12px/1.5 'lucida grande',tahoma,arial,'bitstream vera sans',helvetica,sans-serif;
+	background-color: #FF5; margin: 10px 0px 0px 0px;
+}
+
+UL, LI {
+	LIST-STYLE-TYPE: none; margin: 0px; padding: 0px;
+}
+
+/*页面头*/
+#header{
+width:100%;
+/*height: 200px;*/
+margin: 0 auto;
+overflow:hidden;
+}
+#navi_top{
+width:980px;
+height: 20px;
+margin: 0 auto;
+overflow:hidden;
+}
+#navi_topl{
+float:left;
+text-align:center;
+position: relative;
+}
+.navi_top_img_phone {
+	PADDING-LEFT: 18px; BACKGROUND: url(../images/public/phone.png) no-repeat left center
+}
+#navi_topl UL LI {
+	float: left;
+}
+
+#navi_topr{
+/*height: 20px;*/
+float:right;
+/*background:#C63;*/
+}
+#navi_topr UL LI {
+	float: right;
+}
+.sheader_line {
+	LINE-HEIGHT: 26px;
+	PADDING-LEFT: 4px;
+	WIDTH: 1px;
+	PADDING-RIGHT: 4px;
+	background-image: url(../images/public/sheader_bg_line.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/*******************/
+#navi_mid{
+width:980px;
+height: 72px;
+margin: 0 auto;
+overflow:hidden;
+}
+#navi_midl{
+        width: 168px;
+        height: 72px;
+        display: inline;
+        float: left;
+        background-image: url("../images/navi/pceggs_logo20140319.png"); no-repeat left;
+}
+#navi_midm{
+        width: 210px;
+        height: 72px;
+        display: inline;
+        float: left;
+        background-image: url("../images/navi/pceggs_ggy20140319.gif"); no-repeat left;
+}
+#navi_midr{
+        width: 552px;
+        height: 72px;
+        display: inline;
+        float: right;
+        background-image: url("../images/navi/headers_topimg20140411.gif"); no-repeat left;
+}
+/**********************/
+#navi_bottom{
+	width:100%;
+	height: 38px;
+	margin: 0 auto;
+	overflow:hidden;
+	background-image: url(../images/navi/navi_bg.gif);
+	background-repeat: repeat-x;
+}
+#navi_bottom_content{
+	width:980px;
+	height: 38px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+#main_nav LI{
+	float: left;
+	font-size:20px;
+	margin-top:5px;
+}
+.main_navr LI{
+	float: right;
+	font-size:15px;
+	margin-top:6px;
+}

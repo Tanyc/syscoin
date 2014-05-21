@@ -1,0 +1,113 @@
+/**************************************/
+#body_content{
+/*    height:900px;*/
+	width:980px;
+    margin: 12px auto auto;
+    background-color:#0f0;
+    overflow:hidden;
+}
+.ad_tab {
+    width: 720px;
+/*    height: 500px;*/
+    display: inline;
+    float: left;
+    background-color: #fff;
+}
+
+.ad_list {
+    width: 250px;
+/*    height: 500px;*/
+    display: inline;
+    float: right;
+    background-color: #fff;
+}
+
+.ad_list ul li{
+    list-style-type:circle;
+    background: url(../images/body_1/line1.gif) bottom repeat-x;
+    line-height:30px;
+    margin-left: 25px;
+}
+
+.page_tab li {                    
+    float: left;
+    background: url("../images/public/sheader_bg_line.gif") right top no-repeat;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+.page_tab li a{position: relative; background: url("../images/public/pageTab.gif") center top no-repeat; color: #FFF;}
+.page_tab li a:link {text-decoration: none;color: blue; outline: none}
+.page_tab li a:active {text-decoration:blink}
+.page_tab li a:visited {color: red}
+.page_tab li a:hover {color: red}
+
+.page_body ul li{
+    text-align: center;
+/*    display: inline;*/
+    float: left;
+    padding: 10px;
+}
+
+.page_tab {
+    height: 40px;
+    background-color:rgb(230,230,230);
+}
+
+.ad_title h2 {
+padding-left: 26px;
+height: 48px;
+overflow: hidden;
+background: url(../images/body_1/lico1.png) left center no-repeat;
+    display:inline;
+}
+.more_notice {
+    float: right;   
+}
+
+.page_foot {
+    padding: 4px 4px 10px 4px;
+text-align: center;
+margin-top: 4px;
+font-family: Verdana, Simsun, Helvetica, Arial, sans-serif 宋体;
+}
+.page_foot span, .page_foot a {
+margin: 4px 3px;
+}
+.page_foot .disabled {
+border: 1px solid #999;
+color: #666666;
+margin-top: 4px;
+padding: 2px 5px;
+text-align: center;
+border: 1px solid #a7bbcc;
+background: #FFF;
+padding: 3px 5px 5px;
+font-size: 12px !important;
+}
+.page_foot .current {
+background-color: #8AA8C2;
+border: 1px solid #999;
+color: #fff;
+margin-top: 4px;
+padding: 2px 5px;
+text-align: center;
+padding: 3px 5px 5px;
+background: #114598;
+border: 1px solid #002a6c;
+color: #FFF;
+font-size: 12px !important;
+}
+.page_foot a {
+border: 1px solid #c0c0c0;
+padding: 2px 5px;
+text-align: center;
+text-decoration: none;
+line-height: 100%;
+border: 1px solid #a7bbcc;
+background: #FFF;
+padding: 3px 5px 5px;
+font-size: 12px !important;
+}
