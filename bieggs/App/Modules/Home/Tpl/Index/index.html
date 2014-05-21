@@ -1,37 +1,270 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
- <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>ThinkPHP示例：独立分组</title>
-	<style type="text/css">
-	*{ padding: 0; margin: 0;font-size:16px; font-family: "微软雅黑"} 
-	body{ background: #fff; color: #333;}
-	a{text-decoration:none; color:#174B73; border-bottom:1px dashed gray}
-	a:hover{color:#F60; border-bottom:1px dashed gray}
-	div.result{border:1px solid #d4d4d4; background:#FFC;color:#393939; padding:8px 20px;float:auto;margin:2px}
-	</style>
- </head>
- <body>
- <div class="main">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dingyongPrj</title>
+<load href='__CSS__/main_index.css' />
+<load href='__CSS__/naviation.css' />
 
- <table cellpadding=0 cellspacing=0>
-  <tr>
-  	<td>
-      <div id="notice_list" >
-        <ul >
-      	<volist name="prize" id="vo">
-<!--           <div id="div_{$vo.id}" class="result" style='font-weight:normal;<eq name="key%2" value="1">background:#ECECFF</eq>'>
-            <A href="{:U('read?id='.$vo['id'])}">{$vo.title}</A>
-            {$vo.create_time|date='Y-m-d H:i:s',###}
-        	</div> -->
-          <!-- <li>{$vo.name}</a></li> -->
-      	</volist>
-      </ul>
-      </div>
-  	</td>
-  </tr>
- </table>
+</head>
 
+<body>
+<div id="header">
+    <!--navi_top-->
+    <div id="navi_top">
+        <div id="navi_topl">
+            <ul>
+                <li><a href="/iphone/iphoneindex.aspx" class="navi_top_img_phone">手机版</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">同玩社区</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">VIP会员</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">蛋友活动</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="/Serving/help_servicemain.aspx" target="_parent" onclick="doSomething(event);">客服中心</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="#" onclick="addfavorite()">收藏</a></li>
+            </ul>
+        </div>
+        <div id="navi_topr">
+            <ul>
+                <li><a href="/newone/PgQCoinReg.aspx" onclick="doSomething(event);">注册</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a  id="fc_loginHead" style="cursor:pointer"  onclick="doSomething(event);">登录</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li>您好，欢迎你的光临！</li>
+            </ul>
+        </div>
+    </div>
+    <!--logo guanggaobg-->
+    <div id="navi_mid"  >
+        <a href="#"><div id="navi_midl"></div></a>
+        <a href="#"><div id="navi_midm"></div></a>
+        <a href="#"><div id="navi_midr"></div></a>
+    </div>
+    <!--daohang-->
+    <div id="navi_bottom">
+    	<div id="navi_bottom_content">
+            <ul id="main_nav">
+                <li><a href="#" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">广告体验</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">淘宝商城</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">活动专区</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">奖品兑换</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">会员中心</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="#" onclick="addfavorite()">收藏</a></li>
+            </ul>
+            <ul class="main_navr">
+                <li><a href="/iphone/iphoneindex.aspx" target="_black" onclick="doSomething(event);">晒奖</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">推广有奖</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">讨论区</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">帮助</a></li>
+            </ul>
+    	</div>
+    </div>
 </div>
- </body>
+
+<!--------------------------------------------------->
+<div id="body_content">
+    <div class="p01">
+        <div class="guild">
+            <ul class="service">
+              <li>企业QQ&nbsp;&nbsp;&nbsp;：<a href="tencent://message/?uin=394276418&Site=www.qq.com&Menu=yes" target="_blank">394276418</a></li>
+              <li>广告合作&nbsp;&nbsp;：<a href="tencent://message/?uin=394276418&Site=www.qq.com&Menu=yes" target="_blank">394276418</a></li>
+              <li>客服主管&nbsp;&nbsp;：<a href="tencent://message/?uin=394276418&Site=www.qq.com&Menu=yes" target="_blank">394276418</a></li></ul>
+        </div>
+    <DIV id="div_slider">
+    <SCRIPT language="javascript" type="text/javascript" src="__JS__/jquery-1.7.1.min.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="__JS__/jquery.Slides.js"></SCRIPT>
+    <SCRIPT type="text/javascript">
+        $(function () {
+            $("#div_slider").KinSlideshow();
+        })
+    </SCRIPT>
+    <A href="#" target="_blank"><IMG alt="test1" src="__IMAGES__/body_1/pic201401251058101.jpg" width="515" height="275"></A>
+    <A href="#" target="_blank"><IMG alt="test2" src="__IMAGES__/body_1/pic201402130312181.jpg" width="515" height="275"></A>
+    </DIV>
+      
+    <div class="login">
+        <form name="form" method="post" action="login.php?act=login">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td width="66">邮&nbsp;&nbsp;&nbsp;箱:</td>
+                    <td width="152"><input class="bg" name="tbUserAccount" type="text" id="tbUserAccount"></td>
+                </tr>
+                <tr>
+                    <td>密&nbsp;&nbsp;&nbsp;码:</td>
+                    <td><input class="bg" name="tbUserPwd" type="password" id="tbUserPwd"></td>
+              </tr>
+                <tr class="checkcode">
+                    <td height="0">验证码:</td>
+                  <td><input class="bg" type="text" name="tbSafeCode" id="tbSafeCode" style="width:65px;"><img id="vdimgck" src="inc/code.php" alt="看不清？点击更换" width="60" height="27" style="cursor:pointer" onclick="this.src=this.src+'?'"></td>
+                </tr>
+                <tr>
+                    <td height="85"></td>
+                  <td class="checkbox"><input name="tbKeep" type="checkbox" value="1"><span>下次自动登录<a href="resetpassword.php" target="_blank">忘记密码</a></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input name="登陆" type="submit" class="loginbtn" value=""></td>
+                </tr>
+            </tbody></table>
+            </form>
+            <a href="reg.php"><p class="regbtn"></p></a>
+        </div>
+    </div>
+      <!----------------------midcontent2--------------------------->
+    <div class="step">
+        <a href=""><img src="__PUBLIC__/images/body_1/step.jpg" alt=""></a>
+    </div>
+    <div class="div_content">
+        <div class="webmessage">
+            <div class="msg_prize_title">
+                <h2>网站公告</h2>
+                <a href="#" class="more_notice">更多&gt;&gt;</a>
+            </div>
+            <div class="notice_list">
+                <ul >
+                  <volist name="notice" id="vo">
+                    <li><a href="{:U("__HOME__/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a></li>
+                  </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="prizes">
+            <div class="msg_prize_title">
+                <h2>热门奖品</h2>
+                <a href="#" class="more_notice">更多&gt;&gt;</a>
+            </div>
+            <div class="prizes_list">
+                <ul>          
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/201402131149381ba601.jpg" alt="" style="height:132px; width:160px;"></a></div>
+                       <div class="name"><a href="">iPod shuffle</a></div>
+                       <div class="num">兑换：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/20140213114834047bfe.jpg" alt="" style="height:132px; width:160px;"></a></div>
+                       <div class="name"><a href="">苹果 MacBook</a></div>
+                       <div class="num">兑换：<span class="orange"><b>8,460,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/20140213114707336208.jpg" alt="" style="height:132px; width:160px;"></a></div>
+                       <div class="name"><a href="">Bose SoundLink Bluetooth</a></div>
+                       <div class="num">兑换：<span class="orange"><b>2,800,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/20140213115614e3bce7.jpg" alt="" style="height:132px; width:160px;"></a></div>
+                       <div class="name"><a href="">佳能 600D 18-55</a></div>
+                       <div class="num">兑换：<span class="orange"><b>5,250,000</b></span></div>
+                   </li>             
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="div_content">
+        <div class="activity">
+            <div class="msg_prize_title">
+                <h2>热门活动</h2>
+                <a href="#" class="more_notice">更多&gt;&gt;</a>
+            </div>
+            <div class="notice_list">
+                <ul >
+                  <volist name="notice" id="vo">
+                    <li><a href="{:U("/App/Modules/Home/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a></li>
+                  </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="practice">
+            <div class="msg_prize_title">
+                <h2>立即体验</h2>
+                <a href="#" class="more_notice">更多&gt;&gt;</a>
+            </div>
+            <div class="prizes_list">
+                <ul>          
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                                       <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES____PUBLIC__/images/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                                       <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li>
+                   
+                   <li>
+                       <div class="imgDiv"><a href=""><img src="__IMAGES__/prize/pic201402130148581.jpg" alt="" style="height:70px; width:160px;"></a></div>
+                       <div class="num">奖励：<span class="orange"><b>530,000</b></span></div>
+                   </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!--------------------------------------------------->
+<div class="footer">
+<p>关于比蛋 | 服务条款 | 客服中心 | 新手帮助</p>
+<p>Copyright © 2009 - 2012 dingdong.com dingdong.net 深ICP备12055565号 ICP:深B2-20120226</p>
+<p>比蛋-深圳网络有限公司</p>
+</div>
+
+</body>
 </html>
