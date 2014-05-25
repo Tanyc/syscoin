@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>dingyongPrj</title>
+    <load href='__CSS__/naviation.css' />
+    <load href='__CSS__/ad_index.css' />
+    <load href='__CSS__/footer.css' />
+
+    <load href='__JS__/jquery.js' />
+    <load href='__JS__/jquery.featureList-1.0.0.js' />
+    <script language="javascript">
+    $(document).ready(function() {
+        $.featureList(
+            $("#tabs li a"),
+            $("#output li"), {
+                start_item  :   1
+            }
+        );
+    });
+</script>
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+    <div id="header">
+        <!--navi_top-->
+        <div id="navi_top">
+            <div id="navi_topl">
+                <ul>
+                    <li>
+                        <a href="/iphone/iphoneindex.aspx" class="navi_top_img_phone">手机版</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">同玩社区</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">VIP会员</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">蛋友活动</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="/Serving/help_servicemain.aspx" target="_parent" onclick="doSomething(event);">客服中心</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="#" onclick="addfavorite()">收藏</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navi_topr">
+                <ul>
+                    <li>
+                        <a href="/newone/PgQCoinReg.aspx" onclick="doSomething(event);">注册</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a  id="fc_loginHead" style="cursor:pointer"  onclick="doSomething(event);">登录</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>您好，欢迎你的光临！</li>
+                </ul>
+            </div>
+        </div>
+        <!--logo guanggaobg-->
+        <div id="navi_mid"  >
+            <a href="#">
+                <div id="navi_midl"></div>
+            </a>
+            <a href="#">
+                <div id="navi_midm"></div>
+            </a>
+            <a href="#">
+                <div id="navi_midr"></div>
+            </a>
+        </div>
+        <!--daohang-->
+        <div id="navi_bottom">
+            <div id="navi_bottom_content">
+                <ul id="main_nav">
+                    <li>
+                        <a href="#" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">广告体验</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">淘宝商城</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">游戏竞猜</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="" target="_parent" onclick="doSomething(event);">活动专区</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="" target="_parent" onclick="doSomething(event);">奖品兑换</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="" target="_parent" onclick="doSomething(event);">会员中心</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="#" onclick="addfavorite()">收藏</a>
+                    </li>
+                </ul>
+                <ul class="main_navr">
+                    <li>
+                        <a href="/iphone/iphoneindex.aspx" target="_black" onclick="doSomething(event);">晒奖</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">推广有奖</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">讨论区</a>
+                    </li>
+                    <li class="sheader_line">&nbsp;</li>
+                    <li>
+                        <a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">帮助</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------->
+    <div id="body_content">
+        <!-- InstanceBeginEditable name="content" -->
+        <div id="body_content_l">
+            <div id="feature_list">
+                <ul id="tabs">
+                    <li>
+                        <a href="http://www.aoyene.cc/profit.php#" class="">
+                            <img src="__IMAGES__/ad/services.png">
+                            <h3>test1</h3>
+                            <span>test111</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.aoyene.cc/profit.php#" class="">
+                            <img src="__IMAGES__/ad/programming.png">            
+                            <h3>test2</h3>
+                            <span>test22222</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://www.aoyene.cc/profit.php#" class="current">
+                            <img src="__IMAGES__/ad/applications.png">            
+                            <h3>test3</h3>
+                            <span>test333333</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="output">
+                    <li style="display: none;">
+                        <a href="http://www.aoyene.cc/adtask.php?adid=13">
+                            <img src="__IMAGES__/ad/20120714122159-Vr4DEHVi3w.png"></a>
+                    </li>
+                    <li style="display: none;">
+                        <a href="http://www.aoyene.cc/profit.php?type=an">
+                            <img src="__IMAGES__/ad/20120714122325-P1N1rzY4Xf.png"></a>
+                    </li>
+
+                    <li style="display: list-item;">
+                        <a href="http://www.aoyene.cc/adtask.php?adid=19">
+                            <img src="__IMAGES__/ad/20120714122459-N1xlGmAfgG.png"></a>
+                    </li>
+                </div>
+            <div id="body_content_ld"></div>
+        </div>
+
+        <div id="body_content_r">body_content_r</div>
+        <!-- InstanceEndEditable --> </div>
+
+    <!-- InstanceBeginEditable name="footer" -->
+    <!-- #BeginLibraryItem "/Library/footer_1.lbi" -->
+    <div class="footer">
+        <p>关于比蛋 | 服务条款 | 客服中心 | 新手帮助</p>
+        <p>
+            Copyright © 2009 - 2012 dingdong.com dingdong.net 深ICP备12055565号 ICP:深B2-20120226
+        </p>
+        <p>比蛋-深圳网络有限公司</p>
+    </div>
+    <!-- #EndLibraryItem -->
+    <!-- InstanceEndEditable -->
+</body>
+    <!-- InstanceEnd -->
+</html>

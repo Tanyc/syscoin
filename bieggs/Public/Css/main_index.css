@@ -160,16 +160,6 @@ background: #99FFCC;
     margin-top:5px;
 }
 
-.footer{
-    width:100%px;
-    height:80px;
-/*    margin:5px auto;*/
-    margin-top:10px;
-    background-color:rgb(237,237,237);
-    text-align:center;
-    padding-top: 15px;
-    line-height: 8px;
-}
 .div_content{
 /*    height:230px;*/
     overflow:hidden;
