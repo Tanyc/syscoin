@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS `bi_prize`;
 CREATE TABLE `bi_prize` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `prize_num` varchar(10) not null,
-  `name` varchar(80) NOT NULL,
-  `cost_eggs` varchar(15) NOT NULL,
-  `swap_num` int(5) unsigned NOT NULL,
-  `des` varchar(100),
-  PRIMARY KEY (`id`)
-)DEFAULT CHARSET=utf8;
+`id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+`prize_num` varchar(10) not null,
+`name` varchar(80) NOT NULL,
+`cost_eggs` varchar(15) NOT NULL,
+`swap_num` int(5) unsigned NOT NULL,
+`des` varchar(100),
+PRIMARY KEY (`id`)
+)DEFAULT CHARSET =utf8;
 
 -- ----------------------------
 -- Records of bi_notice
