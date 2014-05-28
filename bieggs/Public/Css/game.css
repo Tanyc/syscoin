@@ -1,0 +1,133 @@
+/**************************************/
+a {text-decoration:NONE;}
+a:link {
+color: #000;
+text-decoration: none;
+}
+a:hover {color:#00f;}
+#body_content{
+    height:900px;
+	width:980px;
+    margin: 12px auto auto;
+    overflow:hidden;
+}
+.dynamic_msg{
+    width: 100%;
+    height: 30px;
+    background: #f00;
+}
+
+.game_content{
+    width: 978;
+    height: 700px;
+    border: 1px solid #E2E2E2;
+}
+
+.game_tab{
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+}
+
+.title_game {
+font-size: 14px;
+text-align: left;
+padding-top: 0px;
+padding-left: 3px;
+padding-right: 5px;
+width: 950px;
+height: 27px;
+font-weight: bold;
+overflow: hidden;
+}
+
+.center_table td {
+    text-align: center;
+    height: 28px;
+    
+}
+.panel_td1{
+    background-color: #ffb;
+}
+.content {
+margin: 0px auto;
+_margin: 0px auto;
+width: 950px;
+overflow: hidden;
+}
+    
+body {
+font: 12px/1.5 'lucida grande',tahoma,arial,'bitstream vera sans',helvetica,sans-serif;
+}
+
+body, div, ul, ol, li, form, input, textarea, p {
+margin: 0;
+padding: 0;
+}
+    
+div {
+display: block;
+}
+    
+table {
+display: table;
+border-collapse: separate;
+border-color: gray;
+}
+
+#raasra{
+    align-content: center;
+}
+
+.xy2820131227 {
+width: 968px;
+height: 46px;
+border: 1px solid #ffb91f;
+margin: 0 auto;
+margin-bottom: 2px;
+}
+.xy2820131227_l {
+width: 479px;
+border-right: 1px solid #ffb91f;
+height: 46px;
+text-align: center;
+font-size: 12px;
+line-height: 46px;
+color: #000;
+float: left;
+_padding-top: 16px;
+_height: 32px;
+}
+.xy2820131227_r {
+width: 344px;
+height: 90px;
+text-align: center;
+font-size: 12px;
+line-height: 46px;
+color: #000;
+float: right;
+_padding-top: 12px;
+_height: 32px;
+}
+.form_game {
+font-family: "宋体", Arial;
+font-size: 14px;
+text-align: center;
+width: 100%;
+color: #FF0000;
+border-top-style: none;
+border-right-style: none;
+border-bottom-style: none;
+border-left-style: none;
+border-top-color: #FFFFFF;
+border-right-color: #FFFFFF;
+border-bottom-color: #FFFFFF;
+border-left-color: #FFFFFF;
+}
+.xy2820131227_r a {
+text-decoration: none;
+color: #000;
+}
+.center_table{
+    background: url("../images/public/titlebg.gif") repeat;
+}
