@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 // $Id$
 
-class IndexAction extends Action{
+class indexAction extends Action{
     public function index(){
         $Model  =   D('Notice');
         $this->assign('notice',$Model->getList());

@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 // $Id$
 
-class AdAction extends Action{
+class adAction extends Action{
     public function index(){
         $this->display();
     }
