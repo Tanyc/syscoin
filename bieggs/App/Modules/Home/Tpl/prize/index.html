@@ -7,7 +7,7 @@
 <load href='__CSS__/naviation.css' />
 <load href='__CSS__/prize.css' />
 <load href='__CSS__/footer.css' />
-<load href='__JS__/prize.css' />
+<load href='__JS__/main.js' />
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
@@ -53,13 +53,13 @@
             <ul id="main_nav">
                 <li><a href="{:U('Home/index')}" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('Home/ad')}" target="_black" onclick="doSomething(event);">广告体验</a></li>
+                <li><a href="{:U('Home/ad')}" target="_parent" onclick="doSomething(event);">广告体验</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="sheader_red" href="{:U('Home/buy')}" onclick="doSomething(event);">今日团购</a></li>
+                <li><a class="sheader_red" href="{:U('Home/buy')}" onclick="doSomething(event);">蛋蛋团购</a></li>
                 <li class="sheader_line">&nbsp;</li>
                 <li><a href="{:U('Home/game')}" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('Home/activity')}" target="_parent" onclick="doSomething(event);">活动专区</a></li>
+                <li><a href="{:U('Home/invest')}" target="_parent" onclick="doSomething(event);">邀请好友</a></li>
                 <li class="sheader_line">&nbsp;</li>
                 <li><a href="{:U('Home/prize')}" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
@@ -90,7 +90,7 @@
           <table width="199" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="border1">
             <tbody>
               <tr>
-                <td height="36" colspan="3" valign="top" background="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/jpfl.gif">&nbsp;</td>
+                <td height="36" colspan="3" valign="top" background="__IMAGES__/prize/jpfl.gif">&nbsp;</td>
               </tr>
               <tr>
                 <td height="228" colspan="3" align="center" valign="top">
@@ -98,17 +98,17 @@
                     <tbody>
                       <tr>
                         <td height="20" align="left" class="red">
-                          <strong>ÐéÄâ±Ò³äÖµ</strong>
+                          <strong>虚拟币充值</strong>
                         </td>
                       </tr>
                       <tr>
                         <td height="20" align="left">
                           <a href="http://www.aoyene.cc/prizes_list.php?id=4">
-                            <span class="blue">36u½»ÓÑ¿¨</span>
+                            <span class="blue">栏目1</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=2">
-                            <span class="blue">qq±Òqq»áÔ±</span>
+                            <span class="blue">Q币会员</span>
                             &nbsp;
                           </a>
                           <br></td>
@@ -119,26 +119,26 @@
                     <tbody>
                       <tr>
                         <td height="20" align="left" class="red">
-                          <strong>3cÊýÂë²úÆ·</strong>
+                          <strong>栏目2</strong>
                         </td>
                       </tr>
                       <tr>
                         <td height="20" align="left">
                           <a href="http://www.aoyene.cc/prizes_list.php?id=6">
-                            <span class="blue">ÊÖ»ú</span>
+                            <span class="blue">栏目3</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=7">
-                            <span class="blue">±Ê¼Ç±¾µçÄÔ</span>
+                            <span class="blue">栏目5</span>
                             &nbsp;
                           </a>
                           <br>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=8">
-                            <span class="blue">ÓÎÏ·»ú</span>
+                            <span class="blue">栏目6</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=17">
-                            <span class="blue">Æû³µÓÃÆ·</span>
+                            <span class="blue">栏目7</span>
                             &nbsp;
                           </a>
                           <br></td>
@@ -149,17 +149,17 @@
                     <tbody>
                       <tr>
                         <td height="20" align="left" class="red">
-                          <strong>Å®Éú×î°®</strong>
+                          <strong>栏目8</strong>
                         </td>
                       </tr>
                       <tr>
                         <td height="20" align="left">
                           <a href="http://www.aoyene.cc/prizes_list.php?id=14">
-                            <span class="blue">ÈÈÃÅÅ®×°</span>
+                            <span class="blue">栏目8</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=15">
-                            <span class="blue">¾«Æ·ÃÀ×±</span>
+                            <span class="blue">栏目10</span>
                             &nbsp;
                           </a>
                           <br></td>
@@ -170,26 +170,26 @@
                     <tbody>
                       <tr>
                         <td height="20" align="left" class="red">
-                          <strong>¾Ó¼ÒÓÃÆ·</strong>
+                          <strong>栏目11</strong>
                         </td>
                       </tr>
                       <tr>
                         <td height="20" align="left">
                           <a href="http://www.aoyene.cc/prizes_list.php?id=10">
-                            <span class="blue">´²ÉÏÓÃÆ·</span>
+                            <span class="blue">栏目12</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=11">
-                            <span class="blue">³ø·¿ÓÃÆ·</span>
+                            <span class="blue">栏目13</span>
                             &nbsp;
                           </a>
                           <br>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=12">
-                            <span class="blue">Íæ¾ß£¬°Ú¼þ</span>
+                            <span class="blue">栏目14</span>
                             &nbsp;
                           </a>
                           <a href="http://www.aoyene.cc/prizes_list.php?id=16">
-                            <span class="blue">³èÎïÓÃÆ·</span>
+                            <span class="blue">栏目15</span>
                             &nbsp;
                           </a>
                           <br></td>
@@ -213,7 +213,7 @@
             <tr>
               <td height="53" align="center" valign="top">
                 <a href="http://www.aoyene.cc/dui_jiang_list.php">
-                  <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/djmd.png" width="199" height="47"></a>
+                  <img src="__IMAGES__/prize/djmd.png" width="199" height="47"></a>
               </td>
             </tr>
           </tbody>
@@ -223,7 +223,7 @@
             <tr>
               <td height="230">
                 <a href="http://www.aoyene.cc/userrecom.php">
-                  <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/ad_km.jpg" width="199" height="230" style="margin-top:8px"></a>
+                  <img src="__IMAGES__/prize/ad_km.jpg" width="199" height="230" style="margin-top:8px"></a>
               </td>
             </tr>
           </tbody>
@@ -234,7 +234,7 @@
       <td width="743" height="672" rowspan="2" valign="top">
 
         <div class="liucheng">
-          <p> <em id="lc1" onclick="setTab(&#39;lc&#39;,1,2)" class="current">ÊµÎï¶Ò»»Á÷³Ì</em> <em id="lc2" onclick="setTab(&#39;lc&#39;,2,2)">ÐéÀñ¶Ò½±Á÷³Ì</em>
+          <p> <em id="lc1" onclick="setTab(&#39;lc&#39;,1,2)" class="current">栏目16</em> <em id="lc2" onclick="setTab(&#39;lc&#39;,2,2)">栏目17</em>
           </p>
           <div id="con_lc_1" class="shiwu"></div>
           <div id="con_lc_2" class="xuli" style="display:none"></div>
@@ -243,18 +243,18 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top10">
           <tbody>
             <tr>
-              <td width="81%" height="45" background="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/lefttitlebg.gif">
+              <td width="81%" height="45" background="__IMAGES__/prize/lefttitlebg.gif">
                 <div class="ad_fanli">
                   <ul class="ad_tit">
                     <li class="current">
-                      <a href="http://www.aoyene.cc/prizes.php#">ÈÈÃÅ½±Æ·</a>
+                      <a href="http://www.aoyene.cc/prizes.php#">栏目18</a>
                     </li>
                   </ul>
                 </div>
 
               </td>
-              <td width="19%" align="right" background="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/lefttitlebg.gif">
-                <a href="http://www.aoyene.cc/prizes_list.php?type=1">¸ü¶à&gt;&gt;</a>
+              <td width="19%" align="right" background="__IMAGES__/prize/lefttitlebg.gif">
+                <a href="http://www.aoyene.cc/prizes_list.php?type=1">栏目19&gt;&gt;</a>
                 &nbsp;
               </td>
             </tr>
@@ -263,64 +263,62 @@
                 <div class="ad_fanli">
                   <ul class="list_ad" id="eui_tab">
                     <li>
-                      <a title="2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹" href="http://www.aoyene.cc/prizes_content.php?id=1122" target="_blank">
-                        <img alt="2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T13FfeXdxmXXbCuT.Y_031021.jpg_160x160.jpg" width="150">
-                        <em>2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1122" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T13FfeXdxmXXbCuT.Y_031021.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
                           ½ö 250,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="Apple/Æ»¹û MacBook Pro MD101CH/A" href="http://www.aoyene.cc/prizes_content.php?id=1117" target="_blank">
-                        <img alt="Apple/Æ»¹û MacBook Pro MD101CH/A" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/030592fc-32c0-4af3-af5b-a5faee429537.jpg" width="150">
-                        <em>Apple/Æ»¹û MacBook Pro MD101CH/A</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1117" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/030592fc-32c0-4af3-af5b-a5faee429537.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 8,500,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 8,500,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="Apple/Æ»¹û iPhone4S 16G" href="http://www.aoyene.cc/prizes_content.php?id=1116" target="_blank">
-                        <img alt="Apple/Æ»¹û iPhone4S 16G" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T1ctaTXeJlXXXl8Ak9_074238.jpg_160x160.jpg" width="150">
-                        <em>Apple/Æ»¹û iPhone4S 16G</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1116" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T1ctaTXeJlXXXl8Ak9_074238.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 4,700,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 4,700,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="Ð¡Ã× M2 MIUI+Ô­ÉúAndroid£¨Android v4.0£©" href="http://www.aoyene.cc/prizes_content.php?id=1114" target="_blank">
-                        <img alt="Ð¡Ã× M2 MIUI+Ô­ÉúAndroid£¨Android v4.0£©" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T1otjaXahfXXXULmZT_013122.jpg_160x160.jpg" width="150">
-                        <em>Ð¡Ã× M2 MIUI+Ô­ÉúAndroid£¨Android v4.0£©</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1114" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T1otjaXahfXXXULmZT_013122.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 2,000,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 2,000,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="36u½»ÓÑÆ½Ì¨³äÖµ¿¨50000½ð¶¹" href="http://www.aoyene.cc/prizes_content.php?id=14" target="_blank">
-                        <img alt="36u½»ÓÑÆ½Ì¨³äÖµ¿¨50000½ð¶¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/aoye50.jpg" width="150">
-                        <em>36u½»ÓÑÆ½Ì¨³äÖµ¿¨50000½ð¶¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=14" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/aoye50.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 50,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 50,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="30Q±Ò" href="http://www.aoyene.cc/prizes_content.php?id=1" target="_blank">
-                        <img alt="30Q±Ò" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/20120714163937-RFrfrKK0WO.jpg" width="150">
-                        <em>30Q±Ò</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/20120714163937-RFrfrKK0WO.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 33,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 33,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
-
                     <span class="clr"></span>
                   </ul>
                 </div>
-
               </td>
             </tr>
           </tbody>
@@ -329,7 +327,7 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top10">
           <tbody>
             <tr>
-              <td width="81%" height="45" background="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/lefttitlebg.gif">
+              <td width="81%" height="45" background="__IMAGES__/prize/lefttitlebg.gif">
                 <div class="ad_fanli">
                   <ul class="ad_tit">
                     <li class="current">
@@ -337,10 +335,9 @@
                     </li>
                   </ul>
                 </div>
-
               </td>
-              <td width="19%" align="right" background="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/lefttitlebg.gif">
-                <a href="http://www.aoyene.cc/prizes_list.php?type=2">¸ü¶à&gt;&gt;</a>
+              <td width="19%" align="right" background="__IMAGES__/prize/lefttitlebg.gif">
+                <a href="http://www.aoyene.cc/prizes_list.php?type=2">更多&gt;&gt;</a>
                 &nbsp;
               </td>
             </tr>
@@ -349,78 +346,77 @@
                 <div class="ad_fanli">
                   <ul class="list_ad" id="eui_tab2">
                     <li>
-                      <a title="36u½»ÓÑÆ½Ì¨³äÖµ¿¨10000½ð¶¹" href="http://www.aoyene.cc/prizes_content.php?id=1129" target="_blank">
-                        <img alt="36u½»ÓÑÆ½Ì¨³äÖµ¿¨10000½ð¶¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/aoye10.jpg" width="150">
-                        <em>36u½»ÓÑÆ½Ì¨³äÖµ¿¨10000½ð¶¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1129" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/aoye10.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 10,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 10,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="36u½»ÓÑÆ½Ì¨³äÖµ¿¨1000½ð¶¹" href="http://www.aoyene.cc/prizes_content.php?id=1128" target="_blank">
-                        <img alt="36u½»ÓÑÆ½Ì¨³äÖµ¿¨1000½ð¶¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/aoye1.jpg" width="150">
-                        <em>36u½»ÓÑÆ½Ì¨³äÖµ¿¨1000½ð¶¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1128" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/aoye1.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 1,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 1,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="36u½»ÓÑÆ½Ì¨³äÖµ¿¨200000½ð¶¹" href="http://www.aoyene.cc/prizes_content.php?id=1125" target="_blank">
-                        <img alt="36u½»ÓÑÆ½Ì¨³äÖµ¿¨200000½ð¶¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/aoye200.jpg" width="150">
-                        <em>36u½»ÓÑÆ½Ì¨³äÖµ¿¨200000½ð¶¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1125" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/aoye200.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 200,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 200,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="36u½»ÓÑÆ½Ì¨³äÖµ¿¨500000½ð¶¹" href="http://www.aoyene.cc/prizes_content.php?id=1124" target="_blank">
-                        <img alt="36u½»ÓÑÆ½Ì¨³äÖµ¿¨500000½ð¶¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/aoye500.jpg" width="150">
-                        <em>36u½»ÓÑÆ½Ì¨³äÖµ¿¨500000½ð¶¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1124" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/aoye500.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 500,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 500,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹" href="http://www.aoyene.cc/prizes_content.php?id=1122" target="_blank">
-                        <img alt="2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T13FfeXdxmXXbCuT.Y_031021.jpg_160x160.jpg" width="150">
-                        <em>2012ÏÄ¼¾ÐÂ¿î²¨Î÷Ã×ÑÇ·çÁ½¼þÌ×Ñ©·ÄÁ¬ÒÂÈ¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1122" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T13FfeXdxmXXbCuT.Y_031021.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 250,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 250,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="·¨º­Òâ³Ú É£²ÏË¿Ìá»¨ Å·Ê½ÀËÂþ »Æ½ð·ãÒ¶ ÈáÈíÇ×·ô Á¬ÒÂÈ¹" href="http://www.aoyene.cc/prizes_content.php?id=1121" target="_blank">
-                        <img alt="·¨º­Òâ³Ú É£²ÏË¿Ìá»¨ Å·Ê½ÀËÂþ »Æ½ð·ãÒ¶ ÈáÈíÇ×·ô Á¬ÒÂÈ¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T1p4e5XixvXXcj8Qc8_101303.jpg_160x160.jpg" width="150">
-                        <em>·¨º­Òâ³Ú É£²ÏË¿Ìá»¨ Å·Ê½ÀËÂþ »Æ½ð·ãÒ¶ ÈáÈíÇ×·ô Á¬ÒÂÈ¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1121" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T1p4e5XixvXXcj8Qc8_101303.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 150,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 150,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="2012Âû¿ÉôäÏÄ ÌõÎÆÁ¬ÒÂÈ¹×²É« Æ´É«ÐÞÉíÎÞÐäÁ¬ÒÂÈ¹" href="http://www.aoyene.cc/prizes_content.php?id=1120" target="_blank">
-                        <img alt="2012Âû¿ÉôäÏÄ ÌõÎÆÁ¬ÒÂÈ¹×²É« Æ´É«ÐÞÉíÎÞÐäÁ¬ÒÂÈ¹" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T1iPTvXa8lXXc4Vqva_090137.jpg_160x160.jpg" width="150">
-                        <em>2012Âû¿ÉôäÏÄ ÌõÎÆÁ¬ÒÂÈ¹×²É« Æ´É«ÐÞÉíÎÞÐäÁ¬ÒÂÈ¹</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1120" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T1iPTvXa8lXXc4Vqva_090137.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 180,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 180,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
                     <li>
-                      <a title="ç±Òô PS3 Ö÷»ú Slim 320G ÐÂ°æ CECH-3000ÐÍ 3012B" href="http://www.aoyene.cc/prizes_content.php?id=1119" target="_blank">
-                        <img alt="ç±Òô PS3 Ö÷»ú Slim 320G ÐÂ°æ CECH-3000ÐÍ 3012B" src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/T1u5eEXa0tXXbq.6I8_100927.jpg_160x160.jpg" width="150">
-                        <em>ç±Òô PS3 Ö÷»ú Slim 320G ÐÂ°æ CECH-3000ÐÍ 3012B</em>
+                      <a title="测试文字" href="http://www.aoyene.cc/prizes_content.php?id=1119" target="_blank">
+                        <img alt="测试文字" src="__IMAGES__/prize/T1u5eEXa0tXXbq.6I8_100927.jpg_160x160.jpg" width="150">
+                        <em>测试文字</em>
                         <span>
-                          ½ö 2,300,000
-                          <img src="./¶Ò»»ÖÐÐÄ-åÛÒ¹Íø - ÍæÓÎÏ· ×¬ÐÇÐÇ, »»½±Æ·¾ÍÔÚ°¾Ò¹Íø_files/star.png" width="14" height="14"></span>
+                          仅 2,300,000
+                          <img src="__IMAGES__/prize/star.png" width="14" height="14"></span>
                       </a>
                     </li>
-
                     <span class="clr"></span>
                   </ul>
                 </div>

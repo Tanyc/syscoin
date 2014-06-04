@@ -6,7 +6,6 @@ text-decoration: none;
 }
 a:hover {color:#00f;}
 #body_content{
-    height:900px;
 	width:980px;
     margin: 12px auto auto;
     overflow:hidden;

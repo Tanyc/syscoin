@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* common styles */
+body{
+    margin:0;
+    font-size:12px;
+    background:#f1f1f1;
+    font-family:Arial, Helvetica, sans-serif;
+}
+div{
+    margin:0 auto;
+}
+ul,ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+a{ text-decoration:none;}
+a:link{
+    text-decoration:none;
+    color:#000000;
+}
+a:visited{
+    text-decoration:none;
+    color:#000000;
+}
+a:hover{
+    
+    color:#000000;
+}
+a:active{
+    text-decoration:underline;
+    color:#000000;
+}
+
+#content {width:100%;margin:0 auto;center top repeat-x; padding-top:15px;margin-bottom: 10px}
+
+.navuser{ border-top:0px solid #d5e9fa; position:relative; padding-bottom:0px; margin-top:0px}
+.navuser .new{ width:22px; height:12px; display:block;background:url(../images/new.gif) no-repeat; position:absolute; top:15px; right:50px; z-index:999}
+.navuser li{ display:block;background:url(../Images/user/bimg.gif) right -176px no-repeat;  height:41px; line-height:41px; text-align:left; position:relative }
+.navuser li a{ padding-left:40px; display:block; height:41px; line-height:41px; text-align:left; font-size:14px; color:#00599e; }
+.navuser li a:hover,.navuser li a.ah{ background:url(../Images/user/bimg.gif) right -134px no-repeat; position:relative;margin-right:-11px;color:#00599e; text-decoration:none;font-weight:bold;}
+.navuser li a em{ width:20px; height:20px; overflow:hidden; display:block; float:left;position:relative; top:11px; margin-right:6px;background:url(../images/icons.gif) no-repeat;}
+.navuser li a em.infonav{ background-position:0 0;}
+.navuser li a em.jifennav{ background-position:0 -20px;}
+.navuser li a em.scjnav{ background-position:0 -120px}
+.navuser li a em.jsbnav{background-position:0 -40px}
+.navuser li a em.txlnav{background-position:0 -60px;}
+.navuser li a em.tuan{background-position:0 -140px;}
+.navuser li.nav_tuan{
+    margin-top:0px;
+    border-top:1px　solid #d5e9fa;
+    padding-left:22px;
+    font-size:16px;
+    font-family:"微软雅黑";
+    color:#ff5a00;
+    font-weight:bold;
+    background-image: url(../images/usertitlebg.gif);
+    background-repeat: repeat;
+    height:40px;
+    background-position: top;
+}
