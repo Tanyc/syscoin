@@ -48,33 +48,35 @@
     <div id="navi_bottom">
     	<div id="navi_bottom_content">
             <ul id="main_nav">
-                <li><a href="{:U('/index')}" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
+                <li><a class="navibar_1" href="{:U('/index')}" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/ad')}" target="_parent" onclick="doSomething(event);">广告体验</a></li>
+                <li><a class="navibar_2" href="{:U('/ad')}" target="_parent" onclick="doSomething(event);">广告体验</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/buy')}" target="_parent" onclick="doSomething(event);">蛋蛋团购</a></li>
+                <li><a class="navibar_3" href="{:U('/buy')}" target="_parent" onclick="doSomething(event);">蛋蛋团购</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/game')}" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
+                <li><a class="navibar_4" href="{:U('/game')}" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/activity')}" target="_parent" onclick="doSomething(event);">活动中心</a></li>
+                <li><a class="navibar_5" href="{:U('/activity')}" target="_parent" onclick="doSomething(event);">活动中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/prize')}" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
+                <li><a class="navibar_6" href="{:U('/prize')}" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/user')}" target="_parent" onclick="doSomething(event);">个人中心</a></li>
+                <li><a class="navibar_7" href="{:U('/user')}" target="_parent" onclick="doSomething(event);">个人中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/glory')}" onclick="addfavorite()">晒奖</a></li>
+                <li><a class="navibar_8" href="{:U('/glory')}" onclick="addfavorite()">晒奖</a></li>
             </ul>
             <ul class="main_navr">
-                <li><a href="{:U('/help')}" target="_parent" onclick="doSomething(event);">帮助</a></li>
+                <li><a class="navibar_11" href="{:U('/help')}" target="_parent" onclick="doSomething(event);">帮助</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/invest')}" target="_parent" onclick="doSomething(event);">推广有奖</a></li>
+                <li><a class="navibar_10" href="{:U('/invest')}" target="_parent" onclick="doSomething(event);">推广有奖</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a href="{:U('/bbs')}" target="_parent" onclick="doSomething(event);">讨论区</a></li>
+                <li><a class="navibar_9" href="{:U('/bbs')}" target="_parent" onclick="doSomething(event);">讨论区</a></li>
             </ul>
     	</div>
     </div>
 </div>
-
+<style type="text/css">
+  .navibar_{$curID}{color: #ff0000; font-weight:bold;}
+</style>
 <!--------------------------------------------------->
 <div id="body_content">
 <!-- TemplateBeginEditable name="content" -->

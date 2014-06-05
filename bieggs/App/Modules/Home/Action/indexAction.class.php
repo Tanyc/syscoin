@@ -1,14 +1,4 @@
 <?php
-// +----------------------------------------------------------------------
-// | TOPThink [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2011 http://topthink.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-// $Id$
 
 class indexAction extends Action{
     public function index(){
@@ -17,6 +7,7 @@ class indexAction extends Action{
         /***************************************/
         $ModelPrize = D('Prize');
         $this->assign('prize',$ModelPrize->getList(6,"id,prize_num,name,cost_eggs,swap_num"));
+        $this->assign('curID',1);
 
         $this->display();
     }
