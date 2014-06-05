@@ -1,0 +1,78 @@
+.tab_bbs_tl{font-size:14px;background: url(../images/tab_bj_h.png) no-repeat;height:38px; margin:0 auto;margin-bottom:5px; width:950px;}
+.tab_bbs_tl a{cursor:pointer;text-decoration:none;color:#515151;}
+.tab_bbs_tl a:hover{color:#d20000;text-decoration:none}
+.tab_bbs_tl ul li{ float:left;margin-left:4px; margin-right:4px;line-height:38px;text-align:center }
+.tab_bbs_tl ul li.selected{font-weight:bold;font-size:14px;
+background:url(../images/tab_h.png) left 0px no-repeat ; float:left;padding-left:10px;line-height:38px;height:38px;text-align:center;display:block;}
+
+.tab_bbs_tl ul li.selected a{color:#ffffff;background:url(../images/tab_h.png) right 0px no-repeat;display:block; padding-right:10px;} 
+.tab_bbs_tl ul li.selected a:hover{color:#ffffff; text-decoration:none} 
+
+.discuss_ggw{position:relative;margin:0 auto;width:950px;overflow:hidden;height:50px;}
+.discuss_ft{height:45px; width:950px;}
+.discuss_ftl{ float:left; width:300px; margin-top:6px;}
+.discuss_ftr{ float:right; width:600px; text-align:right; margin-top:11px;}
+
+.fbtz_s{width:100px; font-weight:700; font-size:14px; margin-top:17px; padding-left:12px;}
+
+.post-mod {margin:0 auto;padding:0 20px;width:700px;border-top:1px solid #ededed;background:#fafafa;overflow:hidden;}
+.post-bd label input {margin-right:4px;vertical-align:-3px;*margin-right:0;*vertical-align:-2px;}
+.post-bd li {margin-bottom:10px;padding-bottom:1px;zoom:1;}
+.post-bd .post-to{position:relative;z-index:9; margin-top:20px;}
+.post-bd .ue-editor{position:relative;z-index:7;}
+
+.post-bd .post-tag{position:relative;z-index:8;}
+.post-title .txt {width:420px; border:1px solid #abadb3; height:18px; line-height:18px; padding-left:3px;}
+#content {height:120px;}
+.post-ft {padding:25px 0;text-align:center;}
+.post_wby{width:680px; height:36px; background-color:#f7f7f7; border:1px solid #dddddd; border-bottom:0px;}
+.post_fbtb_an{float:left; width:20px; margin-left:5px; margin-right:5px;padding-top:10px;}
+
+#main-wrap {float:right;width:740px;}
+#side-wrap {float:left;width:200px;border:1px solid #ECECEC;background-color:#F4F4F4;}
+/*=S Á´½Ó */	
+
+/*=S list-tab */
+.list-tab .list-tab-hd, .list-tab .list-tab-hd .current, .list-tab .list-tab-hd strong {background:url(../images/list_bg.gif) no-repeat;}
+.list-tab {clear:both;}
+.list-tab .list-tab-hd {padding:4px 5px 0 7px;height:26px;border-top:1px solid #f6dab0;border-right:1px solid #f6dab0;border-bottom:2px solid #ffd28e;border-left:1px solid #f6dab0;background-repeat:repeat-x;}
+.list-tab .list-tab-hd ul {position:absolute;height:28px;line-height:28px;}	
+.list-tab .list-tab-hd li {float:left;padding:0 18px;height:28px;font-size:14px;}
+.list-tab .list-tab-hd .current {padding:0 0 0 5px;background-position:0 -30px;}
+.list-tab .list-tab-hd strong {float:left;padding:0 10px 0 8px;height:28px;background-position:right -58px;}
+.list-tab .list-tab-bd {clear:both;width:740px;overflow:hidden;}
+.glytj_img{ width:170px; height:135px; margin:0 auto; border:1px solid #e0e0e0; margin-top:12px;}
+.glytj_word_m{width:170px; height:30px; color:#0657b2; line-height:30px; text-align:center; margin:0 auto;}
+.glytj_word_l{ text-align:left;}
+.glytj_word_l p{line-height:24px;}
+span.dot_tb{background:url(../images/dot.gif) no-repeat center center; width:4px; padding-right:15px;}
+/*=E list-tab */
+
+/*=S list-sort */
+.list-sort {padding:9px 0 0 7px;_width:763px;border-bottom:1px solid #f6dab0;background:url(../images/bg_common.png) repeat-x;overflow:hidden;}
+.list-sort i.color9 {float:left;}
+.list-sort .list-sort-items {overflow:hidden;_zoom:1;}
+.list-sort .list-sort-items h2, .list-sort .list-sort-items em {float:left;margin:0 15px 5px 0;line-height:16px;font-weight:400;}
+.list-sort a, .list-sort strong {padding:2px 3px;}
+.list-sort a,.list-sort span,.list-sort strong{white-space:nowrap;}
+.list-sort a:hover, .list-sort strong {background:#de2b2b;color:#fff;text-decoration:none;}
+/*=S list-sort */
+
+/*=S list-data */
+.list-data {width:100%;}
+.list-data .gray th, .list-data .gray td {background-color:#F7F7F7;}
+.list-data .opt {width:20px;text-align:center;}
+.list-data .icon {width:33px;text-align:right; padding-right:5px;}
+.list-data .author{width:80px; padding:0px;}
+ .list-data .num {width:40px;}
+.list-data .lastpost {width:70px;}
+.list-data th {font-weight:400;text-align:left;}
+
+.list-data thead th {height:30px;border-bottom:1px solid #dedede;color:#666;}
+
+.title {font-size:14px;}
+.title a, .title a:visited {color:#0657B2;}
+.title a:hover {color:#0657b2;}
+.subject{position:relative;text-overflow:ellipsis; width:480px;}
+
+

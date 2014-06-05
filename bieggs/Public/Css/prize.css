@@ -1,72 +1,9 @@
 @charset "utf-8";
-/* common styles */
-body{
-    margin:0;
-    font-size:12px;
-    background:#f1f1f1;
-    font-family:Arial, Helvetica, sans-serif;
-}
-div{
-    margin:0 auto;
-}
+
 ul,ol{
     list-style:none;
     margin:0;
     padding:0;
-}
-
-a{ text-decoration:none;}
-a:link{
-    text-decoration:none;
-    color:#000000;
-}
-a:visited{
-    text-decoration:none;
-    color:#000000;
-}
-a:hover{
-    
-    color:#000000;
-}
-a:active{
-    text-decoration:underline;
-    color:#000000;
-}
-a.orangeLink:link{
-    text-decoration:none;
-    color:#ff9000;
-    font-weight:bold;
-}
-a.orangeLink:visited{
-    text-decoration:none;
-    color:#ff9000;
-    font-weight:bold;
-}
-a.orangeLink:hover{
-    text-decoration:underline;
-    color:#ff9000;
-    font-weight:bold;
-}
-a.orangeLink:active{
-    text-decoration:underline;
-    color:#ff9000;
-    font-weight:bold;
-}
-a.redLink:link{
-    text-decoration:none;
-    color:#FF0000;
-}
-a.redLink:visited{
-    text-decoration:none;
-    color:#FF0000;
-}
-a.redLink:hover{
-    text-decoration:underline;
-    color:#FF0000;
-}
-a.redLink:active{
-    text-decoration:underline;
-    color:#FF0000;
 }
 
 #body_content {width:100%;margin:0 auto;center top repeat-x; padding-top:15px;margin-bottom: 10px}

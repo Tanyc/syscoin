@@ -9,6 +9,13 @@ UL, LI {
 	LIST-STYLE-TYPE: none; margin: 0px; padding: 0px;
 }
 
+a {text-decoration:NONE;}
+a:link {
+color: #000;
+text-decoration: none;
+}
+a:hover {color:#00f;}
+
 /*页面头*/
 #header{
 width:100%;
@@ -99,9 +106,13 @@ overflow:hidden;
 	float: left;
 	font-size:20px;
 	margin-top:5px;
+	margin-right: 5px;
 }
 .main_navr LI{
 	float: right;
 	font-size:15px;
-	margin-top:6px;
+	margin-top: 10px;
+	margin-right: 3px;
 }
+
+.sheader_red{color:#ff0000;/*background: url(../images/game/orange-line.gif)*/}

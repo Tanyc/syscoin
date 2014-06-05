@@ -1,0 +1,344 @@
+.indexPart1{background:url(../image/indexPart1Bg.gif) top repeat-x; height:333px; overflow:hidden; position:relative;}
+.indexPart1 h2{height:60px; line-height:60px; overflow:hidden; padding-left:34px; background:url(../image/limg19.png) 10px center no-repeat;}
+.indexPart1 .formDiv li{height:36px; line-height:27px; overflow:hidden; padding-left:68px; position:relative;}
+.indexPart1 .name{position:absolute; z-index:10; left:0px; top:0px; width:60px; text-align:right;}
+.indexPart1 .input1{float:left; width:156px; height:25px; line-height:25px; padding:0 5px; border:#ccc solid 1px;}
+.indexPart1 .input2{width:80px;}
+.indexPart1 .lzm{float:left; padding:3px 0 0 6px;}
+.indexPart1 .formDiv .li_01, .indexPart1 .li_01 a{color:#1e88dc;}
+.indexPart1 .li_01 input{float:left; position:relative; top:4px; left:-2px;}
+.indexPart1 .btnDiv{text-align:center;}
+.indexPart1 .btn1{background:url(../image/lbtn.gif); width:109px; height:33px; border:0px; cursor:pointer;}
+.indexPart1 .btnDiv a{display:inline-block; height:33px; line-height:33px; padding-left:20px;}
+.indexPart1 .msgDiv{position:absolute; z-index:1; left:0px; top:253px; background:url(../image/indexPart1Bg1.gif) left top no-repeat; width:258px; height:80px; overflow:hidden; text-align:center;}
+.indexPart1 .msgDiv li{float:left; width:129px; overflow:hidden; padding-top:10px;}
+.indexPart1 .msgDiv .msg{padding:10px 0 8px 0;}
+.indexPart1 .msgDiv .num{font-family:Arial;}
+.indexPart1 .list{position:relative; top:-10px;}
+.indexPart1 .list li{height:38px; line-height:37px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x; position:relative; padding-left:98px;}
+.indexPart1 .list .name{width:90px;}
+
+.indexFlsah{height:335px; overflow:hidden; position:relative;}
+.indexFlsah li{position:absolute; z-index:1; left:0px; top:0px; display:none;}
+.indexFlsah li img{width:725px; height:335px;}
+.indexFlsah .btnDiv{background:url(../image/bg.png); height:23px; width:100%; overflow:hidden; position:absolute; z-index:10; left:0px; top:309px; text-align:right; padding-top:3px;}
+.indexFlsah .btnDiv span{display:inline-block; width:18px; height:18px; line-height:18px; text-align:center; overflow:hidden; background:#6e6e6e; border:#919191 solid 1px; color:#b4b4b4; margin-right:5px;}
+.indexFlsah .btnDiv .spanNow{background:#b52727; border:#d92727 solid 1px; color:#333;}
+
+.indexPart2{height:206px; overflow:hidden;}
+.indexPart2 .list{padding:10px 15px;}
+.indexPart2 li{height:36px; line-height:35px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x;}
+.indexPart2 li a{padding-left:17px; background:url(../image/lico1.gif) 6px center no-repeat;}
+
+.indexPart3{height:371px; overflow:hidden;}
+.indexPart3 .list{padding:10px 15px;}
+.indexPart3 li{height:36px; line-height:35px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x;}
+.indexPart3 li a{padding-left:17px; background:url(../image/lico1.gif) 6px center no-repeat;}
+.indexPart3 .imgDiv{text-align:center; padding-top:15px;}
+.indexPart3 .list h5{text-align:center; border-bottom:#CCC solid 1px; padding-bottom:10px;}
+
+.indexPart4{height:206px; overflow:hidden; padding-left:13px;}
+.indexPart4 li{float:left; width:174px; text-align:center; overflow:hidden; padding-top:11px; font-family:Arial;}
+.indexPart4 .imgDiv img{border:#d9d9d9 solid 1px;}
+.indexPart4 .name{padding:8px 0;}
+.indexPart4 .num span{color:#e70037; background:url(../image/lico4.gif) right center no-repeat; padding-right:12px;}
+
+.indexPart5{height:360px; padding:11px 0 0 8px; overflow:hidden;}
+.indexPart5 li{float:left; text-align:center; width:177px; height:117px; overflow:hidden; font-family:Arial;}
+.indexPart5 .imgDiv img{border:#d9d9d9 solid 1px; padding:3px;}
+.indexPart5 .num{padding-top:10px;}
+.indexPart5 b{color:#e70037; background:url(/image/lico4.gif) right center no-repeat; padding-right:12px;}
+
+.giftNav{background:url(../image/indexPart1Bg.gif) top repeat-x; min-height:200px; _height:200px;}
+.giftNav .title{height:42px; line-height:42px; padding-left:34px; overflow:hidden; position:relative;}
+.giftNav .title img{position:absolute; left:7px; top:6px;}
+.giftNav h5 a{height:29px; line-height:29px; overflow:hidden; display:block; padding-left:22px; background:#f4f4f4 url(../image/lico5.gif) 235px center no-repeat; font-size:14px;}
+.giftNav .content{line-height:24px; padding:10px 0 10px 22px; margin-top:0px !important;}
+
+.giftsList{width:727px; overflow:hidden; position:relative;}
+.giftsList ul{width:110%; position:relative; top:-1px;}
+.giftsList li{float:left; text-align:center; width:181px; height:208px; overflow:hidden; border-top:#e9e9e9 solid 1px; border-right:#e9e9e9 solid 1px;}
+.giftsList .name{padding:2px 0 8px 0;}
+.giftsList .num span{color:#ff6600; background:url(../image/lico4.gif) right center no-repeat; padding-right:12px; font-family:Arial;}
+
+.giftShow{width:426px; padding-left:280px; height:205px; overflow:hidden; margin:0 auto; position:relative; border-bottom:#ccc dotted 1px; font-size:14px;}
+.giftShow .imgDiv{border:#ddd solid 1px; position:absolute; z-index:1; left:0px; top:10px;}
+.giftShow .name{padding:10px 12px;}
+.giftShow .list{background:url(../image/line1.gif) top repeat-x; padding-bottom:6px;}
+.giftShow li{background:url(../image/line1.gif) bottom repeat-x; height:32px; line-height:31px; overflow:hidden; position:relative; padding-left:150px;}
+.giftShow li b{position:absolute; z-index:10; left:12px; top:0px; white-space:nowrap; color:#ff6600;}
+.giftShow li span{color:#ff6600;}
+.giftShow .price{height:40px; line-height:40px; overflow:hidden; background:#f4f4f4; padding-left:12px;}
+.giftShow .btn1{background:url(../image/lbtn1.gif); width:109px; height:33px; border:0px; position:absolute; z-index:10; top:143px; right:10px; font-size:14px; font-weight:bold; color:#FFF;}
+.giftShow .inputDiv{position:absolute; z-index:10; top:145px; right:10px;}
+.giftShow .inputDiv input{width:55px; height:25px; line-height:25px; padding:0 10px; border:#bdbdbd solid 1px;}
+
+.giftShowDiv{width:706px; overflow:hidden; margin:0 auto; padding:20px 0;}
+.giftShowDiv .title{height:25px; line-height:25px; overflow:hidden; padding-left:12px; background:#fff0cb; color:#ff6600;}
+.giftShowDiv .content{line-height:26px; padding:10px 12px; color:#525252;}
+.giftShowDiv .formDiv{border:#ddd solid 1px; border-right:0px; margin-top:15px;}
+.giftShowDiv .formDiv li{border-bottom:#ddd solid 1px; padding:9px 10px; border-right:#ddd solid 1px;}
+.giftShowDiv .formDiv th{font-weight:100; width:85px; padding-left:10px; text-align:left; border-bottom:#ddd solid 1px; border-right:#ddd solid 1px;}
+.giftShowDiv .formDiv td{padding:6px 10px; border-bottom:#ddd solid 1px; border-right:#ddd solid 1px;}
+.giftShowDiv .formDiv .input1{border:#bdbdbd solid 1px; width:155px; height:25px; line-height:25px; padding:0 5px;}
+.giftShowDiv .formDiv .input2{width:505px;}
+.giftShowDiv .formDiv textarea{border:#bdbdbd solid 1px; width:505px; height:55px; line-height:25px; padding:0 5px;}
+.giftShowDiv .formDiv .btnDiv{text-align:center; padding:10px 0; border-right:#ddd solid 1px;}
+.giftShowDiv .formDiv .btn1{background:url(../image/lbtn3.gif); width:100px; height:35px; border:0px; font-weight:bold; color:#FFF; font-size:14px;}
+
+.help{padding:10px; border:#CCC solid 1px;}
+.help .name{height:52px; line-height:52px; overflow:hidden; background:#f2f2f2; text-align:center; font-size:24px; font-family:"微软雅黑";}
+.help .time{background:url(../image/line1.gif) bottom repeat-x; padding:12px 0; color:#999; text-align:center;}
+.help .content{font-size:14px; line-height:28px; padding:18px;}
+
+.helpNav{background:url(../image/helpNav.gif) left repeat-y; min-height:200px; _height:200px; border-top:#ccc solid 1px; border-bottom:#ccc solid 1px;}
+.helpNav .title{height:55px; line-height:45px; padding-left:8px; overflow:hidden; color:#acacac; font-size:24px; font-style:italic; text-transform:uppercase; font-family:"微软雅黑"; background:url(../image/indexPart1Bg.gif) top repeat-x; margin:0 1px;}
+.helpNav .title i{font-size:12px; padding-left:5px;}
+.helpNav h5{display:block; height:25px; line-height:25px; overflow:hidden; padding-left:31px; background:#fff3d9 url(../image/lico2.png) 13px center no-repeat; margin:0 1px;}
+.helpNav .list{padding:5px 0 14px 11px;}
+.helpNav .list a{display:block; height:27px; line-height:27px; overflow:hidden; border:#FFF solid 1px; border-right:0px; border-left:#fff solid 3px; padding-left:19px; margin-right:1px; background:url(../image/ico1.gif) 10px center no-repeat;}
+.helpNav .list .aNow, .helpNav .list a:hover{border:#ccc solid 1px; border-left:#ff5a00 solid 3px; border-right:0px; font-weight:bold; color:#ff5a00; background:#fff url(../image/ico2.gif) 142px center no-repeat; margin-right:0px;}
+
+.login{width:415px; overflow:hidden; margin:27px auto;}
+.loginForm{padding-top:20px;}
+.loginForm li{height:43px; overflow:hidden; position:relative; line-height:32px; padding-left:100px;}
+.loginForm .name{position:absolute; z-index:10; left:0px; top:0px; width:90px; text-align:right; font-size:14px;}
+.loginForm .input1{float:left; width:247px; height:30px; line-height:30px; padding:0 5px; border:#ccc solid 1px;}
+.loginForm .input2{width:102px;}
+.loginForm .lzm{padding:5px 6px;}
+.loginForm .checkbox{float:left; position:relative; top:6px; left:-2px;}
+.loginForm .btnDiv{text-align:center; height:52px;}
+.loginForm .btn1{background:url(../image/lbtn1.gif); width:109px; height:33px; border:0px; cursor:pointer; font-size:14px; font-weight:bold; color:#FFF; margin:0 3px;}
+.loginForm .btn2{background:url(../image/lbtn2.gif); width:103px; height:34px; border:0px; cursor:pointer; font-size:14px; font-weight:bold; color:#FFF; margin:0 3px;}
+/**/
+.regForm li{height:51px; padding-left:158px;}
+.regForm .name{width:150px;}
+.regForm .tips{white-space:nowrap; padding-left:12px; color:#999;}
+/**/
+.ForgotPassword li{padding-left:130px;}
+.ForgotPassword .name{width:120px;}
+
+.Agreement{font-size:14px; line-height:24px; color:#999; padding:15px 35px;}
+
+.pageTab{background:url(../image/pageTab.gif) top repeat-x; height:60px; overflow:hidden; padding-left:15px;}
+.pageTab li{float:left; background:url(../image/pageTab1.gif) right top no-repeat; height:60px;}
+.pageTab a{display:block; float:left; height:46px; line-height:41px; padding:0 25px; font-size:14px; font-weight:bold; margin-left:-3px;}
+.pageTab .aNow{position:relative; background:url(../image/pageTab2.gif) center top no-repeat; color:#FFF;}
+
+.adExperience li{float:left; width:194px; height:172px; overflow:hidden; padding:0 21px 0 20px; position:relative;}
+.adExperience img{border:#ddd solid 1px;}
+.adExperience .imgDiv{height:122px; overflow:hidden;}
+.adExperience .name{padding:0 6px;}
+.adExperience .num{position:absolute; z-index:1; top:122px; right:27px; white-space:nowrap; background:url(../image/lico4.gif) right center no-repeat; padding-right:12px;}
+
+.adExperienceSide{padding:10px;}
+.adExperienceSide li{height:36px; line-height:35px; overflow:hidden; background:url(../image/lico1.gif) 10px center no-repeat; padding-left:20px; border-bottom:#ddd dotted 1px;}
+.adExperienceSide span{padding-right:22px;}
+.adExperienceSide b{background:url(../image/lico4.gif) right center no-repeat; padding-right:12px;}
+
+.adExperienceShow{padding:15px;}
+.adExperiencePart1{height:175px; overflow:hidden; position:relative; border-bottom:#ddd solid 1px; padding:10px 0 0 295px; margin-bottom:15px;}
+.adExperiencePart1 .imgDiv{position:absolute; z-index:1; left:0px; top:0px; border:#ddd solid 1px;}
+.adExperiencePart1 .list{background:url(../image/line1.gif) top repeat-x; min-height:10px; _height:10px;}
+.adExperiencePart1 li{float:left; width:50%; height:32px; line-height:32px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x;}
+.adExperiencePart1 .btnDiv{padding-top:15px;}
+.adExperiencePart1 .btnDiv a{display:block; background:url(../image/lbtn1.gif) left top no-repeat; width:109px; height:33px; line-height:33px; text-align:center; overflow:hidden; font-size:14px; font-weight:bold; color:#FFF; margin-right:18px; float:left;}
+.adExperienceShow .name{width:110px; height:25px; line-height:25px; padding-left:12px; overflow:hidden; background:#fff0cb;}
+.adExperienceShow .content{line-height:24px; padding:10px 12px 25px 12px;}
+
+.PartTime{padding:15px;}
+.PartTime .title{width:110px; height:25px; line-height:25px; padding-left:12px; overflow:hidden; background:#fff0cb;}
+.PartTime .msg{line-height:24px; padding:10px 12px 25px 12px;}
+.PartTime .table{background:url(../image/PartTime.gif) top repeat-x;}
+.PartTime th{height:33px;}
+.PartTime td{height:41px; background:url(../image/line1.gif) bottom repeat-x; text-align:center; color:#666;}
+.PartTime .notice{text-align:center; font-size:14px; padding:25px 0 10px 0;}
+.PartTime textarea{width:570px; height:38px; border:#7f9db9 solid 1px; font-size:12px; padding:5px; margin-left:50px;}
+.PartTime .btn{text-align:center; padding-top:5px;}
+.PartTime .lzDiv{text-align:center; height:50px; padding-top:35px;}
+.PartTime .lzDiv .input1{width:75px; height:25px; line-height:25px; border:#d7d7d7 solid 1px; padding:0px;}
+.PartTime .lzDiv .btn1{background:url(../image/lbtn1.gif); width:109px; height:33px; font-weight:bold; font-size:14px; color:#FFF; border:0px;}
+.PartTime .lzDiv img{position:relative; top:5px; margin:0 8px;}
+
+.QuestionnaireShow{padding-bottom:50px;}
+.QuestionnaireShow .title{background:url(../image/pageTab.gif) left -1px repeat-x; height:40px; line-height:40px; overflow:hidden; position:relative; padding-left:43px;}
+.QuestionnaireShow .title img{position:absolute; z-index:10; left:10px; top:11px;}
+.QuestionnaireShow .msg{padding:12px 15px;}
+.QuestionnaireShow .name{padding:0 0 15px 15px;}
+.QuestionnaireShow li{height:30px; padding-left:73px; line-height:20px;}
+.QuestionnaireShow li input{float:left; position:relative; left:-2px;}
+.QuestionnaireShow .btnDiv{padding:15px 63px; margin:0 10px; border-bottom:#ddd dotted 1px; margin-bottom:15px;}
+.QuestionnaireShow .btn1{background:url(../image/lbtn1.gif); width:109px; height:33px; font-weight:bold; font-size:14px; color:#FFF; border:0px; margin-right:10px;}
+
+.access{padding:10px;}
+.access .formDiv{border:#ddd solid 1px;}
+.access .formDiv li{border-bottom:#ddd solid 1px; padding:5px 10px; line-height:24px;}
+.access .formDiv th{font-weight:100; width:130px; padding-right:10px; text-align:right; border-bottom:#ddd solid 1px;}
+.access .formDiv td{padding:6px 10px; border-bottom:#ddd solid 1px; border-left:#ddd solid 1px;}
+.access .formDiv td a{font-weight:bold; padding-left:12px; color:#ff6600;}
+.access .input1{width:155px; height:25px; line-height:25px; padding:0 5px; background:#faffbd;}
+.access .input2{border:#bdbdbd solid 1px; width:340px; height:25px; line-height:25px; padding:0 5px;}
+.access .input2_1{width:85px;}
+.access .input3{border:#bdbdbd solid 1px; width:150px; height:25px; line-height:25px; padding:0 5px; margin-right:6px;}
+.access .btnDiv{text-align:center; padding:20px 0 10px 0;}
+.access .btn1{background:url(../image/lbtn1.gif); width:109px; height:33px; font-weight:bold; font-size:14px; color:#FFF; border:0px; margin-right:10px;}
+.access textarea{border:#bdbdbd solid 1px; width:560px; height:180px; line-height:25px; padding:0 5px; font-size:12px;}
+.access .formDiv_1 th{width:150px;}
+.access .tips{color:#999;}
+.access .txImg{border:#333 solid 1px; margin-right:10px;}
+.access .list1{min-height:100px; _height:100px; border:#ddd solid 1px; position:relative; top:-2px;}
+.access .list1 th{height:32px; background:#f8f8f8; border-right:#e8f2f9 solid 1px; border-bottom:#e8f2f9 solid 1px;}
+
+.area{padding:10px;}
+.area .name{text-align:center; padding-bottom:10px;}
+.area th{height:29px; background:#f2f2f2; font-size:14px;}
+.area td{height:31px; border-bottom:#f0f0f0 solid 1px; text-align:center;}
+.area2 td{border:0px;}
+.area3 th{font-size:12px;}
+.area .form th img{position:relative; top:2px;}
+.area th input{position:relative; top:-2px;}
+.area th .name5, .area td .name5{text-align:left; padding-left:18px;}
+.area td .div0{color:#999;}
+.area .searchForm{height:36px; overflow:hidden; line-height:27px; font-weight:bold;}
+.area .searchForm li{float:left; padding-left:12px;}
+.area .searchForm .input1{width:155px; height:25px; line-height:25px; padding:0 5px; float:left; border:#bdbdbd solid 1px;}
+.area .searchForm .btn1{background:url(../image/lbtn7.gif); width:54px; height:28px; border:0px; cursor:pointer; float:left;}
+
+.BasicInfoPart1{height:179px; overflow:hidden; position:relative; border:#e5e5e5 solid 1px; margin:10px; padding-left:146px;}
+.BasicInfoPart1 .imgDiv{position:absolute; z-index:1; left:23px; top:28px; width:100px; text-align:center; overflow:hidden;}
+.BasicInfoPart1 .imgDiv img{border:#333 solid 1px; margin-bottom:5px;}
+.BasicInfoPart1 th{width:81px; height:35px; text-align:right; font-weight:100; background:#f9f9f9; border-left:#e5e5e5 solid 1px; border-bottom:#e5e5e5 solid 1px; padding:0 5px;}
+.BasicInfoPart1 td{height:35px; border-left:#e5e5e5 solid 1px; border-bottom:#e5e5e5 solid 1px; padding:0 5px;}
+
+.BasicInfoPart2{margin:10px; border:#e5e5e5 solid 1px; border-bottom:0px; background:#ffffcc;}
+.BasicInfoPart2 li{height:35px; line-height:35px; overflow:hidden; position:relative; border-bottom:#e5e5e5 solid 1px;}
+.BasicInfoPart2 .ico{position:absolute; z-index:1; left:24px; top:9px; height:16px; width:16px;}
+.BasicInfoPart2 h5{padding-left:50px;}
+.BasicInfoPart2 .msg{height:35px; white-space:nowrap; position:absolute; z-index:1; left:265px; top:0px; padding-left:5px; border-left:#FFF solid 1px;}
+.BasicInfoPart2 .btn{font-weight:bold; color:#ff6600; position:absolute; z-index:1; top:0px; right:6px; white-space:nowrap;}
+
+.memberTab{height:39px; overflow:hidden; background:url(../image/tabBg1.gif) left 38px repeat-x; padding-left:15px;}
+.memberTab li{float:left; cursor:pointer; width:100px; height:40px; line-height:40px; text-align:center; overflow:hidden; background:url(../image/tabBg2.gif) right top no-repeat; font-size:14px; margin-right:3px;}
+.memberTab .liNow{background:url(../image/tabBg2.gif) left top no-repeat;}
+
+.memberBox{padding:10px;}
+.memberBox .tabContentDiv{border-top:0px;}
+
+.details .tab{height:39px; overflow:hidden; background:url(../image/tabBg1.gif) left 38px repeat-x; padding-left:15px;}
+.details .tab li{float:left; cursor:pointer; width:100px; height:40px; line-height:40px; text-align:center; overflow:hidden; background:url(../image/tab3.gif) right top no-repeat; font-size:14px; margin-right:3px;}
+.details .tab .liNow{background:url(../image/tab3.gif) left top no-repeat; font-weight:bold; color:#FFF;}
+.details .tabContentDiv{border-top:0px;}
+.details .list1{width:756px; height:30px; line-height:30px; overflow:hidden; background:#ffaa00; margin-bottom:3px;}
+.details .list1 ul{width:110%;}
+.details .list1 li{float:left; height:30px; padding:0 16px; border-right:#f7bf50 solid 1px;}
+.details .list1 a{font-weight:bold; color:#FFF;}
+.details .list li{height:71px; position:relative; overflow:hidden; padding:0 10px 0 270px;}
+.details .list .li_01{font-weight:bold; background:#f2f2f2;}
+.details .list .time{position:absolute; z-index:1; left:15px; top:0px; line-height:71px; white-space:nowrap;}
+.details .list .btn{position:absolute; z-index:1; left:150px; top:0px; line-height:71px; white-space:nowrap;}
+.details .list th{height:35px; border-bottom:#ddd dashed 1px; text-align:left; width:20%; padding-left:5%;}
+.details .list td{height:35px; border-bottom:#ddd solid 1px; text-align:left; width:20%; padding-left:5%;}
+
+.activityBg{background:url(../image/ActivityBg1.jpg) center top no-repeat;}
+.activityBg1{background:url(../image/ActivityBg2.jpg) center bottom no-repeat; min-height:1000px; _height:1000px; padding:497px 0 60px 0;}
+.activityBox{width:900px; overflow:hidden; margin:0 auto; font-size:14px; padding:10px 0;}
+.activityBox .line{background:url(../image/line2.gif) left center repeat-x; height:24px; overflow:hidden;}
+.activityBox .content1{font-weight:bold; line-height:32px; padding:5px 10px;}
+.activityBox .time{font-weight:bold; padding:0 10px 10px 10px; line-height:27px;}
+.activityBox .time span{display:inline-block; background:url(../image/bg2.gif) center top no-repeat; height:27px; width:100px; text-align:center; color:#FFF;}
+.activityBox .table1{border:#e5eef4 solid 2px; width:816px; overflow:hidden; margin:5px auto;}
+.activityBox .table1 td{height:36px; background:#f4f8fa; color:#073f70; width:114px; text-align:center; border:#fff solid 1px; border-right:#e5eef4 solid 1px; border-bottom:#e5eef4 solid 1px;}
+.activityBox .table1 th{text-align:left; padding-left:45px; color:#fa1c2f; border-right:#e5eef4 solid 2px; border-bottom:#e5eef4 solid 1px;}
+.activityBox .table1 h2{color:#fa1c2f; text-align:center; height:36px; line-height:36px;}
+.activityBox .content2{text-align:center; line-height:28px; color:#525252; padding:10px 0;}
+.activityBox .table2{border:#d9d9d9 solid 1px;}
+.activityBox .table2 th{height:41px; background:#feeecc; border-top:#FFF solid 1px; border-right:#FFF solid 1px;}
+.activityBox .table2 td{border-top:#e9e9e9 solid 1px; border-right:#e9e9e9 solid 1px; padding:10px 0; text-align:center;}
+.activityBox .table2 .td_01{background:#f8f8f8;}
+
+.activityList{padding:10px 0;}
+.activityList .tab{height:37px; overflow:hidden; background:url(../image/tabBg1.gif) left 36px repeat-x; padding-left:7px;}
+.activityList .tab li{float:left; cursor:pointer; width:229px; height:37px; line-height:36px; text-align:center; overflow:hidden; background:url(/image/tab4.gif) left top no-repeat; font-size:14px; font-weight:bold; margin-right:3px;}
+.activityList .tab .liNow{background:url(/image/tab4.gif) right top no-repeat; color:#ff6600;}
+.activityList .tabContent{padding:0 20px;}
+.activityList .tabContent li{height:auto; overflow:hidden; position:relative; background:url(../image/line1.gif) bottom repeat-x; padding:25px 0 0 280px;}
+.activityList .imgDiv{position:absolute; z-index:1; left:18px; top:25px; border:#ddd solid 1px; padding:4px;}
+.activityList h2{height:30px; line-height:30px; overflow:hidden; padding:0 15px; background:#fff3d3;}
+.activityList h2 a{color:#ff4e00;}
+.activityList .content{line-height:28px; padding:10px; font-size:14px; color:#808080;}
+.activityList .content span{color:#000;}
+.activityList .content a{color:#067ae5;}
+.activityList .btn{position:absolute; z-index:1; top:110px; right:0px;}
+.activityList .pageNum{padding-top:20px;}
+
+.ranking{float:left; width:321px; height:1077px; overflow:hidden; border:#d9d9d9 solid 1px; margin-right:9px; background:url(../image/rankBg.gif) 15px 88px no-repeat;}
+.ranking .title{height:49px; line-height:43px; overflow:hidden; color:#FFF; padding-left:45px;}
+.ranking_03{margin:0px;}
+.ranking_01 .title{background:url(../image/rankTitle1.gif) left top no-repeat;}
+.ranking_02 .title{background:url(../image/rankTitle2.gif) left top no-repeat;}
+.ranking_03 .title{background:url(../image/rankTitle3.gif) left top no-repeat;}
+.ranking .name{width:275px; height:30px; line-height:30px; overflow:hidden; margin:0 auto; background:#fff5df; position:relative; padding-left:35px;}
+.ranking .name span{position:absolute; z-index:10; top:0px; right:0px; display:block; width:100px; text-align:center; overflow:hidden;}
+.ranking .list{width:310px; overflow:hidden; margin:0 auto; padding-top:3px;}
+.ranking li{width:270px; height:33px; line-height:33px; overflow:hidden; float:left; position:relative; padding-left:40px; background:url(../image/line1.gif) bottom repeat-x;}
+.ranking li .orange{position:absolute; z-index:10; top:0px; right:0px; display:block; width:120px; text-align:center; overflow:hidden;}
+
+.record{padding:10px 15px;}
+.record th{height:29px; font-size:14px; background:#f2f2f2;}
+.record td{background:url(../image/line1.gif) bottom repeat-x; text-align:center; height:36px;}
+
+.user{position:relative; margin:10px; padding-left:185px;}
+.user th{width:91px; font-weight:100; text-align:right; padding-right:5px; background:#f9f9f9; border-left:#e5e5e5 solid 1px; border-bottom:#e5e5e5 solid 1px; height:37px;}
+.user td{border-bottom:#e5e5e5 solid 1px; padding-left:10px;}
+.user .info{position:absolute; z-index:10; left:0px; top:20px; width:185px; text-align:center; overflow:hidden;}
+.user .imgDiv img{border:#666 solid 1px;}
+.user h5{padding:12px 0 35px 0;}
+.user li{height:45px;}
+
+.AnnouncementList{padding:5px 10px;}
+.AnnouncementList li{height:32px; line-height:32px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x; padding-left:10px;}
+
+.grabCard{padding:5px 10px;}
+.grabCard li{height:32px; line-height:32px; overflow:hidden; background:url(../image/line1.gif) bottom repeat-x; padding-left:10px; position:relative;}
+.grabCard li span{position:absolute; z-index:10; top:0px; right:10px;}
+
+.grabCardDiv{padding:15px;}
+.grabCardDiv .msg{padding:0 0 15px 10px;}
+.grabCardDiv .table{border:#ddd solid 1px; padding:1px; margin-bottom:10px;}
+.grabCardDiv .table th{height:36px; background:#f2f2f2;}
+.grabCardDiv .table td{height:36px; background:url(../image/line1.gif) bottom repeat-x; text-align:center;}
+.grabCardDiv .list{position:relative; height:490px; background:url(../image/grabCardDiv.gif) center top no-repeat;}
+.grabCardDiv .list h2{color:#FFF; text-align:center; line-height:37px; padding-right:10px;}
+.grabCardDiv .list .btn{position:absolute; z-index:10; top:4px; right:10px; display:block; background:url(../image/btn11.png) left top no-repeat; width:99px; height:29px; overflow:hidden;}
+.grabCardDiv .list li{position:absolute; z-index:1;}
+
+.PlaygroundPart2{height:354px; overflow:hidden; padding:17px 0 0 12px;}
+.PlaygroundPart2 li{float:left; text-align:center; width:232px; height:165px; overflow:hidden;}
+.PlaygroundPart2 img{padding:4px; border:#ddd solid 1px;}
+.PlaygroundPart2 .name{padding-top:8px;}
+
+.PlaygroundPart1{height:418px; overflow:hidden; position:relative; background:url(../image/line3.gif) center repeat-y;}
+.PlaygroundPart1 .fl{width:494px; overflow:hidden;}
+.PlaygroundPart1 .title{background:url(../image/title.gif) top repeat-x; height:43px; line-height:43px; overflow:hidden; position:relative; border-right:#ddd solid 1px; padding-left:48px;}
+.PlaygroundPart1 .title img{position:absolute; z-index:10; left:15px; top:11px;}
+.PlaygroundPart1 .list{padding:15px 0 0 15px;}
+.PlaygroundPart1 li{float:left; width:115px; height:125px; overflow:hidden; text-align:center;}
+.PlaygroundPart1 .name{padding-top:6px;}
+.tz h1{padding:10px 15px;}
+.tz li{min-height:32px; _height:32px; position:relative; border-bottom:#eee solid 1px; padding:6px 0 0 110px; width:850px;}
+.tz h5{position:absolute; z-index:1; left:15px; top:4px; width:75px; padding:0 0 0 13px; height:28px; line-height:28px; overflow:hidden; color:#FFF;}
+.tz .li_01 h5{background:url(../image/tzBg11.gif) left top no-repeat;}
+.tz .li_02 h5{background:url(../image/tzBg12.gif) left top no-repeat;}
+.tz .li_03 h5{background:url(../image/tzBg13.gif) left top no-repeat;}
+.tz li a{display:inline-block; width:45px; height:24px; line-height:24px; text-align:center; overflow:hidden; margin-right:8px; margin-bottom:4px;}
+.tz li a:hover{color:#fff;}
+.tz .li_01 a{background:url(../image/beishu_bg.png) -0px -174px no-repeat;}
+.tz .li_01 a:hover{background:url(../image/beishu_bg.png) -0px -58px no-repeat;}
+.tz .li_02 a{background:url(../image/beishu_bg.png) -0px -145px no-repeat;}
+.tz .li_02 a:hover{background:url(../image/beishu_bg.png) -0px -29px no-repeat;}
+.tz .li_03 a{background:url(../image/beishu_bg.png) -0px -116px no-repeat;}
+.tz .li_03 a:hover{background:url(../image/beishu_bg.png) -0px -0px no-repeat;}
+.tz .li_03 .a1{background:url(../image/beishu_bg.png) -0px -174px no-repeat;}
+.tz .li_03 .a1:hover{background:url(../image/beishu_bg.png) -0px -58px no-repeat;}
+.tz .li_03 .a2{background:url(../image/beishu_bg.png) -0px -203px no-repeat; width:66px;}
+.tz .li_03 .a2:hover{background:url(../image/beishu_bg.png) -0px -87px no-repeat;}

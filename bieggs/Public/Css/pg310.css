@@ -5,39 +5,6 @@ color: #000;
 text-decoration: none;
 }
 a:hover {color:#00f;}
-#body_content{
-    height:900px;
-	width:980px;
-    margin: 12px auto auto;
-    overflow:hidden;
-}
-.dynamic_msg{
-    width: 978px;
-    height: 30px;
-    border: 1px solid #E2E2E2;
-}
-
-.dynamic_msg_l{
-    width: 430px;
-    float: left;
-    display: inline;
-    padding-top:4px;
-    padding-right: 4px;
-    overflow: hidden;
-}
-.dynamic_msg_r{
-    width: 488px;
-    float: right;
-    display: inline;
-    padding-top:5px;
-    padding-left: 48px;
-    background: url('../images/game/dt_bg.gif') no-repeat;
-}
-
-#demo{overflow: hidden;white-space: nowrap;width:478px;}
-#indemo{float: left;width: 800%;}
-#demo1, #demo2{float: left;}
-
 .game_content{
     width: 978;
     height: 700px;
@@ -67,25 +34,6 @@ width: 950px;
 height: 27px;
 font-weight: bold;
 overflow: hidden;
-}
-  
-body {
-font: 12px/1.5 'lucida grande',tahoma,arial,'bitstream vera sans',helvetica,sans-serif;
-}
-
-body, div, ul, ol, li, form, input, textarea, p {
-margin: 0;
-padding: 0;
-}
-    
-div {
-display: block;
-}
-    
-table {
-display: table;
-border-collapse: separate;
-border-color: gray;
 }
 
 .white {

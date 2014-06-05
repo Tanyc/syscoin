@@ -1,11 +1,5 @@
 @charset "utf-8";
 /* common styles */
-body{
-    margin:0;
-    font-size:12px;
-    background:#f1f1f1;
-    font-family:Arial, Helvetica, sans-serif;
-}
 div{
     margin:0 auto;
 }
@@ -15,25 +9,7 @@ ul,ol{
     padding:0;
 }
 
-a{ text-decoration:none;}
-a:link{
-    text-decoration:none;
-    color:#000000;
-}
-a:visited{
-    text-decoration:none;
-    color:#000000;
-}
-a:hover{
-    
-    color:#000000;
-}
-a:active{
-    text-decoration:underline;
-    color:#000000;
-}
-
-#body_content {width:100%;margin:0 auto;center top repeat-x; padding-top:15px;margin-bottom: 10px}
+#body_content {width:100%;margin:0 auto;center top repeat-x; padding-top:15px;margin-bottom: 10px;border: 1px solid #E2E2E2;}
 
 .py_info {padding:10px 20px;}
 .py_info ul { display:block}
