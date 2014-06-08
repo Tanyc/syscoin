@@ -29,20 +29,14 @@ margin:0 auto;
 	margin: 0 auto;
 	padding: 0px;
 	width: 980px;
-	height: 300px;
+	height: 280px;
+	overflow: hidden;
 }
 .p01 .guild {
 	width: 200px;
 	float: left;
-	display: inline-block;
-	border-top-width: 1px;
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-left-width: 1px;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
+	height: 273px;
+	border: 1px solid #e2e2e2;
 }
 .p01 .guild ul.service {
 	padding: 40px 0px 0px 20px;
@@ -94,10 +88,10 @@ margin:0 auto;
 	margin: 0px 9px; border: 1px solid rgb(190, 215, 232); width: 510px; height: 275px; float: left; display: inline-block;
 }
 .p01 .login {
-	width: 250px;
-	padding-top: 10px;
+	width: 246px;
+	height: 273px;
 	float: right;
-	display: inline-block;
+	border: 1px solid #e2e2e2;
 }
 .p01 .login table {
 	color: rgb(102, 102, 102); font-size: 14px; margin-top: 35px; margin-right: 10px; margin-left: 10px;
@@ -152,15 +146,16 @@ margin:0 auto;
 }
 
 .div_content{
-/*    height:230px;*/
     overflow:hidden;
     margin-top:5px;
+    border: 1px solid #E2E2E2;
 }
 .webmessage{
     width:250px;
     height:230px;
     display:inline;
     float:left;
+    border-right: 1px solid #E2E2E2;
 }
 .msg_prize_title h2 {
 padding-left: 26px;
@@ -176,24 +171,47 @@ top: 0px;
 right: 10px;
 }
 .prizes{
-    width:725px;
+    width:722px;
+    height: 233px;
     display:inline;
     float:right;
+    border-left: 1px solid #E2E2E2;
 }
 
 .activity{
     width:250px;
+    height: 340px;
     display:inline;
     float:left;
+    border-right: 1px solid #E2E2E2;
 }
 .practice{
-    width:725px;
+    width:722px;
+    height: 340px;
     display:inline;
     float:right;
+    border-left: 1px solid #E2E2E2;
 }
 
 .msg_prize_title{
     height:30px;
+    background: url(../images/public/bar_bg.gif) repeat-x;
+}
+
+.user_login_title{
+    height:30px;
+    background: url(../images/public/bar_bg.gif) repeat-x;
+}
+
+.user_login_title h2 {
+	padding-left: 26px;
+	overflow: hidden;
+	background: url(../images/public/person.gif) left center no-repeat;
+    display:inline;
+}
+
+.guild .user_login_title h2 {
+	background: url(../images/body_1/qq.jpg) left center no-repeat;
 }
 
 .more_notice{

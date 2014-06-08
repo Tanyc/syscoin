@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-  <title>比蛋-专业的广告游戏平台</title>
-  <load href='__CSS__/main.css' />
-  <load href='__CSS__/naviation.css' />
-  <load href='__CSS__/footer.css' />
+  <title>dingyongPrj</title>
+  <link rel="stylesheet" type="text/css" href="__CSS__/main_index.css" />
+  <link rel="stylesheet" type="text/css" href="__CSS__/naviation.css" />
+  <link rel="stylesheet" type="text/css" href="__CSS__/footer.css" />
   <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
@@ -50,43 +50,40 @@
     <div id="navi_bottom">
     	<div id="navi_bottom_content">
             <ul id="main_nav">
-                <li><a class="navibar_1" href="{:U('/index')}" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
+                <li><a href="#" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_2" href="{:U('/ad')}" target="_parent" onclick="doSomething(event);">广告体验</a></li>
+                <li><a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">广告体验</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_3" href="{:U('/buy')}" target="_parent" onclick="doSomething(event);">蛋蛋团购</a></li>
+                <li><a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">今日团购</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_4" href="{:U('/game')}" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
+                <li><a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_5" href="{:U('/activity')}" target="_parent" onclick="doSomething(event);">活动中心</a></li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">活动专区</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_6" href="{:U('/prize')}" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_7" href="{:U('/user')}" target="_parent" onclick="doSomething(event);">个人中心</a></li>
+                <li><a href="" target="_parent" onclick="doSomething(event);">个人中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_8" href="{:U('/glory')}" onclick="addfavorite()">晒奖</a></li>
+                <li><a href="#" onclick="addfavorite()">收藏</a></li>
             </ul>
             <ul class="main_navr">
-                <li><a class="navibar_11" href="{:U('/help')}" target="_parent" onclick="doSomething(event);">帮助</a></li>
+                <li><a href="/iphone/iphoneindex.aspx" target="_black" onclick="doSomething(event);">晒奖</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_10" href="{:U('/invest')}" target="_parent" onclick="doSomething(event);">推广有奖</a></li>
+                <li><a href="http://www.yy365.com/" target="_black" onclick="doSomething(event);">推广有奖</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_9" href="{:U('/bbs')}" target="_parent" onclick="doSomething(event);">讨论区</a></li>
+                <li><a class="sheader_red" href="/vip/vip_index.aspx" onclick="doSomething(event);">讨论区</a></li>
+                <li class="sheader_line">&nbsp;</li>
+                <li><a href="/activity/Activity.aspx" target="_parent" onclick="doSomething(event);">帮助</a></li>
             </ul>
     	</div>
     </div>
 </div>
-<style type="text/css">
-  .navibar_{$curID}{color: #ff0000; font-weight:bold;}
-</style>
+
 <!--------------------------------------------------->
 <div id="body_content">
 <!-- InstanceBeginEditable name="content" -->
     <div class="p01">
       <div class="guild">
-        <div class="user_login_title">
-          <h2>客服QQ</h2>
-        </div>
         <ul class="service">
           <li>
             企业QQ&nbsp;&nbsp;&nbsp;：
@@ -117,10 +114,7 @@
       </DIV>
 
       <div class="login">
-        <div class="user_login_title">
-          <h2>会员登录</h2>
-        </div>
-          <form name="form" method="post" action="login.php?act=login">
+        <form name="form" method="post" action="login.php?act=login">
           <table border="0" cellpadding="0" cellspacing="0">
             <tbody>
               <tr>
@@ -166,7 +160,94 @@
       <a href="">
         <img src="__PUBLIC__/images/body_1/step.jpg" alt=""></a>
     </div>
-        <div class="div_content">
+    <div class="div_content">
+      <div class="webmessage">
+        <div class="msg_prize_title">
+          <h2>网站公告</h2>
+          <a href="#" class="more_notice">更多&gt;&gt;</a>
+        </div>
+        <div class="notice_list">
+          <ul >
+            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                <a href="<?php echo U("__HOME__/Tpl/notice/".$vo['con_link']);?>"><?php echo ($vo["title"]); ?></a>
+              </li><?php endforeach; endif; else: echo "" ;endif; ?>
+          </ul>
+        </div>
+      </div>
+      <div class="prizes">
+        <div class="msg_prize_title">
+          <h2>热门奖品</h2>
+          <a href="#" class="more_notice">更多&gt;&gt;</a>
+        </div>
+        <div class="prizes_list">
+          <ul>
+            <li>
+              <div class="imgDiv">
+                <a href="">
+                  <img src="__IMAGES__/prize/201402131149381ba601.jpg" alt="" style="height:132px; width:160px;"></a>
+              </div>
+              <div class="name">
+                <a href="">iPod shuffle</a>
+              </div>
+              <div class="num">
+                兑换：
+                <span class="orange"> <b>530,000</b>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="imgDiv">
+                <a href="">
+                  <img src="__IMAGES__/prize/20140213114834047bfe.jpg" alt="" style="height:132px; width:160px;"></a>
+              </div>
+              <div class="name">
+                <a href="">苹果 MacBook</a>
+              </div>
+              <div class="num">
+                兑换：
+                <span class="orange"> <b>8,460,000</b>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="imgDiv">
+                <a href="">
+                  <img src="__IMAGES__/prize/20140213114707336208.jpg" alt="" style="height:132px; width:160px;"></a>
+              </div>
+              <div class="name">
+                <a href="">Bose SoundLink Bluetooth</a>
+              </div>
+              <div class="num">
+                兑换：
+                <span class="orange">
+                  <b>2,800,000</b>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="imgDiv">
+                <a href="">
+                  <img src="__IMAGES__/prize/20140213115614e3bce7.jpg" alt="" style="height:132px; width:160px;"></a>
+              </div>
+              <div class="name">
+                <a href="">佳能 600D 18-55</a>
+              </div>
+              <div class="num">
+                兑换：
+                <span class="orange">
+                  <b>5,250,000</b>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="div_content">
       <div class="activity">
         <div class="msg_prize_title">
           <h2>热门活动</h2>
@@ -174,11 +255,9 @@
         </div>
         <div class="notice_list">
           <ul >
-            <volist name="notice" id="vo">
-              <li>
-                <a href="{:U("/App/Modules/Home/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a>
-              </li>
-            </volist>
+            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                <a href="<?php echo U("/App/Modules/Home/Tpl/notice/".$vo['con_link']);?>"><?php echo ($vo["title"]); ?></a>
+              </li><?php endforeach; endif; else: echo "" ;endif; ?>
           </ul>
         </div>
       </div>
@@ -336,94 +415,6 @@
                 奖励：
                 <span class="orange">
                   <b>530,000</b>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="div_content">
-      <div class="webmessage">
-        <div class="msg_prize_title">
-          <h2>网站公告</h2>
-          <a href="#" class="more_notice">更多&gt;&gt;</a>
-        </div>
-        <div class="notice_list">
-          <ul >
-            <volist name="notice" id="vo">
-              <li>
-                <a href="{:U("__HOME__/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a>
-              </li>
-            </volist>
-          </ul>
-        </div>
-      </div>
-      <div class="prizes">
-        <div class="msg_prize_title">
-          <h2>热门奖品</h2>
-          <a href="#" class="more_notice">更多&gt;&gt;</a>
-        </div>
-        <div class="prizes_list">
-          <ul>
-            <li>
-              <div class="imgDiv">
-                <a href="">
-                  <img src="__IMAGES__/prize/201402131149381ba601.jpg" alt="" style="height:132px; width:160px;"></a>
-              </div>
-              <div class="name">
-                <a href="">iPod shuffle</a>
-              </div>
-              <div class="num">
-                兑换：
-                <span class="orange"> <b>530,000</b>
-                </span>
-              </div>
-            </li>
-
-            <li>
-              <div class="imgDiv">
-                <a href="">
-                  <img src="__IMAGES__/prize/20140213114834047bfe.jpg" alt="" style="height:132px; width:160px;"></a>
-              </div>
-              <div class="name">
-                <a href="">苹果 MacBook</a>
-              </div>
-              <div class="num">
-                兑换：
-                <span class="orange"> <b>8,460,000</b>
-                </span>
-              </div>
-            </li>
-
-            <li>
-              <div class="imgDiv">
-                <a href="">
-                  <img src="__IMAGES__/prize/20140213114707336208.jpg" alt="" style="height:132px; width:160px;"></a>
-              </div>
-              <div class="name">
-                <a href="">Bose SoundLink Bluetooth</a>
-              </div>
-              <div class="num">
-                兑换：
-                <span class="orange">
-                  <b>2,800,000</b>
-                </span>
-              </div>
-            </li>
-
-            <li>
-              <div class="imgDiv">
-                <a href="">
-                  <img src="__IMAGES__/prize/20140213115614e3bce7.jpg" alt="" style="height:132px; width:160px;"></a>
-              </div>
-              <div class="name">
-                <a href="">佳能 600D 18-55</a>
-              </div>
-              <div class="num">
-                兑换：
-                <span class="orange">
-                  <b>5,250,000</b>
                 </span>
               </div>
             </li>
