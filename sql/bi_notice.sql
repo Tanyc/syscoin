@@ -10,9 +10,6 @@ CREATE TABLE `bi_notice` (
 -- ----------------------------
 -- Records of bi_notice
 -- ----------------------------
-INSERT INTO `bi_notice` VALUES ('1', 'notice1', 'notice1.html','1400474180');
-INSERT INTO `bi_notice` VALUES ('2', 'notice2', 'notice2.html','1400474199');
-INSERT INTO `bi_notice` VALUES ('3', 'notice3', 'notice3.html','1400474280');
-INSERT INTO `bi_notice` VALUES ('4', 'notice4', 'notice4.html','1400474380');
-INSERT INTO `bi_notice` VALUES ('5', 'notice5', 'notice5.html','1400474480');
-INSERT INTO `bi_notice` VALUES ('6', 'notice6', 'notice6.html','1400474580');
+INSERT INTO `bi_notice` VALUES ('1', '关于用户首次兑奖的相关问题', 'notice1.html','1400474180');
+INSERT INTO `bi_notice` VALUES ('2', '端午狂欢，登录有奖', 'notice2.html','1400474199');
+INSERT INTO `bi_notice` VALUES ('3', '关于团购返利的相关公告', 'notice3.html','1400474280');

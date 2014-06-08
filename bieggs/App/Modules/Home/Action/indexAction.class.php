@@ -2,11 +2,14 @@
 
 class indexAction extends Action{
     public function index(){
-        $Model  =   D('Notice');
-        $this->assign('notice',$Model->getList());
+        $mNotice  =   D('Notice');
+        $this->assign('notice',$mNotice->getList());
         /***************************************/
-        $ModelPrize = D('Prize');
-        $this->assign('prize',$ModelPrize->getList(6,"id,prize_num,name,cost_eggs,swap_num"));
+        $mActivity  =   D('Activity');
+        $this->assign('activity',$mActivity->getList());
+        /***************************************/
+        $mPrize = D('Prize');
+        $this->assign('prize',$mPrize->getList(6,"id,prize_num,name,cost_eggs,swap_num"));
         $this->assign('curID',1);
 
         $this->display();

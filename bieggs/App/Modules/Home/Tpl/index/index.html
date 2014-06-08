@@ -144,7 +144,7 @@
                 <td class="checkbox">
                   <input name="tbKeep" type="checkbox" value="1">
                   <span>
-                    下次自动登录
+                    记住密码
                     <a href="resetpassword.php" target="_blank">忘记密码</a>
                   </span>
                 </td>
@@ -174,9 +174,9 @@
         </div>
         <div class="notice_list">
           <ul >
-            <volist name="notice" id="vo">
-              <li>
-                <a href="{:U("/App/Modules/Home/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a>
+            <volist name="activity" id="vo">
+              <li <eq name="vo[id] % 2" value="0">style="background:#f2f2f2"</eq>>
+                <a href="{:U('/App/Modules/Home/Tpl/notice/'.$vo['id'])}">{$vo.title}</a>
               </li>
             </volist>
           </ul>
@@ -352,8 +352,8 @@
         <div class="notice_list">
           <ul >
             <volist name="notice" id="vo">
-              <li>
-                <a href="{:U("__HOME__/Tpl/notice/".$vo['con_link'])}">{$vo.title}</a>
+              <li <eq name="vo[id] % 2" value="0">style="background:#f2f2f2"</eq>>
+                <a href="{:U('__HOME__/Tpl/notice/'.$vo['id'])}">{$vo.title}</a>
               </li>
             </volist>
           </ul>

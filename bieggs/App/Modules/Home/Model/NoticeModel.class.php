@@ -1,6 +1,6 @@
 <?php
 class NoticeModel extends Model {
-    public function getList($count=6){
+    public function getList($count=7){
         return $this->order('id DESC')->field(true)->limit($count)->select();
     }
 
