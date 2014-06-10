@@ -3,7 +3,6 @@
 	width:980px;
     margin: 12px auto auto;
     overflow:hidden;
-    border: 1px solid #E2E2E2;
 }
 
 /*页面中间*/
@@ -23,20 +22,21 @@ margin:0 auto;
 	margin-top: auto;
 	margin-right: auto;
 	margin-bottom: auto;
-	margin-left: 10px;
+	margin-left: 5px;
+	border: 1px solid #f1cb95;
 }
 .p01 {
 	margin: 0 auto;
 	padding: 0px;
 	width: 980px;
-	height: 280px;
+	height: 275px;
 	overflow: hidden;
 }
 .p01 .guild {
 	width: 200px;
 	float: left;
 	height: 273px;
-	border: 1px solid #e2e2e2;
+	border: 1px solid #f1cb95;
 }
 .p01 .guild ul.service {
 	padding: 40px 0px 0px 20px;
@@ -72,26 +72,17 @@ margin:0 auto;
 	color: rgb(0, 102, 204); font-family: "Tahoma","SimHei","MicroSoft YaHei"; font-size: 24px; font-weight: bold;
 }
 
-.p01 .step li {
-	width: 110px; padding-top: 20px; padding-left: 90px; float: left;
-}
-.p01 .step li.s1 {
-	width: 145px; padding-top: 12px; padding-left: 125px;
-}
-.p01 .step li a {
-	color: rgb(136, 136, 136);
-}
-.p01 .step li a:hover {
-	color: rgb(231, 0, 0); text-decoration: none;
+.step{
+	margin-top: 5px;
 }
 .p01 .focus {
 	margin: 0px 9px; border: 1px solid rgb(190, 215, 232); width: 510px; height: 275px; float: left; display: inline-block;
 }
 .p01 .login {
-	width: 246px;
+	width: 250px;
 	height: 273px;
 	float: right;
-	border: 1px solid #e2e2e2;
+	border: 1px solid #f1cb95;
 }
 .p01 .login table {
 	color: rgb(102, 102, 102); font-size: 14px; margin-top: 35px; margin-right: 10px; margin-left: 10px;
@@ -148,14 +139,14 @@ margin:0 auto;
 .div_content{
     overflow:hidden;
     margin-top:5px;
-    border: 1px solid #E2E2E2;
+    /*border: 1px solid #E2E2E2;*/
 }
 .webmessage{
     width:250px;
-    height:230px;
+    height:330px;
     display:inline;
     float:left;
-    border-right: 1px solid #E2E2E2;
+    border: 1px solid #f1cb95;
 }
 .msg_prize_title h2 {
 padding-left: 26px;
@@ -172,25 +163,25 @@ right: 10px;
 }
 .prizes{
     width:722px;
-    height: 433px;
+    height: 510px;
     display:inline;
     float:right;
-    border-left: 1px solid #E2E2E2;
+    border: 1px solid #f1cb95;
 }
 
 .activity{
     width:250px;
-    height: 433px;
+    height: 510px;
     display:inline;
     float:left;
-    border-right: 1px solid #E2E2E2;
+    border: 1px solid #f1cb95;
 }
 .practice{
     width:722px;
-    height: 340px;
+    height: 330px;
     display:inline;
     float:right;
-    border-left: 1px solid #E2E2E2;
+    border: 1px solid #f1cb95;
 }
 
 .msg_prize_title{
@@ -235,11 +226,14 @@ right: 10px;
     float:left;
     padding-left:10px;
     line-height:30px;
+    padding-top: 20px;
+    margin-left: 3px;
+    margin-top: 10px;
+    border: 1px solid #E2E2E2;
 }
 .prizes_list ul{
     margin-top:10px;
 }
 .prizes_list{
     padding-left:10px;
-/*    margin-left:10px;?*/
 }
