@@ -76,13 +76,55 @@ background: url(../images/ad/ad_tit_current.gif) no-repeat;
 }
 
 .body_content_r{
-    width:230px;
-    background-color:#00f;
+    width:225px;
     overflow:hidden;
     display: inline;
     float: right;
+    border: 1px solid #f1cb95;
 }
 
-.body_content_rt{width: 100%;height: 100px;background: #f00}
-.body_content_rm{width: 100%;height: 200px;background: #0f0}
-.body_content_rb{width: 100%;height: 350px;background: #00f}
+.n_g ul {
+margin-left: 5px;
+}
+
+.slider {
+width: 100%;
+padding: 0px;
+margin: 0 auto;
+}
+
+.login_ok p {
+position: relative;
+top: 20px;
+margin-bottom: 80px;
+left: 1px;
+width: 80%;
+}
+
+.slider li {
+padding: 5px 2px;
+border-bottom: 1px dashed #E2E2E2;
+overflow: hidden;
+width: 100%;
+height: 22px;
+line-height: 22px;
+}
+
+.person_center {
+    display: block;
+    width: 82px;
+    height: 20px;
+    position: absolute;
+    text-indent: -99999px;
+    background: url(../images/ad/person_center.gif) no-repeat;
+}
+
+.prize_center {
+    right: 0px;
+    display: block;
+    width: 82px;
+    height: 20px;
+    position: absolute;
+    text-indent: -99999px;
+    background: url(../images/ad/prize_center.gif) no-repeat;
+}

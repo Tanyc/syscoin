@@ -1,15 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
     <title>广告体验-专业的广告游戏平台</title>
-    <load href='__CSS__/naviation.css' />
-    <load href='__CSS__/ad.css' />
-    <load href='__CSS__/footer.css' />
+    <link rel="stylesheet" type="text/css" href="__CSS__/naviation.css" />
+    <link rel="stylesheet" type="text/css" href="__CSS__/ad.css" />
+    <link rel="stylesheet" type="text/css" href="__CSS__/footer.css" />
 
-    <load href='__JS__/jquery.js' />
-    <load href='__JS__/jquery.featureList-1.0.0.js' />
+    <script type="text/javascript" src="__JS__/jquery.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.featureList-1.0.0.js"></script>
     <script language="javascript">
     $(document).ready(function() {
         $.featureList(
@@ -63,34 +63,34 @@
     <div id="navi_bottom">
     	<div id="navi_bottom_content">
             <ul id="main_nav">
-                <li><a class="navibar_1" href="{:U('/index')}" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
+                <li><a class="navibar_1" href="<?php echo U('/index');?>" target="_parent" onclick="doSomething(event);">首&nbsp&nbsp页</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_2" href="{:U('/ad')}" target="_parent" onclick="doSomething(event);">广告体验</a></li>
+                <li><a class="navibar_2" href="<?php echo U('/ad');?>" target="_parent" onclick="doSomething(event);">广告体验</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_3" href="{:U('/buy')}" target="_parent" onclick="doSomething(event);">蛋蛋团购</a></li>
+                <li><a class="navibar_3" href="<?php echo U('/buy');?>" target="_parent" onclick="doSomething(event);">蛋蛋团购</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_4" href="{:U('/game')}" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
+                <li><a class="navibar_4" href="<?php echo U('/game');?>" target="_parent" onclick="doSomething(event);">游戏竞猜</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_5" href="{:U('/activity')}" target="_parent" onclick="doSomething(event);">活动中心</a></li>
+                <li><a class="navibar_5" href="<?php echo U('/activity');?>" target="_parent" onclick="doSomething(event);">活动中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_6" href="{:U('/prize')}" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
+                <li><a class="navibar_6" href="<?php echo U('/prize');?>" target="_parent" onclick="doSomething(event);">兑换中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_7" href="{:U('/user')}" target="_parent" onclick="doSomething(event);">个人中心</a></li>
+                <li><a class="navibar_7" href="<?php echo U('/user');?>" target="_parent" onclick="doSomething(event);">个人中心</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_8" href="{:U('/glory')}" onclick="addfavorite()">晒奖</a></li>
+                <li><a class="navibar_8" href="<?php echo U('/glory');?>" onclick="addfavorite()">晒奖</a></li>
             </ul>
             <ul class="main_navr">
-                <li><a class="navibar_11" href="{:U('/help')}" target="_parent" onclick="doSomething(event);">帮助</a></li>
+                <li><a class="navibar_11" href="<?php echo U('/help');?>" target="_parent" onclick="doSomething(event);">帮助</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_10" href="{:U('/invest')}" target="_parent" onclick="doSomething(event);">推广有奖</a></li>
+                <li><a class="navibar_10" href="<?php echo U('/invest');?>" target="_parent" onclick="doSomething(event);">推广有奖</a></li>
                 <li class="sheader_line">&nbsp;</li>
-                <li><a class="navibar_9" href="{:U('/bbs')}" target="_parent" onclick="doSomething(event);">讨论区</a></li>
+                <li><a class="navibar_9" href="<?php echo U('/bbs');?>" target="_parent" onclick="doSomething(event);">讨论区</a></li>
             </ul>
     	</div>
     </div>
 </div>
 <style type="text/css">
-  .navibar_{$curID}{color: #ff0000; font-weight:bold;}
+  .navibar_<?php echo ($curID); ?>{color: #ff0000; font-weight:bold;}
 </style>
 <!--------------------------------------------------->
 <div id="body_content">
