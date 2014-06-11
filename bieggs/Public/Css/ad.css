@@ -32,7 +32,7 @@
 
 div#feature_list {width: 740px;height: 180px;overflow: hidden;position: relative;margin:0 auto;}
 div#feature_list ul {position: absolute;top: 0;list-style: none;    padding: 0;margin: 0;}
-ul#tabs {left: 0;z-index: 2;width: 320px; background:url(http://cache.adm.cnzz.net/ad_images/2012/2012-06-12/20120612145948-8iFjNFOL74.gif)}
+ul#tabs {left: 0;z-index: 2;width: 278px; background:url(../images/ad/tab_bg.gif)}
 ul#tabs li {font-size: 12px;font-family: Arial;}
 ul#tabs li h3{margin: 0;    padding: 6px 0 5px 0;font-size: 15px;text-transform: uppercase; font-family:"微软雅黑"; color:#959595}
 ul#tabs li img {padding: 2px;border: none;float: left;margin: 8px; width:32px; height:32px}
@@ -141,6 +141,7 @@ line-height: 22px;
     line-height: 22px;
 }
 
-.niu_list li a{
-    float: right;
+ul#tabs li a.current {
+background: url('../images/ad/tab-current.gif') repeat-x;
+color: #FFF;
 }

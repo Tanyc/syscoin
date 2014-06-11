@@ -10,7 +10,7 @@
 
     <load href='__JS__/jquery.js' />
     <load href='__JS__/jquery.featureList-1.0.0.js' />
-    <script language="javascript">
+<script language="javascript">
     $(document).ready(function() {
         $.featureList(
             $("#tabs li a"),
@@ -114,7 +114,7 @@
                     </li>
 
                     <li>
-                        <a href="http://www.aoyene.cc/profit.php#" class="current">
+                        <a href="http://www.aoyene.cc/profit.php#" class="">
                             <img src="__IMAGES__/ad/applications.png">
                             <h3>test3</h3>
                             <span>test333333</span>
@@ -152,27 +152,22 @@
                     </div>
                     <div class="body_content_id_list">
                         <ul class="list_ad_index" id="eui_tab">
-
-
-                        <switch name="tab" >
-                        <case value="2">输出内容2</case>
-                        <case value="3">输出内容3</case>
-                        <default />
                             <volist name="tiyan" id="vo">
-                                <li>
-                                    <a title="{$vo.name}" href="adtask.php?adid=48" target="_blank">
-                                        <img src="__IMAGES__/ad/tiyan/{$vo.pic}" width="152" height="67">
-                                        <span>
-                                            {$vo.name}
-                                            <img src="__IMAGES__/ad/new.jpg" alt="新活动，待体验"></span>
-                                        <span>
-                                            奖金蛋：{$vo.give_eggs}
-                                            <img src="images/star.png" width="14" height="14"></span>
-                                    </a>
-                                </li>
+                                    <li>
+                                        <a title="{$vo.name}" href="adtask.php?adid=48" target="_blank">
+                                            <img src="__IMAGES__/ad/tiyan/{$vo.pic}" width="152" height="67">
+                                            <span>
+                                                {$vo.name}
+                                                <img src="__IMAGES__/ad/new.jpg">
+                                            </span>
+                                            <span>
+                                                奖<br>金蛋：{$vo.give_eggs}
+                                                <img src="__IMAGES__/public/egg.gif" width="14" height="14">
+                                            </span>
+                                        </a>
+                                    </li>
                             </volist>
-                        </switch>
-                    </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -420,21 +415,6 @@
                         <tbody>
                             <tr>
                                 <td width="100%" height="40" align="center" valign="bottom" background="__IMAGES__/ad/niu_person.png">
-
-                                    <script language="javascript" type="text/javascript">
-//<![CDATA[
-function tabit(tabName,btnId,tabNumber)
-{
-for(i=0;i<tabNumber;i++)
-{
-document.getElementById(tabName+"_div"+i).style.display = "none";
-document.getElementById(tabName+"_btn"+i).className = tabName+"_taboff";
-}
-document.getElementById(tabName+"_div"+btnId).style.display = "block";
-document.getElementById(tabName+"_btn"+btnId).className = tabName+"_tabon";
-}
-//]]></script>
-
                                     <table width="175" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:1px">
                                         <tbody>
                                             <tr>
@@ -457,9 +437,9 @@ document.getElementById(tabName+"_btn"+btnId).className = tabName+"_tabon";
                                                         <img src="/images/icons/icon7.jpg">
                                                         1001245
                                                     </span>
-                                                    <a href="/user_detail.php?uid=1082313" target="_blank">
-                                                        35,854,854
-                                                        <img src="/images/vip_6.gif" align="absmiddle" border="0"></a>
+                                                    <a href="/user_detail.php?uid=1104616" target="_blank" style="color: #c30000;font-weight: bold; margin-left:60px">
+                                                        15,159,962
+                                                        <img src="__IMAGES__/public/egg.gif" align="absmiddle" border="0"></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -472,9 +452,9 @@ document.getElementById(tabName+"_btn"+btnId).className = tabName+"_tabon";
                                                         <img src="/images/icons/icon7.jpg">
                                                         1873372
                                                     </span>
-                                                    <a href="/user_detail.php?uid=1104616" target="_blank">
+                                                    <a href="/user_detail.php?uid=1104616" target="_blank" style="color: #c30000;font-weight: bold; margin-left:60px">
                                                         31,159,962
-                                                        <img src="/images/vip_6.gif" align="absmiddle" border="0"></a>
+                                                        <img src="__IMAGES__/public/egg.gif" align="absmiddle" border="0"></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -485,6 +465,25 @@ document.getElementById(tabName+"_btn"+btnId).className = tabName+"_tabon";
                     </table>
                 </div>
             </div>
+<script language="javascript" type="text/javascript">
+    function tabit(tabName,btnId,tabNumber){
+        for(i=0;i<tabNumber;i++){
+            document.getElementById(tabName+"_div"+i).style.display = "none";
+            var etab = document.getElementById(tabName+"_btn"+i);
+            etab.style.fontWeight = "";
+            etab.style.color = "";
+        }
+        document.getElementById(tabName+"_div"+btnId).style.display = "block";
+        document.getElementById(tabName+"_btn"+btnId).className = tabName+"_tabon";
+
+        var tab = document.getElementById(tabName+"_btn"+btnId);
+        tab.style.fontWeight = "bold";
+        tab.style.color = "#ff0000";
+    }
+</script>
+<style type="text/css">
+/*  #tsnews_btn1{color: #ff0000; font-weight:bold;}*/
+</style>
             <!-- InstanceEndEditable -->
 </div>
     
