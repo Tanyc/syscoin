@@ -1,7 +1,7 @@
 <?php
 class prizeAction extends Action{
     public function index(){
-    	$this->assign('curID',6);
+    	$this->assign('PAGE_CURID',6);
         $this->display();
     }
 }

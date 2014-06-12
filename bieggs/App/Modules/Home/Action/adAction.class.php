@@ -1,30 +1,23 @@
 <?php
 
-class adAction extends Action{
+class adAction extends adComAction{
     public function index(){
-    	$this->assign('curID',2);
-
-        $tiyan = D("Tiyan");
-        $this->assign('tiyan',$tiyan->getTiyanList());
-
+        $M_TAB = 1;
+        $this->assign('db_tiyan',$this->tiyan->getListByTab($M_TAB));
         $this->display();
     }
 
     public function play(){
-    	$this->assign('curID',2);
-    	$this->assign('tab',2);
-
-        $tiyan = D("Tiyan");
-        $this->assign('tiyan',$tiyan->getShiwanList());
+        $M_TAB = 2;
+    	$this->assign('m_tab',$M_TAB); //tab页面
+        $this->assign('db_tiyan',$this->tiyan->getListByTab($M_TAB));
         $this->display('index');
     }
 
     public function check(){
-    	$this->assign('curID',2);
-    	$this->assign('tab',3);
-
-        $tiyan = D("Tiyan");
-        $this->assign('tiyan',$tiyan->getDiaochaList());
+        $M_TAB = 3;
+    	$this->assign('m_tab',$M_TAB); //tab页面
+        $this->assign('db_tiyan',$this->tiyan->getListByTab($M_TAB));
         $this->display('index');
     }
 

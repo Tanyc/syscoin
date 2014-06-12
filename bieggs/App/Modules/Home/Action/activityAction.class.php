@@ -2,7 +2,7 @@
 
 class activityAction extends Action{
     public function index(){
-    	$this->assign('curID',5);
+    	$this->assign('PAGE_CURID',5);
         $this->display();
     }
 

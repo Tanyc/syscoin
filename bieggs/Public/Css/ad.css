@@ -13,7 +13,6 @@
 
 #feature_list{
     height: 200px;
-    background-color:#ff0;
     overflow:hidden;
     display: inline;
     float: left;
@@ -87,7 +86,7 @@ background: url(../images/ad/ad_tit_current.gif) no-repeat;
 margin-left: 5px;
 }
 
-.slider {
+#slider {
 width: 100%;
 padding: 0px;
 margin: 0 auto;
@@ -100,11 +99,10 @@ margin: 0 auto;
 position: relative;
 top: 20px;
 margin-bottom: 80px;
-left: 1px;
 width: 80%;
 }
 
-.slider li {
+#slider li {
 padding: 5px 2px;
 border-bottom: 1px dashed #E2E2E2;
 overflow: hidden;
@@ -112,6 +110,10 @@ width: 100%;
 height: 22px;
 line-height: 22px;
 }
+
+.red a{color: #ff1000; font-weight: bold;}
+
+.blue a{color: #0000ff}
 
 .person_center {
     display: block;
@@ -143,5 +145,5 @@ line-height: 22px;
 
 ul#tabs li a.current {
 background: url('../images/ad/tab-current.gif') repeat-x;
-color: #FFF;
+color: #ff0000;
 }

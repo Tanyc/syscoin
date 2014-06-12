@@ -1,17 +1,17 @@
 <?php
 class gameAction extends Action{
     public function index(){
-    	$this->assign('curID',4);
+    	$this->assign('PAGE_CURID',4);
         $this->display();
     }
 
     public function pg310(){
-    	$this->assign('curID',4);
+    	$this->assign('PAGE_CURID',4);
         $this->display();
     }
 
     public function pgstar(){
-    	$this->assign('curID',4);
+    	$this->assign('PAGE_CURID',4);
         $this->display();
     }
 }

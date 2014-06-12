@@ -17,3 +17,7 @@ INSERT INTO `bi_tiyan` VALUES ('7', '博雅测试', '280', 'tiyan.jpg','2');
 INSERT INTO `bi_tiyan` VALUES ('8', '博雅侧四十四', '230', 'tiyan.jpg','3');
 INSERT INTO `bi_tiyan` VALUES ('9', '博雅事实上实施', '245', 'tiyan.jpg','3');
 INSERT INTO `bi_tiyan` VALUES ('10', '博雅vv阿三', '265', 'tiyan.jpg','3');
+
+INSERT INTO `bi_tiyan` VALUES ('11', '赠品试用赚蛋', '7000', 'slider1.png','4');
+INSERT INTO `bi_tiyan` VALUES ('12', '竞猜游戏竞猜赚蛋', '1000', 'slider2.png','4');
+INSERT INTO `bi_tiyan` VALUES ('13', '新人任务赚蛋', '2000', 'slider3.png','4');

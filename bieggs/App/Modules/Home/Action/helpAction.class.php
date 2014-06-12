@@ -2,7 +2,7 @@
 
 class helpAction extends Action{
     public function index(){
-    	$this->assign('curID',11);
+    	$this->assign('PAGE_CURID',11);
         $this->display();
     }
 

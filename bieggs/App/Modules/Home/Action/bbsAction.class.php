@@ -2,7 +2,7 @@
 
 class bbsAction extends Action{
     public function index(){
-    	$this->assign('curID',9);
+    	$this->assign('PAGE_CURID',9);
         $this->display();
     }
 
