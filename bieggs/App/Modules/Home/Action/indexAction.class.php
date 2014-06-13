@@ -1,6 +1,6 @@
 <?php
 
-class indexAction extends Action{
+class indexAction extends comAction{
     public function index(){
         $mNotice  =   D('Notice');
         $this->assign('notice',$mNotice->getList());

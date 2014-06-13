@@ -5,9 +5,9 @@
 <!-- InstanceBeginEditable name="doctitle" -->
   <title>310-专业的广告游戏平台</title>
   <load href='__CSS__/naviation.css' />
-  <load href='__CSS__/com.css' />
   <load href='__CSS__/pg310.css' />
   <load href='__CSS__/footer.css' />
+  <load href='__CSS__/com.css' />
 
   <script language="javascript" type="text/javascript">
     function copyToClipBoard() {
@@ -194,7 +194,33 @@
           </div>
         </div>
       </div>
-      <load href='__JS__/game/textrun.js' />
+<script type="text/javascript">
+    var FeedData = {title:'蛋友<a href="/FriendInfor/FriendPrize.aspx?userid=8764495">__USERID__</a>兑换了<a href="/prize/prizeDetail.aspx?ISSUE=ZC0266">__P_NAME__</a>',datatype:'奖品',time:'__TIME__'};
+    var msg = "";
+    var speed=40; //数字越大速度越慢 20
+    var tab=document.getElementById("demo"); 
+    var tab1=document.getElementById("demo1"); 
+    var tab2=document.getElementById("demo2"); 
+    var MyMar = null;
+    function Marquee(){ 
+        if(tab2.offsetWidth-tab.scrollLeft<=0) {
+            tab.scrollLeft -= tab1.offsetWidth;
+        }else{ 
+            tab.scrollLeft++; 
+        } 
+    }
+    tab.onmouseover=function() {clearInterval(MyMar)}; 
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)}; 
+    <volist name="db_dj_slider" id="vo">
+        var user_id = "{$vo.user_id}"; 
+        var p_name = "{$vo.p_name}"; 
+        var time = "{$vo.time}"; 
+        msg += "<span>【" + FeedData.datatype + "】</span>" + FeedData.title.replace("__USERID__",user_id).replace("__P_NAME__",p_name) +" " + FeedData.time.replace("__TIME__",time) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    </volist> 
+    tab1.innerHTML = msg;
+    tab2.innerHTML = msg;
+    MyMar=setInterval(Marquee,speed);
+</script>
     </div>
     <div class=game_content>
       <div class=game_tab>
