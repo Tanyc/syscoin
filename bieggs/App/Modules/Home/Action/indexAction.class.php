@@ -10,7 +10,7 @@ class indexAction extends comAction{
         /***************************************/
         $mPrize = D('Prize');
         $this->assign('prize',$mPrize->getList(6,"id,prize_num,name,cost_eggs,swap_num"));
-        $this->assign('curID',1);
+        $this->assign('PAGE_CURID',1);
 
         $this->display();
     }

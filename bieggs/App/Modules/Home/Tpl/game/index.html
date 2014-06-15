@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
   <title>幸运28-专业的广告游戏平台</title>
   <load href='__CSS__/game.css' />
   <load href='__JS__/game/AJax.js' />
@@ -108,18 +109,16 @@
     }
 </script>
   <!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
 </head>
 
 <body>
-<include file="public:header"/>
-<style type="text/css">
-  .navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}
-</style>
-<!--------------------------------------------------->
-<div id="body_content">
-<!-- InstanceBeginEditable name="content" -->
+  <include file="public:header"/>
+  <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+  <!--------------------------------------------------->
+  <div id="body_content">
+    <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
     <div class=game_content>
       <div class=game_tab>
@@ -138,8 +137,7 @@
           </div>
         </div>
       </div>
-        <div class="line">
-        </div>
+      <div class="line"></div>
       <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FCF8DA;clear:both;">
         <input type="hidden" id="soundshow" name="soundshow" value="2">
         <input type="hidden" id="reloadshow" name="reloadshow" value="">
@@ -240,26 +238,28 @@
             <td width="11%">中奖人数</td>
             <td width="10%">参与</td>
           </tr>
-          <tr align="center" height="28px" bgcolor="#fff">
-            <td class="panel_td1">628963</td>
-            <td class="panel_td2">05-04 11:50</td>
-            <td class="panel_td3">
-              <script language="javascript" type="text/javascript">chkResult('', '-1');</script>
-              -
-            </td>
-            <td class="panel_td4">52</td>
-            <td class="panel_td5">
-              65,793
-              <img src="__IMAGES__/game/egg.gif"></td>
-            <td class="panel_td6">
-              <script language="javascript" type="text/javascript">chkwin('0', '549499');</script>
-              0
-            </td>
-            <td class="panel_td7">
-              <script language="javascript" type="text/javascript">chkStatus('0', '549499', '0');</script>
-              <a class="a0" href="/play/pg28Insert.aspx?LID=549499" target="_top">投注</a>
-            </td>
-          </tr>
+
+
+          <volist name="db_pc28" id="vo">
+            <tr align="center" height="28px" bgcolor="#fff">
+              <td class="panel_td1">{$vo.id}</td>
+              <td class="panel_td2">{$vo.open_time}</td>
+              <td class="panel_td3">
+                <script language="javascript" type="text/javascript">chkResult({$vo.open_num}, '-1');</script>
+                -
+              </td>
+              <td class="panel_td4">{$vo.all_down}</td>
+              <td class="panel_td5">
+                {$vo.all_eggs}
+                <img src="__IMAGES__/public/egg.gif"></td>
+              <td class="panel_td6">
+                {$vo.open_people}
+              </td>
+              <td class="panel_td7">
+                <script language="javascript" type="text/javascript">chkStatus('0', '549499', '0');</script>
+              </td>
+            </tr>
+          </volist>
           <tr align="center" bgcolor="#FFFFFF">
             <td height="28" colspan="7" bgcolor="#FFFFFF">
               <script language="javascript" type="text/javascript">
@@ -336,8 +336,8 @@
         </tbody>
       </table>
     </div>
-    <!-- InstanceEndEditable -->
-</div>
-<include file="public:footer"/>
+    <!-- InstanceEndEditable --> </div>
+  <include file="public:footer"/>
 </body>
-<!-- InstanceEnd --></html>
+  <!-- InstanceEnd -->
+</html>

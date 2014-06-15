@@ -1,10 +1,1 @@
 #body_content{width:980px;margin: 12px auto auto;overflow:hidden;border: 1px solid #f1cb95;}
-.dynamic_msg{width: 978px;height: 30px;border: 1px solid #E2E2E2;}
-.dynamic_msg_l{width: 430px;float: left; display: inline;padding-top:4px; padding-right: 4px;overflow: hidden;}
-.dynamic_msg_r{width: 488px;float: right;display: inline;padding-top:5px;padding-left: 48px;background: url('../images/game/dt_bg.gif') no-repeat;}
-.dynamic_msg_r a{color: #00f}
-.dynamic_msg_r a:hover{color: #f00}
-
-#demo{overflow: hidden;white-space: nowrap;width:478px;}
-#indemo{float: left;width: 800%;}
-#demo1, #demo2{float: left;}

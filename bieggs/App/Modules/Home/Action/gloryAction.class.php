@@ -1,5 +1,5 @@
 <?php
-class gloryAction extends Action{
+class gloryAction extends comAction{
     public function index(){
     	$this->assign('PAGE_CURID',8);
         $this->display();
