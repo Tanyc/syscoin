@@ -18,14 +18,18 @@
 </script>
 
   <script language="javascript" type="text/javascript">
-    function chkResult(v, val) {
-        if (val != "-1") {
-            val = val - 10;
-            document.write(v + "<img src='/img/xnbc/number_" + val + ".gif' />");
-        }
-        else {
-            document.write("-");
-        }
+    function chkResult(nums) {
+      if("" == nums || null == nums){
+        document.write("-");
+      }else{
+        nums = nums.toString();
+        var f_num = nums.charAt(0);
+        var s_num = parseInt(nums.charAt(1));
+        var t_num = parseInt(nums.charAt(2));
+        f_num = ("-" == f_num) ? 0 : parseInt(f_num);
+        var strR = f_num + " + " + s_num + " + " + t_num + " = ";
+        document.write(strR + "<img src='__IMAGES__/game/nums/number_" + (f_num + s_num + t_num) + ".gif' />");
+      }
     }
 
     function chkStatus(status, lid, ISLOTTERY) {
@@ -241,22 +245,26 @@
 
 
           <volist name="db_pc28" id="vo">
-            <tr align="center" height="28px" bgcolor="#fff">
+            <tr align="center" height="28px" bgcolor="#fff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>>
               <td class="panel_td1">{$vo.id}</td>
               <td class="panel_td2">{$vo.open_time}</td>
               <td class="panel_td3">
-                <script language="javascript" type="text/javascript">chkResult({$vo.open_num}, '-1');</script>
-                -
+                <script language="javascript" type="text/javascript">
+                  //document.write(<?php echo ("" + $vo["open_num"]); php?>);
+                  chkResult(<?php echo ("" + $vo["open_num"]); php?>);
+                </script>
               </td>
               <td class="panel_td4">{$vo.all_down}</td>
               <td class="panel_td5">
                 {$vo.all_eggs}
                 <img src="__IMAGES__/public/egg.gif"></td>
               <td class="panel_td6">
-                {$vo.open_people}
+                <a href="www.baidu.com" style="color:#f00">{$vo.open_people}</a>
               </td>
               <td class="panel_td7">
-                <script language="javascript" type="text/javascript">chkStatus('0', '549499', '0');</script>
+              <if condition='$vo.open_num eq ""'> <a href="www.baidu.com" style="color:#f00">投注</a>
+                <else /> <a href="www.baidu.com">已开奖</a>
+                </if>
               </td>
             </tr>
           </volist>
