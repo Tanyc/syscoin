@@ -1,0 +1,44 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      .game_tab{width: 100%; height: 22px; margin: 5px;}
+      .title_game {font-size: 14px;text-align: left;padding-top: 0px;padding-left: 3px;padding-right: 5px;width: 950px;height: 27px;font-weight: bold;overflow: hidden;}
+      .line{width: 100%;height: 8px;margin-bottom: 5px;}
+    </style>
+</head>
+<div class="game_tab">
+  <div style="width:970px">
+    <div class="title_game" style="float:left; width:610px;">
+      <a href="/bidan/bieggs/Home/game">
+        <img src="/bidan/bieggs/Public/Images/game/pub/ico_6.gif" width="98" height="27" border="0"></a>
+      <a href="/bidan/bieggs/Home/game/pg310">
+        <img src="/bidan/bieggs/Public/Images/game/pub/ico_26.gif" width="98" height="27" border="0"></a>
+      <a href="/bidan/bieggs/Home/game/pgstar">
+        <img src="/bidan/bieggs/Public/Images/game/pub/ico_29.gif" width="98" height="27" border="0"></a>
+    </div>
+    <div style=" float:right; width:330px; height:25px;vertical-align:middle; line-height:25px;text-align:right">
+      <a href="/nbbs/bbsPost.aspx?PostID=3864534&amp;topicid=4&amp;ret=1" target="_blank" style="color:#3f3f3f;">幸运28启用北京快乐8第三方开奖数据&gt;&gt;&gt;</a>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+</div>
+<!--two ways show tab-->
+<!-- <div class="line"
+  <if condition="$GAME_TAB eq 1"> 
+    style='background:url("__IMAGES__/game/orange-line.gif"); x-repeat;'
+  <elseif condition="$GAME_TAB eq 2"/>
+    style='background:url("__IMAGES__/game/green-line.gif"); x-repeat;'
+  <else />
+    style='background:url("__IMAGES__/game/red-line.gif"); x-repeat;'
+  </if>
+></div> -->
+<?php 
+  if (1 == $GAME_TAB) {
+    $tab_item = "orange-line.gif";
+  } elseif (2 == $GAME_TAB) {
+    $tab_item = "green-line.gif";
+  } else{
+    $tab_item = "red-line.gif";
+  }
+ ?>
+<div class="line" style='background:url("__IMAGES__/game/{$tab_item}"); x-repeat;'></div>

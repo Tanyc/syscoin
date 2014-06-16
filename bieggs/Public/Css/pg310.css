@@ -7,35 +7,8 @@ text-decoration: none;
 a:hover {color:#00f;}
 .game_content{
     width: 978;
-    height: 700px;
     border: 1px solid #E2E2E2;
 }
-
-.game_tab{
-    width: 100%;
-    height: 22px;
-    margin: 5px;
-}
-
-.line{
-     width: 100%;
-     height: 8px;
-    background:url("../images/game/green-line.gif"); x-repeat;
-    margin-bottom: 5px;
-}
-
-.title_game {
-font-size: 14px;
-text-align: left;
-padding-top: 0px;
-padding-left: 3px;
-padding-right: 5px;
-width: 950px;
-height: 27px;
-font-weight: bold;
-overflow: hidden;
-}
-
 .white {
 color: #fff;
 }

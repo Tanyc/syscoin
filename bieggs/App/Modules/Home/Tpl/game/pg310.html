@@ -1,231 +1,138 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
   <title>310-专业的广告游戏平台</title>
   <load href='__CSS__/pg310.css' />
-
-  <script language="javascript" type="text/javascript">
-    function copyToClipBoard() {
-        var clipBoardContent = '';
-        clipBoardContent += "http://www.pceggs.cn/pgComDefault.aspx?ID=0"; 
-        window.clipboardData.setData("Text", clipBoardContent);
-        alert("地址已经复制到粘贴板!");
-    }
-</script>
-
-  <script language="javascript" type="text/javascript">
-    function chkResult(v, val) {
-        if (val != "-1") {
-            val = val - 10;
-            document.write(v + "<img src='/img/xnbc/number_" + val + ".gif' />");
-        }
-        else {
-            document.write("-");
-        }
-    }
-
-    function chkStatus(status, lid, ISLOTTERY) {
-        //状态：0投注中，1暂停投注等待开奖，2已开奖            
-        switch (status) {
-            case '0':{
-                    if (ISLOTTERY == "1") {
-                        document.write("<a class='a0' href='/play/pg28Insert.aspx?LID=" + lid + "' target='_top'>已投注</a>")
-                    }else {
-                        document.write("<a class='a0' href='/play/pg28Insert.aspx?LID=" + lid + "' target='_top'>投注</a>")
-                    }
-                    break;
-                }
-            case '1':{
-                    document.write("<a href='/play/pgMy28Detail.aspx?LID=" + lid + "' target='_top'>开奖中</a>")
-                    break;
-                }
-            case '2':{
-                    document.write("<a href='/play/pgMy28Detail.aspx?LID=" + lid + "' target='_top'>已开奖</a>")
-                    break;
-                }
-        }
-    }
-    function chkwin(val, lid) {
-        if (val != '0') {
-            document.write("<a class='a0' href='/play/pg28Result.aspx?LID=" + lid + "' target='_top' title='查看中奖人名单'>" + val + " </a>");
-        }else {
-            document.write("0");
-        }
-    }
-</script>
-  <script language="javascript" type="text/javascript">
-
-    function transStr(str) {
-        str = str.toString()
-        var begin = "";
-        var after = "";
-        var l;
-        var str2 = "";
-        if (str.indexOf(".") > 0) {
-            begin = str.substring(0, str.indexOf("."));
-            after = str.substring(str.indexOf("."), str.length);
-        }else {
-            begin = str;
-        }
-        l = begin.length / 3;
-        if (l > 1) {
-            for (var i = 0; i < l; ) {
-                str2 = "," + begin.substring(begin.length - 3, begin.length) + str2;
-                begin = begin.substring(0, begin.length - 3);
-                l = begin.length / 3;
-            }
-            if (after.length < 3) {
-                str2 = begin + str2 + after;
-            } else {
-                str2 = begin + str2 + after
-            }
-            return str2.substring(1);
-        }else {
-            if (after.length < 3) {
-                return str;
-            } else {
-                return str;
-            }
-        }
-    }
-
-    function SGMoney(Sm, Gm) {
-        if (Sm == null || Sm == 0) {
-            document.write("-");
-        }else {
-            var val = Gm - Sm;
-            if (val >= 0) {
-                val = transStr(val);
-                document.write("<span style='color:red'>" + val + "</span><img src='__IMAGES__/game/egg.gif'/>");
-            }else {
-                val = transStr(Math.abs(val));
-                document.write("<span style='color:#1B5E00'>-" + val + "</span><img src='__IMAGES__/game/egg.gif'/>");
-            }
-        }
-    }
-</script>
+  <load href='__JS__/game/game.js' />
   <!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
 </head>
 
 <body>
-<include file="public:header"/>
-<style type="text/css">
-  .navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}
-</style>
-<!--------------------------------------------------->
-<div id="body_content">
-<!-- InstanceBeginEditable name="content" -->
+  <include file="public:header"/>
+  <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+  <!--------------------------------------------------->
+  <div id="body_content">
+    <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
+    <style type="text/css">
+    .dynamic_msg {border: 1px solid #248300;}
+    #body_content {border: 1px solid #248300;}
+    </style>
     <div class=game_content>
-      <div class=game_tab>
-        <div style="width:970px">
-          <div class="title_game" style="float:left; width:610px;">
-            <a href="{:U('Home/game')}">
-              <img src="__IMAGES__/game/pub/ico_6.gif" width="98" height="27" border="0"></a>
-            <a href="{:U('Home/game/pg310')}">
-              <img src="__IMAGES__/game/pub/ico_26.gif" width="98" height="27" border="0"></a>
-            <a href="{:U('Home/game/pgstar')}">
-              <img src="__IMAGES__/game/pub/ico_29.gif" width="98" height="27" border="0"></a>
-          </div>
-          <div style=" float:right; width:330px; height:25px;vertical-align:middle; line-height:25px;text-align:right">
-            <a href="/nbbs/bbsPost.aspx?PostID=3864534&amp;topicid=4&amp;ret=1" target="_blank" style="color:#3f3f3f;">310游戏由各种体育赛事实时开奖&gt;&gt;&gt;</a>
-            &nbsp;&nbsp;
-          </div>
-        </div>
-      </div>
-        <div class="line">
-        </div>
-        <table width="978" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="24cf00">
-          <tbody>
-            <tr>
-              <td width="50%" height="24" align="left" valign="middle" style="padding-left:10px"> <b><a href="pg310.aspx?typeid=1" class="abt12_1">310竞技比赛</a></b> 
-                <span class="wh12">|</span>
-                <a href="Pg310Europe5match.aspx" class="abt12_1">
-                  <img src="__IMAGES__/game/new28.gif">五大联赛专题</a>
-                <span class="wh12">|</span>
-                <a href="Pg310WorldCup.aspx" class="abt12_1">2010世界杯专题</a>
-              </td>
-              <td width="50%" align="right" valign="middle" style="padding-right:10px">
-                &nbsp;
-                <a href="pgMy310.aspx" target="_parent" class="abt12_1">我的投注</a>
-                <span class="wh12">|</span>
-                <a href="pg310Help.aspx" target="_blank" class="abt12_1">310竞猜帮助</a>
-                <span class="wh12">|</span>
-                <a href="javascript:ShowMsgo.show('/adcomate/pggetgoldeggsnew.aspx',503,546)" target="_parent" class="abt12_1">领取救济金</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <include file="public:gametab"/>
+      <table width="978" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="24cf00">
+        <tbody>
+          <tr>
+            <td width="50%" height="24" align="left" valign="middle" style="padding-left:10px"> <b><a href="pg310.aspx?typeid=1" class="abt12_1">310竞技比赛</a></b> 
+              <span class="wh12">|</span>
+              <a href="Pg310Europe5match.aspx" class="abt12_1">
+                <img src="__IMAGES__/game/new28.gif">五大联赛专题</a>
+              <span class="wh12">|</span>
+              <a href="Pg310WorldCup.aspx" class="abt12_1">2010世界杯专题</a>
+            </td>
+            <td width="50%" align="right" valign="middle" style="padding-right:10px">
+              &nbsp;
+              <a href="pgMy310.aspx" target="_parent" class="abt12_1">我的投注</a>
+              <span class="wh12">|</span>
+              <a href="pg310Help.aspx" target="_blank" class="abt12_1">310竞猜帮助</a>
+              <span class="wh12">|</span>
+              <a href="javascript:ShowMsgo.show('/adcomate/pggetgoldeggsnew.aspx',503,546)" target="_parent" class="abt12_1">领取救济金</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        <table width="978" border="0" cellpadding="0" cellspacing="1" bgcolor="#248301" style="margin-left:auto; margin-right:auto; color:Black;">
-          <tbody>
-            <tr align="center">
-              <td width="8%" height="26" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">期号</span>
-              </td>
-              <td width="14%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">赛事名称</span>
-              </td>
-              <td width="20%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">赛事描述</span>
-              </td>
-              <td width="10%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">比赛时间</span>
-              </td>
-              <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">分析</span>
-              </td>
-              <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">赛果</span>
-              </td>
-              <td width="8%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">已投注数</span>
-              </td>
-              <td width="11%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">金蛋总数</span>
-              </td>
-              <td width="8%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">中奖人数</span>
-              </td>
-              <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
-                <span class="STYLE21">参与</span>
-              </td>
-            </tr>
-
+      <table width="978" border="0" cellpadding="0" cellspacing="1" bgcolor="#248301" style="margin-left:auto; margin-right:auto; color:Black;">
+        <tbody>
+          <tr align="center">
+            <td width="8%" height="26" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">期号</span>
+            </td>
+            <td width="14%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">赛事名称</span>
+            </td>
+            <td width="20%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">赛事描述</span>
+            </td>
+            <td width="10%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">比赛时间</span>
+            </td>
+            <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">分析</span>
+            </td>
+            <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">赛果</span>
+            </td>
+            <td width="8%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">已投注数</span>
+            </td>
+            <td width="11%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">奖池累计</span>
+            </td>
+            <td width="8%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">中奖人数</span>
+            </td>
+            <td width="7%" background="/img/pub/pg310_bg.gif" class="white">
+              <span class="STYLE21">参与</span>
+            </td>
+          </tr>
+          <volist name="db_pc310" id="vo">
             <tr align="center" bgcolor="#FFFFFF" class="font12">
-              <td height="32" bgcolor="#e6f7e0">12239</td>
-              <td height="28" bgcolor="#FFFFFF" class="font12">世杯热身</td>
-              <td height="28" bgcolor="#FFFFFF" class="font12">厄瓜多尔 vs 英格兰</td>
-              <td height="28" bgcolor="#FFFFFF" class="font12">06-05 02:00</td>
+              <td height="32" bgcolor="#e6f7e0">{$vo.id}</td>
+              <td height="28" bgcolor="#FFFFFF" class="font12">{$vo.game_name}</td>
+              <td height="28" bgcolor="#FFFFFF" class="font12">{$vo.game_desc}</td>
+              <td height="28" bgcolor="#FFFFFF" class="font12">{$vo.game_time}</td>
               <td height="28" bgcolor="#FFFFFF" class="font12">
                 <a href="http://match.sports.sina.com.cn/livecast/show_date.php?date=2014-06-05" target="_blank">分析</a>
               </td>
               <td bgcolor="#FFFFFF">
-                <script language="javascript" type="text/javascript">chkResult('','-');</script>
-                -
+
+                <?php 
+                if ("3" == $vo["game_result"]) {
+                  $tab_item = "310_3.gif";
+                } elseif ("1" == $vo["game_result"]) {
+                  $tab_item = "310_1.gif";
+                } elseif ("0" == $vo["game_result"]) {
+                  $tab_item = "310_0.gif";
+                } else{
+                  $tab_item = "-";
+                }
+               ?>
+                <if condition='$tab_item eq "-"'>
+                  -
+                  <else />
+                  <img src="__IMAGES__/game/nums/{$tab_item}" />
+                </if>
               </td>
-              <td bgcolor="#FFFFFF" class="font12">317</td>
               <td bgcolor="#FFFFFF" class="font12">
-                222,231,827
-                <img src="__IMAGES__/game/egg.gif"></td>
+                <script language="javascript" type="text/javascript">
+                  document.write(transStr({$vo.all_down}));
+                </script>
+              </td>
+              <td bgcolor="#FFFFFF" class="font12">
+                <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_eggs}));</script>
+                <img src="__IMAGES__/public/egg.gif"></td>
               <td height="28" bgcolor="#FFFFFF" class="font12">
-                <script language="javascript" type="text/javascript">chkwin('0','291953');</script>
-                0
+                {$vo.open_people}
               </td>
               <td bgcolor="#FFFFFF" class="font12">
-                <script language="javascript" type="text/javascript">chkStatus('0','291953');</script>
-                <a class="a0" href="/play/pg310Insert.aspx?LID=291953" target="_top">投注</a>
+                <if condition='$vo["game_result"] eq ""'>
+                  <a href="www.ceshi.com" style="color:#080">投注</a>
+                <else />
+                  <a href="www.ceshi.com" style="color:#099">已开奖</a>
+                </if>
               </td>
             </tr>
+          </volist>
+          <tr align="center" bgcolor="#FFFFFF">
+            <td height="28" colspan="10" bgcolor="#FFFFFF">
 
-            <tr align="center" bgcolor="#FFFFFF">
-              <td height="28" colspan="10" bgcolor="#FFFFFF">
-
-                <script language="javascript" type="text/javascript">
+              <script language="javascript" type="text/javascript">
     function onsubmit(CurrentPageIndex)
     {
         document.getElementById("CurrentPageIndex").value = CurrentPageIndex ;
@@ -233,7 +140,7 @@
         document.getElementById("pagination").submit();
     }
 </script>
-                <style type="text/css">
+              <style type="text/css">
 <!--
 .phoenix a:hover { color: #003366; text-decoration: none ; }
 .phoenix a:link { color: #3366cc; text-decoration: none; }
@@ -242,76 +149,77 @@
 .phoenix .common{ font-family:Tahoma; font-size:12px; }
 -->
 </style>
-                <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
-                  <!--<form id="pagination" method="post" action="/play/Pg310.aspx">        
-                  -->
-                  <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">        
-                  <tbody>
-                    <tr valign="middle">
-                      <td align="left">
-                        <span title="记录总数" style="cursor:pointer;">
-                          <span class="common">&nbsp;&nbsp;记录总数：</span>
-                          <span style="color:#000066; font-weight:bold;">11630</span>
-                        </span>
-                        <span title="总页数" style="cursor:pointer;">
-                          <span class="common">&nbsp;&nbsp;总页数：</span>
-                          <span style="color:#000066;font-weight:bold;">1163</span>
-                        </span>
-                        &nbsp;&nbsp;
-                        <span title="当前页" style="cursor:pointer;">
-                          <span class="common">&nbsp; &nbsp;当前页：</span>
-                          <span style="color:#CC0000;font-weight:bold;">1</span>
-                        </span>
-                      </td>
-                      <td align="center">
-                        <span class="point14">|</span>
-                        <span class="point14" title="首页">
-                          <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
-                        <span class="point14" title="前十页">
-                          <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
-                        <span class="point14" title="前一页">
-                          <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
-                        <span style="color:#CC0000; font-weight:bold;">1</span>
-                        <a href="javascript:onsubmit(2);" target="_top">2</a>
-                        <a href="javascript:onsubmit(3);" target="_top">3</a>
-                        <a href="javascript:onsubmit(4);" target="_top">4</a>
-                        <a href="javascript:onsubmit(5);" target="_top">5</a>
-                        <a href="javascript:onsubmit(6);" target="_top">6</a>
-                        <a href="javascript:onsubmit(7);" target="_top">7</a>
-                        <a href="javascript:onsubmit(8);" target="_top">8</a>
-                        <a href="javascript:onsubmit(9);" target="_top">9</a>
-                        <a href="javascript:onsubmit(10);" target="_top">10</a>
-                        <a href="javascript:onsubmit(2);" target="_top">
-                          <span class="point14" title="后一页">
-                            <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
-                        </a>
-                        <a href="javascript:onsubmit(11);" target="_top">
-                          <span class="point14" title="后十页">
-                            <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
-                        </a>
-                        <a href="javascript:onsubmit(1163);" target="_top">
-                          <span class="point14" title="尾页">
-                            <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
-                        </a>
-                        <span class="point14">|</span>
-                      </td>
-                      <td align="right">
-                        <span title="当前记录数" style="cursor:pointer;">
-                          <span class="common">&nbsp;&nbsp;当页记录数：</span>
-                          <span style="color:#CC0000;font-weight:bold;">10</span>
-                        </span>
-                      </td>
-                    </tr>
-                    <!--</form>--></tbody>
-                </table>
+              <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
+                <!--<form id="pagination" method="post" action="/play/Pg310.aspx">
+                -->
+                <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">
+                <tbody>
+                  <tr valign="middle">
+                    <td align="left">
+                      <span title="记录总数" style="cursor:pointer;">
+                        <span class="common">&nbsp;&nbsp;记录总数：</span>
+                        <span style="color:#000066; font-weight:bold;">11630</span>
+                      </span>
+                      <span title="总页数" style="cursor:pointer;">
+                        <span class="common">&nbsp;&nbsp;总页数：</span>
+                        <span style="color:#000066;font-weight:bold;">1163</span>
+                      </span>
+                      &nbsp;&nbsp;
+                      <span title="当前页" style="cursor:pointer;">
+                        <span class="common">&nbsp; &nbsp;当前页：</span>
+                        <span style="color:#CC0000;font-weight:bold;">1</span>
+                      </span>
+                    </td>
+                    <td align="center">
+                      <span class="point14">|</span>
+                      <span class="point14" title="首页">
+                        <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
+                      <span class="point14" title="前十页">
+                        <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
+                      <span class="point14" title="前一页">
+                        <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
+                      <span style="color:#CC0000; font-weight:bold;">1</span>
+                      <a href="javascript:onsubmit(2);" target="_top">2</a>
+                      <a href="javascript:onsubmit(3);" target="_top">3</a>
+                      <a href="javascript:onsubmit(4);" target="_top">4</a>
+                      <a href="javascript:onsubmit(5);" target="_top">5</a>
+                      <a href="javascript:onsubmit(6);" target="_top">6</a>
+                      <a href="javascript:onsubmit(7);" target="_top">7</a>
+                      <a href="javascript:onsubmit(8);" target="_top">8</a>
+                      <a href="javascript:onsubmit(9);" target="_top">9</a>
+                      <a href="javascript:onsubmit(10);" target="_top">10</a>
+                      <a href="javascript:onsubmit(2);" target="_top">
+                        <span class="point14" title="后一页">
+                          <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
+                      </a>
+                      <a href="javascript:onsubmit(11);" target="_top">
+                        <span class="point14" title="后十页">
+                          <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
+                      </a>
+                      <a href="javascript:onsubmit(1163);" target="_top">
+                        <span class="point14" title="尾页">
+                          <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
+                      </a>
+                      <span class="point14">|</span>
+                    </td>
+                    <td align="right">
+                      <span title="当前记录数" style="cursor:pointer;">
+                        <span class="common">&nbsp;&nbsp;当页记录数：</span>
+                        <span style="color:#CC0000;font-weight:bold;">10</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <!--</form>--></tbody>
+              </table>
 
-      </td>
-    </tr>
-  </tbody></table>
-      
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
-    <!-- InstanceEndEditable -->
-</div>
-<include file="public:footer"/>
+    <!-- InstanceEndEditable --> </div>
+  <include file="public:footer"/>
 </body>
-<!-- InstanceEnd --></html>
+  <!-- InstanceEnd -->
+</html>

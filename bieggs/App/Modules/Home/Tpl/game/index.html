@@ -7,110 +7,10 @@
   <title>幸运28-专业的广告游戏平台</title>
   <load href='__CSS__/game.css' />
   <load href='__JS__/game/AJax.js' />
+  <load href='__JS__/game/game.js' />
 
-  <script language="javascript" type="text/javascript">
-    function copyToClipBoard() {
-        var clipBoardContent = '';
-        clipBoardContent += "http://www.pceggs.cn/pgComDefault.aspx?ID=0"; 
-        window.clipboardData.setData("Text", clipBoardContent);
-        alert("地址已经复制到粘贴板!");
-    }
-</script>
+<script language="javascript" type="text/javascript">
 
-  <script language="javascript" type="text/javascript">
-    function chkResult(nums) {
-      if("" == nums || null == nums){
-        document.write("-");
-      }else{
-        nums = nums.toString();
-        var f_num = nums.charAt(0);
-        var s_num = parseInt(nums.charAt(1));
-        var t_num = parseInt(nums.charAt(2));
-        f_num = ("-" == f_num) ? 0 : parseInt(f_num);
-        var strR = f_num + " + " + s_num + " + " + t_num + " = ";
-        document.write(strR + "<img src='__IMAGES__/game/nums/number_" + (f_num + s_num + t_num) + ".gif' />");
-      }
-    }
-
-    function chkStatus(status, lid, ISLOTTERY) {
-        //状态：0投注中，1暂停投注等待开奖，2已开奖            
-        switch (status) {
-            case '0':{
-                    if (ISLOTTERY == "1") {
-                        document.write("<a class='a0' href='/play/pg28Insert.aspx?LID=" + lid + "' target='_top'>已投注</a>")
-                    }else {
-                        document.write("<a class='a0' href='/play/pg28Insert.aspx?LID=" + lid + "' target='_top'>投注</a>")
-                    }
-                    break;
-                }
-            case '1':{
-                    document.write("<a href='/play/pgMy28Detail.aspx?LID=" + lid + "' target='_top'>开奖中</a>")
-                    break;
-                }
-            case '2':{
-                    document.write("<a href='/play/pgMy28Detail.aspx?LID=" + lid + "' target='_top'>已开奖</a>")
-                    break;
-                }
-        }
-    }
-    function chkwin(val, lid) {
-        if (val != '0') {
-            document.write("<a class='a0' href='/play/pg28Result.aspx?LID=" + lid + "' target='_top' title='查看中奖人名单'>" + val + " </a>");
-        }else {
-            document.write("0");
-        }
-    }
-</script>
-  <script language="javascript" type="text/javascript">
-
-    function transStr(str) {
-        str = str.toString()
-        var begin = "";
-        var after = "";
-        var l;
-        var str2 = "";
-        if (str.indexOf(".") > 0) {
-            begin = str.substring(0, str.indexOf("."));
-            after = str.substring(str.indexOf("."), str.length);
-        }else {
-            begin = str;
-        }
-        l = begin.length / 3;
-        if (l > 1) {
-            for (var i = 0; i < l; ) {
-                str2 = "," + begin.substring(begin.length - 3, begin.length) + str2;
-                begin = begin.substring(0, begin.length - 3);
-                l = begin.length / 3;
-            }
-            if (after.length < 3) {
-                str2 = begin + str2 + after;
-            } else {
-                str2 = begin + str2 + after
-            }
-            return str2.substring(1);
-        }else {
-            if (after.length < 3) {
-                return str;
-            } else {
-                return str;
-            }
-        }
-    }
-
-    function SGMoney(Sm, Gm) {
-        if (Sm == null || Sm == 0) {
-            document.write("-");
-        }else {
-            var val = Gm - Sm;
-            if (val >= 0) {
-                val = transStr(val);
-                document.write("<span style='color:red'>" + val + "</span><img src='/img/pub/egg.gif'/>");
-            }else {
-                val = transStr(Math.abs(val));
-                document.write("<span style='color:#1B5E00'>-" + val + "</span><img src='/img/pub/egg.gif'/>");
-            }
-        }
-    }
 </script>
   <!-- InstanceEndEditable -->
   <!-- InstanceBeginEditable name="head" -->
@@ -125,23 +25,7 @@
     <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
     <div class=game_content>
-      <div class=game_tab>
-        <div style="width:970px">
-          <div class="title_game" style="float:left; width:610px;">
-            <a href="{:U('Home/game')}">
-              <img src="__IMAGES__/game/pub/ico_6.gif" width="98" height="27" border="0"></a>
-            <a href="{:U('Home/game/pg310')}">
-              <img src="__IMAGES__/game/pub/ico_26.gif" width="98" height="27" border="0"></a>
-            <a href="{:U('Home/game/pgstar')}">
-              <img src="__IMAGES__/game/pub/ico_29.gif" width="98" height="27" border="0"></a>
-          </div>
-          <div style=" float:right; width:330px; height:25px;vertical-align:middle; line-height:25px;text-align:right">
-            <a href="/nbbs/bbsPost.aspx?PostID=3864534&amp;topicid=4&amp;ret=1" target="_blank" style="color:#3f3f3f;">幸运28启用北京快乐8第三方开奖数据&gt;&gt;&gt;</a>
-            &nbsp;&nbsp;
-          </div>
-        </div>
-      </div>
-      <div class="line"></div>
+      <include file="public:gametab"/>
       <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FCF8DA;clear:both;">
         <input type="hidden" id="soundshow" name="soundshow" value="2">
         <input type="hidden" id="reloadshow" name="reloadshow" value="">
@@ -213,7 +97,7 @@
                   <div style="  text-align:center; height:40px; line-height:30px;  ">
                     幸运28第 <strong style="color:#ff0000;">633132</strong>
                     期开奖结果：7 + 6 + 5 =
-                    <img src="__IMAGES__/game/number/number_18.gif" width="25" height="25" align="absmiddle">
+                    <img src="__IMAGES__/game/nums/number_18.gif" width="25" height="25" align="absmiddle">
                     &nbsp;&nbsp;&nbsp;[
                     <a href="http://www.bwlc.net/bulletin/index.jsp?id=3" target="_blank">官方查询</a>
                     ]&nbsp;&nbsp;[
@@ -238,33 +122,37 @@
             <td width="16%">开奖时间</td>
             <td width="23%">开奖结果</td>
             <td width="10%">已投注数</td>
-            <td width="18%">金蛋总数</td>
+            <td width="18%">奖池累计</td>
             <td width="11%">中奖人数</td>
             <td width="10%">参与</td>
           </tr>
-
-
           <volist name="db_pc28" id="vo">
             <tr align="center" height="28px" bgcolor="#fff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>>
               <td class="panel_td1">{$vo.id}</td>
               <td class="panel_td2">{$vo.open_time}</td>
               <td class="panel_td3">
                 <script language="javascript" type="text/javascript">
-                  //document.write(<?php echo ("" + $vo["open_num"]); php?>);
-                  chkResult(<?php echo ("" + $vo["open_num"]); php?>);
+                  chkResult28(<?php echo ("" + $vo["open_num"]); php?>, '__IMAGES__');
                 </script>
               </td>
-              <td class="panel_td4">{$vo.all_down}</td>
+              <td class="panel_td4">
+                <script language="javascript" type="text/javascript">
+                  document.write(transStr({$vo.all_down}));
+                </script>
+              </td>
               <td class="panel_td5">
-                {$vo.all_eggs}
-                <img src="__IMAGES__/public/egg.gif"></td>
+                <script language="javascript" type="text/javascript">
+                  document.write(transStr({$vo.all_eggs}));
+                </script>
+                <img src="__IMAGES__/public/egg.gif">
+              </td>
               <td class="panel_td6">
                 <a href="www.baidu.com" style="color:#f00">{$vo.open_people}</a>
               </td>
               <td class="panel_td7">
               <if condition='$vo.open_num eq ""'> <a href="www.baidu.com" style="color:#f00">投注</a>
-                <else /> <a href="www.baidu.com">已开奖</a>
-                </if>
+              <else /> <a href="www.baidu.com">已开奖</a>
+              </if>
               </td>
             </tr>
           </volist>
