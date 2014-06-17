@@ -21,11 +21,12 @@
     <include file="public:textrun"/>
     <style type="text/css">
     .dynamic_msg {border: 1px solid #248300;}
+    .dynamic_msg_r a {color: #248300;}
     #body_content {border: 1px solid #248300;}
     </style>
     <div class=game_content>
       <include file="public:gametab"/>
-      <table width="978" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="24cf00">
+      <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="24cf00">
         <tbody>
           <tr>
             <td width="50%" height="24" align="left" valign="middle" style="padding-left:10px"> <b><a href="pg310.aspx?typeid=1" class="abt12_1">310竞技比赛</a></b> 
@@ -47,7 +48,7 @@
         </tbody>
       </table>
 
-      <table width="978" border="0" cellpadding="0" cellspacing="1" bgcolor="#248301" style="margin-left:auto; margin-right:auto; color:Black;">
+      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#248301" style="margin-left:auto; margin-right:auto; color:Black;margin-bottom:5px">
         <tbody>
           <tr align="center">
             <td width="8%" height="26" background="/img/pub/pg310_bg.gif" class="white">
@@ -122,9 +123,9 @@
               </td>
               <td bgcolor="#FFFFFF" class="font12">
                 <if condition='$vo["game_result"] eq ""'>
-                  <a href="www.ceshi.com" style="color:#080">投注</a>
+                  <a href="www.ceshi.com" style="color:#299402">投注</a>
                 <else />
-                  <a href="www.ceshi.com" style="color:#099">已开奖</a>
+                  <a href="www.ceshi.com">已开奖</a>
                 </if>
               </td>
             </tr>
@@ -205,7 +206,7 @@
                     <td align="right">
                       <span title="当前记录数" style="cursor:pointer;">
                         <span class="common">&nbsp;&nbsp;当页记录数：</span>
-                        <span style="color:#CC0000;font-weight:bold;">10</span>
+                        <span style="color:#248300;font-weight:bold;">10</span>
                       </span>
                     </td>
                   </tr>

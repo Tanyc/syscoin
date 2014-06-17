@@ -9,9 +9,7 @@
   <load href='__JS__/game/AJax.js' />
   <load href='__JS__/game/game.js' />
 
-<script language="javascript" type="text/javascript">
-
-</script>
+  <script language="javascript" type="text/javascript"></script>
   <!-- InstanceEndEditable -->
   <!-- InstanceBeginEditable name="head" -->
   <!-- InstanceEndEditable -->
@@ -24,6 +22,11 @@
   <div id="body_content">
     <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
+    <style type="text/css">
+      /*.dynamic_msg {border: 1px solid #FFD071;}*/
+      .dynamic_msg_r a {color: #F5A300;}
+      /*#body_content {border: 1px solid #FFD071;}*/
+    </style>
     <div class=game_content>
       <include file="public:gametab"/>
       <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FCF8DA;clear:both;">
@@ -115,7 +118,7 @@
         </tbody>
         <Load href='__JS__/game/seting.js'/>
       </table>
-      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#fc0" align="center" style="color:Black;" id="panel" >
+      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#fc0" align="center" style="color:Black; margin-bottom:5px" id="panel" >
         <tbody>
           <tr class="center_table">
             <td width="12%">期号</td>
@@ -127,113 +130,118 @@
             <td width="10%">参与</td>
           </tr>
           <volist name="db_pc28" id="vo">
-            <tr align="center" height="28px" bgcolor="#fff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>>
-              <td class="panel_td1">{$vo.id}</td>
-              <td class="panel_td2">{$vo.open_time}</td>
-              <td class="panel_td3">
-                <script language="javascript" type="text/javascript">
-                  chkResult28(<?php echo ("" + $vo["open_num"]); php?>, '__IMAGES__');
-                </script>
-              </td>
-              <td class="panel_td4">
-                <script language="javascript" type="text/javascript">
-                  document.write(transStr({$vo.all_down}));
-                </script>
-              </td>
-              <td class="panel_td5">
-                <script language="javascript" type="text/javascript">
-                  document.write(transStr({$vo.all_eggs}));
-                </script>
-                <img src="__IMAGES__/public/egg.gif">
-              </td>
-              <td class="panel_td6">
-                <a href="www.baidu.com" style="color:#f00">{$vo.open_people}</a>
-              </td>
-              <td class="panel_td7">
-              <if condition='$vo.open_num eq ""'> <a href="www.baidu.com" style="color:#f00">投注</a>
-              <else /> <a href="www.baidu.com">已开奖</a>
-              </if>
-              </td>
-            </tr>
-          </volist>
-          <tr align="center" bgcolor="#FFFFFF">
-            <td height="28" colspan="7" bgcolor="#FFFFFF">
+            <tr align="center" height="28px" bgcolor="#fff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>
+            >
+            <td class="panel_td1">{$vo.id}</td>
+            <td class="panel_td2">{$vo.open_time}</td>
+            <td class="panel_td3">
               <script language="javascript" type="text/javascript">
-    function onsubmit(CurrentPageIndex)
-    {
-        document.getElementById("CurrentPageIndex").value = CurrentPageIndex ;
-        //document.getElementById("Condition").value = Condition ;
-        document.getElementById("pagination").submit();
-    }
-</script>
-              <style type="text/css"></style>
-              <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
-                <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">
-                <tbody>
-                  <tr valign="middle">
-                    <td align="left">
-                      <span title="记录总数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;记录总数：</span>
-                        <span style="color:#000066; font-weight:bold;">213</span>
-                      </span>
-                      <span title="总页数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;总页数：</span>
-                        <span style="color:#000066;font-weight:bold;">22</span>
-                      </span>
-                      &nbsp;&nbsp;
-                      <span title="当前页" style="cursor:pointer;">
-                        <span class="common">&nbsp; &nbsp;当前页：</span>
-                        <span style="color:#CC0000;font-weight:bold;">1</span>
-                      </span>
-                    </td>
-                    <td align="center">
-                      <span class="point14">|</span>
-                      <span class="point14" title="首页">
-                        <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
-                      <span class="point14" title="前十页">
-                        <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
-                      <span class="point14" title="前一页">
-                        <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
-                      <span style="color:#CC0000; font-weight:bold;">1</span>
-                      <a href="javascript:onsubmit(2);" target="_top">2</a>
-                      <a href="javascript:onsubmit(3);" target="_top">3</a>
-                      <a href="javascript:onsubmit(4);" target="_top">4</a>
-                      <a href="javascript:onsubmit(5);" target="_top">5</a>
-                      <a href="javascript:onsubmit(6);" target="_top">6</a>
-                      <a href="javascript:onsubmit(7);" target="_top">7</a>
-                      <a href="javascript:onsubmit(8);" target="_top">8</a>
-                      <a href="javascript:onsubmit(9);" target="_top">9</a>
-                      <a href="javascript:onsubmit(10);" target="_top">10</a>
-                      <a href="javascript:onsubmit(2);" target="_top">
-                        <span class="point14" title="后一页">
-                          <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
-                      </a>
-                      <a href="javascript:onsubmit(11);" target="_top">
-                        <span class="point14" title="后十页">
-                          <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
-                      </a>
-                      <a href="javascript:onsubmit(22);" target="_top">
-                        <span class="point14" title="尾页">
-                          <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
-                      </a>
-                      <span class="point14">|</span>
-                    </td>
-                    <td align="right">
-                      <span title="当前记录数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;当页记录数：</span>
-                        <span style="color:#CC0000;font-weight:bold;">10</span>
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                  chkResult28(<?php echo ("" + $vo["open_num"]); php?>, '__IMAGES__');</script>
+            </td>
+            <td class="panel_td4">
+              <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_down}));</script>
+            </td>
+            <td class="panel_td5">
+              <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_eggs}));</script>
+              <img src="__IMAGES__/public/egg.gif"></td>
+            <td class="panel_td6">
+              <a href="www.baidu.com" style="color:#F5A300">{$vo.open_people}</a>
+            </td>
+            <td class="panel_td7">
+              <if condition='$vo.open_num eq ""'>
+                <a href="www.baidu.com" style="color:#F5A300">投注</a>
+                <else />
+                <a href="www.baidu.com">已开奖</a>
+              </if>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- InstanceEndEditable --> </div>
-  <include file="public:footer"/>
+        </volist>
+        <tr align="center" bgcolor="#FFFFFF">
+          <td height="28" colspan="7" bgcolor="#FFFFFF">
+<script language="javascript" type="text/javascript">
+    function onsubmit(cur_pg){
+        document.getElementById("pg").value = cur_pg;
+        document.getElementById("pgindex").submit();
+    }
+    function calcAllPg(items){
+        var pages = Math.ceil(items / 20);
+        document.write(pages);
+    }
+</script>
+            <form name="pgindex" method="post" action="game" id="pgindex">
+              <input id="pg" name="pg" type="hidden" value="2">;
+            </form>
+
+            <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
+              <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">
+              <tbody>
+                <tr valign="middle">
+                  <td align="left">
+                    <span title="记录总数" style="cursor:pointer;">
+                      <span class="common">&nbsp;&nbsp;记录总数：</span>
+                      <span style="color:#000066; font-weight:bold;">{$db_pc28_cnt}</span>
+                    </span>
+                    <span title="总页数" style="cursor:pointer;">
+                      <span class="common">&nbsp;&nbsp;总页数：</span>
+                      <span style="color:#000066;font-weight:bold;">
+                        <script type="text/javascript">
+                          calcAllPg({$db_pc28_cnt});
+                        </script>
+                      </span>
+                    </span>
+                    &nbsp;&nbsp;
+                    <span title="当前页" style="cursor:pointer;">
+                      <span class="common">&nbsp; &nbsp;当前页：</span>
+                      <span style="color:#CC0000;font-weight:bold;">{$cur_pg}</span>
+                    </span>
+                  </td>
+                  <td align="center">
+                    <span class="point14">|</span>
+                    <span class="point14" title="首页">
+                      <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
+                    <span class="point14" title="前十页">
+                      <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
+                    <span class="point14" title="前一页">
+                      <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
+                    <span style="color:#CC0000; font-weight:bold;">1</span>
+                    <a href="javascript:onsubmit(2);" target="_top">2</a>
+                    <a href="javascript:onsubmit(3);" target="_top">3</a>
+                    <a href="javascript:onsubmit(4);" target="_top">4</a>
+                    <a href="javascript:onsubmit(5);" target="_top">5</a>
+                    <a href="javascript:onsubmit(6);" target="_top">6</a>
+                    <a href="javascript:onsubmit(7);" target="_top">7</a>
+                    <a href="javascript:onsubmit(8);" target="_top">8</a>
+                    <a href="javascript:onsubmit(2);" target="_top">
+                      <span class="point14" title="后一页">
+                        <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
+                    </a>
+                    <a href="javascript:onsubmit(11);" target="_top">
+                      <span class="point14" title="后十页">
+                        <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
+                    </a>
+                    <a href="javascript:onsubmit(22);" target="_top">
+                      <span class="point14" title="尾页">
+                        <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
+                    </a>
+                    <span class="point14">|</span>
+                  </td>
+                  <td align="right">
+                    <span title="当前记录数" style="cursor:pointer;">
+                      <span class="common">&nbsp;&nbsp;当页记录数：</span>
+                      <span style="color:#F5A300;font-weight:bold;">20</span>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- InstanceEndEditable -->
+</div>
+<include file="public:footer"/>
 </body>
-  <!-- InstanceEnd -->
+<!-- InstanceEnd -->
 </html>

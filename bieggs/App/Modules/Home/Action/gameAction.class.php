@@ -9,8 +9,16 @@ class gameAction extends comAction{
     public function index(){
         $this->assign('GAME_TAB',1);
 
+        $pg = $this->_param('pg');
         $pc28 = D("Pc28");
-        $this->assign("db_pc28",$pc28->getResult(1));
+        $this->assign("db_pc28",$pc28->getResult($pg));
+
+        $array['db_pc28_cnt'] = $pc28->getCount();
+        $array['cur_pg']      = ("" == $pg)? 1 : $pg;
+
+        $this->assign($array);
+
+
         $this->display();
     }
 
