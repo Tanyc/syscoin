@@ -111,20 +111,16 @@
                 </if>
               </td>
               <td bgcolor="#FFFFFF" class="font12">
-                <script language="javascript" type="text/javascript">
-                  document.write(transStr({$vo.all_down}));
-                </script>
+                <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_down}));</script>
               </td>
               <td bgcolor="#FFFFFF" class="font12">
                 <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_eggs}));</script>
                 <img src="__IMAGES__/public/egg.gif"></td>
-              <td height="28" bgcolor="#FFFFFF" class="font12">
-                {$vo.open_people}
-              </td>
+              <td height="28" bgcolor="#FFFFFF" class="font12">{$vo.open_people}</td>
               <td bgcolor="#FFFFFF" class="font12">
                 <if condition='$vo["game_result"] eq ""'>
                   <a href="www.ceshi.com" style="color:#299402">投注</a>
-                <else />
+                  <else />
                   <a href="www.ceshi.com">已开奖</a>
                 </if>
               </td>
@@ -132,87 +128,10 @@
           </volist>
           <tr align="center" bgcolor="#FFFFFF">
             <td height="28" colspan="10" bgcolor="#FFFFFF">
-
-              <script language="javascript" type="text/javascript">
-    function onsubmit(CurrentPageIndex)
-    {
-        document.getElementById("CurrentPageIndex").value = CurrentPageIndex ;
-        //document.getElementById("Condition").value = Condition ;
-        document.getElementById("pagination").submit();
-    }
-</script>
-              <style type="text/css">
-<!--
-.phoenix a:hover { color: #003366; text-decoration: none ; }
-.phoenix a:link { color: #3366cc; text-decoration: none; }
-.phoenix a:visited { color: #3366cc; text-decoration: none; }
-.phoenix .point14{ font-family:webdings; font-size:14px; }
-.phoenix .common{ font-family:Tahoma; font-size:12px; }
--->
-</style>
-              <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
-                <!--<form id="pagination" method="post" action="/play/Pg310.aspx">
-                -->
-                <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">
-                <tbody>
-                  <tr valign="middle">
-                    <td align="left">
-                      <span title="记录总数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;记录总数：</span>
-                        <span style="color:#000066; font-weight:bold;">11630</span>
-                      </span>
-                      <span title="总页数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;总页数：</span>
-                        <span style="color:#000066;font-weight:bold;">1163</span>
-                      </span>
-                      &nbsp;&nbsp;
-                      <span title="当前页" style="cursor:pointer;">
-                        <span class="common">&nbsp; &nbsp;当前页：</span>
-                        <span style="color:#CC0000;font-weight:bold;">1</span>
-                      </span>
-                    </td>
-                    <td align="center">
-                      <span class="point14">|</span>
-                      <span class="point14" title="首页">
-                        <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
-                      <span class="point14" title="前十页">
-                        <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
-                      <span class="point14" title="前一页">
-                        <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
-                      <span style="color:#CC0000; font-weight:bold;">1</span>
-                      <a href="javascript:onsubmit(2);" target="_top">2</a>
-                      <a href="javascript:onsubmit(3);" target="_top">3</a>
-                      <a href="javascript:onsubmit(4);" target="_top">4</a>
-                      <a href="javascript:onsubmit(5);" target="_top">5</a>
-                      <a href="javascript:onsubmit(6);" target="_top">6</a>
-                      <a href="javascript:onsubmit(7);" target="_top">7</a>
-                      <a href="javascript:onsubmit(8);" target="_top">8</a>
-                      <a href="javascript:onsubmit(9);" target="_top">9</a>
-                      <a href="javascript:onsubmit(10);" target="_top">10</a>
-                      <a href="javascript:onsubmit(2);" target="_top">
-                        <span class="point14" title="后一页">
-                          <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
-                      </a>
-                      <a href="javascript:onsubmit(11);" target="_top">
-                        <span class="point14" title="后十页">
-                          <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
-                      </a>
-                      <a href="javascript:onsubmit(1163);" target="_top">
-                        <span class="point14" title="尾页">
-                          <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
-                      </a>
-                      <span class="point14">|</span>
-                    </td>
-                    <td align="right">
-                      <span title="当前记录数" style="cursor:pointer;">
-                        <span class="common">&nbsp;&nbsp;当页记录数：</span>
-                        <span style="color:#248300;font-weight:bold;">10</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <!--</form>--></tbody>
-              </table>
-
+            <form name="pgindex" method="post" action="pg310" id="pgindex">
+              <input id="pg" name="pg" type="hidden" value="2">
+            </form>
+            <include file="public:pagectl"/>
             </td>
           </tr>
         </tbody>

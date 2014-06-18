@@ -64,9 +64,9 @@ function GetRTime(ctime){
       nS = nS-1;
       stopSencond=stopSencond-1;
       if(stopSencond<0){
-       document.getElementById("RemainS").innerHTML="已经停止竞猜，还有<strong style='color:#ff0000;'>"+nS+"</strong>秒开奖 ";
+       document.getElementById("RemainS").innerHTML="已经停止竞猜，还有<strong style='color:#FF9C00;'>"+nS+"</strong>秒开奖 ";
       }else{
-            document.getElementById("RemainS").innerHTML="还有<strong style='color:#ff0000;'>"+stopSencond+"</strong>秒停止竞猜，<strong style='color:#ff0000;'>"+nS+"</strong>秒开奖 "; 
+            document.getElementById("RemainS").innerHTML="还有<strong style='color:#FF9C00;'>"+stopSencond+"</strong>秒停止竞猜，<strong style='color:#FF9C00;'>"+nS+"</strong>秒开奖 "; 
       }   
       document.getElementById("RemainTitle").innerHTML="第<strong>633133</strong>期"; 
       // if(0==0){

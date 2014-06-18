@@ -23,9 +23,7 @@
     <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
     <style type="text/css">
-      /*.dynamic_msg {border: 1px solid #FFD071;}*/
       .dynamic_msg_r a {color: #F5A300;}
-      /*#body_content {border: 1px solid #FFD071;}*/
     </style>
     <div class=game_content>
       <include file="public:gametab"/>
@@ -98,7 +96,7 @@
                     &nbsp;&nbsp;&nbsp;
                   </div>
                   <div style="  text-align:center; height:40px; line-height:30px;  ">
-                    幸运28第 <strong style="color:#ff0000;">633132</strong>
+                    幸运28第 <strong style="color:#FF9C00;">633132</strong>
                     期开奖结果：7 + 6 + 5 =
                     <img src="__IMAGES__/game/nums/number_18.gif" width="25" height="25" align="absmiddle">
                     &nbsp;&nbsp;&nbsp;[
@@ -158,82 +156,9 @@
         </volist>
         <tr align="center" bgcolor="#FFFFFF">
           <td height="28" colspan="7" bgcolor="#FFFFFF">
-<script language="javascript" type="text/javascript">
-    function onsubmit(cur_pg){
-        document.getElementById("pg").value = cur_pg;
-        document.getElementById("pgindex").submit();
-    }
-    function calcAllPg(items){
-        var pages = Math.ceil(items / 20);
-        document.write(pages);
-    }
-</script>
             <form name="pgindex" method="post" action="game" id="pgindex">
-              <input id="pg" name="pg" type="hidden" value="2">;
-            </form>
-
-            <table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
-              <input id="CurrentPageIndex" name="CurrentPageIndex" type="hidden">
-              <tbody>
-                <tr valign="middle">
-                  <td align="left">
-                    <span title="记录总数" style="cursor:pointer;">
-                      <span class="common">&nbsp;&nbsp;记录总数：</span>
-                      <span style="color:#000066; font-weight:bold;">{$db_pc28_cnt}</span>
-                    </span>
-                    <span title="总页数" style="cursor:pointer;">
-                      <span class="common">&nbsp;&nbsp;总页数：</span>
-                      <span style="color:#000066;font-weight:bold;">
-                        <script type="text/javascript">
-                          calcAllPg({$db_pc28_cnt});
-                        </script>
-                      </span>
-                    </span>
-                    &nbsp;&nbsp;
-                    <span title="当前页" style="cursor:pointer;">
-                      <span class="common">&nbsp; &nbsp;当前页：</span>
-                      <span style="color:#CC0000;font-weight:bold;">{$cur_pg}</span>
-                    </span>
-                  </td>
-                  <td align="center">
-                    <span class="point14">|</span>
-                    <span class="point14" title="首页">
-                      <img src="__IMAGES__/public/pgblue-1.png" border="0"></span>
-                    <span class="point14" title="前十页">
-                      <img src="__IMAGES__/public/pgblue-2.png" border="0"></span>
-                    <span class="point14" title="前一页">
-                      <img src="__IMAGES__/public/pgblue-3.png" border="0"></span>
-                    <span style="color:#CC0000; font-weight:bold;">1</span>
-                    <a href="javascript:onsubmit(2);" target="_top">2</a>
-                    <a href="javascript:onsubmit(3);" target="_top">3</a>
-                    <a href="javascript:onsubmit(4);" target="_top">4</a>
-                    <a href="javascript:onsubmit(5);" target="_top">5</a>
-                    <a href="javascript:onsubmit(6);" target="_top">6</a>
-                    <a href="javascript:onsubmit(7);" target="_top">7</a>
-                    <a href="javascript:onsubmit(8);" target="_top">8</a>
-                    <a href="javascript:onsubmit(2);" target="_top">
-                      <span class="point14" title="后一页">
-                        <img src="__IMAGES__/public/pgblue-4.png" border="0"></span>
-                    </a>
-                    <a href="javascript:onsubmit(11);" target="_top">
-                      <span class="point14" title="后十页">
-                        <img src="__IMAGES__/public/pgblue-5.png" border="0"></span>
-                    </a>
-                    <a href="javascript:onsubmit(22);" target="_top">
-                      <span class="point14" title="尾页">
-                        <img src="__IMAGES__/public/pgblue-6.png" border="0"></span>
-                    </a>
-                    <span class="point14">|</span>
-                  </td>
-                  <td align="right">
-                    <span title="当前记录数" style="cursor:pointer;">
-                      <span class="common">&nbsp;&nbsp;当页记录数：</span>
-                      <span style="color:#F5A300;font-weight:bold;">20</span>
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+  <input id="pg" name="pg" type="hidden" value="2"></form>
+            <include file="public:pagectl"/>
           </td>
         </tr>
       </tbody>
