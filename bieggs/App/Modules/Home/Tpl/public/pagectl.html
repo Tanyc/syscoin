@@ -76,7 +76,9 @@
 			<td align="right">
 				<span title="当前记录数" style="cursor:pointer;">
 					<span class="common">&nbsp;&nbsp;当页记录数：</span>
-					<span style="color:#F5A300;font-weight:bold;">15</span>
+          <span style="color:#F5A300;font-weight:bold;">
+            <if condition='$cur_pg eq 1'>15<else />20</if>
+          </span>
 				</span>
 			</td>
 		</tr>

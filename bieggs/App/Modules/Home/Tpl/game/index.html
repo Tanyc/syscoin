@@ -27,38 +27,7 @@
     </style>
     <div class=game_content>
       <include file="public:gametab"/>
-      <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FCF8DA;clear:both;">
-        <input type="hidden" id="soundshow" name="soundshow" value="2">
-        <input type="hidden" id="reloadshow" name="reloadshow" value="">
-        <tbody>
-          <tr>
-            <td width="50%" height="24" align="left" valign="middle" style="padding-left:10px">
-              <a href="/play/pgMy28.aspx" target="_parent" class="abt12_1">我的投注</a>
-              <span class="wh12">|</span>
-              <a href="PG28Trend.aspx" target="_parent" class="abt12_1">幸运28走势图</a>
-              <span class="wh12">
-                <span class="wh12">|</span>
-              </span>
-              <a href="/serving/introduce_serviceLucky28.aspx" class="abt12_1">
-                <img src="__IMAGES__/game/new28.gif" alt="">&nbsp;幸运28介绍</a>
-              <span class="wh12">|</span>
-              <img src="__IMAGES__/public/phone_tb.gif" width="13px" height="15" alt="">
-              <a href="pg28wap.aspx" target="_parent" class="abt12_1">手机wap站</a>
-              <span class="wh12">
-                <span class="wh12">|</span>
-              </span>
-              <a href="/play/Pgnrb.aspx" class="abt12_1">牛人榜</a>
-            </td>
-            <td width="50%" align="right" valign="middle" style="padding-right:10px">
-              <a href="javascript:ShowMsgo.show('/adcomate/pggetgoldeggsnew.aspx',503,546)" class="abt12_1">领取救济金</a>
-              <span class="wh12">|</span>
-              <a href="/play/pg28ModesEdit.aspx" target="_parent" class="abt12_1">投注模式编辑</a>
-              <span class="wh12">|</span>
-              <a href="/play/Autoplay.aspx" target="_parent" class="abt12_1">自动投注</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <include file="public:pc28menu"/>
       <table width="968" border="0" cellspacing="0" cellpadding="0" align="center">
         <tbody>
           <tr valign="top">
@@ -143,13 +112,17 @@
               <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_eggs}));</script>
               <img src="__IMAGES__/public/egg.gif"></td>
             <td class="panel_td6">
-              <a href="www.baidu.com" style="color:#F5A300">{$vo.open_people}</a>
+              <if condition='$vo.open_people eq 0'>
+                <span style="color:#000">0</span>
+              <else />
+                <a href="www.baidu.com" style="color:#cc6600">{$vo.open_people}</a>
+              </if>
             </td>
             <td class="panel_td7">
               <if condition='$vo.open_num eq ""'>
-                <a href="www.baidu.com" style="color:#F5A300">投注</a>
+                <a href="www.baidu.com">投注</a>
                 <else />
-                <a href="www.baidu.com">已开奖</a>
+                <a href="www.baidu.com" style="color:#cc6600">已开奖</a>
               </if>
             </td>
           </tr>

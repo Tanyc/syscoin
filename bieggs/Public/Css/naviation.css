@@ -11,7 +11,7 @@ UL, LI {
 
 a {text-decoration:NONE;}
 a:link {
-text-decoration: none;
+	text-decoration: none;
 }
 a:hover {color:#00f;}
 

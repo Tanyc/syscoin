@@ -116,12 +116,18 @@
               <td bgcolor="#FFFFFF" class="font12">
                 <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_eggs}));</script>
                 <img src="__IMAGES__/public/egg.gif"></td>
-              <td height="28" bgcolor="#FFFFFF" class="font12">{$vo.open_people}</td>
+              <td height="28" bgcolor="#FFFFFF" class="font12">
+                <if condition='$vo.open_people eq 0'>
+                  <span style="color:#000">0</span>
+                <else />
+                  <a href="www.baidu.com" style="color:#299402">{$vo.open_people}</a>
+                </if>
+              </td>
               <td bgcolor="#FFFFFF" class="font12">
                 <if condition='$vo["game_result"] eq ""'>
-                  <a href="www.ceshi.com" style="color:#299402">投注</a>
-                  <else />
-                  <a href="www.ceshi.com">已开奖</a>
+                  <a href="www.ceshi.com">投注</a>
+                <else />
+                  <a href="www.ceshi.com" style="color:#299402">已开奖</a>
                 </if>
               </td>
             </tr>

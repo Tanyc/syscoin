@@ -9,6 +9,9 @@ a:hover {color:#00f;}
     width: 978;
     border: 1px solid #E2E2E2;
 }
+.dynamic_msg_r a {
+color: #248300;
+}
 .white {
 color: #fff;
 }
