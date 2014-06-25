@@ -40,16 +40,14 @@ var mode = new Array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
 					 [3,8,13,18,23],//5余3
 					 [4,9,14,19,24]//5余4
 					 );
-
- var maxnum = 100000000;//最大投注金额
-$(document).ready(function ()
-{
+var maxnum = 100000000;//最大投注金额
+$(document).ready(function (){
    GetRTime(TSeconds,Issue);  
 //点击投注模式
 $(".img_bt1").click(function(){
 					var i=$(this).attr("attr");
 					clear();
-$(this).css("background-image","url(/img/pg28/img_bt2.gif)");
+					$(this).css("background-image","url(../Public/Images/public/img_bt.gif)");
 					setValue(i);
 					getAllpceggs();
 							 }).hover(
@@ -168,14 +166,14 @@ function setValue(num){
 	}
 //清除方法
 function clear(){
-$(".img_bt1").css("background-image","url(/img/pg28/img_bt1.gif)");
+$(".img_bt1").css("background-image","url(../public/images/game/img_bt.gif)");
 	$("#panel").find("input[name='SMONEY']").each(function(){
 														if(!$(this).attr("readonly")){
 															$(this).val("");
 															}});
 	$("#panel").find("input[name='checkboxd']").attr("checked",false);
 	$("#totalvalue").text("0");
-	}
+}
 //数字加千分符号
 function ver(n){
 re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g    
@@ -241,36 +239,26 @@ function refreshd(id){
 	}
 
 //页面载入时执行
-function showvalue(arr,flag)
-{
-    if(StrTimeOut=="-1")
-    {
+function showvalue(arr,flag){
+    if(StrTimeOut=="-1"){
       showmessage("3","该期已经截止投注！",LastIssue);
     //$("#div_ad").css("display","");
      return false;
-    }
-    else if(IsGetEggs=="1")
-    {
+    }else if(IsGetEggs=="1"){
         //$("#div_ad").css("display",""); 
-
          showmessage("8","目前您的账户上金蛋少于5000，是否需要免费获取金蛋？",LastIssue);
 
      }
 	// clear();
-	$.each(arr, function(i)
-        {
-            if(this!="")
-            {
-			    if($("#txt"+i).attr("readonly"))
-                {
+	$.each(arr, function(i){
+            if(this!=""){
+			    if($("#txt"+i).attr("readonly")){
 		            return;
 		        }
-		        if(flag)
-                {
+		        if(flag){
 		            $("#txt"+i).parent().prev("td").children("input").attr("disabled",true);
 		            $("#txt"+i).attr("readonly",true).attr("disabled",true);
-		        }else
-                {
+		        }else{
 		            $("#txt"+i).parent().prev("td").children("input").attr("checked",true);
 			    }
 			    $("#txt"+i).val(ver(this));
@@ -357,8 +345,6 @@ if(a_cis1!=""){
 }
 //确认投注	
 function comform(){
-
-
 	t=$("#totalvalue").text().replace(/,/gi,"");
     t=parseInt(t);
 	var str=[];
@@ -398,20 +384,13 @@ var str=[];
 
 //倒计时
 
-function GetRTime(ctime,Isue)
-{    
+function GetRTime(ctime,Isue){    
     var nS=ctime;  
     var Issue=Isue;
-
-    if(nS>0)
-    {
-      //alert(document.getElementById('check_reload').checked);
-      //alert(nS);
+    if(nS>0){
       nS = nS-1	  
       document.getElementById("RemainTitle").innerHTML="<span  style='color: #FF0000;font-size: 14px;'>距离第<span style='font-size:12px'>"+Issue+"</span>期开奖还有<span style='font-size:12px'>"+nS+"</span>秒</span>";  
-    }
-    else
-    {
+    }else{
        document.getElementById("RemainTitle").innerHTML="<span class='form_game'>第<span style='font-size:12px'>"+Issue+"</span>期正在开奖中！</span>";  
        
     }
@@ -419,57 +398,33 @@ function GetRTime(ctime,Isue)
 }  
 
 //是否按现模式自动投注
-function ischecked()
-{
+function ischecked(){
  var isdb   = document.getElementById("isdb")//子层
  var isdb_p ="";//父层
- 
- 
- if(isdb.checked==true)
- {
+ if(isdb.checked==true){
       document.getElementById("isdb_p").value ="1";
- }else
- {
+ }else{
        document.getElementById("isdb_p").value ="0";
  }
-
 }
 
  //取消投注
-function rm()
-{
+function rm(){
   document.getElementById("isdb_p").value ="0";
   document.getElementById("div_ad").style.display = 'none';
   document.getElementById("parent_div").style.display = 'none';
 }
 
 //确认投注
-function datapost()
-{
-
-
-    //chgsubmit();
+function datapost(){
     $("input[name='SMONEY']").attr("disabled",false);
-
    var form1 =document.getElementById("form1");//父层
   form1.submit();
 }
 
-//滚动
-function sc1(){    
-document.getElementById("div_ad").style.top=(document.documentElement.scrollTop+document.body.scrollTop+(document.documentElement.clientHeight-document.getElementById("div_ad").offsetHeight)/2)+"px";    
-document.getElementById("div_ad").style.left=(document.documentElement.scrollLeft+(document.documentElement.clientWidth-document.getElementById("div_ad").offsetWidth)/2)+"px";    
-} 
-function scall()
-{    
- sc1();
-}  
-  
-window.onscroll=sc1;  
 
 //投注后信息返回
 function showmessage(flag,msg,NLid){
-
 ////弹出浮层
  $("#div_ad").css("display","");
 sc1();
@@ -572,7 +527,6 @@ $(".btnpane").html('<div style="text-align:center;"><a onclick="return rm();" st
 return;
 break;
 }
-
 
  //弹出笼罩层
  var bodyheight = document.getElementById('ad_body').clientHeight;

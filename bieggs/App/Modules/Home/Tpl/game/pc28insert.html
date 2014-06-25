@@ -5,8 +5,7 @@
   <title>幸运28-专业的广告游戏平台</title>
   <load href='__CSS__/pc28insert.css' />
   <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
-
-  <script language="javascript" type="text/javascript"></script>
+  <load href='__JS__/game/pc28.js'/>
 </head>
 
 <body>
@@ -16,11 +15,23 @@
   <div id="body_content">
     <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
-    <style type="text/css">
-      .dynamic_msg_r a {color: #F5A300;}
-    </style>
+    <style type="text/css">.dynamic_msg_r a {color: #F5A300;}</style>
     <include file="public:gametab"/>
     <include file="public:pc28menu"/>
+    <div style="margin:2px auto 10px auto; width:968px; height:30px; line-height :25px">
+      <div style="width:20%; float:left; line-height:30px; height:30px; padding-left:5px;">
+        637809期开奖结果:
+        <img src="__IMAGES__/game/nums/number_8.gif" width="25" height="25"></div>
+      <div style="width:60%; text-align:center; border:1px; float :left; line-height:30px; height:30px; " id="RemainTitle">
+        <span style="color: #FF0000;font-size: 14px;">
+          距离第
+          <span style="font-size:12px">637810</span>
+          期开奖还有
+          <span style="font-size:12px">57</span>
+          秒
+        </span>
+      </div>
+    </div>
     <div class="border_out">
       <div class="border_out_l">
         <div class="border_out_title">
@@ -135,16 +146,31 @@
     </div>
 
     <div class="content_middle" style="width:968px;margin:auto;" id="panel">
+<script language="javascript" type="text/javascript">  
+  var cis="941.62,338.43,169.20,103.96,67.96,48.27,35.57,27.44,22.17,18.11,15.84,14.02,13.67,13.21,13.30,13.70,14.46,15.81,18.07,22.21,27.43,35.84,48.71,67.61,102.25,178.81,333.39,589.64";//上期赔率
+  var a_cis=cis.split(",");
+  var cis1="425.53,1124.23,4233.02,7231.36,5232.2352,3453.83,2458.41,1348.92,14449.75,16573.56,1569.01,156564.74,1658.13,1563.29,1569.50,1655.49894,1897.87,1126.51,1129.9339,1228.6110,2337.3446,2557.2651,45653.7762,56761.77,1608.69,16736.1678,3717.49,502.14";//本期赔率
+  var a_cis1=cis1.split(",");
+  var BeforePeriods="*"+"637809";//上期投注号
+  var Periods="558378"//本期ID
+  var arr1=",,,,,,,,,,,,,,,,,,,,,,,,,,,".split(",");//投注金蛋
+  var Issue="637810";//当期期号
+  var TSeconds="100";//倒计时
+  var mypceggs="16504";//我的金蛋数
+  var IsGetEggs="0";//是否可以清理获取
+  var StrTimeOut="0"
+  var LastIssue="";
+</script>
       <input class="input2" name="SMONEYY" type="hidden" value="ALD">
       <table width="484" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="left" style="color:Black;">
         <tbody>
           <tr align="center" height="20">
-            <td width="50" background="/img/pg28/xy28_bg.gif">号码</td>
-            <td width="71" background="/img/pg28/xy28_bg.gif">上期赔率</td>
-            <td width="71" background="/img/pg28/xy28_bg.gif">当前赔率</td>
-            <td width="53" background="/img/pg28/xy28_bg.gif">请选择</td>
-            <td width="130" background="/img/pg28/xy28_bg.gif">投注</td>
-            <td width="80" background="/img/pg28/xy28_bg.gif">倍数</td>
+            <td width="50" background="">号码</td>
+            <td width="71" background="">上期赔率</td>
+            <td width="71" background="">当前赔率</td>
+            <td width="53" background="">请选择</td>
+            <td width="130" background="">投注</td>
+            <td width="80" background="">倍数</td>
           </tr>
           <tr align="center" bgcolor="#FFFFFF" height="27">
             <td>
@@ -348,12 +374,12 @@
       <table width="484" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="right" style="color:Black;">
         <tbody>
           <tr align="center" height="20">
-            <td width="50" background="/img/pg28/xy28_bg.gif">号码</td>
-            <td background="/img/pg28/xy28_bg.gif">上期赔率</td>
-            <td background="/img/pg28/xy28_bg.gif">当前赔率</td>
-            <td background="/img/pg28/xy28_bg.gif">请选择</td>
-            <td width="130" background="/img/pg28/xy28_bg.gif">投注</td>
-            <td background="/img/pg28/xy28_bg.gif" style="width: 80px">倍数</td>
+            <td width="50" background="">号码</td>
+            <td background="">上期赔率</td>
+            <td background="">当前赔率</td>
+            <td background="">请选择</td>
+            <td width="130" background="">投注</td>
+            <td background="" style="width: 80px">倍数</td>
           </tr>
           <tr align="center" bgcolor="#FFFFFF" height="27">
             <td>
