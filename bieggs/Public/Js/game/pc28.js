@@ -75,9 +75,10 @@ $("#panel").find("input[name='Add']").click(function(){
 $("input[name='checkboxd']").each(function(i){
 										  $(this).click(function(){ 
 											if($(this).attr("checked")){
-											$(this).parent().next("td").children("input").val(nub1[i]);
-												}else{$(this).parent().next("td").children("input").val("");}
-											getAllpceggs()
+												$(this).parent().next("td").children("input").val(nub1[i]);
+											}else{
+												$(this).parent().next("td").children("input").val("");}
+												getAllpceggs()
 											})
 										   })
 //点击号码
@@ -174,11 +175,12 @@ $(".img_bt1").css("background-image","url(../public/images/game/img_bt.gif)");
 	$("#panel").find("input[name='checkboxd']").attr("checked",false);
 	$("#totalvalue").text("0");
 }
+
 //数字加千分符号
 function ver(n){
-re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g    
-return n.replace(re,"$1,")    
-	}
+	re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g    
+	return n.replace(re,"$1,")    
+}
 	
 //设置所有赔率
 function setAllvalue(peilv){
@@ -300,15 +302,14 @@ var first=0;
 //取总的投注金蛋
 function getAllpceggs(){
 	var total=0;
-	 $("#panel").find("input[name='SMONEY']").each(function(){
-																if(!$(this).attr("readonly")){
-																var  txt_value=$.trim($(this).val()).replace(/,/gi,"");	
-																		if(txt_value&&!isNaN(txt_value)){
-																			total+=parseInt(txt_value);
-																			}
-																			}
-																		}
-															   )
+	$("#panel").find("input[name='SMONEY']").each(function(){
+		if(!$(this).attr("readonly")){
+			var txt_value=$.trim($(this).val()).replace(/,/gi,"");	
+			if(txt_value&&!isNaN(txt_value)){
+				total+=parseInt(txt_value);
+			}
+		}
+	})
 
 $("#totalvalue").text(ver(total+""));
 
