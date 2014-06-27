@@ -1,10 +1,3 @@
-/**************************************/
-a {text-decoration:NONE;}
-a:link {
-color: #000;
-text-decoration: none;
-}
-a:hover {color:#00f;}
 .dynamic_msg{
     width: 978px;
     height: 30px;

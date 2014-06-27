@@ -1,10 +1,3 @@
-/**************************************/
-a {text-decoration:NONE;}
-a:link {
-color: #000;
-text-decoration: none;
-}
-a:hover {color:#00f;}
 .game_content{
     width: 978;
     border: 1px solid #E2E2E2;
