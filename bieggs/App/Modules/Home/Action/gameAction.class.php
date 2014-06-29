@@ -43,8 +43,4 @@ class gameAction extends comAction{
         $this->display();
     }
 
-/*************action**************/
-    public function pc28insert(){
-        $this->display();
-    }
 }

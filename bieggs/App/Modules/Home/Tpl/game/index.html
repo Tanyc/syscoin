@@ -9,10 +9,11 @@
   <load href='__JS__/game/AJax.js' />
   <load href='__JS__/game/game.js' />
 
-  <script language="javascript" type="text/javascript"></script>
-  <!-- InstanceEndEditable -->
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
+  <script language="javascript" type="text/javascript">
+    function genLidUrl(obj,LID){
+      obj.href = 'bets/index/LID/' + LID;
+    }
+  </script>
 </head>
 
 <body>
@@ -120,7 +121,7 @@
             </td>
             <td class="panel_td7">
               <if condition='$vo.open_num eq ""'>
-                <a href="{:U('/game/pc28insert')}">投注</a>
+                <a href="#" onmouseover="genLidUrl(this,{$vo.id})" >投注</a>
                 <else />
                 <a href="www.baidu.com" style="color:#cc6600">已开奖</a>
               </if>
@@ -130,7 +131,8 @@
         <tr align="center" bgcolor="#FFFFFF">
           <td height="28" colspan="7" bgcolor="#FFFFFF">
             <form name="pgindex" method="post" action="game" id="pgindex">
-  <input id="pg" name="pg" type="hidden" value="2"></form>
+              <input id="pg" name="pg" type="hidden" value="2">
+            </form>
             <include file="public:pagectl"/>
           </td>
         </tr>
