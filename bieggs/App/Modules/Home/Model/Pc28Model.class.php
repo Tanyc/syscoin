@@ -10,6 +10,10 @@ class Pc28Model extends Model {
         return $this->order('id DESC')->field(true)->limit($offset,$this::CNT)->select();
     }
 
+    public function getLastRecord($filed){
+        return $this->order('id DESC')->field($filed)->limit(5,1)->select();
+    }
+
     public function getCount(){
         return $this->count();
     }

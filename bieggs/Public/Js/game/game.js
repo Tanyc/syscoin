@@ -10,10 +10,9 @@ function chkResult28(nums,__IMAGES__) {
     document.write("-");
   }else{
     nums = nums.toString();
-    var f_num = nums.charAt(0);
+    var f_num = parseInt(nums.charAt(0));
     var s_num = parseInt(nums.charAt(1));
     var t_num = parseInt(nums.charAt(2));
-    f_num = ("-" == f_num) ? 0 : parseInt(f_num);
     var strR = f_num + " + " + s_num + " + " + t_num + " = ";
     document.write(strR + "<img src=" +  __IMAGES__ + "/game/nums/number_" + (f_num + s_num + t_num) + ".gif />");
   }

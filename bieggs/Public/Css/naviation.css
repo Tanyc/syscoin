@@ -42,9 +42,7 @@ position: relative;
 }
 
 #navi_topr{
-/*height: 20px;*/
 float:right;
-/*background:#C63;*/
 }
 #navi_topr UL LI {
 	float: right;

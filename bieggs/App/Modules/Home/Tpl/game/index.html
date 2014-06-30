@@ -104,7 +104,7 @@
             <td class="panel_td2">{$vo.open_time}</td>
             <td class="panel_td3">
               <script language="javascript" type="text/javascript">
-                  chkResult28(<?php echo ("" + $vo["open_num"]); php?>, '__IMAGES__');</script>
+                  chkResult28('<?php echo ($vo["open_num"]); php?>', '__IMAGES__');</script>
             </td>
             <td class="panel_td4">
               <script language="javascript" type="text/javascript">document.write(transStr({$vo.all_down}));</script>
@@ -121,7 +121,8 @@
             </td>
             <td class="panel_td7">
               <if condition='$vo.open_num eq ""'>
-                <a href="#" onmouseover="genLidUrl(this,{$vo.id})" >投注</a>
+                <!-- onmouseover="genLidUrl(this,{$vo.id})" 另一种实现方式-->
+                <a href="{:U('bets/index?LID='.$vo['id'])}" >投注</a>
                 <else />
                 <a href="www.baidu.com" style="color:#cc6600">已开奖</a>
               </if>

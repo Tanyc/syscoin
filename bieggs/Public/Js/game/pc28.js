@@ -31,12 +31,12 @@ var mode = new Array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
 					 [4,9,14,19,24]);//5余4
 var maxnum = 100000000;//最大投注金额
 $(document).ready(function (){
-   GetRTime(TSeconds,Issue);  
+   GetRTime(TSeconds,LID);  
 //点击投注模式
 $(".img_bt1").click(function(){
 					var i=$(this).attr("attr");
 					clear();
-					$(this).css("background-image","url(../Public/Images/public/img_bt.gif)");
+					$(this).css("background-image","url(../../../Public/Images/public/img_bt.gif)");
 					setValue(i);
 					getAllpceggs();
 							 }).hover(
@@ -142,7 +142,6 @@ $("#panel").find("input[name='SMONEY']").keyup(function(){
 			});
 });
 
-
 //标准投注模式设定方法
 function setValue(num){
 	for(var i=0;i<mode[num].length;i++){
@@ -156,7 +155,7 @@ function setValue(num){
 	}
 //清除方法
 function clear(){
-$(".img_bt1").css("background-image","url(../public/images/game/img_bt.gif)");
+$(".img_bt1").css("background-image","url(../../../public/images/game/img_bt.gif)");
 	$("#panel").find("input[name='SMONEY']").each(function(){
 														if(!$(this).attr("readonly")){
 															$(this).val("");
@@ -199,16 +198,17 @@ function ani_select(){
 			  
 //自定义模式 
 function personmode(id){
-	  $.ajax({
-    type:"get",
-    url:"index",
-	error:function(){
-		alert("操作错误");
-	},
-    success:function(data, textStatus){
-		UserMode(data.split(","));
-    }
-  });
+	$.ajax({
+	    type:"get",
+	    url:"../../../bets/userMode?id="+id,
+		error:function(){
+			alert("操作错误");
+		},
+	    success:function(data, textStatus){
+	    	var test = data.split(",");
+			UserMode(data.split(","));
+	    }
+	});
 }
 
 //刷新赔率 
@@ -226,7 +226,35 @@ function refreshd(id){
   });
 	}
 
-//页面载入时执行
+//载入开奖时间
+function initParams(){
+	showvalue(arr1,1);
+	$(".ardown").text(ver(aldown));
+	$(".open_time").text(open_time);
+	$(".llid").siblings("img").attr("src",img_path + "/game/nums/number_" + getLastNum(LLNUM) + ".gif");
+	addUserMode();
+}
+
+function addUserMode(){
+	var html = "";
+	for (var i = 0; i <= umode.length - 1; i++) {
+		html += '<a style="color:#ff8c00;font-weight:bold;" href="javascript:personmode(' + i + ')">' + umode[i] + '</a> ';
+	};
+	$(".user_mode").html(html);
+}
+
+function getLastNum(LLNUM){
+  if("" == LLNUM || null == LLNUM){
+    return "-";
+  }else{
+    nums = LLNUM.toString();
+    var f_num = parseInt(nums.charAt(0));
+    var s_num = parseInt(nums.charAt(1));
+    var t_num = parseInt(nums.charAt(2));
+    return f_num + s_num + t_num;
+  }
+}
+
 function showvalue(arr,flag){
     if(StrTimeOut=="-1"){
       showmessage("3","该期已经截止投注！",LastIssue);
@@ -359,15 +387,15 @@ function comform(){
 
 function GetRTime(ctime,Isue){    
     var nS=ctime;  
-    var Issue=Isue;
+    var LID=Isue;
     if(nS>0){
       nS = nS-1	  
-      document.getElementById("RemainTitle").innerHTML="<span  style='color: #FF6C00;font-size: 14px;'>距离第<span style='font-size:18px; color:#f00'>"+Issue+"</span>期开奖还有<span style='font-size:18px; color:#f00'>"+nS+"</span>秒</span>";  
+      document.getElementById("RemainTitle").innerHTML="<span  style='color: #FF6C00;font-size: 14px;'>距离第<span style='font-size:18px; color:#f00'>"+LID+"</span>期开奖还有<span style='font-size:18px; color:#f00'>"+nS+"</span>秒</span>";  
     }else{
-       document.getElementById("RemainTitle").innerHTML="<span class='form_game'>第<span style='font-size:12px'>"+Issue+"</span>期正在开奖中！</span>";  
+       document.getElementById("RemainTitle").innerHTML="<span class='form_game'>第<span style='font-size:12px'>"+LID+"</span>期正在开奖中！</span>";  
        
     }
-    setTimeout("GetRTime("+nS+","+Issue+")",1000);  
+    setTimeout("GetRTime("+nS+","+LID+")",1000);  
 }  
 
 //是否按现模式自动投注
@@ -461,7 +489,7 @@ function showmessage(flag,msg,NLid){
 		case "9"://确认投注
 			$(".content1").html(msg);
 			$(".titleclose").html('<span class="title">确认投注</span><a onclick="showDialog(false);" class="close"><span>X</span></a>');
-			$(".btnpane").html('<div style="float:left; "><a onclick="return datapost()"  style="width:72px;height:22px; background:url(./Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer;"></a></div> <div style="float:right;"><a onclick="showDialog(false);"  style="width:72px;height:22px; background:url(./Public/Images/game/popup_cancel.png) no-repeat;display:block;cursor:pointer;"></a></div> ');
+			$(".btnpane").html('<div style="float:left; "><a onclick="return datapost()"  style="width:72px;height:22px; background:url(../../../Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer;"></a></div> <div style="float:right;"><a onclick="showDialog(false);"  style="width:72px;height:22px; background:url(../../../Public/Images/game/popup_cancel.png) no-repeat;display:block;cursor:pointer;"></a></div> ');
 			break;
 		case "10"://系统异常（投注模式pg28mode.aspx）
 			$(".content1").html(msg);
@@ -471,17 +499,17 @@ function showmessage(flag,msg,NLid){
 		case "11"://投注金额超过上限
 			$(".content1").html(msg);
 			$(".titleclose").html('<span class="title">投注金额超过上限</span><a onclick="showDialog(false);" class="close"><span>X</span></a>');
-			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(./Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
+			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(../../../Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
 			break;
 		case "12"://金蛋投余额不足
 			$(".content1").html(msg);
 			$(".titleclose").html('<span class="title">您的金蛋不足！</span><a onclick="showDialog(false);" class="close"><span>X</span></a>');
-			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(./Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
+			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(../../../Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
 			break;
 		case "13"://没有投注
 			$(".content1").html(msg);
 			$(".titleclose").html('<span class="title">请先投注！</span><a onclick="showDialog(false);" class="close"><span>X</span></a>');
-			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(./Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
+			$(".btnpane").html('<div style="text-align:center;"><a onclick="showDialog(false);" style="width:72px;height:22px;background:url(../../../Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
 			break;
 		case "14"://投注邀请分享浮层
 			$(".content1").html(msg);
@@ -498,7 +526,7 @@ function showmessage(flag,msg,NLid){
 		case "16"://验证码错误
 			$(".content1").html(msg);
 			$(".titleclose").html('<span class="title">提示</span><a onclick="return rm();" class="close"><span>X</span></a>');
-			$(".btnpane").html('<div style="text-align:center;"><a onclick="return rm();" style="width:72px;height:22px;background:url(./Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
+			$(".btnpane").html('<div style="text-align:center;"><a onclick="return rm();" style="width:72px;height:22px;background:url(../../../Public/Images/game/popup_ok.png) no-repeat;display:block;cursor:pointer; margin:0 auto"> </a></div>');
 			return;
 			break;
 	}
