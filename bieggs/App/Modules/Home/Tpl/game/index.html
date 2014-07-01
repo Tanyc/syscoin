@@ -124,7 +124,7 @@
                 <!-- onmouseover="genLidUrl(this,{$vo.id})" 另一种实现方式-->
                 <a href="{:U('bets/index?LID='.$vo['id'])}" >投注</a>
                 <else />
-                <a href="www.baidu.com" style="color:#cc6600">已开奖</a>
+                <a href="{:U('bets/psbets?LID='.$vo['id'])}" style="color:#cc6600">已开奖</a>
               </if>
             </td>
           </tr>

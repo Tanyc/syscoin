@@ -131,3 +131,20 @@ height: 20px;
 width: 22px;
 cursor: pointer;
 }
+
+/************************/
+.tzbanner {
+width: 968px;
+border: 1px solid #FFCA7E;
+height: 88px;
+margin: auto;
+margin-bottom: 10px;
+margin-top: 10px;
+background: url(../Images/public/bg_h3.gif);
+}
+.tzbanner_fk {
+height: 75px;
+border: 1px solid #FFE6B5;
+margin-top: 6px;
+background: #FEFDF5;
+}

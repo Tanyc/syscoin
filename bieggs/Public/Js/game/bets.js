@@ -36,7 +36,8 @@ $(document).ready(function (){
 $(".img_bt1").click(function(){
 					var i=$(this).attr("attr");
 					clear();
-					$(this).css("background-image","url(../../../Public/Images/public/img_bt.gif)");
+					clearUmode();
+					$(this).css("background-image","url(../../../Public/Images/public/img_bt_o.gif)");
 					setValue(i);
 					getAllpceggs();
 							 }).hover(
@@ -155,7 +156,7 @@ function setValue(num){
 	}
 //清除方法
 function clear(){
-$(".img_bt1").css("background-image","url(../../../public/images/game/img_bt.gif)");
+$(".img_bt1").css("background-image","url(../../../public/images/public/img_bt_y.gif)");
 	$("#panel").find("input[name='SMONEY']").each(function(){
 														if(!$(this).attr("readonly")){
 															$(this).val("");
@@ -195,9 +196,16 @@ function ani_select(){
 									  )
 	getAllpceggs();
 			  }
-			  
+
+function clearUmode(id){  //总共有15种用户模式
+	for (var i = 0; i <= 15; i++) {
+		$('.umode' + i).css("color", "#ff8c00");
+	};
+}  
 //自定义模式 
 function personmode(id){
+	clearUmode();
+	$('.umode' + id).css("color", "#ff0000");
 	$.ajax({
 	    type:"get",
 	    url:"../../../bets/userMode?id="+id,
@@ -238,7 +246,7 @@ function initParams(){
 function addUserMode(){
 	var html = "";
 	for (var i = 0; i <= umode.length - 1; i++) {
-		html += '<a style="color:#ff8c00;font-weight:bold;" href="javascript:personmode(' + i + ')">' + umode[i] + '</a> ';
+		html += '<a class=umode' + i + ' style="color:#ff8c00;font-weight:bold;" href="javascript:personmode(' + i + ')">' + umode[i] + '</a> ';
 	};
 	$(".user_mode").html(html);
 }
