@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- InstanceBegin template="/Templates/navi_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>幸运28-专业的广告游戏平台</title>
+  <load href='__CSS__/game.css' />
+</head>
+
+<body>
+  <include file="public:header"/>
+  <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}
+.tzbanner {width: 968px;border: 1px solid #FFCA7E;height: 88px;margin: auto;margin-bottom: 10px;margin-top: 10px;background-color:#ffcf00;}
+.tzbanner_fk {height: 75px;border: 1px solid #FFE6B5;margin-top: 6px;background: #FEFDF5;}
+  </style>
+  <!--------------------------------------------------->
+  <div id="body_content">
+    <!-- InstanceBeginEditable name="content" -->
+    <include file="public:textrun"/>
+    <style type="text/css">
+      .dynamic_msg_r a {color: #F5A300;}
+    </style>
+    <div class=game_content>
+      <include file="public:gametab"/>
+      <include file="public:pc28menu"/>
+      <div class="tzbanner">
+        <div class="tzbanner_fk">
+          <table width="920" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tbody>
+              <tr>
+                <td height="9" colspan="4" align="left"></td>
+              </tr>
+              <tr>
+                <td width="235" height="30" align="left">
+                  &nbsp;&nbsp;&nbsp;&nbsp;期号： <font color="red">639350</font>
+                </td>
+                <td width="230" align="left">开奖状态：已开奖</td>
+                <td width="230" height="30" align="left">开奖时间：<span class="time">2014-05-06 12:45</span></td>
+                <td width="225" align="left">
+                  开奖结果：
+                  <img class="open_num" src="/bidan/bieggs/Public/Images/game/nums/number_15.gif" width="25" height="25" align="absmiddle"></td>
+              </tr>
+              <tr>
+                <td width="235" height="30" align="left">
+                  &nbsp;&nbsp;&nbsp;&nbsp;我的投注额：<span class="mydown">2,587,541</span>
+                  <img src="/bidan/bieggs/Public/Images/public/egg.gif"></td>
+                <td width="230" height="30" align="left">
+                  获得金蛋：<span class="gmoney">25,845,454</span>
+                  <img src="/bidan/bieggs/Public/Images/public/egg.gif"></td>
+                <td width="230" height="30" align="left">
+                  我的盈亏： <span class="egggen">23,257,913</span>
+                  <img src="/bidan/bieggs/Public/Images/public/egg.gif"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#fc0" align="center" style="color:Black; margin-bottom:5px" id="panel" >
+        <tbody>
+          <tr class="center_table">
+            <td width="12%">用户ID</td>
+            <td width="16%">投注金蛋</td>
+            <td width="23%">中奖金蛋</td>
+          </tr>
+          <volist name="db_result" id="vo">
+            <tr align="center" height="28px" bgcolor="#FFFFFF">
+            <td class="panel_td1">{$vo.user_id}</td>
+            <td class="panel_td2">{$vo.user_down}</td>
+            <td class="panel_td3">{$vo.user_get}</td>
+          </tr>
+        </volist>
+        <tr align="center" bgcolor="#FFFFFF">
+          <td height="28" colspan="7" bgcolor="#FFFFFF">
+            <form name="pgindex" method="post" action="" id="pgindex">
+              <input id="pg" name="pg" type="hidden" value="2">
+              <input id="LID" name="LID" type="hidden" value={$LID}>
+            </form>
+            <include file="public:pagectl"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- InstanceEndEditable -->
+</div>
+<include file="public:footer"/>
+</body>
+<!-- InstanceEnd -->
+</html>

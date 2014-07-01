@@ -86,7 +86,7 @@
         </tbody>
         <Load href='__JS__/game/seting.js'/>
       </table>
-      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#fc0" align="center" style="color:Black; margin-bottom:5px" id="panel" >
+      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#ffc00" align="center" style="color:Black; margin-bottom:5px" id="panel" >
         <tbody>
           <tr class="center_table">
             <td width="12%">期号</td>
@@ -98,7 +98,7 @@
             <td width="10%">参与</td>
           </tr>
           <volist name="db_pc28" id="vo">
-            <tr align="center" height="28px" bgcolor="#fff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>
+            <tr align="center" height="28px" bgcolor="#ffffff" <eq name='vo["id"] % 2' value="0">style="background:#f2f2f2"</eq>
             >
             <td class="panel_td1">{$vo.id}</td>
             <td class="panel_td2">{$vo.open_time}</td>
@@ -114,9 +114,9 @@
               <img src="__IMAGES__/public/egg.gif"></td>
             <td class="panel_td6">
               <if condition='$vo.open_people eq 0'>
-                <span style="color:#000">0</span>
+                <span style="color:#000000">0</span>
               <else />
-                <a href="www.baidu.com" style="color:#cc6600">{$vo.open_people}</a>
+                <a href="{:U('result/index?LID='.$vo['id'])}" style="color:#cc6600">{$vo.open_people}</a>
               </if>
             </td>
             <td class="panel_td7">

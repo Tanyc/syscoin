@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>幸运28-专业的广告游戏平台</title>
-  <load href='__CSS__/pc28insert.css' />
+  <load href='__CSS__/bets.css' />
   <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
   <load href='__JS__/game/psbets.js'/>
   <!-- <load href='__JS__/cookie.js'/> -->
@@ -32,21 +32,21 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;期号： <font color="red">639350</font>
                 </td>
                 <td width="230" align="left">开奖状态：已开奖</td>
-                <td width="230" height="30" align="left">开奖时间：07/01 12:15</td>
+                <td width="230" height="30" align="left">开奖时间：<span class="time"></span></td>
                 <td width="225" align="left">
                   开奖结果：
-                  <img src="/img/pub/number_16.gif" width="25" height="25" align="absmiddle"></td>
+                  <img class="open_num" src="" width="25" height="25" align="absmiddle"></td>
               </tr>
               <tr>
                 <td width="235" height="30" align="left">
-                  &nbsp;&nbsp;&nbsp;&nbsp;我的投注额：0
-                  <img src="/img/pub/egg.gif"></td>
+                  &nbsp;&nbsp;&nbsp;&nbsp;我的投注额：<span class="mydown"></span>
+                  <img src="__IMAGES__/public/egg.gif"></td>
                 <td width="230" height="30" align="left">
-                  获得金蛋：0
-                  <img src="/img/pub/egg.gif"></td>
+                  获得金蛋：<span class="gmoney"></span>
+                  <img src="__IMAGES__/public/egg.gif"></td>
                 <td width="230" height="30" align="left">
-                  我的盈亏： <font color="red">0</font>
-                  <img src="/img/pub/egg.gif"></td>
+                  我的盈亏： <span class="egggen"></span>
+                  <img src="__IMAGES__/public/egg.gif"></td>
               </tr>
             </tbody>
           </table>
@@ -78,10 +78,15 @@
   </div>
 <script language="javascript" type="text/javascript">
   var img_path = '__IMAGES__';
-  var self_in = "<?php echo ($db_user_bets[0]['ALLSMONEY']); ?>".split(",");
+  var self_in = "<?php echo ($db_user_bets[0]['ALLSMONEY']); ?>";
+  if ("" != self_in) {
+    self_in = self_in.split(",");
+  }
   var cis="<?php echo ($rate); ?>".split(","); //当期赔率
   var open_num="<?php echo ($open_num); ?>"; //当期开奖号
   var time ="<?php echo ($time); ?>"; //当期开奖号
+  var SMONEYSUM = "<?php echo ($db_user_bets[0]['SMONEYSUM']); ?>"
+  var GMONEYSUM = "<?php echo ($db_user_bets[0]['GMONEYSUM']); ?>"
   
 
   initpsBets();

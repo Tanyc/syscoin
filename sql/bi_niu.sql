@@ -2,8 +2,8 @@ DROP TABLE IF EXISTS `bi_niu`;
 CREATE TABLE `bi_niu` (
   `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
   `data_id` int(1) unsigned NOT NULL,
-  `user_id` int(12) unsigned NOT NULL,
-  `egg_win_all` int(30) unsigned NOT NULL,
+  `user_id` int(11) unsigned NOT NULL,
+  `egg_win_all` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 INSERT INTO `bi_niu` VALUES ('1', '1', '17883275','2300474');

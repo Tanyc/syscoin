@@ -1,5 +1,9 @@
 <?php
 class betsAction extends loginAction{
+    function _initialize() {
+        parent::_initialize();
+        $this->assign('PAGE_CURID',4);
+    }
 
     public function index(){
         $LID = $this->_param('LID');
@@ -31,9 +35,8 @@ class betsAction extends loginAction{
         $this->assign("db_user_bets",$userBets->getDataByLid($LID));
         //当期开奖结果
         /***************以下赋值后期考虑依缓存实现*******************/
-        $open_num = 15;
         $rate = "941.62,338.43,169.20,103.96,67.96,48.27,35.57,27.44,22.17,18.11,15.84,14.02,13.67,13.21,13.30,13.70,14.46,15.81,18.07,22.21,27.43,35.84,48.71,67.61,102.25,178.81,333.39,589.64";
-        $arr['open_num'] = $open_num;
+        $arr['open_num'] = 15;
         $arr['rate']     = $rate;
         $arr['time']     = "2014-05-06 12:45";
         /***********************************************************/
