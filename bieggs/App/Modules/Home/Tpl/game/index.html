@@ -114,7 +114,7 @@
               <img src="__IMAGES__/public/egg.gif"></td>
             <td class="panel_td6">
               <if condition='$vo.open_people eq 0'>
-                <span style="color:#000000">0</span>
+                <span style="color:#000000">-</span>
               <else />
                 <a href="{:U('result/index?LID='.$vo['id'])}" style="color:#cc6600">{$vo.open_people}</a>
               </if>
@@ -135,6 +135,9 @@
               <input id="pg" name="pg" type="hidden" value="2">
             </form>
             <include file="public:pagectl"/>
+            <style type="text/css">
+              .fontc{color:#ff8000;font-weight:bold;}
+            </style>
           </td>
         </tr>
       </tbody>

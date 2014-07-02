@@ -3,6 +3,7 @@ function initpsBets(){
 	genNumItem();
 	$(".open_num").attr("src",img_path + '/game/nums/number_' + open_num + '.gif');
 	$(".time").text(time);
+	$(".game_num").text(game_num);
 	$(".mydown").text(("" == SMONEYSUM)? 0 : ver(SMONEYSUM));
 	$(".gmoney").text(("" == GMONEYSUM)? 0 : ver(GMONEYSUM));
 	$(".egggen").text(ver(GMONEYSUM - SMONEYSUM));

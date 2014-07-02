@@ -10,6 +10,7 @@ class gameAction extends comAction{
     public function initCom($db_data_cnt, $cur_pg){
         $array['db_data_cnt'] = $db_data_cnt;    //总数
         $array['cur_pg']      = $cur_pg; //当前页
+        $array['items']      = 20; //每页显示的条数
         $this->assign($array);
     }
 

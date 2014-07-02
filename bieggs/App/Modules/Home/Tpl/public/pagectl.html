@@ -3,6 +3,8 @@
 </head>
 
 <script language="javascript" type="text/javascript">
+  var itemPerPage = {$items}; 
+
     function onsubmit(cur_pg){
         document.getElementById("pg").value = cur_pg;
         document.getElementById("pgindex").submit();
@@ -29,7 +31,7 @@
     }
 
     function calcAllPg(items,is_ret){
-        var pages = Math.ceil((items + 5) / 20);
+        var pages = Math.ceil(items / itemPerPage);
         if (is_ret) {
           return pages;
         };
@@ -51,19 +53,19 @@
 		<tr valign="middle">
 			<td align="left">
 				<span title="记录总数" style="cursor:pointer;">
-					<span class="common">&nbsp;&nbsp;记录总数：</span>
-					<span style="color:#000066; font-weight:bold;">{$db_data_cnt}</span>
+					<span>&nbsp;&nbsp;记录总数：</span>
+					<span class="fontc">{$db_data_cnt}</span>
 				</span>
 				<span title="总页数" style="cursor:pointer;">
-					<span class="common">&nbsp;&nbsp;总页数：</span>
-					<span style="color:#000066;font-weight:bold;">
+					<span>&nbsp;&nbsp;总页数：</span>
+					<span class="fontc">
 						<script type="text/javascript">calcAllPg({$db_data_cnt});</script>
 					</span>
 				</span>
 				&nbsp;&nbsp;
 				<span title="当前页" style="cursor:pointer;">
-					<span class="common">&nbsp; &nbsp;当前页：</span>
-					<span style="color:#CC0000;font-weight:bold;">{$cur_pg}</span>
+					<span>&nbsp; &nbsp;当前页：</span>
+					<span class="fontc">{$cur_pg}</span>
 				</span>
 			</td>
 			<td align="center">
@@ -75,9 +77,9 @@
 			</td>
 			<td align="right">
 				<span title="当前记录数" style="cursor:pointer;">
-					<span class="common">&nbsp;&nbsp;当页记录数：</span>
-          <span style="color:#F5A300;font-weight:bold;">
-            <if condition='$cur_pg eq 1'>15<else />20</if>
+					<span>&nbsp;&nbsp;当页记录数：</span>
+          <span class="fontc">
+            {$items}
           </span>
 				</span>
 			</td>
@@ -93,7 +95,7 @@ var sh = sh = {f:1,a:1};
     for (var i = 1; i <= loop; i++) {
       var item = "";
       if ({$cur_pg} == i) {
-        item += '<span style="color:#C24E00;font-weight:bold;">' + i +'</span>';
+        item += '<span class="fontc">' + i +'</span>';
       }else{
         item = '<a href="javascript:onsubmit(' + i +');"' + 'target="_top">' + i + '</a>';
       }
@@ -125,7 +127,7 @@ var sh = sh = {f:1,a:1};
     for (var i = st_index * 8 + 1; i <= topnum; i++) {
       var item = "";
       if ({$cur_pg} == i) {
-        item += '<span style="color:#C24E00;font-weight:bold;">' + i +'</span>';
+        item += '<span class="fontc">' + i +'</span>';
       }else{
         item = '<a href="javascript:onsubmit(' + i +');"' + 'target="_top">' + i + '</a>';
       }

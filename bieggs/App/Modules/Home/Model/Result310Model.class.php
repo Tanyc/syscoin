@@ -1,5 +1,5 @@
 <?php
-class ResultModel extends Model {
+class Result310Model extends Model {
 	const CNT = 10;
 
     public function getResult($game_id,$page = 1){

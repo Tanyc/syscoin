@@ -24,6 +24,16 @@ class betsAction extends loginAction{
         $this->display();
     }
 
+    public function bets310(){
+        $this->assign('GAME_TAB',2);
+        $LID = $this->_param('LID');
+        if ("" == $LID) {
+           redirect(__ROOT__.'/game', 0, '');
+           return;
+        }
+        $this->display();
+    }
+
     public function psbets(){
         $LID = $this->_param('LID');
         if ("" == $LID) {
@@ -40,6 +50,7 @@ class betsAction extends loginAction{
         $arr['rate']     = $rate;
         $arr['time']     = "2014-05-06 12:45";
         /***********************************************************/
+        $arr['game_num']     = $LID;
         $this->assign($arr);
 
         $this->display();
