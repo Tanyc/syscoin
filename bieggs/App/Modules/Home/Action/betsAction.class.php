@@ -31,6 +31,10 @@ class betsAction extends loginAction{
            redirect(__ROOT__.'/game', 0, '');
            return;
         }
+        $pc310 = D("Pc310");
+        $this->assign("db_pc310_LID",$pc310->getResultByLID($LID));
+        $this->assign("LID",$LID);
+
         $this->display();
     }
 
@@ -54,6 +58,14 @@ class betsAction extends loginAction{
         $this->assign($arr);
 
         $this->display();
+    }
+
+    //提交投注结果
+    public function pc310bets(){
+        Log::record("------------------LID = " . $this->_param('LID'));
+        Log::record("------------------ALLSMONEY = " . $this->_param('ALLSMONEY'));
+        Log::record("------------------SMONEYSUM = " . $this->_param('SMONEYSUM'));
+        // redirect(__ROOT__.'/game', 1, '恭喜！投注成功。');
     }
 
     public function pc28bets(){

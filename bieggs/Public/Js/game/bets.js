@@ -167,6 +167,7 @@ $(".img_bt1").css("background-image","url(../../../public/images/public/img_bt_y
 
 //数字加千分符号
 function ver(n){
+	n = n + "";
 	re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g    
 	return n.replace(re,"$1,")    
 }

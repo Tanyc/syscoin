@@ -10,6 +10,10 @@ class Pc310Model extends Model {
         return $this->field(true)->limit($offset,$this::CNT)->select();
     }
 
+    public function getResultByLID($LID){
+        return $this->where("id=".$LID)->field(true)->select();
+    }
+
     public function getCount(){
         return $this->count();
     }
