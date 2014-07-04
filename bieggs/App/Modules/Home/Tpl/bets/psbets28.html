@@ -28,7 +28,7 @@
               </tr>
               <tr>
                 <td width="235" height="30" align="left">
-                  &nbsp;&nbsp;&nbsp;&nbsp;期号：<font class="game_num" color="red"></font>
+                  &nbsp;&nbsp;&nbsp;&nbsp;期号：<font class="LID" color="red"></font>
                 </td>
                 <td width="230" align="left">开奖状态：已开奖</td>
                 <td width="230" height="30" align="left">开奖时间：<span class="time"></span></td>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div style="margin-bottom:10px;margin-left:10px;">投注明细</div>
+    <div style="margin-bottom:10px;margin-left:5px;">我的投注明细</div>
 
     <table width="484" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="left" style="color:Black;">
           <tbody class="left_table">
@@ -81,7 +81,7 @@
   if ("" != self_in) {
     self_in = self_in.split(",");
   }
-  var game_num="<?php echo ($game_num); ?>"
+  var LID="<?php echo ($LID); ?>"
   var cis="<?php echo ($rate); ?>".split(","); //当期赔率
   var open_num="<?php echo ($open_num); ?>"; //当期开奖号
   var time ="<?php echo ($time); ?>"; //当期开奖号

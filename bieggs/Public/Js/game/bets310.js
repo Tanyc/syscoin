@@ -12,6 +12,13 @@ function ver(n){
 	return n.replace(re,"$1,")    
 }
 
+function showMy310Get(i){
+    var result = new Array(0,3,1);
+    if (game_result == result[i]) {
+      document.write(ver(GMONEYSUM));
+    }
+}
+
 function setRate(re){
 	var sum = result0 + result1 + result2;
 	var rate = 0;
@@ -43,21 +50,22 @@ function chclick(idval){
         }
     }else{
         if (document.getElementById("CI"+idval).checked == true){
-            document.getElementById(idval).value = everEgg;
+            document.getElementById(idval).value = ver(everEgg);
         }else{
             document.getElementById(idval).value = 0;
         }
     }
-    setNums(idval);
+    setNums();
 }
 
-function setNums(idval){
+function setNums(id){
     var regex=/^[1-9]\d{0,}$/;
     var val;
     len = document.getElementsByName("SMONEY").length;
     sum = 0;
     for (i=0;i<parseInt(len);i++){
-        val = document.getElementsByName("SMONEY")[i].value.replace(/,/gi,"");
+        var sMoney = document.getElementsByName("SMONEY")[i];
+        val = sMoney.value.replace(/,/gi,"");
         if(regex.test(val)&&(document.getElementsByName("checkboxd")[i].disabled==false)){
             document.getElementsByName("checkboxd")[i].checked = true;
             sum = parseInt(sum)+parseInt(val);
@@ -68,13 +76,25 @@ function setNums(idval){
     }
     if (sum>myMoney){
         alert("您的余额不足！");
+        // if (id) {
+        //     document.getElementsByName("SMONEY")[id].value = "";
+        // };
         return false;
     }
     if(sum>maxnum){
        alert("对不起，总投注金额不能超过投注上限！");
+        // if (id) {
+        //     document.getElementsByName("SMONEY")[id].value = "";
+        // };
        return false;
     }
-    document.getElementById("SMONEYSUM").value = sum;
+    for (i=0;i<parseInt(len);i++){
+        var sMoney = document.getElementsByName("SMONEY")[i];
+        val = sMoney.value.replace(/,/gi,"");
+        sMoney.value=ver(val);
+    }
+    document.getElementById("SMONEYSUM").value = ver(sum);
+    return true;
 }
 
 function chgsubmit(){
@@ -87,7 +107,7 @@ function chgsubmit(){
     for(i=0;i<len;i++){
         if (document.getElementsByName("checkboxd")[i].checked==true){
             t = t+1
-            smval = document.getElementsByName("SMONEY")[i].value;                                        
+            smval = document.getElementsByName("SMONEY")[i].value.replace(/,/gi,"");                                        
             if(!regex.test(smval)){
                 alert("请确认您的投注金额！");
                 return false;
@@ -113,15 +133,15 @@ function chgsubmit(){
        alert("该期为平安夜特殊期，只需投1个金蛋！");
        return false;
     }
-    document.getElementById("SMONEYSUM").value = sum;
-    if (parseInt(sum)>parseInt()){
+    document.getElementById("SMONEYSUM").value = ver(sum);
+    if (parseInt(sum)>parseInt(myMoney)){
         alert("您的余额不足！");
         return false;            
     }
     else if (parseInt(sum)==0){
         alert("请先投注！");
         return false;
-    }else if (window.confirm("确认您投注？将扣除您"+sum+"个金蛋！")){
+    }else if (window.confirm("确认您投注？将扣除您"+ver(sum)+"个金蛋！")){
         var result = "";
         for (loop = 0 ; loop < len ; loop++){
             var checki = document.getElementsByName("checkboxd")[loop];
@@ -149,7 +169,7 @@ $(document).ready(
 		.each(function(i){
 			$(this).click(function(){
 			if($(this).attr("checked")){
-				$(this).parent().next("td").children("input").val(everEgg);
+				$(this).parent().next("td").children("input").val(ver(everEgg));
 			}else{
 				$(this).parent().next("td").children("input").val("");}
 			})
@@ -164,8 +184,10 @@ $(document).ready(
 	                var  txt_value=txt.val().replace(/,/gi,"");
 					if(!txt_value){return;}
 					var new_value=Math.floor(txt_value*peilv);
-					txt.val(ver(new_value+""));
-					setNums();
+                    txt.val(ver(new_value+""));
+                    if (!setNums()) {
+                        txt.val(ver(txt_value+""));
+                    }
 			    }
 			})
 		});

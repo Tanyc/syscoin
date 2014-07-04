@@ -10,8 +10,12 @@ class Pc310Model extends Model {
         return $this->field(true)->limit($offset,$this::CNT)->select();
     }
 
-    public function getResultByLID($LID){
+    public function getRecordByLID($LID){
         return $this->where("id=".$LID)->field(true)->select();
+    }
+
+    public function getResultByLID($LID){
+        return $this->where("id=".$LID)->field('game_result')->select();
     }
 
     public function getCount(){

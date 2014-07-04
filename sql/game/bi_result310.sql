@@ -1,3 +1,4 @@
+-- 该文件为某一期的开奖中奖情况，某一期某些用户中了**
 DROP TABLE IF EXISTS `bi_result310`;
 CREATE TABLE `bi_result310` (
   `id` int(20) unsigned NOT NULL AUTO_INCREMENT,

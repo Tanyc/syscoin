@@ -26,6 +26,7 @@ a {text-decoration: NONE;color: #000;}
 .bar_m_l{float:left; display:inline}
 .bar_m_r{float:right; display:inline}
 .bar_b{background-color:#00bb00; width:958px; margin:3px auto 3px auto; padding-top:5px; padding-left:10px; padding-bottom:5px;}
-.bar_b_t{width:100%; padding-top:5px; padding-bottom:5px; text-align:center; font-size:40px; font-weight:bold;}
+.bar_b_t{width:100%; padding-top:5px; padding-bottom:5px; text-align:center; font-size:28px; font-weight:bold;}
 .bar_b_ti{font-size:18px; font-weight:bold;}
 .bets_tip{margin:0 auto 5px auto; width:968px;}
+.input310 {color: #00aa00}
