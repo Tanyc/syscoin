@@ -14,7 +14,7 @@ function chkResult28(nums,__IMAGES__) {
     var s_num = parseInt(nums.charAt(1));
     var t_num = parseInt(nums.charAt(2));
     var strR = f_num + " + " + s_num + " + " + t_num + " = ";
-    document.write(strR + "<img src=" +  __IMAGES__ + "/game/nums/number_" + (f_num + s_num + t_num) + ".gif />");
+    document.write(strR + "<img src=" +  __IMAGES__ + "/game/nums/number_" + (f_num + s_num + t_num) + ".png />");
   }
 }
 

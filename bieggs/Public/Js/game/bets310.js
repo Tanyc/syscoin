@@ -15,25 +15,33 @@ function ver(n){
 function showMy310Get(i){
     var result = new Array(0,3,1);
     if (game_result == result[i]) {
-      document.write(ver(GMONEYSUM));
+        document.write(ver(GMONEYSUM));
+    }else{
+        document.write(0);
     }
+}
+
+function setNumImageIcon(i){
+    var im = document.getElementById("open_num");
+    im.src = image_path + '/game/nums/310_' + i + '.png';
 }
 
 function setRate(re){
 	var sum = result0 + result1 + result2;
 	var rate = 0;
+    var temp;
 	switch(re){
 	case 0:
-		result0 = (0 == result0)? 1:result0;
-	  	rate = sum / result0;
+		temp = (0 == result0)? 1:result0;
+	  	rate = sum / temp;
 	  	break;
 	case 1:
-	  	result1 = (0 == result1)? 1:result1;
-	  	rate = sum / result1;
+	  	temp = (0 == result1)? 1:result1;
+	  	rate = sum / temp;
 	  	break;
 	case 2:
-	    result2 = (0 == result2)? 1:result2;
-	  	rate = sum / result2;
+	    temp = (0 == result2)? 1:result2;
+	  	rate = sum / temp;
 	  	break;
 	default:
 	  	break;

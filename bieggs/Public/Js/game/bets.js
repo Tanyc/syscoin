@@ -240,7 +240,7 @@ function initParams(){
 	showvalue(arr1,1);
 	$(".ardown").text(ver(aldown));
 	$(".open_time").text(open_time);
-	$(".llid").siblings("img").attr("src",img_path + "/game/nums/number_" + getLastNum(LLNUM) + ".gif");
+	$(".llid").siblings("img").attr("src",img_path + "/game/nums/number_" + getLastNum(LLNUM) + ".png");
 	addUserMode();
 }
 

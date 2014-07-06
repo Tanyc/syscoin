@@ -22,7 +22,7 @@ class betsAction extends loginAction{
             $uMode = D("Umode");
             $this->assign("db_umode",$uMode->getNameList());
             $this->display('bets28');
-        }else { //显示投注状态信息
+        } else { //显示投注状态信息
             /***************以下赋值后期考虑依缓存实现*******************/
             $rate = "941.62,338.43,169.20,103.96,67.96,48.27,35.57,27.44,22.17,18.11,15.84,14.02,13.67,13.21,13.30,13.70,14.46,15.81,18.07,22.21,27.43,35.84,48.71,67.61,102.25,178.81,333.39,589.64";
             $arr['open_num'] = 15;
@@ -53,6 +53,7 @@ class betsAction extends loginAction{
         if (is_array($record) && "" == $record[0]['game_result']) { //未开奖，显示投注界面
             $this->display('bets310');
         }else{ //已开奖，显示中奖状态
+            $this->assign("open_time","1400473645");  //测试用，后期创建开奖时间
             $this->display('psbets310');
         }
     }
