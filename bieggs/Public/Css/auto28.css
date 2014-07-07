@@ -1,0 +1,29 @@
+.zdtz_jbsz {
+width: 968px;
+margin: 0 auto;
+color: #000000;
+}
+.zdtz_jbsz p {
+font-size: 14px;
+font-weight: bold;
+margin-left: 3px;
+}
+.zdtz_line {
+background: url(../Images/game/auto28/line.gif) repeat-x;
+height: 3px;
+}
+.zdtz_text {
+line-height: 26px;
+padding: 2px 5px;
+}
+.zdtzright_lj {
+position: absolute;
+z-index: 10px;
+margin-left: 842px;
+margin-top: 10px;
+}
+.zdtz_jbsz {
+width: 936px;
+margin: 0 auto;
+color: #000000;
+}

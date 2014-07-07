@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>幸运28-专业的广告游戏平台</title>
+  <load href='__CSS__/auto28.css' />
+</head>
+
+<body>
+  <include file="public:header"/>
+  <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+  <div id="body_content">
+    <include file="public:textrun"/>
+    <style type="text/css">.dynamic_msg_r a {color: #F5A300;}</style>
+    <include file="public:gametab"/>
+    <include file="public:pc28menu"/>
+    <div style="margin:2px auto 10px auto; width:968px; height:30px; line-height :25px">
+      <div style="width:20%; float:left; line-height:30px; height:30px; padding-left:5px;">
+        第
+        <span class="llid" style="color:#ff0000;"></span>
+        期开奖结果:
+        <img src="" width="25" height="25"></div>
+    </div>
+    <div class="zdtz_jbsz">
+      <p>基本设置</p>
+      <table width="968" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F">
+        <tbody>
+          <tr>
+            <td width="109" height="66" rowspan="2" bgcolor="#FFE4B0">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前投注&nbsp;&nbsp;
+              <img src="__IMAGES__/game/auto28/zdtz_jth.gif" width="6" height="11" align="absmiddle"></td>
+            <td width="824" height="33" bgcolor="#FFFAC7">
+              &nbsp;&nbsp;&nbsp;开始模式：
+              <select id="BEGINMODES" name="BEGINMODES">
+                <option value="1">投注随机保存</option>
+                <option value="2">08--19</option>
+                <option value="3">平双</option>
+                <option value="4">平单</option>
+                <option value="5">跟中</option>
+                <option value="6">倒边</option>
+                <option value="7">除小双</option>
+                <option value="8">除大双</option>
+                <option value="9">除小单</option>
+                <option value="10">除大单</option>
+                <option value="11">自投边</option>
+                <option value="12">中边</option>
+                <option value="13">除余0</option>
+                <option value="14">除余1</option>
+                <option value="15">除余2</option>
+              </select>
+              <script type="text/javascript" language="javascript">Select("BEGINMODES",'11');</script>
+              &nbsp;&nbsp;
+              <span style="color:#6A6A6A">选择自动投注的开始模式，自动投注将从这个模式开始</span>
+            </td>
+          </tr>
+          <tr>
+            <td height="33" bgcolor="#FFFAC7">
+              &nbsp;&nbsp;&nbsp;投注期号：
+              <input name="STARTISSUE" id="STARTISSUE" type="text" value="640454" style="width:80px;" onblur="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/\D/g,''))" maxlength="10">
+              <span style="color:#6A6A6A">
+                &nbsp;&nbsp;当前已经是第
+                <span class="zdtz_bzred">640454</span>
+                期，开始期号必须大于或等于
+                <span class="zdtz_bzred">640454</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td height="66" bgcolor="#E7E7E7">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;停止投注&nbsp;&nbsp;
+              <img src="__IMAGES__/game/auto28/zdtz_jtb.gif" width="6" height="11" align="absmiddle"></td>
+            <td bgcolor="#F4F4F4" style="line-height:26px">
+              &nbsp;&nbsp;&nbsp;投注期数达到：
+              <input name="QS" id="QS" type="text" style="width:80px;" value="5000" onblur="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/\D/g,''))" maxlength="10">
+              <span style="color:#6A6A6A">(不能超过5000)</span>
+              <span class="zdtz_bzred">&nbsp;或</span>
+              金蛋 ≥
+              <input name="MAXGOLDEGGS" id="MAXGOLDEGGS" type="text" style="width:80px;" value="0" onblur="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/\D/g,''))" maxlength="12">
+              <span style="color:#6A6A6A">(0就不限制)</span>
+              &nbsp;
+              <span class="zdtz_bzred">或</span>
+              金蛋≤
+              <input name="MINGOLDEGGS" id="MINGOLDEGGS" type="text" style="width:80px;" value="0" onblur="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/\D/g,''))" maxlength="12">
+              <span class="zdtz_bzred">&nbsp;或</span>
+              金蛋不够投注
+              <br>
+              &nbsp;&nbsp;&nbsp;
+              <span style="color:#7B0000;">*以上几项达到任意一项即马上停止自动投注</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="zdtz_jbsz" style="margin-bottom:8px;">
+      <div class="zdtzright_lj">
+        <a href="AutoplayCase.aspx" style="color:#FF6600">规则设置案例&gt;&gt;</a>
+      </div>
+      <p>规则设置</p>
+      <div class="zdtz_line"></div>
+      <div class="zdtz_text">
+        设置每个自定义投注模式输赢后使用哪个投注模式进行投注。自动投注开启后，系统会根据您的设置进行循环投注，如果您把其中一个模式的输赢都继续使用这个模式，那么自动投注会一直使用这个模式，直到达到停止投注的条件。（
+        <span class="zdtz_red">输赢</span>
+        与是否猜中号码无关，赢了是指开奖后您得到金蛋≥您投注的金蛋，反之是输了。）
+      </div>
+    </div>
+
+    <div class="zdtz_jbsz" style="margin-bottom:8px;">
+      <div style="width:182px; margin:0 auto; height:62px; padding-top:20px;">
+        <input type="image" name="ibtnStart" id="ibtnStart" src="__IMAGES__/game/auto28/kszdtz_an.gif" onclick="return check();" style="border-width:0px;"></div>
+      <div class="zdtz_line"></div>
+      <div class="zdtz_text">
+        <span style="color:#6A6A6A;"> <strong>备注：</strong>
+          1、自动投注将在开奖后2分钟进行投注，关机也不影响。
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、自动投注的金蛋不包括小金库的金蛋。
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、以最近一期“已开奖”结果的输赢作为下期投注依据。（如果上一期未成功开奖，则以上上一期的输赢结果作为投注依据。）
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <include file="public:footer"/>
+</body>
+</html>

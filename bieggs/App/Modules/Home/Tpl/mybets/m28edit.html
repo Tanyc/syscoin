@@ -5,47 +5,17 @@
   <title>幸运28-专业的广告游戏平台</title>
   <load href='__CSS__/bets.css' />
   <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
-  <load href='__JS__/game/bets.js'/>
-<!--   <load href='__JS__/cookie.js'/> -->
+  <load href='__JS__/game/m28edit.js'/>
 </head>
 
 <body>
   <include file="public:header"/>
   <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
-  <!--------------------------------------------------->
   <div id="body_content">
-    <!-- InstanceBeginEditable name="content" -->
     <include file="public:textrun"/>
     <style type="text/css">.dynamic_msg_r a {color: #F5A300;}</style>
     <include file="public:gametab"/>
     <include file="public:pc28menu"/>
-    <div style="margin:2px auto 10px auto; width:968px; height:30px; line-height :25px">
-      <div style="width:20%; float:left; line-height:30px; height:30px; padding-left:5px;">
-        第
-        <span class="llid" style="color:#ff0000;">637809</span>
-        期开奖结果:
-        <img src="" width="25" height="25"></div>
-      <div style="width:60%; text-align:center; border:1px; float :left; line-height:30px; height:30px; " id="RemainTitle"></div>
-    </div>
-    <div class="border_out" style="height:auto; margin-top:8px;">
-      <div class="border_out_r">
-        <div class="border_out_title">
-          <span style="float:left;width:auto;">本期投注详情</span>
-          <span style="float:right;width:auto;"></span>
-        </div>
-        <div style="padding:2px 5px; background-color:#FEFEF9; border:1px solid #E6C48F; line-height:24px;">
-          <div style="display: inline; ">
-            开奖时间:
-            <span class="open_time" style="font-size:14px; font-weight: bold; color:#ff6c00"></span>
-          </div>
-          <div style="display: inline; margin-left:350px;">
-            已投注:
-            <span class="ardown" style="font-size:14px; font-weight: bold; color:#ff6c00"></span>
-            <img src="__IMAGES__/public/egg.png"/>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="border_out" style="margin-top:8px">
       <div class="border_out_l">
         <div class="border_out_title">
@@ -121,12 +91,11 @@
       <div class="border_out1_c">
         <div style="float:left;width:76px;padding-left:16px;">总投注金蛋：</div>
         <div style="color:#ff6c00; font-weight:bold;width:90px;float:left; overflow:hidden" id="totalvalue">0</div>
-        <div class="conform_btn" onclick="comform()" id="conform_btn">确认投注</div>
       </div>
       <div class="border_out1_r">
-        <div class="touzhu">上期投注</div>
-        <div class="touzhu">反选</div>
-        <div class="touzhu">清除</div>
+        <div class="touzhu">保存设置</div>
+        <div class="touzhu">另存模式</div>
+        <div class="touzhu">删除模式</div>
       </div>
     </div>
 
@@ -142,34 +111,6 @@
       <input type="hidden" id="_issue" name="_issue" value="638866">
       <iframe style="display:none; width: 248px; height: 9px;" name="hidefrm" id="hidefrm" src=""></iframe>
       <div class="content_middle" style="width:968px;margin:auto;" id="panel">
-<script language="javascript" type="text/javascript">  
-  var cis="941.62,338.43,169.20,103.96,67.96,48.27,35.57,27.44,22.17,18.11,15.84,14.02,13.67,13.21,13.30,13.70,14.46,15.81,18.07,22.21,27.43,35.84,48.71,67.61,102.25,178.81,333.39,589.64";//上期赔率
-  var a_cis=cis.split(",");
-  var cis1="425.53,1124.23,4233.02,7231.36,5232.2352,3453.83,2458.41,1348.92,14449.75,16573.56,1569.01,156564.74,1658.13,1563.29,1569.50,1655.49894,1897.87,1126.51,1129.9339,1228.6110,2337.3446,2557.2651,45653.7762,56761.77,1608.69,16736.1678,3717.49,502.14";//本期赔率
-  var a_cis1=cis1.split(",");
-  var BeforePeriods="*"+"637810";//上期投注号
-  var Periods="558378"//本期ID
-  var TSeconds="100";//倒计时
-  var mypceggs="16504";//我的金蛋数
-  var IsGetEggs="0";//是否可以清理获取
-  var StrTimeOut="0"
-  var LastIssue="";
-
-
-  var img_path = '__IMAGES__';
-  var umode = new Array();
-  <volist name="db_umode" id="vo">
-    umode.push('{$vo.name}');
-  </volist>
-
-  var LLID="<?php echo ($db_pc28_last[0]['id']); ?>";//上期期号
-  var LLNUM="<?php echo ($db_pc28_last[0]['open_num']); ?>";//上期开奖号
-  var LID="<?php echo ($db_user_bets[0]['LID']); ?>";//当期期号
-  var aldown = "<?php echo ($db_user_bets[0]['SMONEYSUM']); ?>";
-  var arr1="<?php echo ($db_user_bets[0]['ALLSMONEY']); ?>".split(",");
-  //开奖时间
-  var open_time = "<?php echo (date('Y-m-d H:i:s',$db_user_bets[0]['CTIME'])); ?>";
-</script>
         <input class="input2" name="SMONEYY" type="hidden" value="ALD">
         <table width="484" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFB91F" align="left" style="color:Black;">
           <tbody>
@@ -586,84 +527,9 @@
                 <input class="input3" name="Add" value="2" type="button">
                 <input class="input3" name="Add" value="10" type="button"></td>
             </tr>
-
           </tbody>
         </table>
       </div>
-
-<style type="text/css">
-.div_ad{z-index:102;position:absolute;}
-.input3
-{
-    border: solid 1px #aaa;
-    background: #fff;
-    color: #000;
-    height: 20px;
-     width:22px;
-cursor:pointer
-}
-.popup{width:340px;height:auto;background:#fff;border:1px solid #C40000;}
-.popup .titleclose {padding:1px 0 0 10px;height:44px; background:url(__IMAGES__/game/cm_28_bg.gif) no-repeat; }
-.popup .title {font-size:12px;font-weight:bold;color:#FFF;line-height:23px;border:0px;}
-.popup .close {position:absolute;right:4px;top:1px;width:55px;height:23px;cursor:pointer}
-.popup .close span {display:none;}
-.popup .content1 {padding:20px; padding-top:10px;min-height:26px;_height:26px;text-align:center;line-height:26px; font-size:12px;}
-.popup .btnpane { margin:0 auto;width:168px;margin-bottom:15px;height:22px; margin-left:100px;}
-.popup .content2 {padding-left:15px; padding-right:0px;padding-bottom:8px;padding-top:0px;min-height:26px;_height:26px;text-align:center;line-height:26px; font-size:12px;}
-.popup .btnpane_fx {margin:0 auto;width:340px;padding-bottom:8px;height:22px; font-size:12px;height:32px;}
-.popup .btnpane_fx ul li{ list-style:none; float:left; width:98px;}
-.popup .btnpane_zcwz {margin:0 auto;width:226px;padding-bottom:10px;height:22px; margin-left:120px; font-size:12px;height:32px;}
-.help_show{ position:absolute;top:500px;left:900px;}
-.show_kj{border:4px #FB0301 solid;}
-.kjauto1{ width:100px; height:50px;}
-
-.hand{
-  position:relative;
-  width:59px;
-  height:54px;
-  background: url(../img/fc_hand/hand.gif) no-repeat;
-  cursor:pointer;
-  top:-10px;
-  left:30px;
-}
-
-.show_tips{position:absolute;border:1px solid #EBA100;background: url(../img/fc_hand/help_fc_bg.gif) no-repeat left top;width:437px; font-size:12px;z-index:9999;}
-.show_tips .t_zone{padding:10px;line-height:21px;}
-.tips1{left:70px;top:50px;width:120px;}
-
-.blue_load_l:link {
-  color:#3B5888;
-  text-decoration:underline;
-}
-.blue_load_l:visited {
-  text-decoration:underline;
-  color:#3B5888;
-}
-.blue_load_l:hover {
-  text-decoration:underline;
-  color:#3B5888;
-}
-.blue_load_l:active {
-  text-decoration:underline;
-  color:#3B5888;
-}
-.tips2{left:65px;top:75px;*left:70px;*top:80px;width:300px;}
-.gb_an{float:right; margin-top:3px; margin-right:2px;}
-</style>
-      <div class="div_full" id="parent_div" style="position:absolute; background-color: #C8C8C8; width: 100%; height: 1077px; opacity: 0.4; filter: alpha(opacity=20); MozOpacity: 0.2;-moz-opacity: 0.2; z-index:100; left: 0px;top: 0px; display:none;"></div>
-      <div id="div_ad" style="position: absolute; z-index: 101; width: 360px; height: auto; display:none;" class="popup">
-        <div class="container">
-          <div class="titleclose"></div>
-          <div class="content1"></div>
-          <div class="btnpane"></div>
-        </div>
-      </div>
-<script language="javascript" type="text/javascript">  
-  setpeilv(a_cis,"");
-  initParams();
-  GetRTime(TSeconds,LID);
-</script>
-
     </form>
   </div>
   <include file="public:footer"/>

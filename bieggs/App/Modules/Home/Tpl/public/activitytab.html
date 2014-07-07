@@ -1,0 +1,27 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      .game_tab{width: 100%; height: 22px; margin: 5px;}
+      .title_game {font-size: 14px;text-align: left;padding-top: 0px;padding-left: 3px;padding-right: 5px;width: 950px;height: 27px;font-weight: bold;overflow: hidden;}
+      .line{width: 100%;height: 8px;margin-bottom: 5px;}
+    </style>
+</head>
+<div class="game_tab">
+  <div style="width:970px">
+    <div class="title_game" style="float:left; width:610px;">
+      <a href="{:U('/activity')}">
+        <img src="__IMAGES__/activity/tab.png" width="98" height="27" border="0"></a>
+      <a href="{:U('/activity/pasact')}">
+        <img src="__IMAGES__/activity/passtab.png" width="98" height="27" border="0"></a>
+    </div>
+  </div>
+</div>
+
+<?php 
+  if (0 == $ACT_TAB) {
+    $tab_item = "gray-line.gif";
+  } else{
+    $tab_item = "orange-line.gif";
+  }
+ ?>
+<div class="line" style='background:url("__IMAGES__/activity/{$tab_item}"); x-repeat;'></div>

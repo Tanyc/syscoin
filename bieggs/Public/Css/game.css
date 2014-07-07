@@ -1,12 +1,12 @@
 .dynamic_msg{
     width: 978px;
     height: 30px;
-    border: 1px solid #E2E2E2;
+    border: 1px solid #ff9c00;
 }
 
 .game_content{
     width: 978px;
-    border: 1px solid #E2E2E2;
+    border: 1px solid #ff9c00;
 }
 .center_table td {
     text-align: center;
@@ -38,7 +38,7 @@ height: 46px;
 text-align: center;
 font-size: 12px;
 line-height: 46px;
-color: #000;
+color: #000000;
 float: left;
 }
 .xy2820131227_r {
@@ -47,7 +47,7 @@ height: 90px;
 text-align: center;
 font-size: 12px;
 line-height: 46px;
-color: #000;
+color: #000000;
 float: right;
 _padding-top: 12px;
 _height: 32px;

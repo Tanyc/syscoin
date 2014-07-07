@@ -1,0 +1,61 @@
+.fc_kj {
+background: #fff;
+border: 1px solid #C40000;
+width: 500px;
+height: auto;
+}
+.titleclose {
+padding: 1px 0 0 0;
+height: 44px;
+background: url(../Images/game/geteggs/lqjjj_fcbg.gif) no-repeat;
+text-align: left;
+}
+.title {
+color: #FFF;
+line-height: 23px;
+border: 0px;
+font-size: 14px;
+text-align: left;
+padding-top: 0px;
+padding-left: 3px;
+margin-bottom: 0px;
+height: 27px;
+font-weight: bold;
+}
+
+.content_word {
+width: 372px;
+margin: 0 auto;
+text-align: left;
+height: 88px;
+}
+.yzm_l2 {
+float: left;
+width: 258px;
+line-height: 25px;
+padding-top: 15px;
+}
+.yzm_r {
+float: right;
+width: 104px;
+padding-top: 14px;
+}
+.content_word {
+width: 372px;
+margin: 0 auto;
+text-align: left;
+height: 88px;
+}
+.tsword {
+height: 20px;
+width: 476px;
+margin: 0 auto;
+text-align: left;
+}
+.tsimg {
+height: 295px;
+width: 472px;
+margin: 0 auto;
+margin-top: 5px;
+margin-bottom: 10px;
+}

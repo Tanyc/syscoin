@@ -1,7 +1,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+<load href='__JS__/game/showMsg.js'/>
 </head>
-
+<div id="msgdiv" style="position:absolute;display:none;"></div>
+<div id="overdiv" style="position:absolute;display:none;"></div>
 <table width="968" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FCF8DA;clear:both;">
     <input type="hidden" id="soundshow" name="soundshow" value="2">
     <input type="hidden" id="reloadshow" name="reloadshow" value="">
@@ -10,30 +13,79 @@
             <td width="50%" height="24" align="left" valign="middle">
                 <a href="{:U('/mybets/my28')}" target="_parent" class="abt12_1">我的投注</a>
                 <span class="wh12">|</span>
-                <a href="PG28Trend.aspx" target="_parent" class="abt12_1">幸运28走势图</a>
+                <a href="{:U('/mybets/trend28')}" target="_parent" class="abt12_2">幸运28走势图</a>
                 <span class="wh12">
                     <span class="wh12">|</span>
                 </span>
-                <a href="/serving/introduce_serviceLucky28.aspx" class="abt12_1">
-                    <img src="/bidan/bieggs/Public/Images/game/new28.gif" alt="">&nbsp;幸运28介绍</a>
-                <span class="wh12">|</span>
-                <img src="/bidan/bieggs/Public/Images/public/phone_tb.gif" width="13px" height="15" alt="">
-                <a href="pg28wap.aspx" target="_parent" class="abt12_1">手机wap站</a>
+                <a href="{:U('/mybets/intr28')}" class="abt12_3">幸运28介绍</a>
                 <span class="wh12">
                     <span class="wh12">|</span>
                 </span>
-                <a href="/play/Pgnrb.aspx" class="abt12_1">牛人榜</a>
+                <a href="{:U('/mybets/nrb28')}" class="abt12_4"><img src="/bidan/bieggs/Public/Images/game/new28.gif" alt="">&nbsp牛人榜</a>
             </td>
             <td width="50%" align="right" valign="middle">
-                <a href="javascript:ShowMsgo.show('/adcomate/pggetgoldeggsnew.aspx',503,546)" class="abt12_1">领取救济金</a>
+                <a href="javascript:ShowMsgo.show('{:U('/mybets/geteggs.html')}',515,546)" class="abt12_5">领取救济金</a>
                 <span class="wh12">|</span>
-                <a href="/play/pg28ModesEdit.aspx" target="_parent" class="abt12_1">投注模式编辑</a>
+                <a href="{:U('/mybets/m28edit')}" target="_parent" class="abt12_6">投注模式编辑</a>
                 <span class="wh12">|</span>
-                <a href="/play/Autoplay.aspx" target="_parent" class="abt12_1">自动投注</a>
+                <a href="{:U('/mybets/auto28')}" target="_parent" class="abt12_7">自动投注</a>
             </td>
         </tr>
     </tbody>
 </table>
+<script type="text/javascript">
+    //去除IE6背景缓存
+    document.execCommand("BackgroundImageCache", false, true);
+    function addfavorite(a, b) {
+        if (document.all) {
+            window.external.addFavorite('http://www.pceggs.com' + "", "PC蛋蛋-专业体验营销平台");
+        } else if (window.sidebar) {
+            window.sidebar.addPanel("PC蛋蛋-专业体验营销平台", 'http://www.pceggs.com' + "", "");
+        }
+    }
+    function doSomething(evt) {
+        var e = (evt) ? evt : window.event; //判断浏览器的类型，在基于ie内核的浏览器中的使用cancelBubble
+        if (window.event) {
+            e.cancelBubble = true;
+        } else {
+            //e.preventDefault(); //在基于firefox内核的浏览器中支持做法stopPropagation
+            e.stopPropagation();
+        }
+    }
+    function answerqenstion() {
+        ShowMsgo.show("/activity/201209/dt/dtfc/fuceng/answer.aspx", 740, 610);
+    }
+    function closedd() {
+
+        ShowMsgo.ok();
+    }
+    function closelinqu() {
+        ShowMsgo.cancel();
+        window.location.reload(true);
+    }
+    function aaddgame() {
+        ShowMsgo.show("/Gain/new_guide_game.aspx", 658, 390);
+    }
+    function aaddgg() {
+        ShowMsgo.show("/Gain/new_guide_gg.aspx", 658, 390);
+    }
+    var isgain = "0";
+    var autoopen = "0";
+    var registdays = "2675";
+    var userid = "1873372";
+ var  tohref=window.location.href;
+ if(tohref.indexOf("bbsPost.aspx")>-1||tohref.indexOf("bbsMain.aspx")>-1||tohref.indexOf("ShowList.aspx")>-1||tohref.indexOf("ShowInfo.aspx")>-1||tohref.indexOf("duobao_index.aspx")>-1||tohref.indexOf("duobao_next.aspx")>-1||tohref.indexOf("duobao_historylist.aspx")>-1||tohref.indexOf("bbsPostShow.aspx")>-1 ){
+     $(window).bind("scroll", function () {
+         var top_top = $(document).scrollTop(); //卷上去的高度
+         if (top_top > 0) {
+             $("#topNav1").css("display", "");
+         } else {
+             $("#topNav1").css("display", "none");
+         }
+     })
+ }
+</script>
+
 <style>
-.abt12_1{color: #000;}
+.abt12_{$MENU_TAB}{color: #ff0000; font-weight: bold;}
 </style>
