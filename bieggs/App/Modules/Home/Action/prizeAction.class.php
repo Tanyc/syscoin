@@ -4,4 +4,8 @@ class prizeAction extends comAction{
     	$this->assign('PAGE_CURID',6);
         $this->display();
     }
+
+    public function plist(){
+    	 $this->display();
+    }
 }

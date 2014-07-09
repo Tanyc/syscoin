@@ -1,0 +1,88 @@
+.pcdjzx_con_left {
+width: 245px;
+float: left;
+}
+.jpfl{
+    width: 245px;
+    border: 1px solid #FFCC01;
+}
+.jpfl_bt_title{
+    background: url(../Images/prize/prize_c.png) no-repeat;
+    width: 79px;
+    height: 29px;
+    margin-top: 3px;
+    float: left;
+}
+.jpfl_xx {
+width: 216px;
+margin: 0 auto;
+text-align: left;
+line-height: 22px;
+padding-top: 10px;
+padding-bottom: 6px;
+background: url(../Images/prize/fl_line.gif) bottom no-repeat;
+}
+.jpfl_xx span {
+background: url(../Images/prize/go_v2.gif) no-repeat center 5px;
+width: 5px;
+margin-left: 5px;
+margin-right: 5px;
+}
+.jpfl_bg {
+background: url(/Prize/images/jpfl_bg.gif) no-repeat;
+height: auto;
+}
+.djright_k {
+width: 245px;
+overflow: hidden;
+margin-top: 6px;
+border: 1px #FFCC01 solid;
+}
+.djright_m {
+width: 240px;
+border-bottom: none;
+border-top: none;
+padding: 12px 6px 8px 0px;
+line-height: 25px;
+}
+.djright_m span {
+margin-right: 5px;
+}
+.djright_t {
+width: 245px;
+height: 35px;
+overflow: hidden;
+background: url(../Images/prize/right_k.gif) left top repeat-x;
+line-height: 35px;
+}
+.djright_t .l {
+float: left;
+height: 35px;
+width: 100px;
+}
+.djright_t .r {
+padding-right: 6px;
+float: right;
+height: 35px;
+}
+.djright_m1 {
+width: 245px;
+height: 25px;
+line-height: 25px;
+overflow: hidden;
+}
+.djright_m1 .l {
+float: left;
+}
+.djright_m1 .r {
+float: right;
+color: #888888;
+text-align: right;
+margin-right: 5px;
+}
+.djright_e {
+width: 245px;
+height: 4px;
+font-size: 0px;
+background: url(../Images/prize/right_k.png) left bottom no-repeat;
+}
