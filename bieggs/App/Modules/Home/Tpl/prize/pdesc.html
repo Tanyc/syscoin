@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>兑奖中心-专业的广告游戏平台</title>
+	<load href='__CSS__/pdesc.css' />
+	<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+	<load href='__JS__/com.js' />
+	<load href='__JS__/pdesc.js' />
+</head>
+
+<body>
+	<script type="text/javascript">var img_path = '__IMAGES__';</script>
+	<include file="public:header"/>
+	<style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+	<div id="body_content">
+		<script type="text/javascript">var img_path = '__IMAGES__';</script>
+		<include file="public:textrun"/>
+		<div class="pcdjzx_con">
+			<include file="public:market_left"/>
+			<div class="pcdjzx_con_right">
+				<div class="jp_jpzs">
+					<div class="jp_jpzs_l">
+						<script type="text/javascript">
+							var img = '<?php echo ($db_prize[0]["des_img"]); ?>'
+							showImgLog(img);
+						</script>
+					</div>
+					<div class="jp_jpzs_r">
+						<p>
+							<?php echo ($db_prize[0]["name"]); ?></p>
+						<div class="jp_jpzs_r_xx">
+							<ul>
+								<li>
+									兑换价：
+									<span class="redword">
+										<script type="text/javascript">
+											var cost_eggs = '<?php echo ($db_prize[0]["cost_eggs"]); ?>';
+											document.write(ver(cost_eggs));
+										</script>
+									</span>
+									<img src="__IMAGES__/public/egg.png" width="12px" height="16px">
+								</li>
+								<li>
+									奖品兑换次数：
+									<span>
+										<script type="text/javascript">
+									var swap_num='<?php echo ($db_prize[0]["swap_num"]); ?>';
+									document.write(ver(swap_num));
+									</script>
+									</span>
+								</li>
+								<li class="img">
+									<a href="javascript:doChange();">
+										<img src="__IMAGES__/prize/dui_imi.gif" border="0"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="site_push">
+					<div class="push_nav">
+						<div class="leader_tab">
+							<p id="setdata1" class="on">
+								<a href="javascript:setData(1);">奖品介绍</a>
+							</p>
+							<!-- <p  id="setdata2">
+							<a href="javascript:setData(2);" >兑奖记录(1450)</a>
+						</p>
+						-->
+						<p id="setdata3" class="">
+							<a href="javascript:setData(3);">蛋友评论(33)</a>
+						</p>
+						<p id="setdata4" class="">
+							<a href="javascript:setData(4);">兑奖流程</a>
+						</p>
+					</div>
+					<div class="line"></div>
+					<div id="info_div" style="width: 700px; text-align: center; margin-top: 30px; display: none;">正在加载中，请稍后...</div>
+					<div class="con" id="data1" style="padding-top: 10px;">
+						<script type="text/javascript">
+							var img = '<?php echo ($db_prize[0]["des_img"]); ?>'
+							showImgCont(img);
+					</script>
+					</div>
+					<div class="con" id="data3" style="padding-top: 10px; display: none;">
+						<iframe id="Tradebbs" name="Tradebbs" src="/prize/PrizeBBS.aspx?issue=ZC0106" frameborder="0" width="700" height="900" scrolling="no" style="height: 1322px;"></iframe>
+					</div>
+					<div class="con" id="data4" style="padding-top: 10px; display: none;">
+						<include file="public:ptab_desc"/>
+						<div class="djlc_jpjs">
+							<p style="padding-top:20px;">奖品寄送方式：</p>
+							<div class="djlc_jpjs_js">
+								Q币、手机话费等直充类奖品兑奖审核通过后会充入您的QQ号码/手机号码中（QQ号码/手机号码为兑奖审核通过后自主填写），其余虚拟奖品将直接发送卡密；实体奖品全部采用快递方式。
+							</div>
+							<p>奖品兑换流程：</p>
+							<p class="jpjs_lc">
+								1.  奖品价格
+								<span class="word_ff">已经包含邮寄费用在内</span>
+								，您
+								<span class="word_ff">无须另行支付</span>
+								。兑奖前请确认您的帐户中有足够数量的金蛋！
+							</p>
+							<p class="jpjs_lc">2. 在您要兑奖的奖品页面点击“立即兑换”按钮，提交您的兑奖申请！</p>
+							<p class="jpjs_lc">3. 确认您的奖品邮寄地址、联系电话正确无误后提交兑奖申请 ！</p>
+							<p class="jpjs_lc">
+								4. 实物奖品将在您的兑奖确认后的1-2个工作日内发出，奖品一旦发出系统会通知邮寄号，您可以到快递官网跟踪查询(奖品状态您可通过“
+								<a href="/myaccount/MyPrize" style="color:#ff0000; font-size:18px; text-decoration: underline;">我的兑奖</a>
+								”查询)！
+							</p>
+							<p class="jpjs_lc">5. 兑奖中心所有实物奖品颜色均为随机发送, 如有特殊要求，请联系客服！</p>
+							<p class="jpjs_lc" style="margin-bottom:20px;">6. 奖品受供货商库存影响，会有缺货情况，如有缺货，客服会取消兑奖，退还兑奖金蛋。</p>
+							<div>
+								兑奖过程中如有问题请通过“
+								<a href="/services/ser_prize" style="color:#ff0000; font-size:18px; text-decoration: underline;">客服中心</a>
+								”联系咨询。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="public:footer"/>
+</body>
+</html>

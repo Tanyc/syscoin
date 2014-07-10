@@ -4,21 +4,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>兑奖中心-专业的广告游戏平台</title>
 	<load href='__CSS__/plist.css' />
+	<load href='__JS__/com.js' />
+	<load href='__JS__/plist.js' />
 </head>
 
 <body>
 	<include file="public:header"/>
 	<style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
 	<div id="body_content">
+	<script type="text/javascript">
+		var img_path = '__IMAGES__';
+	</script>
 		<include file="public:textrun"/>
-
 		<div class="pcdjzx_con">
 			<include file="public:market_left"/>
 			<div class="pcdjzx_con_right">
-
 				<div class="djlc_ssk">
 					类目&nbsp;
-					<select name="pid" id="pid" style="width:75px" onchange="setpid(this.value)">
+					<select name="pidlist" id="pidlist" style="width:75px" onchange="setpid(this.value)">
 						<option value="">全部</option>
 						<option value="-1">新品上架</option>
 						<option selected="selected" value="1">虚拟奖品</option>
@@ -32,17 +35,11 @@
 					-
 					<select name="cid" id="cid" style="width:75px">
 						<option value="">全部</option>
-
 						<option value="191">游戏充值</option>
-
 						<option value="58">QQ业务</option>
-
 						<option value="11">QQ充值</option>
-
 						<option value="12">游戏点卡</option>
-
 						<option value="10" selected="">手机充值</option>
-
 					</select>
 					&nbsp;&nbsp;&nbsp;金蛋&nbsp;
 					<input name="LowGoldeggs" type="text" id="LowGoldeggs" size="8">
@@ -57,7 +54,6 @@
 				</div>
 
 				<div class="djpx">
-
 					<div style="float:left;">
 						<ul class="sorting-btns">
 							<li>
@@ -80,181 +76,40 @@
 				</div>
 
 				<div class="jplb">
-					<div class="jplb_con">
-						<div class="jplb_con_con">
-
-							<ul>
-
+					<div class="jplb_con_con">
+						<ul>
+							<volist name="db_prize" id="vo">
 								<li>
 									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0266" title="移动话费100元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0264.jpg')</script>
-											<img src="/img/shangpin/mZC0264.jpg" width="164" height="131" border="0" align="absmiddle"></a>
+										<a href="javascript:genPHref({$vo.id})" title={$vo.name}>
+<script type="text/javascript">
+	showLogImg('{$vo.des_img}');</script>
+										</a>
 									</div>
 									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0266" title="移动话费100元直充">
-											<script language="javascript" type="text/javascript">showstr('移动话费100元直充',24)</script>
-											移动话费100元直充
+										<a href="javascript:genPHref({$vo.id})" title={$vo.name}>
+											{$vo.name}
 										</a>
 										<br>
-										<span style="color:#bd0000">12,400,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<span style="color:#bd0000">
+										<script type="text/javascript">
+										document.write(ver({$vo.cost_eggs}));
+										</script>
+										</span>
+										<img src="__IMAGES__/public/egg.png"/>
 									</div>
 								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0265" title="移动话费50元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0264.jpg')</script>
-											<img src="/img/shangpin/mZC0264.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0265" title="移动话费50元直充">
-											<script language="javascript" type="text/javascript">showstr('移动话费50元直充',24)</script>
-											移动话费50元直充
-										</a>
-										<br>
-										<span style="color:#bd0000">6,450,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0269" title="联通话费100元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0267.jpg')</script>
-											<img src="/img/shangpin/mZC0267.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0269" title="联通话费100元直充">
-											<script language="javascript" type="text/javascript">showstr('联通话费100元直充',24)</script>
-											联通话费100元直充
-										</a>
-										<br>
-										<span style="color:#bd0000">12,400,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0268" title="联通话费50元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0267.jpg')</script>
-											<img src="/img/shangpin/mZC0267.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0268" title="联通话费50元直充">
-											<script language="javascript" type="text/javascript">showstr('联通话费50元直充',24)</script>
-											联通话费50元直充
-										</a>
-										<br>
-										<span style="color:#bd0000">6,450,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0272" title="电信话费100元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0270.jpg')</script>
-											<img src="/img/shangpin/mZC0270.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0272" title="电信话费100元直充">
-											<script language="javascript" type="text/javascript">showstr('电信话费100元直充',24)</script>
-											电信话费100元直充
-										</a>
-										<br>
-										<span style="color:#bd0000">12,400,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0104" title="全国移动话费卡100元">
-											<script language="javascript" type="text/javascript">showimg('/IndexMainStatic/img/shangpin/','ZC0104.jpg')</script>
-											<img src="/IndexMainStatic/img/shangpin/sZC0104.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0104" title="全国移动话费卡100元">
-											<script language="javascript" type="text/javascript">showstr('全国移动话费卡100元',24)</script>
-											全国移动话费卡100元
-										</a>
-										<br>
-										<span style="color:#bd0000">13,500,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0271" title="电信话费50元直充">
-											<script language="javascript" type="text/javascript">showimg('/img/shangpin/','ZC0270.jpg')</script>
-											<img src="/img/shangpin/mZC0270.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0271" title="电信话费50元直充">
-											<script language="javascript" type="text/javascript">showstr('电信话费50元直充',24)</script>
-											电信话费50元直充
-										</a>
-										<br>
-										<span style="color:#bd0000">6,450,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li>
-									<div class="jplb_con_con_img">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0106" title="联通话费卡100元">
-											<script language="javascript" type="text/javascript">showimg('/IndexMainStatic/img/shangpin/','ZC0106.jpg')</script>
-											<img src="/IndexMainStatic/img/shangpin/sZC0106.jpg" width="164" height="131" border="0" align="absmiddle"></a>
-									</div>
-									<div class="jplb_con_con_word">
-										<a href="/prize/PrizeDetail.aspx?ISSUE=ZC0106" title="联通话费卡100元">
-											<script language="javascript" type="text/javascript">showstr('联通话费卡100元',24)</script>
-											联通话费卡100元
-										</a>
-										<br>
-										<span style="color:#bd0000">13,500,000</span>
-										<span class="eggs">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
-								</li>
-
-								<li class="sx_fgx">
-
-									<!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
-									<div id="AspNetPager1" style="font-size:12px;text-align:right;">
-										<table width="100%" border="0" cellpadding="0" cellspacing="0">
-											<tbody>
-												<tr>
-													<td valign="bottom" align="left" nowrap="true" style="width:60%;">
-														总数： <font color="red">8</font>
-														&nbsp;分页： <font color="red">1</font>
-														/1&nbsp;
-													</td>
-													<td valign="bottom" align="right" nowrap="true" class="" style="width:40%;">
-														<a disabled="true" style="margin-right:10px;">首页</a>
-														<a disabled="true" style="margin-right:10px;">前页</a>
-														<span style="margin-right:10px;font-weight:Bold;color:red;">1</span>
-														<a disabled="true" style="margin-right:10px;">后页</a>
-														<a disabled="true" style="margin-right:10px;">尾页</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<!-- AspNetPager V6.0.0 for VS2005 End -->
-
-								</li>
-
-							</ul>
-
-						</div>
+							</volist>
+						</ul>
 					</div>
-
+					<form name="pgindex" method="post" action="__URL__/plist" id="pgindex">
+						<input id="id" name="id" type="hidden" value="">
+						<input id="cid" name="cid" type="hidden" value="">
+						<input id="pg" name="pg" type="hidden" value=""></form>
+					<form name="pdesc" method="post" action="__URL__/pdesc" id="pdesc">
+						<input id="pid" name="pid" type="hidden" value=""></form>
+					<include file="public:pagectl"/>
 				</div>
-
 			</div>
 		</div>
 	</div>

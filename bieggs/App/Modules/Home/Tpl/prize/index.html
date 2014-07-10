@@ -15,32 +15,7 @@
 		<div class="pcdjzx_con">
 			<include file="public:market_left"/>
 			<div class="pcdjzx_con_right">
-				<div class="djlc_h" id="area1" style="margin-top:6px;">
-					<img src="__IMAGES__/prize/djlc_bg_sw.png" border="0" usemap="#Map11">
-					<map name="Map11" id="Map11">
-						<area shape="rect" coords="126,5,225,25" href="javascript:changeimg(1)">
-						<area shape="rect" coords="16,5,116,26" href="javascript:changeimg(2)"></map>
-				</div>
-				<div class="djlc_h" style="display:none;margin-top:6px;" id="area2">
-					<img src="__IMAGES__/prize/djlc_bg_xn.png" border="0" usemap="#Map12">
-					<map name="Map12" id="Map12">
-						<area shape="rect" coords="126,5,225,25" href="javascript:changeimg(1)">
-						<area shape="rect" coords="16,5,116,26" href="javascript:changeimg(2)">
-						<area shape="rect" coords="589,124,638,142" href="/myaccount/MyPrize.aspx"></map>
-				</div>
-
-<script>
-	function changeimg(i){
-		if(i==1){
-			document.getElementById("area1").style.display="none";
-			document.getElementById("area2").style.display="";
-		}
-		if(i==2){
-			document.getElementById("area1").style.display="";
-			document.getElementById("area2").style.display="none";
-		}
-	}
-</script>
+				<include file="public:ptab_desc"/>
 				<div class="xpsj">
 					<div class="bt_xpsj">
 						<div class="bt_xpsj_right">

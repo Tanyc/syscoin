@@ -1,0 +1,131 @@
+.pcdjzx_con_right {
+width: 718px;
+float: right;
+margin-right: 5px;
+}
+.jp_jpzs {
+width: 718px;
+height: 224px;
+float: right;
+color: #515151;
+}
+.jp_jpzs_l {
+width: 250px;
+height: 200px;
+float: left;
+border: 1px solid #cdcdcd;
+padding: 10px;
+}
+.jp_jpzs_r {
+width: 408px;
+height: 220px;
+float: right;
+}
+.jp_jpzs_r p {
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 5px;
+margin-top: 5px;
+}
+.jp_jpzs_r_xx ul li {
+float: left;
+width: 408px;
+height: 40px;
+line-height: 40px;
+background: url(../images/prize/dash.gif) bottom repeat-x;
+}
+span.eggs {
+background: url(../images/public/egg.png) right no-repeat;
+margin-left: 0px;
+}
+span.redword {
+font-size: 20px;
+color: #FF0000;
+}
+.site_push .push_nav {
+background: url(/Prize/images/go_mark_line.png) repeat-x left -42px;
+width: 718px;
+float: right;
+margin-top: 12px;
+height: auto;
+}
+.leader_tab {
+height: 39px;
+padding-left: 0px;
+overflow: hidden;
+}
+.leader_tab p {
+float: left;
+position: relative;
+margin-right: 3px;
+height: 26px;
+}
+.leader_tab p a {
+display: inline-block;
+padding: 0 5px 0 5px;
+font-size: 12px;
+color: #515151;
+height: 26px;
+border: 1px solid #DDDDDD;
+background: url(/Prize/images/huis_bg.gif) repeat-x;
+text-decoration: none;
+overflow: hidden;
+font-family: simsun;
+z-index: 10;
+padding-left: 10px;
+padding-right: 10px;
+}
+.djlc_h {
+width: 718px;
+height: 149px;
+float: right;
+}
+.site_push .push_nav .con .djlc_jpjs {
+width: 718px;
+border: 1px solid #f1cb95;
+height: auto;
+float: right;
+margin-top: 5px;
+padding-bottom: 5px;
+}
+.djlc_jpjs_js {
+background-color: #fff9e3;
+width: 660px;
+margin: 0 auto;
+border: 1px solid #f3e0ba;
+line-height: 26px;
+padding: 10px;
+text-indent: 2em;
+}
+.djlc_jpjs p.jpjs_lc {
+background: none;
+border: none;
+font-size: 14px;
+font-weight: normal;
+line-height: 22px;
+}
+.djlc_jpjs p {
+font-size: 14px;
+font-weight: bold;
+padding-left: 20px;
+line-height: 50px;
+}
+.word_ff {
+color: #FF0000;
+}
+.leader_tab p.on a {
+height: 26px;
+color: #bd0000;
+cursor: default;
+font-weight: bold;
+background-color: #FFee88;
+}
+.line{
+	width: 100%;
+	height: 1px;
+	background-color: #ffCC33;
+}
+.jp_jpzs_r_xx ul li.img {
+margin-top: 20px;
+background: none;
+}

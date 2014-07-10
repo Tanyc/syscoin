@@ -751,3 +751,13 @@ function filter_exp(&$value){
         $value .= ' ';
     }
 }
+
+// 判断字符串是否有效
+function is_nil($str){
+    if ("" == $str || null == $str) {
+        return true;
+    } else {
+        return false;
+    }
+    
+}
