@@ -1,14 +1,10 @@
 .layout_wz{ width:950px; height:126px; margin:0 auto;}
-.layout_nav{width:950px; height:49px; margin:0 auto; line-height:50px; border-bottom:1px solid #d2d2d2; margin-bottom:10px;}
+.layout_nav{width:950px; height:49px; margin:0 auto; line-height:50px; border-bottom:2px solid #C30000; margin-bottom:10px;}
 .layout_nav_l{ float:left; width:708px; height:51px;}
 .layout_nav_l ul li{ float:left; padding:0px 14px; font-size:14px;}
-.layout_nav_l ul li.on{ background:url(/img/ShowPrize/sj_nav_xzbg.gif) center bottom no-repeat; height:51px;font-weight:bold;}
 .layout_nav_l ul li a{ color:#333333;}
 .layout_nav_l ul li.line{float:left; padding:0px 14px; color:#797979; font-size:12px; padding:0px;}
 .layout_nav_r{ float:right; width:242px; text-align:right; padding-top:8px; height:43px;}
-.layout_gg{ width:950px; margin:0 auto; height:25px; line-height:25px; margin-bottom:10px; background-color:#fafafa; background:
-url(/img/ShowPrize/award_bgbg.gif) left -96px no-repeat;}
-span.dot{ background:url(/img/ShowPrize/dot.gif) center center no-repeat; padding-right:4px; width:3px;}
 
 .tlq_beta3_sj_box_w{ height:196px;background-color:#f5f5f5; border-bottom:#dfdfdf 1px solid; width:950px; clear:both; }
 .tlq_beta3_sj_box_w_l{width:140px; float:left;  height:164px; padding:15px 15px 0 15px;}

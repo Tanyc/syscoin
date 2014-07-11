@@ -1,0 +1,156 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<load href='__CSS__/pagebot.css'/>
+</head>
+<form name="pgindex" method="post" action="__URL__" id="pgindex">
+  <input id="pg" name="pg" type="hidden" value="">
+  <input id="m_tab" name="m_tab" type="hidden" value="">
+  <input id="extra" name="m_tab" type="hidden" value="">
+</form>
+<script language="javascript" type="text/javascript">
+  var itemPerPage = {$items};
+
+    function calcAllPg(items,is_ret){
+        var pages = Math.ceil(items / itemPerPage);
+        if (is_ret) {
+          return pages;
+        };
+        document.write(pages);
+    }
+    var allpage = calcAllPg({$db_data_cnt},true);
+    function onsubmit(cur_pg){
+        document.getElementById("pg").value = cur_pg;
+        document.getElementById("pgindex").submit();
+    }
+
+    function calcPage(fora,index,cur_pg){
+      if ("f" == fora) {
+        if(1 == index){ //首页
+          return (0 > cur_pg - 80)? 1 : cur_pg - 80;
+        }else if(2 == index){ //前十页
+          return (0 > cur_pg - 8)? 1 : cur_pg - 8;
+        }
+      }else{
+        if(1 == index){ //后一页
+          return (cur_pg + 8 > allpage)? allpage : cur_pg + 8;
+        }else if(2 == index){  //后十页
+          return (cur_pg + 80 > allpage)? allpage : cur_pg + 80;
+        }
+      }
+    }
+
+    function geItem(fora,index,title,cur_pg){
+      var page = calcPage(fora,index,cur_pg);
+      if ("f" == fora) {
+          var fuhao = (1 == index)? "&lt;&lt;" : "&lt;";
+          var item = '<a href="javascript:onsubmit(' + page + ');" target="_top">' + fuhao + '</a>';
+      } else{
+          var fuhao = (2 == index)? "&gt;&gt;" : "&gt;";
+          var item = '<a href="javascript:onsubmit(' + page + ');" target="_top">' + fuhao + '</a>';
+      };
+
+      return item;
+    }
+</script>
+<table cellspacing="2" cellpadding="2" style="font-family:Tahoma; font-size:12px; text-align:center; border:0; width:100%;" class="phoenix">
+  <tbody>
+    <tr valign="middle">
+      <td align="left">
+        <span title="记录总数" style="cursor:pointer;">
+          <span>&nbsp;&nbsp;记录总数：</span>
+          <span class="fontc">{$db_data_cnt}</span>
+        </span>
+        <span title="总页数" style="cursor:pointer;">
+          <span>&nbsp;&nbsp;总页数：</span>
+          <span class="fontc">
+            <script type="text/javascript">calcAllPg({$db_data_cnt});</script>
+          </span>
+        </span>
+        &nbsp;&nbsp;
+        <span title="当前页" style="cursor:pointer;">
+          <span>&nbsp; &nbsp;当前页：</span>
+          <span class="fontc">{$cur_pg}</span>
+        </span>
+      </td>
+      <td align="center">
+        <div class="pageb">
+
+          <block id="f_pg"></block>
+          <block id="pgblock"></block>
+          <block id="a_pg"></block>
+        </div>
+      </td>
+      <td align="right">
+        <span title="当前记录数" style="cursor:pointer;">
+          <span>&nbsp;&nbsp;当页记录数：</span>
+          <span class="fontc">{$items}</span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript">
+var sh = {f:1,a:1};
+  var content = "";
+  if (allpage <= 8 || {$cur_pg} <= 8) {
+    var loop = (allpage <= 8)? allpage : 8;
+    for (var i = 1; i <= loop; i++) {
+      var item = "";
+      if ({$cur_pg} == i) {
+        item += '<span class="current">' + i +'</span>';
+      }else{
+        item = '<a href="javascript:onsubmit(' + i +');"' + 'target="_top">' + i + '</a>';
+      }
+      content += item + "&nbsp;";
+    };
+    var sh_pg = Math.ceil(allpage / 8);
+    if (sh_pg <= 1) {
+      sh = {f:0,a:0}
+    }else{
+      var cur_pg = Math.ceil(({$cur_pg} - 1) / 8);
+      if (cur_pg <= 1) {
+        sh.f = 0;
+      }else if(cur_pg == sh_pg){
+        sh.a = 0;
+      }
+    }
+  }else{
+    var curpg = {$cur_pg};
+    if(curpg > allpage){
+      curpg = allpage - 1;
+    }
+    var st_index = Math.floor((curpg - 1) / 8);
+
+    var topnum = (st_index + 1) * 8 ;
+    if (topnum > allpage) {
+      topnum = allpage;
+    };
+
+    for (var i = st_index * 8 + 1; i <= topnum; i++) {
+      var item = "";
+      if ({$cur_pg} == i) {
+        item += '<span class="fontc">' + i +'</span>';
+      }else{
+        item = '<a href="javascript:onsubmit(' + i +');"' + 'target="_top">' + i + '</a>';
+      }
+      content += item + "&nbsp;";
+    };
+    var sh_pg = Math.ceil(allpage / 8);
+    var c_pg = Math.ceil(curpg / 8);
+  if (c_pg >= sh_pg) {
+    sh.a = 0;
+  }
+  }
+  var pgblock = document.getElementById("pgblock");
+  pgblock.innerHTML=content;
+    /***********f_pg***************/
+    var f_pg = document.getElementById("f_pg");
+  var item1 = geItem("f",1,"首页",{$cur_pg}) + "&nbsp;";
+  var item2 = geItem("f",2,"前十页",{$cur_pg}) + "&nbsp;";
+  f_pg.innerHTML=item1 + item2;
+  /************a_pg***************/
+  var a_pg = document.getElementById("a_pg");
+  var item1 = geItem("a",1,"后一页",{$cur_pg}) + "&nbsp;";
+  var item2 = geItem("a",2,"后十页",{$cur_pg}) + "&nbsp;";
+  a_pg.innerHTML=item1 + item2;
+</script>
