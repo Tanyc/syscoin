@@ -19,20 +19,4 @@ function setData(n) {
             $("#data" + i).css("display", "none");
         }
     }
-    if (n == 2 || n == 3) {
-        var tid = "#ChargeUserList";
-        var turl = "http://www.baidu.com";
-        if (n == 3) {
-            tid = "#Tradebbs";
-            turl = "http://www.baidu.com";
-        }
-        var fsrc = $(tid).attr("src");
-        if (fsrc != "" || fsrc.length > 0) {
-            return;
-        }
-        $("#data" + n).css("display", "none");
-        document.getElementById("info_div").style.display = "";
-        $(tid).attr("src", turl);
-    }
-    $(".leader_tab").css("border","#ff0000");
 }

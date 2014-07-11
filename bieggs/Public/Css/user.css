@@ -1,40 +1,167 @@
-@charset "utf-8";
-
-ul,ol{
-    list-style:none;
-    margin:0;
-    padding:0;
+.wal {
+width: 990px;
+margin: 0px auto;
+overflow: hidden;
+}
+.w200 {
+width: 200px;
+overflow: hidden;
+}
+.fl {
+float: left;
+}
+.w780 {
+width: 780px;
+overflow: hidden;
+}
+.fr {
+float: right;
+}
+.helpNav {
+background: url(../image/helpNav.gif) left repeat-y;
+min-height: 200px;
+_height: 200px;
+border-top: #ccc solid 1px;
+border-bottom: #ccc solid 1px;
+}
+.helpNav .title {
+height: 55px;
+line-height: 45px;
+padding-left: 8px;
+overflow: hidden;
+color: #acacac;
+font-size: 24px;
+font-style: italic;
+text-transform: uppercase;
+font-family: "寰蒋闆呴粦";
+background: url(../image/indexPart1Bg.gif) top repeat-x;
+margin: 0 1px;
+}
+.helpNav .title i {
+font-size: 12px;
+padding-left: 5px;
+}
+.helpNav h5 {
+display: block;
+height: 25px;
+line-height: 25px;
+overflow: hidden;
+padding-left: 31px;
+background: #fff3d9 url(../image/lico2.png) 13px center no-repeat;
+margin: 0 1px;
+}
+.helpNav .list {
+padding: 5px 0 14px 11px;
+}
+ul li {
+list-style: none;
+}
+.helpNav .list .aNow, .helpNav .list a:hover {
+border: #ccc solid 1px;
+border-left: #ff5a00 solid 3px;
+border-right: 0px;
+font-weight: bold;
+color: #ff5a00;
+background: #fff url(../image/ico2.gif) 142px center no-repeat;
+margin-right: 0px;
+}
+ul, p, dl, dt, dd {
+padding: 0px;
+margin: 0px;
+}
+.pageBox {
+min-height: 50px;
+_height: 300px;
+border: #ddd solid 1px;
+}
+.h10 {
+height: 10px;
+overflow: hidden;
+clear: both;
+}
+.pageTitle2 {
+background: url(../image/pageTitle2.gif) top repeat-x;
+height: 43px;
+line-height: 43px;
+}
+.BasicInfoPart1 {
+height: 179px;
+overflow: hidden;
+position: relative;
+border: #e5e5e5 solid 1px;
+margin: 10px;
+padding-left: 146px;
+}
+.pageTitle2 h2 {
+height: 43px;
+}
+.pageTitle h2 {
+padding-left: 26px;
+height: 48px;
+overflow: hidden;
+background: url(../image/lico1.png) left center no-repeat;
+}
+.BasicInfoPart1 .imgDiv {
+position: absolute;
+z-index: 1;
+left: 23px;
+top: 28px;
+width: 100px;
+text-align: center;
+overflow: hidden;
+}
+.BasicInfoPart1 .imgDiv img {
+border: #333 solid 1px;
+margin-bottom: 5px;
+}
+.BasicInfoPart2 li {
+height: 35px;
+line-height: 35px;
+overflow: hidden;
+position: relative;
+border-bottom: #e5e5e5 solid 1px;
+}
+.BasicInfoPart2 .ico {
+position: absolute;
+z-index: 1;
+left: 24px;
+top: 9px;
+height: 16px;
+width: 16px;
+}
+.BasicInfoPart2 h5 {
+padding-left: 50px;
+}
+.BasicInfoPart2 .msg {
+height: 35px;
+white-space: nowrap;
+position: absolute;
+z-index: 1;
+left: 265px;
+top: 0px;
+padding-left: 5px;
+border-left: #FFF solid 1px;
+}
+.BasicInfoPart2 .btn {
+font-weight: bold;
+color: #ff6600;
+position: absolute;
+z-index: 1;
+top: 0px;
+right: 6px;
+white-space: nowrap;
+}
+.orange {
+color: #ff6600;
+}
+.BasicInfoPart2 {
+margin: 10px;
+border: #e5e5e5 solid 1px;
+border-bottom: 0px;
+background: #ffffcc;
 }
 
-#body_content{
-    width:980px;
-    margin: 12px auto auto;
-    overflow:hidden;
-    border: 1px solid #E2E2E2;
-}
-
-.navuser{ border-top:0px solid #d5e9fa; position:relative; padding-bottom:0px; margin-top:0px}
-.navuser .new{ width:22px; height:12px; display:block;background:url(../images/new.gif) no-repeat; position:absolute; top:15px; right:50px; z-index:999}
-.navuser li{ display:block;background:url(../Images/user/bimg.gif) right -176px no-repeat;  height:41px; line-height:41px; text-align:left; position:relative }
-.navuser li a{ padding-left:40px; display:block; height:41px; line-height:41px; text-align:left; font-size:14px; color:#00599e; }
-.navuser li a:hover,.navuser li a.ah{ background:url(../Images/user/bimg.gif) right -134px no-repeat; position:relative;margin-right:-11px;color:#00599e; text-decoration:none;font-weight:bold;}
-.navuser li a em{ width:20px; height:20px; overflow:hidden; display:block; float:left;position:relative; top:11px; margin-right:6px;background:url(../images/icons.gif) no-repeat;}
-.navuser li a em.infonav{ background-position:0 0;}
-.navuser li a em.jifennav{ background-position:0 -20px;}
-.navuser li a em.scjnav{ background-position:0 -120px}
-.navuser li a em.jsbnav{background-position:0 -40px}
-.navuser li a em.txlnav{background-position:0 -60px;}
-.navuser li a em.tuan{background-position:0 -140px;}
-.navuser li.nav_tuan{
-    margin-top:0px;
-    border-top:1px　solid #d5e9fa;
-    padding-left:22px;
-    font-size:16px;
-    font-family:"微软雅黑";
-    color:#ff5a00;
-    font-weight:bold;
-    background-image: url(../images/usertitlebg.gif);
-    background-repeat: repeat;
-    height:40px;
-    background-position: top;
+h1, h2, h3, h4, h5 {
+padding: 0px;
+margin: 0px;
 }
