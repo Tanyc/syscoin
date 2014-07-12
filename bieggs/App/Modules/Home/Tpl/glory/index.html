@@ -4,11 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>团购-专业的广告游戏平台</title>
     <load href='__CSS__/glory.css' />
+    <load href='__JS__/glory.js' />
 </head>
 
 <body>
     <include file="public:header"/>
     <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+    <script type="text/javascript">
+        img_path = '__IMAGES__';
+    </script>
     <div id="body_content">
         <include file="public:textrun"/>
         <div class="doc">
@@ -18,15 +22,15 @@
                 <div class="layout_nav_l">
                     <ul>
                         <li class="glory_tab_0">
-                            <a href="{:U('glory/index')}">玩家晒奖</a>
+                            <a href="{:U('')}">玩家晒奖</a>
                         </li>
                         <li class="line">|</li>
                         <li class="glory_tab_1">
-                            <a href="{:U('glory/index?tab=1')}">我的晒奖</a>
+                            <a href="{:U('?tab=1')}">我的晒奖</a>
                         </li>
                     </ul>
                 </div>
-                <style type="text/css">.glory_tab_{$m_tab}{background:url(__IMAGES__/glory/sj_nav_xzbg.gif) center bottom no-repeat; height:51px;font-weight:bold;}</style>
+                <style type="text/css">.glory_tab_{$m_tab}{background:url(__IMAGES__/glory/sj_nav_xzbg.png) center bottom no-repeat; height:51px;font-weight:bold;}</style>
                 <div class="layout_nav_r">
                     <a href="http://www.pceggs.com/ShowPrize/ShowAdd.aspx">
                         <img src="__IMAGES__/glory/sj_an.gif"></a>
@@ -38,214 +42,55 @@
             <div class="bbs_layout_dbg clearall">
                 <div id="PanelList">
                     <div class="list-tab">
-                        <div class="tlq_beta3_sj_box_w">
-                            <div class="tlq_beta3_sj_box_w_l">
-                                <div class="tlq_beta3_sj_box_w_l_img">
-                                    <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">
-                                        <img src="/bidan/bieggs/Public/Images/glory/b_mt_01.jpg"></a>
-                                </div>
-                                <div class="tlq_beta3_sj_box_w_l_name">
-                                    <a class="linkblue_a1" href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">雷诺越</a>
-                                </div>
-                            </div>
-                            <div class="tlq_beta3_sj_box_w_r">
-                                <div class="tlq_beta3_sj_box_w_r_top">
-                                    <div class="tlq_beta3_sj_box_w_r_top_l">
-                                        <div class="tlq_beta3_sj_box_w_r_top_l_l">
-                                            <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">感谢来自蛋蛋的礼物</a>
-                                        </div>
-                                        <div class="tlq_beta3_sj_box_w_r_top_l_r">
-                                            <div class="tlq_beta3_sj_box_w_r_top_l_rpf"></div>
-                                            <div class="tlq_beta3_sj_box_w_r_top_l_rpfimg"></div>
-
-                                        </div>
+                        <volist name="db_glorylist" id="vo">
+                            <div class="tlq_beta3_sj_box_w">
+                                <div class="tlq_beta3_sj_box_w_l">
+                                    <div class="tlq_beta3_sj_box_w_l_img">
+                                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">
+                                            <img src="/bidan/bieggs/Public/Images/glory/b_mt_01.jpg"></a>
                                     </div>
-                                    <div class="tlq_beta3_sj_box_w_r_top_r">发表时间：06-05 17:14</div>
+                                    <div class="tlq_beta3_sj_box_w_l_name">
+                                        <a class="linkblue_a1" href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">雷诺越</a>
+                                    </div>
                                 </div>
-                                <div class="tlq_beta3_sj_xuxian"></div>
-                                <div class="tlq_beta3_sj_box_w_r_bottom">
-                                    <div class="tlq_beta3_sj_box_w_r_bottom_l">
-                                        <a style="color:black" class="linkblue_a1" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">
-                                            玩蛋蛋也N久了，游戏也玩了，28也猜了，虽然总是归零状态中，但是也兑奖换了一些话费玩具等东东，&nbsp;一直是随意的玩玩。
+                                <div class="tlq_beta3_sj_box_w_r">
+                                    <div class="tlq_beta3_sj_box_w_r_top">
+                                        <div class="tlq_beta3_sj_box_w_r_top_l">
+                                            <div class="tlq_beta3_sj_box_w_r_top_l_l">
+                                                <span>{$vo.title}</span>
+                                            </div>
+                                        </div>
+                                        <div class="tlq_beta3_sj_box_w_r_top_r">发表时间：<span>{$vo.CTIME}</span></div>
+                                    </div>
+                                    <div class="tlq_beta3_sj_xuxian"></div>
+                                    <div class="tlq_beta3_sj_box_w_r_bottom">
+                                        <div class="tlq_beta3_sj_box_w_r_bottom_l">
+                                            <span style="color:black">
+                                                <script type="text/javascript">
+                                                    shortDesc('{$vo.content}');
+                                                </script>
+                                            </span>
                                             <br>
-                                            参加夺宝也好久了，但一次都没中过，那天我同事说，有金蛋来夺宝，我还说运气从来不到我家，后来就随意投注了。没想到，......
-                                        </a>
-                                        <br>
-                                        <a class="linkblue_a1" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">[详细]</a>
-                                    </div>
-                                    <div class="tlq_beta3_sj_box_w_r_bottom_r">
-                                        <div class="tlq_beta3_sj_box_w_r_bottom_r_t">
-                                            <ul id="ul_8002200">
-                                                <script type="text/javascript">
-             var imgs = "http://fs.pceggs.com/pic/2014-06-05/201406051713090838622.jpg;http://fs.pceggs.com/pic/2014-06-05/201406051713407760228.jpg;http://fs.pceggs.com/pic/2014-06-05/201406051713535920783.jpg;";
-                      img_doms = imgs.split(";");
-
-                      for (var i = 0; i < img_doms.length-1; i++) {
-
-                          if (i + 1 == img_doms.length-1) {
-                              $("#ul_8002200").append('<li style="margin-left:0px;"><a href="ShowInfo.aspx?tid=8002200"><img src="' + img_doms[i] + '_s.jpg" width="76" height="60" /></a></li>');
-                          } else {
-                              $("#ul_8002200").append('<li ><a href="ShowInfo.aspx?tid=8002200"><img src="' + img_doms[i] + '_s.jpg" width="76px" height="60px" /></a></li>');
-
-                          }
-                      }
-                  </script>
-                                                <li>
-                                                    <a href="ShowInfo.aspx?tid=8002200">
-                                                        <img src="http://fs.pceggs.com/pic/2014-06-05/201406051713090838622.jpg_s.jpg" width="76px" height="60px"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="ShowInfo.aspx?tid=8002200">
-                                                        <img src="http://fs.pceggs.com/pic/2014-06-05/201406051713407760228.jpg_s.jpg" width="76px" height="60px"></a>
-                                                </li>
-                                                <li style="margin-left:0px;">
-                                                    <a href="ShowInfo.aspx?tid=8002200">
-                                                        <img src="http://fs.pceggs.com/pic/2014-06-05/201406051713535920783.jpg_s.jpg" width="76" height="60"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">
-                                                        <img src="/bidan/bieggs/Public/Images/glory/201406051713090838622.jpg_s.jpg" width="76px" height="60px"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">
-                                                        <img src="/bidan/bieggs/Public/Images/glory/201406051713407760228.jpg_s.jpg" width="76px" height="60px"></a>
-                                                </li>
-                                                <li style="margin-left:0px;">
-                                                    <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200">
-                                                        <img src="/bidan/bieggs/Public/Images/glory/201406051713535920783.jpg_s.jpg" width="76" height="60"></a>
-                                                </li>
-                                            </ul>
+                                            <a href="{:U('detail')}?id={$vo.id}">[详细]</a>
                                         </div>
-                                        <div class="tlq_beta3_sj_box_w_r_bottom_r_b ">
-                                            <a class="z_an" id="z_an8002200" href="javascript:AddPraise('8002200','1')">
-                                                <span>赞(1)</span>
-                                            </a>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <a class="pl_an" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002200#fatie">
-                                                <span>评论(0)</span>
-                                            </a>
-
+                                        <div class="tlq_beta3_sj_box_w_r_bottom_r">
+                                            <div class="tlq_beta3_sj_box_w_r_bottom_r_t">
+                                                <ul id="ul_8002200">
+                                                    <script type="text/javascript">
+                                                        showShortImgs('{$vo.imgs}','{$vo.id}');
+                                                    </script>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tlq_beta3_sj_box_g">
-                            <div class="tlq_beta3_sj_box_w_l">
-                                <div class="tlq_beta3_sj_box_w_l_img">
-                                    <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=6158830">
-                                        <img src="/bidan/bieggs/Public/Images/glory/b_mt_16.jpg"></a>
-                                </div>
-                                <div class="tlq_beta3_sj_box_w_l_name">
-                                    <a class="linkblue_a1" href="http://www.pceggs.com/pgComUserInfo.aspx?userid=6158830">╰_╯雪狼汨</a>
-                                </div>
-                            </div>
-                            <div class="tlq_beta3_sj_box_w_r">
-                                <div class="tlq_beta3_sj_box_w_r_top">
-                                    <div class="tlq_beta3_sj_box_w_r_top_l">
-                                        <div class="tlq_beta3_sj_box_w_r_top_l_l">
-                                            <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002191">我的奖品</a>
-                                        </div>
-
-                                        <div class="tlq_beta3_sj_box_w_r_top_l_r">
-                                            <div class="tlq_beta3_sj_box_w_r_top_l_rpf"></div>
-                                            <div class="tlq_beta3_sj_box_w_r_top_l_rpfimg"></div>
-
-                                        </div>
-                                    </div>
-                                    <div class="tlq_beta3_sj_box_w_r_top_r">发表时间：06-05 12:26</div>
-                                </div>
-                                <div class="tlq_beta3_sj_xuxian"></div>
-                                <div class="tlq_beta3_sj_box_w_r_bottom">
-                                    <div class="tlq_beta3_sj_box_w_r_bottom_l">
-                                        <a style="color:black" class="linkblue_a1" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002191">感谢PC蛋蛋，祝PC蛋蛋人气越来越高......</a>
-                                        <br>
-                                        <a class="linkblue_a1" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002191">[详细]</a>
-                                    </div>
-                                    <div class="tlq_beta3_sj_box_w_r_bottom_r">
-                                        <div class="tlq_beta3_sj_box_w_r_bottom_r_t">
-                                            <ul id="ul_8002191">
-                                                <script type="text/javascript">
-                      var imgs = "http://fs.pceggs.com/pic/2014-06-05/201406051226005320121.jpg;";
-                      img_doms = imgs.split(";");
-
-                      for (var i = 0; i < img_doms.length-1; i++) {
-
-                          if (i + 1 == img_doms.length-1) {
-                              $("#ul_8002191").append('<li style="margin-left:0px;"><a href="ShowInfo.aspx?tid=8002191"><img src="' + img_doms[i] + '_s.jpg" width="76" height="60" /></a></li>');
-                          } else {
-                              $("#ul_8002191").append('<li ><a href="ShowInfo.aspx?tid=8002191"><img src="' + img_doms[i] + '_s.jpg" width="76" height="60" /></a></li>');
-
-                          }
-                      }
-                  </script>
-                                                <li style="margin-left:0px;">
-                                                    <a href="ShowInfo.aspx?tid=8002191">
-                                                        <img src="http://fs.pceggs.com/pic/2014-06-05/201406051226005320121.jpg_s.jpg" width="76" height="60"></a>
-                                                </li>
-                                                <li style="margin-left:0px;">
-                                                    <a href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002191">
-                                                        <img src="/bidan/bieggs/Public/Images/glory/201406051226005320121.jpg_s.jpg" width="76" height="60"></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tlq_beta3_sj_box_w_r_bottom_r_b ">
-                                            <a class="z_an" id="z_an8002191" href="javascript:AddPraise('8002191','0')">
-                                                <span>赞(0)</span>
-                                            </a>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <a class="pl_an" href="http://www.pceggs.com/ShowPrize/ShowInfo.aspx?tid=8002191#fatie">
-                                                <span>评论(0)</span>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="discuss_ft" style="width:950px; height:60px; margin:0 auto; ">
-                        <div class="discuss_ftr" style="width:600px; height:60px;  margin:0 auto; text-align:center;margin-top:20px;">
-
-                            <script language="javascript" type="text/javascript">
-    function onsubmit(CurrentPageIndex)
-    {
-        //document.getElementById("CurrentPageIndex").value = CurrentPageIndex ;
-        //document.getElementById("pagination").action=window.location;
-        //document.getElementById("pagination").submit();
-        var CurrentURL = document.URL;
-        var right = GetQueryString("CurrentPageIndex")
-        if(right == "")
-        {
-            if(CurrentURL.indexOf("?") > -1){
-                CurrentURL = CurrentURL + "&CurrentPageIndex="+CurrentPageIndex;
-            }else{
-                CurrentURL = CurrentURL + "?CurrentPageIndex="+CurrentPageIndex;
-            }
-        }else{
-            CurrentURL = CurrentURL.replace("CurrentPageIndex="+right,"CurrentPageIndex="+CurrentPageIndex);
-        }
-        document.location.href=CurrentURL;
-    }
-    
-    function GetQueryString(name) {
-       var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
-       var r = window.location.search.substr(1).match(reg);
-       if (r!=null) return unescape(r[2]); return "";
-    }
-</script>
-                        </div>
+                        </volist>
                     </div>
                 </div>
-                <div id="topNav" style="display: none;">
-                    <a href="http://www.pceggs.com/ShowPrize/ShowList.aspx?topicid=1#totop" style="float:right;">
-                        <img src="__IMAGES__/glory/tlq_beta3_totopimg.gif" width="47"></a>
-                </div>
-                <div class="footer_redline"></div>
             </div>
+            <include file="public:pagebot"/>
         </div>
-        <include file="public:pagebot"/>
     </div>
     <include file="public:footer"/>
 </body>

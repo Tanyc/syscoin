@@ -19,7 +19,7 @@ class gameAction extends comAction{
 
         $pg = $this->_param('pg');
         $pc28 = D("Pc28");
-        $this->assign("db_pc28",$pc28->getResult($pg));
+        $this->assign("db_pc28",$pc28->getResultByPage($pg));
 
         $this->initCom($pc28->getCount(),("" == $pg)? 1 : $pg);
 

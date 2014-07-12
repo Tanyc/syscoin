@@ -1,13 +1,11 @@
 <?php
 class Pc28Model extends Model {
-	const CNT = 20;
-
-    public function getResult($page = 1){
-    	if ("" == $page) {
-    		$page = 1;
-    	}
-    	$offset = ($page - 1) * $this::CNT;
-        return $this->order('id DESC')->field(true)->limit($offset,$this::CNT)->select();
+    const PERPAGE = 20;
+    public function getResultByPage($page = 1){
+        if (is_nil($page)) {
+            $page = 1;
+        }
+        return $this->order('id DESC')->page($page,$this::PERPAGE)->select();
     }
 
     public function getLastRecord($filed){
