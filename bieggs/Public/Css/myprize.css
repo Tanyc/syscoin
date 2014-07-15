@@ -12,3 +12,15 @@ border: 1px solid #bfbcb6;
 	border-top:2px solid #ffffcc;
 	background: url("../images/public/titlebg.gif") repeat-x;
 }
+.account_right_messeage_titlered {
+color: #c80b07;
+font-weight: bolder;
+height: 32px;
+line-height: 32px;
+}
+.account_right_messeageL {
+width: 686px;
+height: 3px;
+background-color: #D13333;
+font-size: 0px;
+}

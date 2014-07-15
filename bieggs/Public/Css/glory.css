@@ -16,10 +16,10 @@
 .tlq_beta3_sj_box_w_r_top_l_l{ float:left;}
 
 .tlq_beta3_sj_box_w_r_top_r{ width:130px; height:48px; float:right; color:#797979;  line-height:48px;}
-.tlq_beta3_sj_xuxian{ width:100%; background:url(../Images/public/dot.png) repeat-x; height:1px; line-height:0px; font-size:0px; overflow:hidden; clear:both;}
+.tlq_beta3_sj_xuxian{ width:100%; background:url(../Images/public/dot.png) repeat-x; height:1px;}
 .tlq_beta3_sj_box_w_r_bottom{ height:147px;width:762px;}
 .tlq_beta3_sj_box_w_r_bottom_l{ width:404px; float:left;height:137px; line-height:24px; color:#797979; padding-top:6px;}
-.tlq_beta3_sj_box_w_r_bottom_r{ width:328px; float:right;height:118px; padding:29px 0 0 16px;}
+.tlq_beta3_sj_box_w_r_bottom_r{ width:250px; float:right;height:118px; padding:29px 0 0 16px;}
 .tlq_beta3_sj_box_w_r_bottom_r_t{height:60px; }
-.tlq_beta3_sj_box_w_r_bottom_r_t ul li{ float:right;height:60px; margin-left:8px;}
+.tlq_beta3_sj_box_w_r_bottom_r_t ul li{ float:right;height:60px; margin:auto auto 2px 2px;}
 .tlq_beta3_sj_box_w_r_bottom_r_b{ margin-top:14px; height:24px; width:194px; float:right; text-align:right; }

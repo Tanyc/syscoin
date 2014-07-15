@@ -1,0 +1,195 @@
+.clearall {
+zoom: 1;
+}
+.side {
+float: left;
+margin-left: 3px;
+width: 167px;
+padding-bottom: 5px;
+border: 1px solid #f1cb95;
+}
+.author {
+margin-bottom: 5px;
+padding-top: 20px;
+height: 20px;
+line-height: 20px;
+text-align: center;
+background: url(../Images/glory/yellow_j.png) repeat-x;
+}
+.tlq_beta3_sj_xuxian {
+width: 95%;
+background: url(../Images/public/dot.png) repeat-x;
+height: 1px;
+margin: 0 auto;
+}
+.uavatar {
+position: relative;
+padding-left: 25px;
+margin-bottom: 5px;
+_zoom: 1;
+}
+
+.uabout {
+position: relative;
+height: 38px;
+overflow: hidden;
+padding-top: 15px;
+margin-left: 30px;
+margin-bottom: 8px;
+margin-top: -5px;
+}
+.uname {
+font-weight: bold;
+width: 120px;
+margin: 0 auto;
+text-align: center;
+}
+a.linkblue_a1 {
+color: #005590;
+}
+.uavatar img {
+width: 120px;
+height: 120px;
+}
+.uabout a {
+position: relative;
+float: left;
+margin-left: -1px;
+padding: 0 6px;
+height: 36px;
+text-align: center;
+border: 1px solid #f9f9f9;
+border-left-color: #e8a9a9;
+color: #666;
+}
+.uabout a em, .uabout a:hover em {
+display: block;
+color: #334F67;
+font-family: Arial;
+}
+.sider_topbt {
+width: 778px;
+height: 37px;
+padding: 30px 20px;
+padding-bottom: 0px;
+background: url(../Images/glory/yellow_j.png) repeat-x;
+}
+.sider {
+width: 760px;
+float: right;
+border-top: 0px;
+border-bottom: 0px;
+padding: 20px 19px;
+font-size: 14px;
+color: #4d4d4d;
+line-height: 24px;
+}
+.bbs_floor{width: 978px; height: auto; margin-top:5px; }
+.sider_topbt ul li {
+float: left;
+padding-right: 5px;
+}
+.sider_topbt span {
+font-weight: bold;
+font-size: 14px;
+color: #333333;
+}
+.sider_wzpl {
+width: 760px;
+height: 20px;
+margin-bottom: 30px;
+}
+.tlq_beta3_sj_bgimg {
+clear: both;
+text-align: center;
+margin: 0 auto;
+margin-top: 20px;
+width: 604px;
+}
+.bbs_pltop {
+height: 26px;
+line-height: 26px;
+width: 950px;
+clear: both;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.floor_r {
+float: right;
+width: 800px;
+height: auto;
+border: 1px solid #f1cb95;
+}
+.bbs_pltop ul li.l {
+float: left;
+width: 864px;
+font-weight: bold;
+line-height: 26px;
+}
+body ul li {
+list-style: none;
+margin: 0px;
+padding: 0px;
+}
+.bbs_pltop ul li.r {
+float: right;
+width: 86px;
+}
+.z_an {
+display: inline-block;
+background: url(../Images/glory/zan_an.png) no-repeat right 0px;
+height: 25px;
+padding-left: 30px;
+padding-right: 5px;
+}
+.pl_an {
+display: inline-block;
+background: url(../Images/glory/zan_bn.png) no-repeat right 0px;
+height: 25px;
+padding-left: 30px;
+padding-right: 5px;
+}
+.bbs_plcon {
+background: #fafafa;
+border-top: 3px solid #e5e5e5;
+padding-right: 14px;
+width: 936px;
+padding-top: 16px;
+}
+.bbs_plconev {
+height: 112px;
+clear: both;
+margin-bottom: 12px;
+}
+.bbs_plconev {
+height: 112px;
+clear: both;
+margin-bottom: 12px;
+}
+.bbs_plconev {
+height: 112px;
+clear: both;
+margin-bottom: 12px;
+}
+.bbs_plconev ul li {
+float: right;
+}
+.bbs_plconevword_rb {
+position: absolute;
+z-index: 200;
+width: 210px;
+margin-left: 620px;
+margin-top: 82px;
+color: #797979;
+text-align: left;
+}
+.bbs_plconevtext {
+width: 785px;
+height: 72px;
+background: url(/img/ShowPrize/award_bgbg.gif) left -522px no-repeat;
+font-size: 14px;
+padding-left: 20px;
+padding-right: 15px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
