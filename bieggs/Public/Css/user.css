@@ -3,13 +3,6 @@ width: 990px;
 margin: 0px auto;
 overflow: hidden;
 }
-.w200 {
-width: 200px;
-overflow: hidden;
-}
-.fl {
-float: left;
-}
 .w780 {
 width: 780px;
 overflow: hidden;
@@ -17,62 +10,31 @@ overflow: hidden;
 .fr {
 float: right;
 }
-.helpNav {
-background: url(../image/helpNav.gif) left repeat-y;
-min-height: 200px;
-_height: 200px;
-border-top: #ccc solid 1px;
-border-bottom: #ccc solid 1px;
+
+.BasicInfoPart1 tr {height: 36px;}
+.BasicInfoPart1 th {
+width: 81px;
+text-align: right;
+border-left: #f1cb95 solid 1px;
+border-bottom: #f1cb95 solid 1px;
+padding: 0 5px;
 }
-.helpNav .title {
-height: 55px;
-line-height: 45px;
-padding-left: 8px;
-overflow: hidden;
-color: #acacac;
-font-size: 24px;
-font-style: italic;
-text-transform: uppercase;
-font-family: "寰蒋闆呴粦";
-background: url(../image/indexPart1Bg.gif) top repeat-x;
-margin: 0 1px;
-}
-.helpNav .title i {
-font-size: 12px;
-padding-left: 5px;
-}
-.helpNav h5 {
-display: block;
-height: 25px;
-line-height: 25px;
-overflow: hidden;
-padding-left: 31px;
-background: #fff3d9 url(../image/lico2.png) 13px center no-repeat;
-margin: 0 1px;
-}
-.helpNav .list {
-padding: 5px 0 14px 11px;
+.BasicInfoPart1 td {
+border-left: #f1cb95 solid 1px;
+border-bottom: #f1cb95 solid 1px;
+padding: 0 5px;
 }
 ul li {
 list-style: none;
 }
-.helpNav .list .aNow, .helpNav .list a:hover {
-border: #ccc solid 1px;
-border-left: #ff5a00 solid 3px;
-border-right: 0px;
-font-weight: bold;
-color: #ff5a00;
-background: #fff url(../image/ico2.gif) 142px center no-repeat;
-margin-right: 0px;
-}
+
 ul, p, dl, dt, dd {
 padding: 0px;
 margin: 0px;
 }
 .pageBox {
 min-height: 50px;
-_height: 300px;
-border: #ddd solid 1px;
+border: #f1cb95 solid 1px;
 }
 .h10 {
 height: 10px;
@@ -80,7 +42,6 @@ overflow: hidden;
 clear: both;
 }
 .pageTitle2 {
-background: url(../image/pageTitle2.gif) top repeat-x;
 height: 43px;
 line-height: 43px;
 }
@@ -88,8 +49,8 @@ line-height: 43px;
 height: 179px;
 overflow: hidden;
 position: relative;
-border: #e5e5e5 solid 1px;
-margin: 10px;
+border: #f1cb95 solid 1px;
+margin: 0 auto;
 padding-left: 146px;
 }
 .pageTitle2 h2 {
@@ -99,7 +60,6 @@ height: 43px;
 padding-left: 26px;
 height: 48px;
 overflow: hidden;
-background: url(../image/lico1.png) left center no-repeat;
 }
 .BasicInfoPart1 .imgDiv {
 position: absolute;
@@ -151,17 +111,9 @@ top: 0px;
 right: 6px;
 white-space: nowrap;
 }
-.orange {
-color: #ff6600;
-}
 .BasicInfoPart2 {
 margin: 10px;
 border: #e5e5e5 solid 1px;
 border-bottom: 0px;
 background: #ffffcc;
-}
-
-h1, h2, h3, h4, h5 {
-padding: 0px;
-margin: 0px;
 }

@@ -1,0 +1,49 @@
+.helpNav {
+width: 200px;
+float: left;
+border: #f1cb95 solid 1px;
+}
+.helpNav .title {
+height: 55px;
+line-height: 45px;
+padding-left: 8px;
+overflow: hidden;
+color: #ff0000;
+font-size: 24px;
+font-style: italic;
+text-transform: uppercase;
+}
+.helpNav .title i {
+font-size: 12px;
+padding-left: 5px;
+}
+.helpNav h5 {
+display: block;
+height: 25px;
+line-height: 25px;
+overflow: hidden;
+padding-left: 10px;
+background:url("../images/public/titlebg.gif") repeat-x;
+}
+.helpNav .list {
+padding: 5px 0 14px 11px;
+}
+.helpNav .list a {
+display: block;
+height: 27px;
+line-height: 27px;
+overflow: hidden;
+border: #f1cb95 solid 1px;
+border-right: 0px;
+padding-left: 10px;
+}
+.helpNav .list .aNow, .helpNav .list a:hover {
+border: #ccc solid 1px;
+border-right: 0px;
+font-weight: bold;
+color: #ff0000;
+}
+h1, h2, h3, h4, h5 {
+padding: 0px;
+margin: 0px;
+}

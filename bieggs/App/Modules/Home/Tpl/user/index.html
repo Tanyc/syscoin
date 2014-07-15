@@ -1,203 +1,155 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>用户中心-专业的广告游戏平台</title>
-<load href='__CSS__/user.css' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>用户中心-专业的广告游戏平台</title>
+  <load href='__CSS__/user.css' />
+  <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+  <load href='__JS__/user.js' />
 </head>
 
 <body>
-<include file="public:header"/>
-<style type="text/css">
-  .navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}
-</style>
-<div id="body_content">
-<div class="wal">
-<div class="fl w200">
-      <div class="helpNav">
-          <div class="title">会员中心<i>Member Center</i></div>
-          <h5><a href="">会员信息</a></h5>
-          <div class="list">
-               <ul>
-                 <li><a href="__IMAGES__/user/81豆会员中心.htm" class="aNow">基本信息</a></li>
-                 <li><a href="http://www.81dou.com/member/jfinfo.aspx">账号明细</a></li>
-                 <li><a href="http://www.81dou.com/member/usercc.aspx">存取吧豆</a></li>
-                 <li><a href="http://www.81dou.com/member/yjbf.aspx">自助补发邮件</a></li>
-                 <li><a href="http://www.81dou.com/member/mymessage.aspx">我的短信</a></li>
-                 <li><a href="http://www.81dou.com/member/mydj.aspx">我的兑奖</a></li>
-                 <li><a href="http://www.81dou.com/member/editme.aspx">修改资料</a></li>
-                 <li><a href="http://www.81dou.com/member/uservalid.aspx">身份认证/绑定手机</a></li>
-               </ul>
+  <include file="public:header"/>
+  <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+  <script type="text/javascript">
+    
+  </script>
+  <div id="body_content">
+    <div class="wal">
+      <include file="public:usernavi"/>
+      <div class="fr w780">
+        <div class="pageBox">
+          <div class="pageTitle pageTitle2">
+            <h2 class="orange">基本信息</h2>
           </div>
-          <h5><a href="">账户安全</a></h5>
-          <div class="list">
-               <ul>
-                 <li><a href="http://www.81dou.com/member/userlongvil.aspx">登陆短信验证</a></li>
-                 <li><a href="http://www.81dou.com/member/userpwd.aspx">修改密码/密保</a></li>
-                 <li><a href="http://www.81dou.com/member/userarea.aspx">登陆地区限制</a></li>
-                 <li><a href="http://www.81dou.com/member/userdh.aspx">兑奖安全设置</a></li>
-                 <li><a href="http://www.81dou.com/member/usersendtype.aspx">虚拟奖励设置</a></li>
-               </ul>
+          <div class="BasicInfoPart1">
+            <div class="imgDiv">
+              <img src="__IMAGES__/user/1_0.jpg" alt="">
+              <h5>
+                <a href="http://www.81dou.com/member/editme.aspx" class="orange">修改头像</a>
+              </h5>
+            </div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <tr>
+                  <th>昵称：</th>
+                  <td>
+                    <div class="fl">dingyong4223</div>
+                    <h5 class="fr">
+                      <a href="http://www.81dou.com/member/editme.aspx" class="orange">修改昵称</a>
+                    </h5>
+                  </td>
+                  <th>ID：</th>
+                  <td> <b class="orange">33520</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th>经验值：</th>
+                  <td> <b class="orange">110</b>
+                  </td>
+                  <th>积分：</th>
+                  <td>
+                    <b class="orange">50</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th>吧豆：</th>
+                  <td>
+                    <b class="orange">50</b>
+                  </td>
+                  <th>存款：</th>
+                  <td>
+                    <b class="orange">0</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th>经验等级：</th>
+                  <td>
+                    <span>
+                      <img src="__IMAGES__/user/1.gif" title="等级:1级"></span>
+                  </td>
+                  <th>积分等级：</th>
+                  <td>
+                    <span>
+                      <img src="__IMAGES__/user/lv0.gif"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>官位：</th>
+                  <td></td>
+                  <th>VIP：</th>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <h5><a href="">广告管理</a></h5>
-          <div class="list">
-               <ul>
-                 <li><a href="http://www.81dou.com/member/tfgg.aspx">投放广告</a></li>
-                 <li><a href="http://www.81dou.com/member/mygg.aspx">我的广告</a></li>
-                 <li><a href="http://www.81dou.com/ag/usertg.aspx">兼职推广</a></li>
-               </ul>
+        </div>
+        <div class="h10"></div>
+        <div class="pageBox">
+          <div class="pageTitle pageTitle2">
+            <h2 class="orange">账号安全</h2>
           </div>
-          <h5><a href="">道具/奖励</a></h5>
-          <div class="list">
-               <ul>
-                 <li><a href="http://www.81dou.com/member/sydj.aspx">道具使用</a></li>
-                 <li><a href="http://www.81dou.com/member/vipjl.aspx">VIP每日奖励领取</a></li>
-                 <li><a href="http://www.81dou.com/member/draw_salary.aspx">工资领取</a></li>
-                 <li><a href="http://www.81dou.com/member/usermyxx.aspx">我的好友</a></li>
-                 <li><a href="http://www.81dou.com/member/tgsy.aspx">推广收益</a></li>
-               </ul>
+          <div class="BasicInfoPart2">
+            <ul>
+              <li>
+                <img src="__IMAGES__/user/yes_1.gif" class="ico">
+                <h5>身份认证方式</h5>
+                <div class="msg">身份认证已通过</div>
+                <a href="" class="btn"></a>
+              </li>
+              <li>
+                <img src="__IMAGES__/user/no_1.gif" class="ico">
+                <h5>登陆地区限制</h5>
+                <div class="msg">您还没有通过设置登陆地区限制</div>
+                <a href="http://www.81dou.com/member/userarea.aspx" class="btn">设置登陆地区限制</a>
+              </li>
+              <li>
+                <img src="__IMAGES__/user/no_1.gif" class="ico">
+                <h5>兑奖需要手机短信验证</h5>
+                <div class="msg">你还没有设置兑奖需要手机短信验证</div>
+                <a href="http://www.81dou.com/member/userdh.aspx" class="btn">设置</a>
+              </li>
+              <li style="background: none;">
+                <img src="__IMAGES__/user/no_1.gif" class="ico">
+                <h5>设置银行密码</h5>
+                <div class="msg">您还没有设置银行密码</div>
+                <a href="http://www.81dou.com/member/setbankpass.aspx" class="btn">设置</a>
+              </li>
+              <li>
+                <img src="__IMAGES__/user/yes_1.gif" class="ico">
+                <h5>登陆需要手机短信验证</h5>
+                <div class="msg">已设置登录需手机验证</div>
+                <a href="" class="btn"></a>
+              </li>
+              <li>
+                <img src="__IMAGES__/user/yes_1.gif" class="ico">
+                <h5>虚拟奖品接受方式</h5>
+                <div class="msg">已设置虚拟奖品接受方式</div>
+                <a href="http://www.81dou.com/member/usersendtype.aspx" class="btn">设置</a>
+              </li>
+              <li>
+                <img src="__IMAGES__/user/no_1.gif" class="ico">
+                <h5> <font color="#FF6633">您的账号很危险请打开以上安全设置!</font>
+                </h5>
+                <div class="msg"></div>
+                <a href="" class="btn"></a>
+              </li>
+            </ul>
           </div>
+        </div>
+        <div class="h10"></div>
+        <!---->
+        <div class="pageBox">
+          <div class="pageTitle pageTitle2">
+            <h2 class="orange">最新消息</h2>
+          </div>
+          <div class="area area2">
+            <iframe src="{:U('/msg')}" frameborder="0" width="740px" scrolling="no" id="Iframe1" name="jfmessdiv2" onload="iFrameHeight2()" height="150"></iframe>
+          </div>
+        </div>
       </div>
-</div>
-<script type="text/javascript">
-    $(".helpNav").find("li").eq(0).find("a").addClass("aNow");  
-</script>
-<div class="fr w780">
-      <div class="pageBox">
-            <div class="pageTitle pageTitle2"><h2 class="orange">基本信息</h2></div>
-            <div class="BasicInfoPart1">
-                  <div class="imgDiv"><img src="__IMAGES__/user/1_0.jpg" alt=""><h5><a href="http://www.81dou.com/member/editme.aspx" class="orange">修改头像</a></h5></div>
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                       <tbody><tr>
-                         <th>昵称：
-                         </th><td><div class="fl">dingyong4223</div><h5 class="fr"><a href="http://www.81dou.com/member/editme.aspx" class="orange">修改昵称</a></h5></td>
-                         <th>ID：</th>
-                         <td><b class="orange">33520</b></td>
-                       </tr>
-                       <tr>
-                         <th>经验值</th>
-                         <td><b class="orange">110</b></td>
-                         <th>积分：</th>
-                         <td><b class="orange">50</b></td>
-                       </tr>
-                       <tr>
-                         <th>吧豆：</th>
-                         <td><b class="orange">50</b></td>
-                         <th>存款：</th>
-                         <td><b class="orange">0</b></td>
-                       </tr>
-                       <tr>
-                         <th>经验等级：</th>
-                         <td><span><img src="__IMAGES__/user/1.gif" title="等级:1级"></span></td>
-                         <th>积分等级：</th>
-                         <td><span><img src="__IMAGES__/user/lv0.gif"></span></td>
-                       </tr>
-                       <tr>
-                         <th>官位：</th>
-                         <td></td>
-                         <th>VIP：</th>
-                         <td></td>
-                       </tr>
-                  </tbody></table>
-            </div>
-      </div>
-      <div class="h10"></div>
-      <!---->
-      <div class="pageBox">
-            <div class="pageTitle pageTitle2"><h2 class="orange">账号安全</h2></div>
-            <div class="BasicInfoPart2">
-                  <ul>
-                  
-                    <li>
-                        <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                        <h5>身份认证方式</h5>
-                        <div class="msg">身份认证已通过</div>
-                        <a href="" class="btn"></a>
-                    </li>
-                    
-                    <li>
-                        <img src="__IMAGES__/user/no_1.gif" class="ico">
-                        <h5>登陆地区限制</h5>
-                        <div class="msg">您还没有通过设置登陆地区限制</div>
-                        <a href="http://www.81dou.com/member/userarea.aspx" class="btn">设置登陆地区限制</a>
-                    </li>
-                        
-      <li>
-                        <img src="__IMAGES__/user/no_1.gif" class="ico">
-                        <h5>兑奖需要手机短信验证</h5>
-                        <div class="msg">你还没有设置兑奖需要手机短信验证</div>
-                        <a href="http://www.81dou.com/member/userdh.aspx" class="btn">设置</a>
-                    </li>
-          
-                          <li style="background: none;">
-                        <img src="__IMAGES__/user/no_1.gif" class="ico">
-                        <h5>设置银行密码</h5>
-                        <div class="msg">您还没有设置银行密码</div>
-                        <a href="http://www.81dou.com/member/setbankpass.aspx" class="btn">设置</a>
-                    </li>
-           
-                    <li>
-                        <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                        <h5>登陆需要手机短信验证</h5>
-                        <div class="msg">已设置登录需手机验证</div>
-                        <a href="" class="btn"></a>
-                    </li>
-                         
-                              <li>
-                        <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                        <h5>虚拟奖品接受方式</h5>
-                        <div class="msg">已设置虚拟奖品接受方式</div>
-                        <a href="http://www.81dou.com/member/usersendtype.aspx" class="btn">设置</a>
-                    </li>
-          
-                    
-                    <li>
-                        <img src="__IMAGES__/user/no_1.gif" class="ico">
-                        <h5><font color="#FF6633">您的账号很危险请打开以上安全设置!</font></h5>
-                        <div class="msg"></div>
-                        <a href="" class="btn"></a>
-                    </li>
-                    
-                  </ul>
-            </div>
-      </div>
-      <div class="h10"></div>
-      <!---->
-      <div class="pageBox">
-            <div class="pageTitle pageTitle2"><h2 class="orange">最新消息</h2></div>
-            <div class="area area2">
-                 <iframe src="__IMAGES__/user/mess.htm" frameborder="0" width="740px" scrolling="no" id="Iframe1" name="jfmessdiv2" onload="iFrameHeight2()" height="150"></iframe>
-<script type="text/javascript" language="javascript">
-    function iFrameHeight2() {
-        var ifm = document.getElementById("Iframe1");
-        var subWeb = document.frames ? document.frames["jfmessdiv2"].document : ifm.contentDocument;
-        if (ifm != null && subWeb != null) {
-            ifm.height = subWeb.body.scrollHeight;
-        }
-    } 
-</script>
-            </div>
-      </div>
-      <div class="h10"></div>
-      <!---->
-      <div class="pageBox">
-            <div class="pageTitle pageTitle2"><h2 class="orange">最近登录</h2></div>
-            <div class="area area2">
-                 <iframe src="__IMAGES__/user/logo.htm" frameborder="0" width="740px" scrolling="no" id="jfmessdiv" name="jfmessdiv" onload="iFrameHeight()" height="150"></iframe>
-<script type="text/javascript" language="javascript">
-    function iFrameHeight() {
-        var ifm = document.getElementById("jfmessdiv");
-        var subWeb = document.frames ? document.frames["jfmessdiv"].document : ifm.contentDocument;
-        if (ifm != null && subWeb != null) {
-            ifm.height = subWeb.body.scrollHeight;
-        }
-    } 
-</script>
-            </div>
-      </div>
-</div>
-</div>
-</div>
-<include file="public:footer"/>
+    </div>
+  </div>
+    <include file="public:footer"/>
 </body>
-<!-- InstanceEnd --></html>
+</html>
