@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>用户中心-专业的广告游戏平台</title>
+	<load href='__CSS__/usercom.css' />
+	<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+	<load href='__JS__/user/usercom.js'/>
+</head>
+
+<body>
+	<include file="public:header"/>
+	<style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+	<script type="text/javascript"></script>
+	<div id="body_content">
+		<div class="wal">
+			<include file="public:usernavi"/>
+			<div class="content_r">
+				<div class="H_top"> <b>我的好友</b>
+				</div>
+				<div class="H_l_top">
+					<span>
+						<a href="javascript:setData(1);" id="tab1">好友详细列表</a>
+					</span>
+					<span>
+						<a href="javascript:setData(2);" id="tab2">好友互动</a>
+					</span>
+				</div>
+				<div id="imfo_edit1" style="padding-top: 10px;">
+				<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
+					<tbody>
+						<tr align="center" height="33px">
+							<td width="15%" align="center" class="tdstyle">好友昵称</td>
+							<td width="15%" align="center" class="tdstyle">关系密度</td>
+							<td width="15%" align="center" class="tdstyle">好友财富</td>
+							<td width="15%" align="center" class="tdstyle">借/贷数量</td>
+							<td width="15%" align="center" class="tdstyle">时间</td>
+							<td width="15%" align="center" class="tdstyle">借款/贷款</td>
+						</tr>
+
+						<tr class="font_bgrave" height="30">
+							<td height="20" align="center" bgcolor="#FFFFFF">签到获得吧币!送2积分</td>
+							<td align="center" bgcolor="#FFFFFF">
+								<span class="c1 b1">10</span>
+								&nbsp;
+								<img src="../static/style/guobi.gif"></td>
+							<td align="center" bgcolor="#FFFFFF">
+								<span class="c1 b1">50</span>
+								&nbsp;
+								<img src="../static/style/guobi.gif"></td>
+							<td align="center" bgcolor="#FFFFFF">2014-7-14 12:55:48</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<div id="spage" style="width:98%">
+					<span>总记录数:1条</span>
+					<a href="/user/account.asp?m=&amp;page=1" id="spage_hv">1</a>
+				</div>
+			</div>
+			<div id="imfo_edit2" style="padding-top: 10px; display:none;">
+				此处实现与好友赠送金币功能（需实名认证的好友），好友贷款借钱等功能（系统实现中间担保）
+			</div>
+			</div>
+		</div>
+	</div>
+<script>
+$(document).ready(function(){
+	var sub_tab = {$SUB_TAB};
+    $(".H_l_top span a").each(function(i){
+    if (sub_tab == i) {
+      $(this).attr("class", "a_bg1");
+      $(this).attr("href", "");
+    }
+  });
+});
+</script>
+	<include file="public:footer"/>
+</body>
+</html>

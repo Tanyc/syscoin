@@ -1,0 +1,74 @@
+.info_bg {
+width: 715px;
+background: #f7f7f7;
+padding: 8px 20px;
+}
+.account_word {
+position: relative;
+padding: 10px 0px;
+font-size: 14px;
+}
+.account_line {
+background: url(../images3/user/account_line.jpg) repeat-x center center;
+margin: 2px 0;
+width: 100%;
+height: 1px;
+}
+.account_word p {
+padding-bottom: 4px;
+line-height: 22px;
+}
+.account_word p img {
+vertical-align: middle;
+margin-left: 4px;
+}
+.user_hello_img {
+position: absolute;
+right: 0px;
+bottom: -6px;
+}
+.account_list_nav {
+width: 763px;
+border-bottom: 2px #f27b04 solid;
+position: relative;
+}
+.account_list_nav .Choose {
+position: absolute;
+width: 300px;
+height: 31px;
+line-height: 31px;
+bottom: 0;
+right: 0px;
+text-align: right;
+color: #d7d7d7;
+}
+.account_list_nav .Choose a {
+margin: 0 4px;
+}
+.account_list_nav li.this {
+background: url(../images3/user/account_list_thisbg.jpg) repeat-x;
+height: 32px;
+border: none;
+line-height: 32px;
+color: #FFFFFF;
+font-size: 14px;
+}
+.My_game {
+width: 763px;
+}
+.My_game li.lbg {
+color: #656565;
+background: url(../images3/user/table_titbg.gif) repeat-x;
+height: 36px;
+line-height: 36px;
+padding-top: 0px;
+text-align: center;
+}
+.My_game li.l1 {
+width: 130px;
+border-left: #dcdcdc 1px solid;
+}
+.time {
+font-size: 12px;
+color: #A3A3A3;
+}
