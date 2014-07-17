@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户中心-专业的广告游戏平台</title>
 	<load href='__CSS__/usercom.css' />
-	<load href='__CSS__/account.css' />
 	<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
 	<load href='__JS__/user/usercom.js'/>
 </head>
@@ -17,39 +16,26 @@
 		<div class="wal">
 			<include file="public:usernavi"/>
 			<div class="content_r">
-				<div class="H_top"> <b>我的账户</b>
+				<div class="H_top"> <b>我的好友</b>
 				</div>
 				<div class="H_l_top">
 					<span>
-						<a href="javascript:setData(1);" id="tab1">我的帐户</a>
+						<a href="javascript:setData(1);" id="tab1">好友详细列表</a>
 					</span>
 					<span>
-						<a href="javascript:setData(2);" id="tab2">游戏明细</a>
+						<a href="javascript:setData(2);" id="tab2">好友互动</a>
 					</span>
-					<span>
-						<a href="javascript:setData(3);" id="tab3">获取明细</a>
-					</span>
-					<span>
-						<a href="javascript:setData(4);" id="tab4">消费明细</a>
-					</span>
-					<span>
-						<a href="javascript:setData(5);" id="tab5">其他记录</a>
-					</span>
-					<span>
-						<a href="javascript:setData(6);" id="tab6">其他经验</a>
-					</span>
-					<span>
-						<a href="javascript:setData(7);" id="tab7">有效股票</a>
-					</span>
-
 				</div>
+				<div id="imfo_edit1" style="padding-top: 10px;">
 				<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
 					<tbody>
 						<tr align="center" height="33px">
-							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
-							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
-							<td width="20%" align="center" class="tdstyle">账户余额</td>
+							<td width="15%" align="center" class="tdstyle">好友昵称</td>
+							<td width="15%" align="center" class="tdstyle">关系密度</td>
+							<td width="15%" align="center" class="tdstyle">好友财富</td>
+							<td width="15%" align="center" class="tdstyle">借/贷数量</td>
 							<td width="15%" align="center" class="tdstyle">时间</td>
+							<td width="15%" align="center" class="tdstyle">借款/贷款</td>
 						</tr>
 
 						<tr class="font_bgrave" height="30">
@@ -71,6 +57,10 @@
 					<span>总记录数:1条</span>
 					<a href="/user/account.asp?m=&amp;page=1" id="spage_hv">1</a>
 				</div>
+			</div>
+			<div id="imfo_edit2" style="padding-top: 10px; display:none;">
+				此处实现与好友赠送金币功能（需实名认证的好友），好友贷款借钱等功能（系统实现中间担保）
+			</div>
 			</div>
 		</div>
 	</div>

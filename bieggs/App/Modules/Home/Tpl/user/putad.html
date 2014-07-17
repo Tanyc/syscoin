@@ -4,65 +4,29 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户中心-专业的广告游戏平台</title>
 	<load href='__CSS__/usercom.css' />
-	<load href='__CSS__/myprize.css' />
-	<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
 	<load href='__JS__/user/usercom.js'/>
 </head>
 
 <body>
 	<include file="public:header"/>
 	<style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">var img_path = '__IMAGES__';</script>
 	<div id="body_content">
 		<div class="wal">
 			<include file="public:usernavi"/>
 			<div class="content_r">
-				<div class="H_top"> <b>我的兑奖</b>
+				<div class="H_top"> <b>投放广告</b>
 				</div>
 				<div class="H_l_top">
 					<span>
-						<a href="javascript:setData(1);" id="tab1" class="a_bg1">兑奖记录</a>
+						<a href="javascript:setData(1);" id="tab1" class="a_bg1">广告编辑</a>
 					</span>
 					<span>
-						<a href="javascript:setData(2);" id="tab2">兑奖地址管理</a>
+						<a href="javascript:setData(2);" id="tab2">已投放广告列表</a>
 					</span>
 				</div>
-				<div id="imfo_edit1">
-					<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
-						<tbody>
-							<tr align="center" height="33px">
-								<td width="25%" align="center" class="tdstyle">奖品名称</td>
-								<td width="20%" align="center" class="tdstyle">金蛋数量</td>
-								<td width="20%" align="center" class="tdstyle">状态</td>
-								<td width="15%" align="center" class="tdstyle">时间</td>
-							</tr>
-
-							<tr class="font_bgrave" height="30">
-								<td height="20" align="center" bgcolor="#FFFFFF">500元话费</td>
-								<td align="center" bgcolor="#FFFFFF">
-									<span class="c1 b1">10,121,154</span>
-									&nbsp;
-									<img src="../static/style/guobi.gif"></td>
-								<td align="center" bgcolor="#FFFFFF">
-									<span class="c1 b1">已发货</span>
-									&nbsp;
-									<img src="../static/style/guobi.gif"></td>
-								<td align="center" bgcolor="#FFFFFF">2014-7-14 12:55:48</td>
-							</tr>
-
-						</tbody>
-					</table>
-					<div id="spage" style="width:98%">
-						<span>总记录数:1条</span>
-						<a href="/user/account.asp?m=&amp;page=1" id="spage_hv">1</a>
-					</div>
-				</div>
-				<div id="imfo_edit2" style="display:none">
-					<div class="account_right_messeage_titlered">&nbsp;&nbsp;新增邮寄地址</div>
-					<div style="width: 770px">
-						<div class="account_right_messeageL"></div>
-
-						<table width="770px" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+				<div id="imfo_edit1" style="padding-top: 10px;">
+					<table width="770px" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 							<tbody>
 								<tr>
 									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">姓名：</td>
@@ -194,51 +158,11 @@
 
 							</tbody>
 						</table>
-
-						<div class="account_right_messeage_titlered">&nbsp;&nbsp;已保存的邮寄地址</div>
-						<table width="770px" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="border:#cfcfcf 1px solid;">
-							<tbody>
-								<tr class="H_top" height="10px">
-									<td align="center" width="5%">收货人</td>
-									<td align="center" width="5%">所在城市</td>
-									<td align="center" width="10%">街道地址</td>
-									<td align="center" width="5%">邮编</td>
-									<td align="center" width="8%">手机电话</td>
-									<td align="center" width="5%"></td>
-									<td align="center" width="5%">操作</td>
-								</tr>
-							</tbody>
-						</table>
-						<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td align="left" height="30">
-										*最多保存 <font color="red">3</font>
-										条有效地址
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="account_right_messeage_jg33"></div>
-						<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td align="left" height="80">
-										备注：
-										<br>
-										1、QQ号码在您兑换虚拟奖品时使用，请保证QQ号码的正确。
-										<br>
-										<br>
-										2、联系电话和手机在您兑换实物奖品时使用，快递公司通过您填写的电话与您联系，错误的电话可能导致您无法收到奖品。
-										<br></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<include file="public:footer"/>
+</div>
+<include file="public:footer"/>
 </body>
 </html>

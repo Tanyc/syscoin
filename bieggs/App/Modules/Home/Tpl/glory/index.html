@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>团购-专业的广告游戏平台</title>
+    <title>晒奖-专业的广告游戏平台</title>
     <load href='__CSS__/glory.css' />
     <load href='__JS__/glory.js' />
 </head>
@@ -26,7 +26,7 @@
                         </li>
                         <li class="line">|</li>
                         <li class="glory_tab_1">
-                            <a href="{:U('?tab=1')}">我的晒奖</a>
+                            <a href="{:U('?extra1=1')}">我的晒奖</a>
                         </li>
                     </ul>
                 </div>
@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="tlq_beta3_sj_box_w_r_bottom_r">
                                             <div class="tlq_beta3_sj_box_w_r_bottom_r_t">
-                                                <ul id="ul_8002200">
+                                                <ul>
                                                     <script type="text/javascript">
                                                         showShortImgs('{$vo.imgs}','{$vo.id}');
                                                     </script>
@@ -92,6 +92,9 @@
             <include file="public:pagebot"/>
         </div>
     </div>
+    <script type="text/javascript">
+        document.getElementById("extra1").value={$m_tab};
+    </script>
     <include file="public:footer"/>
 </body>
 </html>

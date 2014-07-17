@@ -26,9 +26,68 @@ class userAction extends Action{
 
     public function edit(){
         $this->assign('PAGE_NAVII',3); //修改资料
-        $sub_tab = ("" == $this->_param("sub_tab"))? 0 : $this->_param("sub_tab");
-        $this->assign('SUB_TAB',$sub_tab); //重属tab
         
         $this->display();
     }
+
+    public function secure(){
+        $this->assign('PAGE_NAVII',4); //安全认证
+        
+        $this->display();
+    }
+
+    public function userpwd(){
+        $this->assign('PAGE_NAVII',5); //修改密码
+        
+        $this->display();
+    }
+
+    public function putad(){
+        $this->assign('PAGE_NAVII',6); //修改密码
+        
+        $this->display();
+    }
+
+    public function myad(){
+        $this->assign('PAGE_NAVII',7); //修改密码
+        
+        $this->display();
+    }
+
+    public function descad(){
+        $this->assign('PAGE_NAVII',8); //广告介绍
+        
+        $this->display();
+    }
+
+    public function tooluse(){
+        $this->assign('PAGE_NAVII',9); //道具使用
+        
+        $this->display();
+    }
+
+    public function vipget(){
+        $this->assign('PAGE_NAVII',10); //vip每日领取
+        
+        $this->display();
+    }
+
+    public function salary(){
+        $this->assign('PAGE_NAVII',11); //工资领取
+        
+        $this->display();
+    }
+
+    public function myfriend(){
+        $this->assign('PAGE_NAVII',12); //工资领取
+        
+        $this->display();
+    }
+
+    public function invite(){
+        $this->assign('PAGE_NAVII',13); //工资领取
+        
+        $this->display();
+    }
+    
 }

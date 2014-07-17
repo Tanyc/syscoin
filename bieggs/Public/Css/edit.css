@@ -1,55 +1,12 @@
-.content_r{width:770px; float:right; margin-right: 3px; overflow: hidden; background: #fff; border: 1px #f1f1f1 solid;}
-.H_top {
-overflow: hidden;
-background: url("../images/public/titlebg.gif") repeat-x;
-height: 36px;
-line-height: 36px;
-margin: 0 auto;
-}
-.H_top b {
-padding-left: 22px;
-margin-left: 10px;
-font-size: 18px;
-color: #3281cf;
-}
-.H_l_top {
-background-color: #ffffcc;
-height: 29px;
-line-height: 29px;
-text-align: left;
-}
-
-.H_l_top span {
-float: left;
-width: 109px;
-text-align: center;
-border-right:1px solid #f1cb95;
-}
-.H_l_top span .a_bg1 {
-background-color: #FFD582;
-}
-.H_l_top span a {
-display: block;
-height: 29px;
-line-height: 29px;
-text-decoration: none;
-}
 #imfo_edit3{
 	height:700px; padding:10px 5px 10px 10px; float:left; margin: 10px auto;
 }
 .headimg{
 	margin:10px; cursor:pointer; width:55px; height:55px;
 }
-.X_sub {
-width: 79px;
-height: 26px;
-background: url(../Images/public/bnt_yellow.png) no-repeat;
-font-weight: bold;
-margin: 0 auto;
-}
 .mainimg{
 	width:104px; margin:0 auto; margin-top: 50px;
 }
 #choice_headimg{width:98px; height:98px;}
 .subimg1{padding:2px;border:1px #CCCCCC solid;}
-.subimg2{margin-top:10px;margin-left:8px;}
+.subimg2{margin-left: -5px; margin-top: 10px;}
