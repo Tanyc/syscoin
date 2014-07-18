@@ -1,0 +1,41 @@
+.cardshow{
+	float: left;
+	width: 230px;
+	/*border: 1px solid #f1cb95;*/
+}
+.formdiv{
+	display: inline;
+	float: right;
+	width: 532px;
+	/*border: 1px solid #f1cb95;*/
+}
+.cardimg, .vipcard{
+margin: 10px;
+width: 150px;
+height: 83px;
+}
+.dcard{
+	width: 100%;
+}
+.dcardimgdiv, .dvipcardimgdiv{
+	width: 290px;
+	margin: 15px auto;
+}
+.dcardimg, .dvipcardimg{
+	margin: 10px;
+	width: 270px;
+	height: 150px;
+}
+.cardimgbox {
+float:left;margin:30px auto auto 10px;
+}
+.dcard_tip, .dvipcard_tip{
+	margin: auto 3px;
+}
+.B_bor{
+	color: #ff0000;
+}
+#imfo_edit2 ul li{
+	display:inline;
+}
+.dvipcard{border-top:1px solid #f1cb95 }

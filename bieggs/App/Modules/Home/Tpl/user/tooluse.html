@@ -4,7 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户中心-专业的广告游戏平台</title>
 	<load href='__CSS__/usercom.css' />
+	<load href='__CSS__/tooluse.css' />
 	<load href='__JS__/user/usercom.js'/>
+	<load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+	<load href='__JS__/user/tooluse.js'/>
 </head>
 
 <body>
@@ -26,12 +29,47 @@
 					</span>
 				</div>
 				<div id="imfo_edit1" style="padding-top: 10px;">
-					<form id="form3" name="form3" method="post" action="?m=do" onsubmit="return checkup()">
+					<div class="cardshow">
+						<p style="font-weight:bold;font-size:18px;color:#ff0000;">请选先择充值类型：</p>
+						<ul>
+							<li style="text-align:center;">
+								<label onclick="">
+								<input type="checkbox" name="checkboxd" value="checkbox" class="cardimgbox">
+								<img class="cardimg" src="/bidan/bieggs/Public/Images/user/head/0.gif"></label>
+							</li>
+							<li style="text-align:center;">
+								<label onclick="">
+								<input type="checkbox" name="checkboxd" value="checkbox" class="cardimgbox">
+								<img class="cardimg" src="/bidan/bieggs/Public/Images/user/head/1.gif"></label>
+							</li>
+							<li style="text-align:center;">
+								<label onclick="">
+								<input type="checkbox" name="checkboxd" value="checkbox" class="cardimgbox">
+								<img class="cardimg" src="/bidan/bieggs/Public/Images/user/head/2.gif"></label>
+							</li>
+							<li style="text-align:center;">
+								<label onclick="">
+								<input type="checkbox" name="checkboxd" value="checkbox" class="cardimgbox">
+								<img class="cardimg" src="/bidan/bieggs/Public/Images/user/head/3.gif"></label>
+							</li>
+						</ul>
+					</div>
+					<div class="formdiv">
+						<div class="dcard">
+							<div class="dcardimgdiv"><img class="dcardimg" src=""></div>
+							<div class="dcard_tip">
+						      <p>特别提醒：</p>
+						      <p>1、当您在游戏中存在投注时，不能领取救济补足。</p>
+						      <p>2、所有赛事如无特别说明，竞猜数据以最终赛事结果为依据，其中包括比赛的附加时间（如伤停补时等）。</p>
+						      <p>3、游戏数据均采自第三方比赛结果，比赛结束后两小时内工具结果。</p>
+						      <p>4、本游戏仅供娱乐，严禁以本游戏结果开设外围赌局，本网站对竞猜结果保留最终解释权。</p>
+						      </div>
+						</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="5" style="margin-bottom:10px">
 							<tbody>
 								<tr>
 									<td colspan="3" align="center">
-										<div class="B_bor c3">请输入道具卡详细信息，道具相关功能在系统确认后立即生效。</div>
+										<div class="B_bor">提示：请先选择左侧道具卡类型，然后输入卡号和密码。</div>
 									</td>
 								</tr>
 								<tr height="10">
@@ -57,10 +95,37 @@
 								</tr>
 							</tbody>
 						</table>
-					</form>
+					</div>
 				</div>
 				<div id="imfo_edit2" style="padding-top: 10px; display:none">
-					此页用于展示各种道具卡
+					<ul>
+						<li>
+							<label onclick="">
+							<img class="vipcard" src="/bidan/bieggs/Public/Images/user/head/0.gif"></label>
+						</li>
+						<li>
+							<label onclick="">
+							<img class="vipcard" src="/bidan/bieggs/Public/Images/user/head/1.gif"></label>
+						</li>
+						<li>
+							<label onclick="">
+							<img class="vipcard" src="/bidan/bieggs/Public/Images/user/head/2.gif"></label>
+						</li>
+						<li>
+							<label onclick="">
+							<img class="vipcard" src="/bidan/bieggs/Public/Images/user/head/3.gif"></label>
+						</li>
+					</ul>
+						<div class="dvipcard">
+							<div class="dvipcardimgdiv"><img class="dvipcardimg" src=""></div>
+							<div class="dvipcard_tip">
+						      <p>特别提醒：</p>
+						      <p>1、当您在游戏中存在投注时，不能领取救济补足。</p>
+						      <p>2、所有赛事如无特别说明，竞猜数据以最终赛事结果为依据，其中包括比赛的附加时间（如伤停补时等）。</p>
+						      <p>3、游戏数据均采自第三方比赛结果，比赛结束后两小时内工具结果。</p>
+						      <p>4、本游戏仅供娱乐，严禁以本游戏结果开设外围赌局，本网站对竞猜结果保留最终解释权。</p>
+						      </div>
+						</div>
 				</div>
 			</div>
 		</div>
