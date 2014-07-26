@@ -7,6 +7,11 @@ class userAction extends Action{
 
     public function index(){
     	$this->assign('PAGE_NAVII',0); //基本信息
+
+        $db_user = D('User');
+        // $db_user_id = $db_user->getUserByid('1873372'); //测试，后期查询自己的数据
+        $this->assign("db_user_id",$db_user->getUserByid('1873372'));
+
         $this->display();
     }
 

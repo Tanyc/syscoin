@@ -12,7 +12,7 @@
   <include file="public:header"/>
   <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
   <script type="text/javascript">
-    
+    var image_path = '__IMAGES__';
   </script>
   <div id="body_content">
     <div class="wal">
@@ -34,51 +34,68 @@
                 <tr>
                   <th>昵称：</th>
                   <td>
-                    <div class="fl">dingyong4223</div>
+                    <b class="orange" style="float:left;">{$db_user_id.nick}</b>
                     <h5 class="fr">
-                      <a href="http://www.81dou.com/member/editme.aspx" class="orange">修改昵称</a>
+                      <a href="#" style="color:#ff6633">修改昵称</a>
                     </h5>
                   </td>
                   <th>ID：</th>
-                  <td> <b class="orange">33520</b>
+                  <td> <b class="orange">{$db_user_id.user_id}</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th>金蛋：</th>
+                  <td> <b class="orange">
+                    <script type="text/javascript">
+                      document.write(ver({$db_user_id.eggs}));
+                    </script>
+                  </b>
+                  </td>
+                  <th>存款：</th>
+                  <td>
+                    <b class="orange">
+                    <script type="text/javascript">
+                      document.write(ver({$db_user_id.deposit}));
+                    </script>
+                    </b>
                   </td>
                 </tr>
                 <tr>
                   <th>经验值：</th>
-                  <td> <b class="orange">110</b>
-                  </td>
-                  <th>积分：</th>
                   <td>
-                    <b class="orange">50</b>
+                    <b class="orange">{$db_user_id.exp}</b>
                   </td>
-                </tr>
-                <tr>
-                  <th>吧豆：</th>
-                  <td>
-                    <b class="orange">50</b>
-                  </td>
-                  <th>存款：</th>
-                  <td>
-                    <b class="orange">0</b>
-                  </td>
-                </tr>
-                <tr>
                   <th>经验等级：</th>
                   <td>
-                    <span>
-                      <img src="__IMAGES__/user/1.gif" title="等级:1级"></span>
+                      <script type="text/javascript">
+                        setExpRange({$db_user_id.exp});
+                      </script>
+                  </td>
+                </tr>
+                <tr>
+                  <th>积分：</th>
+                  <td>
+                    <b class="orange">{$db_user_id.jifen}</b>
                   </td>
                   <th>积分等级：</th>
                   <td>
-                    <span>
-                      <img src="__IMAGES__/user/lv0.gif"></span>
+                      <script type="text/javascript">
+                        setJifenRange({$db_user_id.jifen});
+                      </script>
                   </td>
                 </tr>
                 <tr>
-                  <th>官位：</th>
-                  <td></td>
-                  <th>VIP：</th>
-                  <td></td>
+                  <th>成长等级：</th>
+                  <td>
+                      <script type="text/javascript">
+                        setGrowRange({$db_user_id.grow});
+                      </script></td>
+                  <th>VIP等级：</th>
+                  <td>
+                      <script type="text/javascript">
+                        setVipRange({$db_user_id.vip});
+                      </script>
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -10,7 +10,9 @@ overflow: hidden;
 .fr {
 float: right;
 }
-
+.orange{
+	color: #ff6633;
+}
 .BasicInfoPart1 tr {height: 36px;}
 .BasicInfoPart1 th {
 width: 81px;
@@ -116,4 +118,16 @@ margin: 10px;
 border: #e5e5e5 solid 1px;
 border-bottom: 0px;
 background: #ffffcc;
+}
+.lv{
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.lvrange_0{
+	color: #aaaaaa;
+}
+.lvrange{
+	color: #ff0000;
 }
