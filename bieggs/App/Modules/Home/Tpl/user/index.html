@@ -13,6 +13,7 @@
   <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
   <script type="text/javascript">
     var image_path = '__IMAGES__';
+    var url_path = '__URL__';
   </script>
   <div id="body_content">
     <div class="wal">
@@ -24,9 +25,12 @@
           </div>
           <div class="BasicInfoPart1">
             <div class="imgDiv">
-              <img src="__IMAGES__/user/1_0.jpg" alt="">
+              <script type="text/javascript">
+                var headimg = '<img src="__IMAGES__/user/head/' + {$db_user_id.headimg} + '.gif" width="98px">';
+                document.write(headimg);
+              </script>
               <h5>
-                <a href="http://www.81dou.com/member/editme.aspx" class="orange">修改头像</a>
+                <a href="{:U('user/edit')}" class="orange">修改资料</a>
               </h5>
             </div>
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -109,47 +113,35 @@
           <div class="BasicInfoPart2">
             <ul>
               <li>
-                <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                <h5>身份认证方式</h5>
-                <div class="msg">身份认证已通过</div>
-                <a href="" class="btn"></a>
+                <script type="text/javascript">
+                  setSnameMsg({$db_user_id.s_number});
+                </script>
               </li>
               <li>
-                <img src="__IMAGES__/user/no_1.gif" class="ico">
-                <h5>登陆地区限制</h5>
-                <div class="msg">您还没有通过设置登陆地区限制</div>
-                <a href="http://www.81dou.com/member/userarea.aspx" class="btn">设置登陆地区限制</a>
+                <script type="text/javascript">
+                  setAreaMsg({$db_user_id.iplimit});
+                </script>
               </li>
               <li>
-                <img src="__IMAGES__/user/no_1.gif" class="ico">
-                <h5>兑奖需要手机短信验证</h5>
-                <div class="msg">你还没有设置兑奖需要手机短信验证</div>
-                <a href="http://www.81dou.com/member/userdh.aspx" class="btn">设置</a>
+                <script type="text/javascript">
+                  setMessageMsg({$db_user_id.s_message});
+                </script>
               </li>
               <li style="background: none;">
-                <img src="__IMAGES__/user/no_1.gif" class="ico">
-                <h5>设置银行密码</h5>
-                <div class="msg">您还没有设置银行密码</div>
-                <a href="http://www.81dou.com/member/setbankpass.aspx" class="btn">设置</a>
+                <script type="text/javascript">
+                  setBankMsg({$db_user_id.s_bankkey});
+                </script>
               </li>
               <li>
-                <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                <h5>登陆需要手机短信验证</h5>
-                <div class="msg">已设置登录需手机验证</div>
-                <a href="" class="btn"></a>
+                <script type="text/javascript">
+                  setLoginMsg({$db_user_id.sms_login});
+                </script>
               </li>
               <li>
-                <img src="__IMAGES__/user/yes_1.gif" class="ico">
-                <h5>虚拟奖品接受方式</h5>
-                <div class="msg">已设置虚拟奖品接受方式</div>
-                <a href="http://www.81dou.com/member/usersendtype.aspx" class="btn">设置</a>
-              </li>
-              <li>
-                <img src="__IMAGES__/user/no_1.gif" class="ico">
-                <h5> <font color="#FF6633">您的账号很危险请打开以上安全设置!</font>
-                </h5>
-                <div class="msg"></div>
-                <a href="" class="btn"></a>
+                <script type="text/javascript">
+                  var cnt = {$db_user_id.s_number} + {$db_user_id.iplimit} + {$db_user_id.s_message} + {$db_user_id.s_bankkey} + {$db_user_id.sms_login};
+                  setSafeTipMsg(cnt);
+                </script>
               </li>
             </ul>
           </div>

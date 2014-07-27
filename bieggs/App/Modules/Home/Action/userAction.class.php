@@ -10,7 +10,7 @@ class userAction extends Action{
 
         $db_user = D('User');
         // $db_user_id = $db_user->getUserByid('1873372'); //测试，后期查询自己的数据
-        $this->assign("db_user_id",$db_user->getUserByid('1873372'));
+        $this->assign("db_user_id",$db_user->getUserSet('1873372'));
 
         $this->display();
     }
@@ -93,6 +93,33 @@ class userAction extends Action{
         $this->assign('PAGE_NAVII',13); //工资领取
         
         $this->display();
+    }
+
+    public function ssetting(){
+        $SAFE_TYPE=array("SNUMBER"=>"0","IPLIMIT"=>"1","SMESSAGE"=>"2","SBANKKEY"=>"3","SMSLOGIN"=>"4");
+        $id = $this->_param("id");
+        // switch ($id) {
+        //     case $SAFE_TYPE["SNUMBER"]:
+        //         $db_user = D('User');
+        //         $db_user->updateField("s_number","123456789");
+        //         break;
+        //     case $SAFE_TYPE["IPLIMIT"]:
+        //         # code...
+        //         break;
+        //     case $SAFE_TYPE["SMESSAGE"]:
+        //         # code...
+        //         break;
+        //     case $SAFE_TYPE["SBANKKEY"]:
+        //         # code...
+        //         break;
+        //     case $SAFE_TYPE["SMSLOGIN"]:
+        //         # code...
+        //         break;
+        //     default:
+        //         break;
+        // }
+        // //中间处理一下业务逻辑
+        // $this->ajaxReturn($id);
     }
     
 }
