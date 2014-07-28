@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLClient", "MySQLClient\MySQLClient.csproj", "{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderTest", "Code Example\ProviderTest.csproj", "{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlDemo", "MySqlDemo\HelloWorld\MySqlDemo.csproj", "{BA6AA5DE-ABC8-4580-BF2D-4FEC8FA29BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTest", "DBTest\DBTest.csproj", "{83A7FA8D-86F3-4562-B3EF-C6BB62EA3B72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6AA5DE-ABC8-4580-BF2D-4FEC8FA29BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6AA5DE-ABC8-4580-BF2D-4FEC8FA29BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6AA5DE-ABC8-4580-BF2D-4FEC8FA29BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6AA5DE-ABC8-4580-BF2D-4FEC8FA29BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A7FA8D-86F3-4562-B3EF-C6BB62EA3B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A7FA8D-86F3-4562-B3EF-C6BB62EA3B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A7FA8D-86F3-4562-B3EF-C6BB62EA3B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A7FA8D-86F3-4562-B3EF-C6BB62EA3B72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

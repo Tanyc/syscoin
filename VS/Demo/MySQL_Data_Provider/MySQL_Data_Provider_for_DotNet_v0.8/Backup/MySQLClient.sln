@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLClient", "MySQLClient\MySQLClient.csproj", "{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderTest", "Code Example\ProviderTest.csproj", "{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Debug.ActiveCfg = Debug|.NET
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Debug.Build.0 = Debug|.NET
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Release.ActiveCfg = Release|.NET
+		{78F4BE7B-0A6F-4BE6-8FFC-39F6AE0563BF}.Release.Build.0 = Release|.NET
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Debug.ActiveCfg = Debug|.NET
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Debug.Build.0 = Debug|.NET
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Release.ActiveCfg = Release|.NET
+		{D3545D1B-3740-42C5-BB5E-E784FE2FF0DB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

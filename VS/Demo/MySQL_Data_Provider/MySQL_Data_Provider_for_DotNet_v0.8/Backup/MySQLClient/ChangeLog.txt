@@ -1,0 +1,57 @@
+ChangeLog for MySQLClient:
+--------------------------
+
+2002-10-21:
+	Corrected: Implicit lower case convertion of connection string removed.
+		Problems with Linux systems and upper case usernames and passwords.
+	
+2002-10-23:
+	Added: Primary key information is now stored in schema information of DataReader.
+	
+	Corrected: Incorrect conversion of text fields to byte arrays.
+	
+	Added: LastInsertID property for Command object. It returns the new created number
+		of the last auto number column, needed to update Datasets on the fly during the
+		RowUpdatedEvent.
+	
+	Corrected: NULL values where inserted as "NULL" string instead of a database NULL.
+	
+	Changed: Signature of constructors for MySQLParameter.
+	
+	Changed: Signature of method MySQLParameterCollection.Add.
+
+2002-10-29:
+	Corrected: Checks for existing and open connection included in Command.ExecuteNonQuery,
+		.ExecuteScalar and .ExecuteReader (only caused null-reference exception).
+	
+2002-11-01:
+	Corrected: DataReader.GetSchemaTable.
+	
+2002-11-07:
+	Corrected: DataReader returned DBNull for Non-Nullable string columns instead of "".
+
+2002-11-15:
+	Corrected: No Unicode decoding for Text data type (because returned as BLOB & !BINARY)
+
+2002-11-16:
+	Added: Connection timeout property supported.
+	
+	Improved: Connection string more flexible, allows " and ', 
+		Now accepts "location", "server", "data source", "address", "database", "initial catalog", "catalog",
+		"user", "user id", "password", "pwd", "connection timeout", "timeout" as parameters.
+	
+2002-11-17:
+	Changed: Definition of MySQLField structure adapted to the libmysql.dll from 4.0.3 beta.
+	
+	Corrected: CommandBehaviour of MySQLCommand was ignored if several behaviours were combined.
+	
+	
+Todo:
+-----
+
+Prio 1:
+Unique Key is not recognized because MySQL doesn't return the MULTIPLE_KEY_FLAG in the
+field definition. Research in progress.
+
+Prio 2:
+Component part for Connection, Command, DataAdapter should be done.
