@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextLoginBox", "TextLoginBox.csproj", "{9ABE3042-EE59-4F1B-91C3-45083250659F}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9ABE3042-EE59-4F1B-91C3-45083250659F}.Debug.ActiveCfg = Debug|.NET
+		{9ABE3042-EE59-4F1B-91C3-45083250659F}.Debug.Build.0 = Debug|.NET
+		{9ABE3042-EE59-4F1B-91C3-45083250659F}.Release.ActiveCfg = Release|.NET
+		{9ABE3042-EE59-4F1B-91C3-45083250659F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

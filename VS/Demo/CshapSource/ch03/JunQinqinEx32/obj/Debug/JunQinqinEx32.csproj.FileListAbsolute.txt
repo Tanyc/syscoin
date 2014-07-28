@@ -1,0 +1,16 @@
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\bin\Debug\军棋.exe
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\bin\Debug\军棋.pdb
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\ResolveAssemblyReference.cache
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\JunQinqinEx32.Form1.resources
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\军棋.Properties.Resources.resources
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\JunQinqinEx32.csproj.GenerateResource.Cache
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\军棋.exe
+F:\CS\网页游戏辅助程序设计例子\ch03\JunQinqinEx32\obj\Debug\军棋.pdb
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\军棋.exe
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\军棋.pdb
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\bin\Debug\军棋.exe
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\bin\Debug\军棋.pdb
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\JunQinqinEx32.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\JunQinqinEx32.Form1.resources
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\军棋.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch03\JunQinqinEx32\obj\Debug\JunQinqinEx32.csproj.GenerateResource.Cache

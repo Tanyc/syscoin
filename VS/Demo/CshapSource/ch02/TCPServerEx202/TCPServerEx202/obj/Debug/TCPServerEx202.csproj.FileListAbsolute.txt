@@ -1,0 +1,8 @@
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\bin\Debug\TCPServerEx202.exe
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\bin\Debug\TCPServerEx202.pdb
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.Form1.resources
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.exe
+D:\VC_PROJECT\cshap\ch02\TCPServerEx202\TCPServerEx202\obj\Debug\TCPServerEx202.pdb

@@ -1,0 +1,8 @@
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\bin\Debug\HttpFtpEx42.exe
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\bin\Debug\HttpFtpEx42.pdb
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.Form1.resources
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.exe
+D:\VC_PROJECT\cshap\ch04\HttpFtpEx42\HttpFtpEx42\obj\Debug\HttpFtpEx42.pdb

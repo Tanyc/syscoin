@@ -1,0 +1,7 @@
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\bin\Debug\MySQLClient.dll
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\bin\Debug\MySQLClient.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\obj\Debug\System.Data.MySQLClient.MySQLCommand.resources
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\obj\Debug\System.Data.MySQLClient.MySQLConnection.resources
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\obj\Debug\MySQLClient.csproj.GenerateResource.Cache
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\obj\Debug\MySQLClient.dll
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySQLClient\obj\Debug\MySQLClient.pdb

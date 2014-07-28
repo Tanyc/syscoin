@@ -1,0 +1,7 @@
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\bin\Debug\MySQLDriverCS.dll
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+d:\userprofiles\yongding\documents\visual studio 2012\Projects\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache

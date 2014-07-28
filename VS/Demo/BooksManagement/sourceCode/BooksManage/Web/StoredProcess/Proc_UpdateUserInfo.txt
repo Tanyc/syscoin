@@ -1,0 +1,11 @@
+CREATE PROC Proc_UpdateUserInfo
+  @userID         NVARCHAR(50),
+  @userDepartment NVARCHAR(50),
+  @userAddress    NVARCHAR(50),
+  @userPhone      NVARCHAR(50)
+
+AS
+  UPDATE Users SET userDepartment=@userDepartment,
+                   userAddress=@userAddress,
+                   userPhone=@userPhone
+               WHERE userID=@userID

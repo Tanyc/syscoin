@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>img{ height: 100px; float: left; }</style>
+  <script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div id="class1"></div>
+	<div id="class2"></div>
+	<div id="class3"></div>
+	<div id="class4"></div>
+
+
+<script>
+
+
+function GetSelect(target,url,pram,index)
+{
+	$.getJSON(url,
+		pram,
+	  function(data) {
+		
+		if(data.items.length > 0 && index<10)
+		{
+			index++;
+			var select =  $("<select/>");
+			select.id="class"+index;
+			select.change(function () { 
+			  alert(select.id);
+			});
+
+			$.each(data.items, function(i,item){
+
+			 var option = $("<option/>")
+			 option.text(item.title);
+			 option.attr("value", item.media.m).appendTo(select);
+			 // if ( i == 3 ) return false;
+			});
+
+			select.appendTo(target);
+			GetSelect(target,url,pram,index);
+		}
+
+	  });
+  
+ }
+ 
+GetSelect("#class1","catjson.php?jsoncallback=?",
+		{
+			tags: "cat",
+			tagmode: "any",
+			format: "json"
+		}
+		,0
+	  );
+
+GetSelect("#class2","catjson.php?jsoncallback=?",
+		{
+			tags: "cat",
+			tagmode: "any",
+			format: "json"
+		}
+		,0
+	  );
+
+
+  GetSelect("#class3","catjson.php?jsoncallback=?",
+	{
+		tags: "cat",
+		tagmode: "any",
+		format: "json"
+	}
+	,0
+  );
+
+
+  GetSelect("#class4","catjson.php?jsoncallback=?",
+	{
+		tags: "cat",
+		tagmode: "any",
+		format: "json"
+	}
+	,0
+  );
+
+ </script>
+
+</body>
+</html>

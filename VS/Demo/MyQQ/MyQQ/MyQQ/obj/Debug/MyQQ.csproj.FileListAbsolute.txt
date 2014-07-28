@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\bin\Debug\MyQQ.exe
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\bin\Debug\MyQQ.pdb
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.ChatForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.FacesForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.RegisterForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.LoginForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.MainForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.PersonalInfoForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.RequestForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.SearchFriendForm.resources
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.exe
+C:\Users\Administrator\Desktop\C#完美仿QQ聊天软件MyQQ源代码(北大青鸟完整版)\项目参考代码\MyQQ\MyQQ\obj\Debug\MyQQ.pdb

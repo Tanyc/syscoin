@@ -1,0 +1,9 @@
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\bin\Debug\WindowsApplication1.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\bin\Debug\WindowsApplication1.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\bin\Debug\MySQLClient.dll
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\bin\Debug\MySQLClient.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\obj\Debug\ProviderTest.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\obj\Debug\WindowsApplication1.Form1.resources
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\obj\Debug\ProviderTest.csproj.GenerateResource.Cache
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\obj\Debug\WindowsApplication1.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\Code Example\obj\Debug\WindowsApplication1.pdb

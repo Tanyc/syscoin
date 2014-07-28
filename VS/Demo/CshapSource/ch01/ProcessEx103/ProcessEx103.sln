@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessEx103", "ProcessEx103\ProcessEx103.csproj", "{B7299AC6-DE01-45DF-B340-092CE6E2CF53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7299AC6-DE01-45DF-B340-092CE6E2CF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7299AC6-DE01-45DF-B340-092CE6E2CF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7299AC6-DE01-45DF-B340-092CE6E2CF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7299AC6-DE01-45DF-B340-092CE6E2CF53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

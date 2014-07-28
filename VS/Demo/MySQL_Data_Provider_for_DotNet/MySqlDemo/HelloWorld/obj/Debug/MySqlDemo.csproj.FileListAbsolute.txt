@@ -1,0 +1,7 @@
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\bin\Debug\HelloWorld.exe.config
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\obj\Debug\HelloWorld.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\obj\Debug\HelloWorld.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\bin\Debug\HelloWorld.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\bin\Debug\HelloWorld.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\bin\Debug\MySQLDriverCS.dll
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\MySqlDemo\HelloWorld\obj\Debug\MySqlDemo.csprojResolveAssemblyReference.cache

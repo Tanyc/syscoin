@@ -1,0 +1,6 @@
+create PROC Proc_GetBooks
+AS
+	SELECT * FROM Book
+GO 
+
+EXEC Proc_GetBooks

@@ -1,0 +1,8 @@
+CREATE PROC Proc_GetBorrowHistory
+   @userID NVARCHAR(50)
+AS
+   SELECT * FROM Book WHERE bookID IN(
+SELECT bookID FROM BorrowRec WHERE readerID=@userID  AND borrowStatus='False')
+
+
+EXEC Proc_GetBorrowHistory '002'

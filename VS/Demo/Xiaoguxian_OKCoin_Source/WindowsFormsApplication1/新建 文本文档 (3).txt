@@ -1,0 +1,366 @@
+c#采用https访问Web服务器的方法时间:2010-12-29 16:42:34来源:网络 作者:未知 点击:78次 1 基本编程方法：
+
+1 基本编程方法：
+
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+using System.Net;
+
+using System.Threading;
+
+using Imps.Services.Common;
+
+using Imps.Services.MMSAdapterCommon;
+
+using Imps.Services.MMSAdapter.Common;
+
+using System.Net.Security;
+
+using System.Security.Cryptography.X509Certificates;
+
+
+public class HttpsRequest
+
+
+{
+
+
+public static void Initialize()
+
+
+{
+
+
+if(isClientCer)
+
+{
+
+//挂接验证服务端证书的回调
+
+ServicePointManager.ServerCertificateValidationCallback
+
+RemoteCertificateValidationCallback;
+
+}
+
+
+}
+
+
+protected static void ProcessRequest(string uri,string body)
+
+
+{
+
+
+byte[] buffer = System.Text.Encoding.UTF8.GetBytes(body);
+
+System.Net.HttpWebRequest webReq = =
+System.Net.HttpWebRequest.Create(url) as HttpWebRequest;
+
+webReq.Method = "POST";
+
+if (isCer)
+
+{
+
+
+//需要Https验证
+
+System.Security.Cryptography.X509Certificates.X509Certificate cer;
+
+//System.Security.Cryptography.X509Certificates.X509Certificate cer = System.Security.Cryptography.X509Certificates.X509Certificate.CreateFromCertFile(pfxPath); if (String.IsNullOrEmpty(pfxPassword)) //是否证书加载是否需要密码 cer = new X509Certificate(pfxPath);
+
+else
+
+cer = new X509Certificate(pfxPath, pfxPassword);
+
+webReq.ClientCertificates.Add(cer);
+
+
+}
+
+webReq.GetRequestStream().Write(buffer, 0, buffer.Length);
+
+webReq.GetRequestStream().Close();
+
+HttpWebResponse response = webReq.GetResponse() as HttpWebResponse;
+
+if (response.StatusCode == HttpStatusCode.OK)
+
+{
+
+
+}
+
+
+else
+
+
+{}
+
+
+}
+
+
+public static bool RemoteCertificateValidationCallback(Object sender,
+
+X509Certificate certificate,
+
+X509Chain chain,
+
+SslPolicyErrors sslPolicyErrors)
+
+{
+
+//如果没有错就表示验证成功
+
+if (sslPolicyErrors == SslPolicyErrors.None)
+
+return true;
+
+else
+
+{
+
+if((SslPolicyErrors.RemoteCertificateNameMismatch &
+sslPolicyErrors)==SslPolicyErrors.RemoteCertificateNameMismatch)
+
+{
+
+tracing.WarnFmt("证书名称不匹配{0}", sslPolicyErrors); }
+
+
+if((SslPolicyErrors.RemoteCertificateChainErrors
+
+sslPolicyErrors)==SslPolicyErrors.RemoteCertificateChainErrors)
+
+{
+
+string msg = "";
+
+foreach (X509ChainStatus status in chain.ChainStatus) {
+
+msg+="status code ={0} "+status.Status;
+
+msg += "Status info = "+status.StatusInformation+" "; }
+
+tracing.WarnFmt("证书链错误{0}", msg);
+
+} &
+
+tracing.WarnFmt("证书验证失败{0}", sslPolicyErrors);
+
+}
+
+return false;
+
+}
+
+
+private static string GetStream(System.IO.Stream stream, int contentlen)
+
+{
+
+byte[] buffer = new byte[contentlen];
+
+int len = 1024;
+
+int index = 0;
+
+while ((len = stream.Read(buffer, index, len)) > 0)
+
+{
+
+index = index + len;
+
+}
+
+
+return System.Text.Encoding.UTF8.GetString(buffer, 0, index); }
+
+
+}
+
+
+2 错误原因查看：
+
+
+可以添加客户端端回调验证查看具体错误原因，错误原因在sslPolicyErrors 中显示
+
+具体为SslPolicyErrors.RemoteCertificateNameMismatch一般是访问的url名字和证书中的
+sslPolicyErrors)==SslPolicyErrors.RemoteCertificateNameMismatch)
+
+{
+
+tracing.WarnFmt("证书名称不匹配{0}", sslPolicyErrors); }
+
+
+if((SslPolicyErrors.RemoteCertificateChainErrors
+
+sslPolicyErrors)==SslPolicyErrors.RemoteCertificateChainErrors)
+
+{
+
+string msg = "";
+
+foreach (X509ChainStatus status in chain.ChainStatus) {
+
+msg+="status code ={0} "+status.Status;
+
+msg += "Status info = "+status.StatusInformation+" "; }
+
+tracing.WarnFmt("证书链错误{0}", msg);
+
+} &
+
+tracing.WarnFmt("证书验证失败{0}", sslPolicyErrors);
+
+}
+
+return false;
+
+}
+
+
+private static string GetStream(System.IO.Stream stream, int contentlen)
+
+{
+
+byte[] buffer = new byte[contentlen];
+
+int len = 1024;
+
+int index = 0;
+
+while ((len = stream.Read(buffer, index, len)) > 0)
+
+{
+
+index = index + len;
+
+}
+
+
+return System.Text.Encoding.UTF8.GetString(buffer, 0, index); }
+
+
+}
+
+
+2 错误原因查看：
+
+
+可以添加客户端端回调验证查看具体错误原因，错误原因在sslPolicyErrors 中显示
+
+具体为SslPolicyErrors.RemoteCertificateNameMismatch一般是访问的url名字和证书中的
+using System.IdentityModel.Selectors;
+
+
+using System.IdentityModel.Tokens;
+
+
+using System.Security.Cryptography.X509Certificates;
+
+namespace ClientWeb.CustomX509Validator
+
+
+{
+
+
+/// <summary>
+
+
+/// Implements the validator for X509 certificates.
+
+
+/// </summary>
+
+
+public class MyX509Validator: X509CertificateValidator
+
+
+{
+
+
+/// <summary>
+
+
+/// Validates a certificate.
+
+
+/// </summary>
+
+
+/// <param name="certificate">The certificate the validate.</param>
+
+
+public override void Validate(X509Certificate2 certificate)
+
+
+{
+
+
+// validate argument
+
+
+if (certificate == null)
+
+
+throw new ArgumentNullException("X509认证证书为空！");
+
+
+// check if the name of the certifcate matches
+
+
+if (certificate.SubjectName.Name != ConfigurationManager.AppSettings["CertName"])
+
+throw new SecurityTokenValidationException("Certificated was not issued by thrusted issuer");
+}
+
+
+}
+
+
+}
+
+
+<behaviors>
+
+
+<endpointBehaviors>
+
+
+<behavior name="myClientBehavior">
+
+
+<clientCredentials>
+
+
+<serviceCertificate>
+
+
+<authentication certificateValidationMode="Custom" customCertificateValidatorType="ClientWeb.CustomX509Validator.MyX509Validator,ClientWeb" />
+
+
+</serviceCertificate>
+
+
+</clientCredentials>
+
+
+</behavior>
+
+
+</endpointBehaviors>
+
+
+</behaviors>
+
+
+本篇文章来源于：开发学院 http://edu.codepub.com 原文链接：http://edu.codepub.com/2010/1229/28413.php

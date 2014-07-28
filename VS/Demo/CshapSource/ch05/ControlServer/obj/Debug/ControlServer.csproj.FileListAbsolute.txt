@@ -1,0 +1,8 @@
+D:\VC_PROJECT\cshap\ch05\ControlServer\bin\Debug\ControlRemote.exe
+D:\VC_PROJECT\cshap\ch05\ControlServer\bin\Debug\ControlRemote.pdb
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlServer.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlServer.FrmServer.resources
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlRemote.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlServer.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlRemote.exe
+D:\VC_PROJECT\cshap\ch05\ControlServer\obj\Debug\ControlRemote.pdb

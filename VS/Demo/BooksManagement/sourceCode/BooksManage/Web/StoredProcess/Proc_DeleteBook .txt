@@ -1,0 +1,7 @@
+CREATE PROC Proc_DeleteBook
+  @bookID nvarchar(50)
+AS
+   DELETE FROM Book WHERE bookID=@bookID
+
+GO
+	EXEC Proc_DeleteBook test

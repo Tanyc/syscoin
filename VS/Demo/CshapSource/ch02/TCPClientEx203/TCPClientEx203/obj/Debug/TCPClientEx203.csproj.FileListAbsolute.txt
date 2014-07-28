@@ -1,0 +1,7 @@
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\bin\Debug\TCPClientEx203.exe
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\bin\Debug\TCPClientEx203.pdb
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\obj\Debug\TCPClientEx203.Form1.resources
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\obj\Debug\TCPClientEx203.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\obj\Debug\TCPClientEx203.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\obj\Debug\TCPClientEx203.exe
+D:\VC_PROJECT\cshap\ch02\TCPClientEx203\TCPClientEx203\obj\Debug\TCPClientEx203.pdb

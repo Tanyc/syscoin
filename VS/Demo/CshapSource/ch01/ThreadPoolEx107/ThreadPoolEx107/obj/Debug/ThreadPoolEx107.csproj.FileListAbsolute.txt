@@ -1,0 +1,4 @@
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx107\ThreadPoolEx107\bin\Debug\ThreadPoolEx107.exe
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx107\ThreadPoolEx107\bin\Debug\ThreadPoolEx107.pdb
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx107\ThreadPoolEx107\obj\Debug\ThreadPoolEx107.exe
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx107\ThreadPoolEx107\obj\Debug\ThreadPoolEx107.pdb

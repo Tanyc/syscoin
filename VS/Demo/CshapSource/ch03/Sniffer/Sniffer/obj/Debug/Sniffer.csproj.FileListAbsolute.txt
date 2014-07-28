@@ -1,0 +1,8 @@
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\bin\Debug\Sniffer.exe
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\bin\Debug\Sniffer.pdb
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.MainForm.resources
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.Properties.Resources.resources
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.exe
+D:\VC_PROJECT\cshap\ch03\Sniffer\Sniffer\obj\Debug\Sniffer.pdb

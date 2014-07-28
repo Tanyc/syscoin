@@ -1,0 +1,22 @@
+<?php
+
+//echo phpinfo();
+
+?>
+
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+		<title>百度一下，你就知道</title>
+		<style>html</style>
+		<script type="text/javascript">function h(obj){obj.style.behavior='url(#default#homepage)';var a = obj.setHomePage('http://www.baidu.com/');}</script>
+	</head>
+
+	<body><div id="u"></div></body>
+
+
+
+</html>
+
+

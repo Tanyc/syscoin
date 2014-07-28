@@ -1,0 +1,7 @@
+CREATE PROC Proc_GetBookInfoByID
+  @bookID nvarchar(50)
+AS
+  SELECT * FROM Book WHERE bookID=@bookID
+
+GO
+	EXEC Proc_GetBookInfoByID test

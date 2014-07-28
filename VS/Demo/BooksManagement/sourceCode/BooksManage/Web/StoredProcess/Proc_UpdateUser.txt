@@ -1,0 +1,17 @@
+CREATE PROC Proc_UpdateUser
+      (@userID nvarchar(50),
+       @userName nvarchar(50),
+       @roleID  int,
+       @userGender bit,
+       @userDepartment nvarchar(50),
+       @userAddress nvarchar(50))
+AS
+update [Users] set userName=@userName,
+                  roleID=@roleID,
+                  userGender=@userGender,
+                  userDepartment=@userDepartment,
+                  userAddress=@userAddress
+where userID=@userID
+
+select * from users
+exec  Proc_UpdateUser 2,leo,2,0,computer,Beijing

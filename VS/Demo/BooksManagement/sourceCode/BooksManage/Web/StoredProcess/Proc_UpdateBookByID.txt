@@ -1,0 +1,23 @@
+Create proc Proc_UpdateBookByID
+ @bookID nvarchar(50),
+ @bookName nvarchar(50),
+ @bookIndex nvarchar(50),
+ @bookTypeID INT, 
+ @author nvarchar(50),
+ @publish nvarchar(50),
+ @price money,
+ @pulishDate datetime,
+ @abstract ntext,
+ @keyword nvarchar(50)
+
+AS
+  update Book set bookName=@bookName,
+                  bookIndex=@bookIndex,
+                  bookTypeID=@bookTypeID,
+                  author=@author,
+                  publish=@publish,
+                  price=@price,
+                  publishDate=@pulishDate,
+                  abstract=@abstract,
+                  keyword=@keyword
+  where bookID=@bookID

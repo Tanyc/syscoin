@@ -1,0 +1,6 @@
+D:\VC_PROJECT\cshap\ch04\Spider\bin\Debug\Spider.exe
+D:\VC_PROJECT\cshap\ch04\Spider\bin\Debug\Spider.pdb
+D:\VC_PROJECT\cshap\ch04\Spider\obj\Debug\Spider.SpiderForm.resources
+D:\VC_PROJECT\cshap\ch04\Spider\obj\Debug\Spider.csproj.GenerateResource.Cache
+D:\VC_PROJECT\cshap\ch04\Spider\obj\Debug\Spider.exe
+D:\VC_PROJECT\cshap\ch04\Spider\obj\Debug\Spider.pdb

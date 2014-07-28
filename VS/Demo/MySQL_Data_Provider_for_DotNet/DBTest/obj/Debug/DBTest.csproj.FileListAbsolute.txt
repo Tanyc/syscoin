@@ -1,0 +1,8 @@
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\bin\Debug\DBTest.exe.config
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\bin\Debug\DBTest.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\bin\Debug\DBTest.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\bin\Debug\MySQLClient.dll
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\bin\Debug\MySQLClient.pdb
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\obj\Debug\DBTest.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\obj\Debug\DBTest.exe
+D:\VC_PROJECT\MySQL_Data_Provider_for_DotNet\DBTest\obj\Debug\DBTest.pdb

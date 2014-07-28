@@ -1,0 +1,6 @@
+create proc Proc_GetRole
+AS
+	SELECT * FROM  [Role]
+
+GO
+	EXEC Proc_GetRole

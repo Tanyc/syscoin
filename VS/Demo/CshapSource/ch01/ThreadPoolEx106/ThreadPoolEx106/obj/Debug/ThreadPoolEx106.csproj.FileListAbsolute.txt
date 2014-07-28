@@ -1,0 +1,5 @@
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx106\ThreadPoolEx106\bin\Debug\ThreadPoolEx106.exe
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx106\ThreadPoolEx106\bin\Debug\ThreadPoolEx106.pdb
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx106\ThreadPoolEx106\obj\Debug\ThreadPoolEx106.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx106\ThreadPoolEx106\obj\Debug\ThreadPoolEx106.exe
+D:\VC_PROJECT\cshap\ch01\ThreadPoolEx106\ThreadPoolEx106\obj\Debug\ThreadPoolEx106.pdb

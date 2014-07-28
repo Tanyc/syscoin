@@ -1,0 +1,85 @@
+http://blog.csdn.net/l_serein/article/details/8106677代码访问https类似浏览器操作
+
+1.验证证书
+
+2.如果要求客户端证书，提供客户端证书
+
+ 
+
+具体代码如下：
+
+访问https的web
+
+
+ public static void ProcessRequest()
+        {
+            //类似浏览器确认证书合法方法的绑定
+            ServicePointManager.ServerCertificateValidationCallback = RemoteCertificateValidationCallback;
+            
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://yourUrl");
+
+            string param = "test=true";
+            byte[] bs = Encoding.UTF8.GetBytes(param);
+
+            //这2句代码表示如果要求客户端证书，将客户端证书加入request，不需要客户端证书的https请求则不需要此代码
+            X509Certificate cer = new X509Certificate("D:\\tt.cer");
+            request.ClientCertificates.Add(cer);
+
+            request.UserAgent = "test";
+            request.Method = "post";
+
+            using (Stream reqStram = request.GetRequestStream())
+            {
+                reqStram.Write(bs, 0, bs.Length);
+            }
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                {
+                    Console.WriteLine(reader.ReadToEnd());
+                }
+            }
+            
+            Console.ReadKey();
+        }
+        //该方法用于验证服务器证书是否合法，当然可以直接返回true来表示验证永远通过。服务器证书具体内容在参数certificate中。可根据个人需求验证
+        //该方法在request.GetResponse()时触发
+        public static bool RemoteCertificateValidationCallback(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            if (sslPolicyErrors == SslPolicyErrors.None)
+                return true;
+            return false;
+        }访问https的web service基本类同，首先添加对https的web引用。
+
+在代码中：
+
+
+        public static void WebRefrence()
+        {
+            //如果觉得写一个委托方法麻烦，可以直接使用匿名委托
+            ServicePointManager.ServerCertificateValidationCallback = delegate(object sender, X509Certificate certificate, 
+                X509Chain chain, SslPolicyErrors errors)
+            {
+                if (errors == SslPolicyErrors.None)
+                    return true;
+                return false;
+            };
+
+            //创建web引用的实例
+            WebReference.Service ws = new WebReference.Service();
+
+            //提供客户端证书，不要求的可以忽略该步骤
+            ws.ClientCertificates.Add(new X509Certificate("D:\\tt.cer"));
+            //执行web service中提供的方法，该例中为将传入的2个int相加并返回结果
+            int r = ws.Add(4, 5);
+            Console.WriteLine(r);
+            Console.ReadKey();
+        }
+
+
+
+
+
+
+

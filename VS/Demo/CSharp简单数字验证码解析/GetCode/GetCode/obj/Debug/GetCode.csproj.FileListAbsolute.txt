@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\bin\Debug\GetCodes.exe
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\bin\Debug\GetCodes.pdb
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\bin\Debug\DotNet.Framework.Common.dll
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\bin\Debug\DotNet.Framework.Common.pdb
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.FrmMain.resources
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.GetCode.resources
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.ImageOpt.resources
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.Properties.Resources.resources
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCode.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.exe
+C:\Users\Administrator\Desktop\WebSites\GetCode\GetCode\obj\Debug\GetCodes.pdb
