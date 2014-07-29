@@ -119,7 +119,7 @@ class userAction extends Action{
         //         break;
         // }
         // //中间处理一下业务逻辑
-        // $this->ajaxReturn($id);
+        $this->ajaxReturn($id);
     }
     
 }
