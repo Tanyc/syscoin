@@ -1,0 +1,4 @@
+obj\Debug\ch6_1.exe
+obj\Debug\ch6_1.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ch6_1.csproj.GenerateResource.Cache

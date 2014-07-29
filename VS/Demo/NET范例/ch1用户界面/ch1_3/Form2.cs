@@ -19,7 +19,6 @@ namespace ch1_3
 
 		public Form2()
 		{
-		
 			//
 			// Windows 窗体设计器支持所必需的
 			//
@@ -58,9 +57,9 @@ namespace ch1_3
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("华文行楷", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(134)));
-			this.label1.Location = new System.Drawing.Point(16, 24);
+			this.label1.Location = new System.Drawing.Point(32, 96);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(208, 23);
+			this.label1.Size = new System.Drawing.Size(224, 23);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "现在可以看见这个窗体";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,13 +67,11 @@ namespace ch1_3
 			// Form2
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
-			this.ClientSize = new System.Drawing.Size(248, 77);
-			this.Controls.Add(this.label1);
+			this.ClientSize = new System.Drawing.Size(292, 273);
+			this.Controls.AddRange(new System.Windows.Forms.Control[] {
+																		  this.label1});
 			this.Name = "Form2";
-			this.Opacity = 0.8;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "新建窗体";
-			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form2_Load);
 			this.ResumeLayout(false);
 

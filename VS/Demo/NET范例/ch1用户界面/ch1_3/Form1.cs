@@ -128,7 +128,6 @@ namespace ch1_3
 			button1.Enabled=false;
 			button2.Enabled=true;
 			button3.Enabled=true;
-			form2Example.Show();
 		}
 
 		private void button2_Click(object sender, System.EventArgs e)

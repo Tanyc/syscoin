@@ -1,0 +1,8 @@
+《Visual C#.NET范例入门与提高》配套光盘使用说明
+    本书所附光盘的内容包含了开发实例的所有程序源码，所有程序源码都是在Win2000 Professional，Visual C#.NET环境下编译并运行通过。要运行本光盘上的实例，用户应首先安装Visual C#.NET，另外本书中部分例子属于ASP.NET应用程序，用户必须安装ASP.NET的相应环境，具体方法本书有介绍。另外如果有些程序在其他操作系统下无法直接运行，请读者根据原书中的操作步骤自行编写程序。
+    第2章的ch2_6,ch2_7,ch2_10,需要使用的图片在光盘目录pic下。
+    第5章中ch5_1,ch5_2两例使用的是Win2000 Professional原始的Windows Media Player组件，如果用户升级了Windows Media Player到其他版本，则会无法直接运行这两个例子，但书中的方法仍然有效，读者可以自己模仿编写新的程序，或者卸载新安装的Windows Media Player版本即可直接运行本盘中的程序。
+    运行第6章的例子前，必须先安装Microsoft Access和SQL Server软件,其中需要使用的Access数据库已经放在ch6目录下，读者可根据书中的具体说明自行设计数据库的存放路径，此外还必须能够访问安装在Microsoft SQL Server 2000或者SQL Server 2000 Desktop Engine下面的Northwind 数据库，具体的安装办法见书。例子CH6.6属于ASP.NET应用程序，默认路径应存放在D:\Inetpub\WWWROOT（如果操作系统在C盘，则为C:\Inetpub\WWWROOT，下同）目录下，为方便起见，将源程序附于光盘目录localhost下。
+    第8章的Web Service应用程序中，首先需要安装IIS服务，以及进行正确的FrontPage首页配置（这一步如果安装的操作系统是Windows 2000 Service版本，或者重新安装了IIS5.0以上版本后，也可以不执行）。最后将Web 服务复制到D:\Inetpub\wwwroot子文件夹中，否则将不能正确调用Web服务。为方便起见，将WebService的源程序附于光盘目录localhost下。
+    另外ch9_2是制作一个控件，直接运行不了，且无任何意义，需要结合Textloginbox项目来使用。9.9节对应“ch9其它文件夹”中的Setup子目录，也不能直接运行，它示范的是一个安装程序，可以在Setup的debug子目录下测试这个安装程序。
+    读者需要将光盘上的文件拷贝到本地磁盘，去掉“只读”属性后即可编译运行。
