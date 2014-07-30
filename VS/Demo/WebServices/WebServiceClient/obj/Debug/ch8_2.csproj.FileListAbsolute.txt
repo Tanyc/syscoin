@@ -1,0 +1,11 @@
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\bin\Debug\ch8_2.exe.config
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\bin\Debug\ch8_2.exe
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\bin\Debug\ch8_2.pdb
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\obj\Debug\ch8_2.csprojResolveAssemblyReference.cache
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\obj\Debug\ch8_2.Form1.resources
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\obj\Debug\ch8_2.csproj.GenerateResource.Cache
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\obj\Debug\ch8_2.exe
+D:\VC_PROJECT\source\VC#.NET范例入门与提高\ch8Web Service\ch8_2\obj\Debug\ch8_2.pdb
+D:\VC_PROJECT\WEB\WebServices\WebServiceClient\bin\Debug\ch8_2.exe.config
+D:\VC_PROJECT\WEB\WebServices\WebServiceClient\obj\Debug\ch8_2.exe
+D:\VC_PROJECT\WEB\WebServices\WebServiceClient\obj\Debug\ch8_2.pdb
