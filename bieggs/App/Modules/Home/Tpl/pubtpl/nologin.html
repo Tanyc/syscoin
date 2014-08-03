@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>用户中心-专业的广告游戏平台</title>
+  <load href='__CSS__/pubtpl.css' />
+  <load href='__JS__/com.js' />
+  <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
+  <load href='__JS__/pubtpl.js' />
+</head>
+
+<body>
+  <include file="public:header"/>
+  <div id="body_content">
+    <div class="newload_wk">
+      <div class="log_title">用户登录</div>
+      <div class="newload_fr" style="height:340px;">
+        <div class="div_msg">您好，欢迎来lucky蛋蛋，请先登录。</div>
+        <form id="loginform" method="post" action="./login" enctype="application/x-www-form-urlencoded">
+          <div class="newzcxx ">
+            <ul>
+              <li class="flxx">邮&nbsp;&nbsp;&nbsp;箱：</li>
+              <li class="frxx">
+                <input name="txt_UserName" type="text" maxlength="60" id="txt_UserName" tabindex="1" class="dzyx_k" style="width:210px;height:18px;"></li>
+              <li class="flxx">&nbsp;</li>
+              <li class="frxx"></li>
+            </ul>
+          </div>
+          <div class="newzcxx">
+            <ul>
+              <li class="flxx">登录密码：</li>
+              <li class="frxx">
+                <input name="txt_PWD" type="password" maxlength="30" id="txt_PWD" tabindex="2" class="dzyx_k" style="width:210px;height:18px;"></li>
+              <li class="flxx"></li>
+              <li class="frxx">长度6-15个字符</li>
+            </ul>
+          </div>
+          <div class="newzcxx">
+            <ul>
+              <li class="flxx">验证码：</li>
+              <li class="frxx">
+                <input name="txt_VerifyCode" type="text" maxlength="5" id="txt_VerifyCode" tabindex="3" class="dzyx_k" style="width:100px; height:18px;">
+                <img id="verifyImg" src="./verify" onclick="this.src=this.src" border="0" style="cursor:pointer;vertical-align:top;margin-left:5px"></li>
+              <li class="flxx"></li>
+              <li class="frxx"></li>
+            </ul>
+          </div>
+          <div class="newzcxx">
+            <ul>
+              <li class="flxx"></li>
+              <li class="frxx">
+                <span class="register_middle_agree">
+                  <input name="LoginWay" type="checkbox" id="LoginWay" value="1" tabindex="4">
+                  <span style="color:#515151;">
+                    三天内自动登录&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/services/ServGetPwd.aspx" target="_blank" style="color:#808080;">忘记密码了</a>
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="newzcxx" style="height:35px;">
+            <ul>
+              <li class="flxx"></li>
+              <li class="frxx">
+                <div style="float:left; width:90px;">
+                  <input type="image" class="Login_Submit" tabindex="5" src="__IMAGES__/public/bnt_login.png" onclick="return loginsb();"></div>
+                <div style="float:left;">
+                  <a href="/newone/PgQCoinReg.aspx" style="color:#3B5888;">注册lucky蛋蛋</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </form>
+
+      </div>
+      <div class="load_xx_line2"></div>
+      <div class="newzc_fr" style="height:340px;">
+        <div class="ljzc">
+          <span class="div_msg">竞猜奖品尽在lucky蛋蛋网</span>
+        </div>
+        <div style="padding-left:40px;">
+          <img src="__IMAGES__/pubtpl/tghd.jpg"></div>
+      </div>
+    </div>
+  </div>
+  <include file="public:footer"/>
+</body>
+</html>

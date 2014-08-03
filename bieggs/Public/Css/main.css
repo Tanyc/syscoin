@@ -91,7 +91,7 @@ margin:0 auto;
 	height: 32px; line-height: 32px; vertical-align: middle;
 }
 .login input.bg {
-	padding: 0px 5px; border: 1px solid rgb(216, 216, 215); width: 140px; height: 22px; color: rgb(0, 0, 0); line-height: 22px; float: left;
+	padding: 0px 5px; border: 1px solid rgb(216, 216, 215); width: 160px; height: 22px; color: rgb(0, 0, 0); line-height: 22px; float: left;
 }
 .w_login input.bg {
 	padding: 0px 5px; border: 1px solid rgb(216, 216, 215); width: 140px; height: 22px; color: rgb(0, 0, 0); line-height: 22px; float: left;
@@ -237,3 +237,6 @@ right: 10px;
 .prizes_list{
     padding-left:10px;
 }
+.index_ar_login_head{float: left;margin: 5px auto auto 5px;}
+.index_ar_login{float: left; margin-left: 10px;}
+.detail{margin-top: 5px;font-weight: bold;}

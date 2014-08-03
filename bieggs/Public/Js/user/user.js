@@ -34,15 +34,6 @@ function setJifenRange(jifen){
 	document.write(doc);
 }
 
-function setVipRange(vip){
-	var range = Math.floor(vip / 1000);
-	var doc = '<span><img src="' + image_path + '/user/vip/lv0.png" title="等级:0级"></span>';
-	if (range >= 1) {
-		var doc = '<span><img src="' + image_path + '/user/vip/lv' + range + '.png" title="等级:' + range + '级"></span>';
-	}
-	document.write(doc);
-}
-
 
 function setGrowRange(grow){
 	var range = Math.floor(grow / 1000);

@@ -1,0 +1,68 @@
+.newload_wk {
+width: 948px;
+height: 404px;
+}
+.newload_fr {
+width: 430px;
+height: 354px;
+padding-top: 5px;
+float: left;
+margin-left: 62px;
+padding-top: 20px;
+display: inline;
+}
+.load_xx_line2 {
+float: left;
+height: 350px;
+margin-top: -15px;
+width: 17px;
+border-left:1px solid #f1cb95; 
+}
+.newzc_fr {
+width: 430px;
+height: 407px;
+padding-top: 30px;
+float: right;
+}
+.newzcxx {
+color: #5E5E5E;
+font-size: 14px;
+height: 50px;
+}
+.newzcxx ul li.flxx {
+font-size: 14px;
+text-align: right;
+width: 78px;
+float: left;
+}
+.newzcxx ul li.frxx {
+width: 344px;
+float: right;
+text-align: left;
+color: #999999;
+font-size: 12px;
+line-height: 30px;
+}
+.frxx input {
+background: url(../NewOne/img/input_bg_sd.png) #fff no-repeat 0px 0px;
+}
+.dzyx_k {
+width: 210px;
+line-height: 16px;
+padding: 2px;
+border: #CCCCCC 1px solid;
+float: left;
+}
+
+.ljzc {
+width: 263px;
+height: 30px;
+line-height: 30px;
+padding-left: 20px;
+}
+
+.log_title{
+	text-align:left; margin-top:20px; margin-left:50px; font-size:30px; color:#808080;font-weight:bold;
+}
+.div_msg{text-align:center; color:#AA0000; padding-top:-20px; height:40px; line-height:40px; width:296px;}
+.Login_Submit{width:81px;height:30px;border-width:0px;margin-bottom:-2px; border-width:0px;margin-bottom:-2px;}
