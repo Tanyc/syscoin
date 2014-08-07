@@ -1,0 +1,34 @@
+<head id="Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<load href='__CSS__/dlg.css' />
+</head>
+<body marginwidth="0" marginheight="0">
+<form name="dlg_form" method="post" action="__ROOT__/pubtpl/dlg" id="form1">
+  <div id="show_div" style="height: 462px; width: 416px;">
+  <div class="load_fc_bd" style="color:#ff0000">请先输入安全验证信息</div>
+    <div class="load_fc_bd">
+      <div class="load_fc_bdt">登录密码</div>
+      <div class="load_fc_bdinput1">
+        <input name="inp_username" type="text" id="inp_username" tabindex="1"></div>
+      <div class="load_fc_bdt">金库密码</div>
+      <div class="load_fc_bdinput2">
+        <input name="inp_password" type="password" id="inp_password" tabindex="2"></div>
+      <div id="div_verify" style="display:block">
+        <div class="load_fc_bdt">验证码</div>
+        <div class="load_fc_bdinput_d">
+          <input name="inp_VerifyCode" type="text" id="inp_VerifyCode" tabindex="3">
+          &nbsp;
+          <img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-3px;" border="0">
+        </div>
+      </div>
+      <div class="loadfc_an" id="loadfc_an">
+        <input type="submit" name="Button1" value="提  交" onclick="return check();" id="Button1" tabindex="5" class="button"></div>
+      <div class="zc_xyhnew">
+      <p>1、重要信息修改需要用户密码安全验证。</p>
+      <p>2、如果操作过程中存在疑问，请联系客服。</p>
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,117 @@
+.load_fc_bd {
+width: 270px;
+margin: 0 auto;
+color: #999999;
+font-size: 12px;
+padding-top: 12px;
+}
+.loadfc_tsy_wu {
+width: 270px;
+height: 26px;
+background-color: #FFF;
+}
+.loadfc_tsy {
+width: 270px;
+height: 24px;
+color: #FF9C00;
+font-size: 12px;
+text-align: center;
+background-color: #ffebec;
+border: 1px solid #ffbdbf;
+line-height: 24px;
+}
+.load_fc_bdt {
+width: 270px;
+height: 28px;
+line-height: 28px;
+}
+.load_fc_bdinput1 input {
+width: 262px;
+height: 32px;
+line-height: 30px;
+border: 1px solid #e1e1e1;
+padding: 0px 4px;
+color: #333333;
+font-size: 14px;
+background: url(../img/one4.jpg) 250px center no-repeat;
+}
+.load_fc_bdt {
+width: 270px;
+height: 28px;
+line-height: 28px;
+}
+.load_fc_bdinput2 input {
+width: 262px;
+height: 32px;
+line-height: 30px;
+border: 1px solid #e1e1e1;
+padding: 0px 4px;
+color: #333333;
+font-size: 14px;
+background: url(../img/one5.jpg) 250px center no-repeat;
+}
+.load_fc_bdt {
+width: 270px;
+height: 28px;
+line-height: 28px;
+}
+.load_fc_bdinput_d {
+width: 270px;
+height: 30px;
+clear: both;
+}
+.load_fc_bdinput_d input {
+width: 160px;
+height: 30px;
+line-height: 32px;
+border: 1px solid #e1e1e1;
+padding: 0px 4px;
+color: #333333;
+font-size: 14px;
+}
+.load_fc_bdzd {
+width: 270px;
+height: 34px;
+color: #333333;
+line-height: 34px;
+clear: both;
+}
+a.loadfc_blue {
+color: #0059a4;
+text-decoration: none;
+}
+.loadfc_an {
+width: 270px;
+height: 36px;
+background-color: #c30000;
+clear: both;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 8px;
+}
+.zc_xyhnew {
+margin-bottom: 26px;
+}
+.loadfc_an a {
+padding: 12px 120px;
+line-height: 36px;
+font-size: 14px;
+color: #FFF;
+font-weight: bold;
+text-decoration: none;
+}
+.loadfc_an .button {
+border: 0;
+color: #FFF;
+font-size: 14px;
+height: 36px;
+width: 270px;
+background: #FF9C00;
+line-height: 36px;
+font-weight: bold;
+text-align: center;
+}
+
+#pc_showloginparent{display: ; left: 50%; margin-left: -207px; top: 50%; margin-top: -247px; position: fixed; width: 428px; height: 497px; z-index: 891208;}
+.load_fc_bd_top{margin-left:20px; width: 416px; height: 30px; padding: 0px; border-width: 1px; overflow-y: hidden; overflow-x: auto; background-color: #ff5C00;}
+#PCShowWindowBg{position: absolute; height: 2566px; opacity: 0.5; width: 100%; left: 0px; top: 0px; z-index: 870618; display: ; background: rgb(0, 0, 0);}

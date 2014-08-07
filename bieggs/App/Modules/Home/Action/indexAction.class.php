@@ -15,6 +15,10 @@ class indexAction extends comAction{
         $this->display();
     }
 
+    public function index_test(){ //测试后删除
+        $this->display();
+    }
+
     public function read($id=0){
         $Model  =   D('Form');
         $this->assign('vo',$Model->getDetail($id));

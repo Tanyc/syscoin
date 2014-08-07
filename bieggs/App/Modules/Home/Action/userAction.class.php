@@ -16,8 +16,26 @@ class userAction extends loginAction{
         $this->display();
     }
 
+    public function edit(){
+        $this->assign('PAGE_NAVII',1); //修改资料
+        
+        $this->display();
+    }
+
+    public function secure(){
+        $this->assign('PAGE_NAVII',2); //身份认证/绑定手机
+        
+        $this->display();
+    }
+
+    public function userpwd(){
+        $this->assign('PAGE_NAVII',3); //修改密码/密保
+        
+        $this->display();
+    }
+
     public function account(){
-    	$this->assign('PAGE_NAVII',1); //基本信息
+    	$this->assign('PAGE_NAVII',4); //账号明细
     	$sub_tab = ("" == $this->_param("sub_tab"))? 0 : $this->_param("sub_tab");
     	$this->assign('SUB_TAB',$sub_tab); //重属tab
     	
@@ -25,25 +43,7 @@ class userAction extends loginAction{
     }
 
     public function myprize(){
-        $this->assign('PAGE_NAVII',2); //我的兑奖
-        
-        $this->display();
-    }
-
-    public function edit(){
-        $this->assign('PAGE_NAVII',3); //修改资料
-        
-        $this->display();
-    }
-
-    public function secure(){
-        $this->assign('PAGE_NAVII',4); //安全认证
-        
-        $this->display();
-    }
-
-    public function userpwd(){
-        $this->assign('PAGE_NAVII',5); //修改密码
+        $this->assign('PAGE_NAVII',5); //我的兑奖
         
         $this->display();
     }
@@ -55,13 +55,13 @@ class userAction extends loginAction{
     }
 
     public function myad(){
-        $this->assign('PAGE_NAVII',7); //修改密码
+        $this->assign('PAGE_NAVII',7); //投放广告
         
         $this->display();
     }
 
     public function descad(){
-        $this->assign('PAGE_NAVII',8); //广告介绍
+        $this->assign('PAGE_NAVII',8); //我的广告
         
         $this->display();
     }

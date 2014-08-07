@@ -1,0 +1,50 @@
+<head id="Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<load href='__CSS__/dlg.css' />
+</head>
+<body onload="setNotice()" marginwidth="0" marginheight="0">
+<form name="form1" method="post" action="login.htm" id="form1">
+  <div>
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value=""></div>
+  <input type="hidden" id="parent_url" value="www.pceggs.com">
+  <input class="input1" name="SMONEY" type="hidden" value="ABC">
+  <div id="show_div" style="height: 462px; width: 416px;">
+    <div class="load_fc_bd">
+      <div class="load_fc_bdt">LUCKY蛋蛋帐号</div>
+      <div class="load_fc_bdinput1">
+        <input name="inp_username" type="text" id="inp_username" tabindex="1"></div>
+      <div class="load_fc_bdt">密码</div>
+      <div class="load_fc_bdinput2">
+        <input name="inp_password" type="password" id="inp_password" tabindex="2"></div>
+      <div id="div_verify" style="display:block">
+        <div class="load_fc_bdt">验证码</div>
+        <div class="load_fc_bdinput_d">
+          <input name="inp_VerifyCode" type="text" id="inp_VerifyCode" tabindex="3">
+          &nbsp;
+          <a href="http://www.pceggs.com/showlogin/login.aspx#" onclick="javascript:document.getElementById(&#39;valiCode&#39;).src=&#39;VerifyCode_ShowLogin.aspx?id=&#39;+Math.random();return false;">
+            <img src="VerifyCode_ShowLogin.aspx" id="valiCode" alt="验证码" style="cursor:pointer;vertical-align:middle" border="0"></a>
+        </div>
+      </div>
+      <div class="load_fc_bdzd">
+        <div style="float:left;">
+          <div style="margin-top:8px\9\0;margin-top:11px;*margin-top:7px;_margin-top:5px;  float:left; width:20px; height:20px;">
+            <input name="rod_LoginWay" type="checkbox" id="rod_LoginWay" tabindex="4"></div>
+        </div>
+        &nbsp;自动登录&nbsp;
+        <div style=" float:right;">
+          <a href="javascript:parent.GoNewUrl('http://www.pceggs.com/services/ServGetPwd.aspx')" class="loadfc_blue">忘记密码？</a>
+        </div>
+      </div>
+      <div class="loadfc_an" id="loadfc_an">
+        <input type="submit" name="Button1" value="登  录" onclick="return check();" id="Button1" tabindex="5" class="button"></div>
+      <div class="zc_xyhnew">
+        还没有LUCKY蛋蛋帐号？
+        <a href="javascript:parent.GoNewUrl('http://www.pceggs.com/newone/PgQCoinReg.aspx')" class="loadfc_blue">马上注册</a>
+      </div>
+    </div>
+  </div>
+</form>
+<script type="text/javascript" src="showlogin_20140623.js" language="javascript"></script>
+<script type="text/javascript">AutoHeight(1);</script>
+</body>
+</html>

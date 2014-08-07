@@ -21,7 +21,10 @@ function verifyName(name){
 		alert("请输入用户名！")
 		return false;
 	}
-	return true;
+	// var regNum=/^[1-9]\d{5,}/; //暂时只支持邮箱登陆
+	// if(!regNum.test(name)){
+	// }
+	return checkEmail(name);
 }
 
 function verifyKey(key){
@@ -58,4 +61,31 @@ function setVipRange(vip){
 		var doc = '<span><img src="' + image_path + '/user/vip/lv' + range + '.png" title="等级:' + range + '级"></span>';
 	}
 	document.write(doc);
+}
+
+function checkEmail(email){
+	var reg=/^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.(com)$/gi;
+	if(!reg.test(email)){
+		alert("邮件地址不合法！");
+		return false;
+	}
+	return true;
+}
+
+function checkEmailNoTip(email){
+	var reg=/^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.(com)$/gi;
+	if(!reg.test(email)){
+		return false;
+	}
+	return true;
+}
+
+function showFloatWindow(isShow){
+	if (isShow) {
+		document.getElementById("PCShowWindowBg").style.display='';
+		document.getElementById("pc_showloginparent").style.display='';
+	}else{
+		document.getElementById("PCShowWindowBg").style.display='none';
+		document.getElementById("pc_showloginparent").style.display='none';
+	}
 }

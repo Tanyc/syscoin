@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script language="javascript" type="text/javascript">
+		function test(){
+			var text="dingyong@163.com"; //    
+			var reg=/^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/gi;
+			var result=  reg.test(text);
+			if(result){
+			  alert("ok");   
+			}else{
+			alert("err");  
+			}
+		}
+  </script>
+</head>
+<body>
+	  <script language="javascript" type="text/javascript">
+		test();
+  </script>
+</body>

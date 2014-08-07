@@ -137,6 +137,10 @@ function setSafeTipMsg(cnt){
 }
 
 function safeSetting(id){
+	if (2 == id) {  //显示安全验证
+		showFloatWindow(true);
+		return;
+	};
 	$('.umode' + id).css("color", "#ff0000");
 	$.ajax({
 	    type:"get",
@@ -146,7 +150,7 @@ function safeSetting(id){
 		},
 	    success:function(data, textStatus){ 
 	    	var setting = parseInt(data);
-	    	location.reload(true); 
+	    	// location.reload(true); 
 	    }
 	});
 }

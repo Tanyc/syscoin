@@ -19,11 +19,13 @@
         <form id="loginform" method="post" action="./login" enctype="application/x-www-form-urlencoded">
           <div class="newzcxx ">
             <ul>
-              <li class="flxx">邮&nbsp;&nbsp;&nbsp;箱：</li>
+              <li class="flxx">账&nbsp;&nbsp;&nbsp;户：</li>
               <li class="frxx">
-                <input name="txt_UserName" type="text" maxlength="60" id="txt_UserName" tabindex="1" class="dzyx_k" style="width:210px;height:18px;"></li>
+                <input name="txt_UserName" type="text" maxlength="60" id="txt_UserName" tabindex="1" class="dzyx_k" style="width:210px;height:18px;">
+                <img id="email_tip" src="__IMAGES__/user/yes_2.gif" style="width:18px; height:18px; display:none">
+                </li>
               <li class="flxx">&nbsp;</li>
-              <li class="frxx"></li>
+              <li class="frxx">请使用注册邮箱登陆</li>
             </ul>
           </div>
           <div class="newzcxx">
@@ -40,7 +42,9 @@
               <li class="flxx">验证码：</li>
               <li class="frxx">
                 <input name="txt_VerifyCode" type="text" maxlength="5" id="txt_VerifyCode" tabindex="3" class="dzyx_k" style="width:100px; height:18px;">
-                <img id="verifyImg" src="./verify" onclick="this.src=this.src" border="0" style="cursor:pointer;vertical-align:top;margin-left:5px"></li>
+                <img id="verifyImg" src="./verify" onclick="this.src=this.src" border="0" style="cursor:pointer;vertical-align:top;margin-left:5px">
+                <img id="code_tip" src="__IMAGES__/user/yes_2.gif" style="width:18px; height:18px; display:none">
+                </li>
               <li class="flxx"></li>
               <li class="frxx"></li>
             </ul>

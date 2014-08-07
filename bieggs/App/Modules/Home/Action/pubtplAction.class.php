@@ -6,6 +6,8 @@ class pubtplAction extends Action{
     }
 
     public function exitLogin(){
+        cookie(C("COOKIE_ID"),null);  //delete cookie
+        cookie(C("COOKIE_AUTH"),null);
         if(isset($_SESSION[C('USER_AUTH_KEY')])) {
             unset($_SESSION[C('USER_AUTH_KEY')]);
             unset($_SESSION);
@@ -34,31 +36,20 @@ class pubtplAction extends Action{
         }
         //生成认证条件
         $map            =   array();
-        $map['email'] = $_POST['txt_UserName']; //使用email作为账户名称
+        $map['email'] = $_POST['txt_UserName']; //use email for account name
         $authInfo = M('User')->where($map)->find();
-        //使用用户名、密码和状态的方式进行认证
         if(false == $authInfo) {
             $this->error('帐号不存在,请核对！');
         } else {
             if($authInfo['key'] != md5($_POST['txt_PWD'])) {
                 $this->error('密码错误！');
             }
-            $_SESSION['online']           = 1; //1表示在线，0表示离线，给客户端展示
-            $_SESSION[C('USER_AUTH_KEY')] = $authInfo['id'];
-            $_SESSION['id']               = $authInfo['id'];
-            $_SESSION['headimg']          = $authInfo['headimg'];
-            $_SESSION['email']            = $authInfo['email'];
-            $_SESSION['nick']             = $authInfo['nick'];
-            $_SESSION['vip']              = $authInfo['vip'];
-            $_SESSION['ltime']            = $authInfo['ltime'];
-            $_SESSION['lip']              = $authInfo['lip'];
-            //保存登录信息
-            $User   =   M('User');
-            $data                   = array();
-            $data['id']             = $authInfo['id'];
-            $data['ltime']          = time();
-            $data['lip']            = get_client_ip();
-            $User->save($data);
+            if (isset($_POST["LoginWay"])) { //auto login in three days
+                cookie(C("COOKIE_ID"),$authInfo['id'],60 * 60 * 24 * 3);  //keep three days time
+                cookie(C("COOKIE_AUTH"),md5($authInfo['email']),60 * 60 * 24 * 3);
+            }
+            setUserInfo($authInfo); //save info to seesion
+            updateUserInfo();       //update login info
             // redirect(__ROOT__.'/user/index');
             $this->success('登录成功！',__ROOT__.'/user/index');
         }
@@ -70,10 +61,17 @@ class pubtplAction extends Action{
         $verifyCode = Image::buildImageVerify(4,1,$type);
     }
 
-    public function verRefresh(){
-        // import("@.ORG.Util.Image");
-        // $verifyCode = Image::buildImageVerify(4,1,$type);
-        $this->ajaxReturn(mytest1());
+    public function checkCode(){
+        $code = $this->_param("code");
+        if(session('verify') == md5($code)){
+            $this->ajaxReturn("ok");
+        }else{
+            $this->ajaxReturn("false");
+        }
+    }
+
+    public function dlg(){
+        
     }
 
 }

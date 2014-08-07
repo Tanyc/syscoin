@@ -45,7 +45,7 @@
                     </h5>
                   </td>
                   <th>ID：</th>
-                  <td> <b class="orange">{$db_user_id.user_id}</b>
+                  <td> <b class="orange">{$db_user_id.id}</b>
                   </td>
                 </tr>
                 <tr>
@@ -154,12 +154,14 @@
             <h2 class="orange">最新消息</h2>
           </div>
           <div class="area area2">
-            <iframe src="{:U('/msg')}" frameborder="0" width="740px" scrolling="no" id="Iframe1" name="jfmessdiv2" onload="iFrameHeight2()" height="150"></iframe>
+            <iframe src="{:U('/msg')}" frameborder="0" width="740px" scrolling="no" id="Iframe1" name="jfmessdiv2" height="150"></iframe>
+            <!-- onload="iFrameHeight2()" -->
           </div>
         </div>
       </div>
     </div>
   </div>
     <include file="public:footer"/>
+    <include file="public:topDlg"/>
 </body>
 </html>
