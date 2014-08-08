@@ -53,4 +53,11 @@ function updateUserInfo(){
     $User->save($data);
 }
 
+function isCodeRight($code){
+    if(session('verify') != md5($code)){
+        return false;
+    }
+    return true;
+}
+
 ?>

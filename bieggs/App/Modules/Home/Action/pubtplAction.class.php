@@ -31,7 +31,7 @@ class pubtplAction extends Action{
         }elseif (!verifyCode($_POST['txt_VerifyCode'])){
             $this->error('验证码长度不合法，请核实！');
         }
-        if(session('verify') != md5($_POST['txt_VerifyCode'])){
+        if(!isCodeRight($_POST['txt_VerifyCode'])){
             $this->error('验证码错误！');
         }
         //生成认证条件
@@ -71,7 +71,36 @@ class pubtplAction extends Action{
     }
 
     public function dlg(){
-        
+        $id = $this->_param('dlg_id');
+        $dlg_from = $this->_param('dlg_from');
+        $key1 = $this->_param('first_key');
+        $key2 = $this->_param('second_key');
+        $code = $this->_param('txt_VerifyCode');
+        if ("1" == $id) {
+            if (!verifyKey($key1) || !verifyKey($key2) || !verifyCode($code)) {
+                $this->assign("is_success",'2');
+                $this->assign("error_msg",'你的操作非法！');
+            } else{
+                if (!isCodeRight($code)){
+                    $this->assign("is_success",'2');
+                    $this->assign("error_msg",'验证码错误！');
+                } else {
+                    $db_user = D('User');
+                    $authInfo = $db_user->getAuthInfo();
+                    if (md5($key1) != $authInfo['key'] || md5($key2) != $authInfo['s_key']) {
+                        $this->assign("is_success",'2');
+                        $this->assign("error_msg",'你的密码错误！');
+                    }else{
+                        if (1 == $dlg_from) { //modify sms_open
+                            $switch = ($authInfo["s_message"] == 1)? 0 : 1;
+                            $db_user->updateField("s_message",$switch);
+                        }
+                        $this->assign("is_success",'1');
+                    }
+                }
+            }
+            $this->display('dlg:snumin');
+        }
     }
 
 }

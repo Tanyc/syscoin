@@ -80,7 +80,15 @@ function checkEmailNoTip(email){
 	return true;
 }
 
-function showFloatWindow(isShow){
+function showFloatWindow(isShow,from){
+	/**********************************************/
+	/*
+	from注释：
+	1=用户界面（兑奖短信）
+	2=其它（保留，后续添加）
+	*/
+	/**********************************************/
+	window.frames["iframe_cont"].document.getElementById("dlg_from").value=from;
 	if (isShow) {
 		document.getElementById("PCShowWindowBg").style.display='';
 		document.getElementById("pc_showloginparent").style.display='';

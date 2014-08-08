@@ -98,11 +98,11 @@ function setAreaMsg(is_set){
 function setMessageMsg(is_set){
 	var title = "兑奖短信安全验证";
 	if(1 == is_set){
-		var doc = "您已设置兑奖短信验证";
-		setMsgShow(title,doc,"关闭短信验证",true,SAFE_TYPE.SMESSAGE);
+		var doc = "兑奖短信验已开启";
+		setMsgShow(title,doc,"关闭",true,SAFE_TYPE.SMESSAGE);
 	}else{
-		var doc = "您还未设置兑奖短信验证";
-		setMsgShow(title,doc,"开启短信验证",false,SAFE_TYPE.SMESSAGE);
+		var doc = "兑奖短信验已关闭";
+		setMsgShow(title,doc,"开启",false,SAFE_TYPE.SMESSAGE);
 	}
 }
 function setBankMsg(is_set){
@@ -118,27 +118,27 @@ function setBankMsg(is_set){
 function setLoginMsg(is_set){
 	var title = "登陆手机短信验证";
 	if(1 == is_set){
-		var doc = "您已设置登录手机短信验证";
-		setMsgShow(title,doc,"关闭短信验证",true,SAFE_TYPE.SMSLOGIN);
+		var doc = "登录手机短信验证已经开启";
+		setMsgShow(title,doc,"关闭",true,SAFE_TYPE.SMSLOGIN);
 	}else{
-		var doc = "您还未设置登录手机短信验证";
-		setMsgShow(title,doc,"开启短信验证",false,SAFE_TYPE.SMSLOGIN);
+		var doc = "登录手机短信验证已经关闭";
+		setMsgShow(title,doc,"开启",false,SAFE_TYPE.SMSLOGIN);
 	}
 }
 function setSafeTipMsg(cnt){
 	var rate = cnt / 5 * 100;
 	if(3 <= cnt){
-		var title = "您的账号处于安全保护状态(安全设置：" + rate + "%)";
+		var title = "您的账号处于安全保护状态(安全值：" + rate + "%)";
 		setSafeTip(title,true);
 	}else{
-		var title = "您的账号处于危险状态(安全设置：" + rate + "%)，请尽快安全设置";
+		var title = "您的账号处于危险状态(安全值：" + rate + "%)，请尽快安全设置";
 		setSafeTip(title);
 	}
 }
 
 function safeSetting(id){
 	if (2 == id) {  //显示安全验证
-		showFloatWindow(true);
+		showFloatWindow(true,1);
 		return;
 	};
 	$('.umode' + id).css("color", "#ff0000");

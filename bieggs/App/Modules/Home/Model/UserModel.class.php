@@ -9,9 +9,7 @@ class UserModel extends Model {
     public function getUserSet(){
         $userMsg = $this->getSelfInfo();
         foreach ($userMsg as $k => $v) {
-        	Log::record($k.'=>'.$v);
         	if ($this->isAttrHide($k)) {
-        		Log::record("-----hidek = " . $k);
         		if ("" != $userMsg[$k]) {
         			$userMsg[$k] = "1";
         		}
@@ -21,7 +19,7 @@ class UserModel extends Model {
     }
 
     private function isAttrHide($attr){
-    	$u_hide=array("key","s_key","phone","qq","s_name","s_number","s_message","s_bankkey"); //用户不可外显得信息
+    	$u_hide=array("key","s_key","phone","qq","s_name","s_number","s_bankkey"); //lift user info
 		for($x=0;$x<count($u_hide);$x++) {
 		  if ($u_hide[$x] == $attr) {
 		  	return true;
@@ -33,6 +31,11 @@ class UserModel extends Model {
     public function updateField($field,$value){
         $ID = $_SESSION[C('USER_AUTH_KEY')];
         $this-> where('id='.$ID)->setField($field,$value);
+    }
+
+    public function getAuthInfo(){
+        $ID = $_SESSION[C('USER_AUTH_KEY')];
+        return $this-> where('id='.$ID)->find();
     }
 
 }

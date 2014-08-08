@@ -3,7 +3,7 @@ CREATE TABLE `bi_user` (
   `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(40) NOT NULL,
   `status` smallint(1),
-  `s_key` varchar(20) NOT NULL,
+  `s_key` varchar(40) NOT NULL,
   `nick` varchar(10),
   `headimg` int(2),
   `email` varchar(20),
@@ -30,7 +30,7 @@ CREATE TABLE `bi_user` (
 
 -- id:用户id
 -- status:用户账号状态 1=正常，2=账号被封，3=账号注销等
--- key:登录密码
+-- key:登录密码 key和s_key均以“6284**”作为测试
 -- s_key:取款密码
 -- nick:用户昵称
 -- headimg:用户头像编号
@@ -54,4 +54,4 @@ CREATE TABLE `bi_user` (
 -- s_message: 兑奖需要短信验证否 0=不需要，1=需要
 -- s_bankkey:银行安全密码
 
-INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'love660303', '天下第一','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","");
+INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第一','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","");

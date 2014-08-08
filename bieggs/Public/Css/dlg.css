@@ -22,7 +22,6 @@ line-height: 24px;
 }
 .load_fc_bdt {
 width: 270px;
-height: 28px;
 line-height: 28px;
 }
 .load_fc_bdinput1 input {
@@ -35,11 +34,6 @@ color: #333333;
 font-size: 14px;
 background: url(../img/one4.jpg) 250px center no-repeat;
 }
-.load_fc_bdt {
-width: 270px;
-height: 28px;
-line-height: 28px;
-}
 .load_fc_bdinput2 input {
 width: 262px;
 height: 32px;
@@ -49,11 +43,6 @@ padding: 0px 4px;
 color: #333333;
 font-size: 14px;
 background: url(../img/one5.jpg) 250px center no-repeat;
-}
-.load_fc_bdt {
-width: 270px;
-height: 28px;
-line-height: 28px;
 }
 .load_fc_bdinput_d {
 width: 270px;
