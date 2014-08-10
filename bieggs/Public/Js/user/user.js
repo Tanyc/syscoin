@@ -1,4 +1,4 @@
-var SAFE_TYPE = {SNUMBER:0 ,IPLIMIT:1 ,SMESSAGE:2, SBANKKEY:3, SMSLOGIN:4}; 
+var SAFE_TYPE = {SNUMBER:0 ,IPLIMIT:1 ,SMESSAGE:2, SBANKKEY:3, SMSLOGIN:4, NICKNAME:5,NICK:6 ,DESC:7, S_ADDR:8}; 
 $(document).ready(function(){
     $('.BasicInfoPart2').find('li').hover(
         function () {
@@ -136,23 +136,5 @@ function setSafeTipMsg(cnt){
 	}
 }
 
-function safeSetting(id){
-	if (2 == id) {  //显示安全验证
-		showFloatWindow(true,1);
-		return;
-	};
-	$('.umode' + id).css("color", "#ff0000");
-	$.ajax({
-	    type:"get",
-	    url:url_path + "/ssetting?id="+id,
-		error:function(){
-			alert("操作错误");
-		},
-	    success:function(data, textStatus){ 
-	    	var setting = parseInt(data);
-	    	// location.reload(true); 
-	    }
-	});
-}
 
 

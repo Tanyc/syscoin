@@ -27,6 +27,28 @@ function verifyCode($code){
 	return true;
 }
 
+function verifyPhone($phone){
+	if(strlen($phone) != 11){
+		return false;
+	}else{
+		if(!preg_match("/^(13[0-9]|15[0|3|6|7|8|9]|18[8|9])\d{8}$/",$phone)){
+			return false;
+		}
+	}
+	return true;
+}
+
+function verifyQQ($qq){ //此函数好像有问题
+	if(strlen($qq) < 5){
+		return false;
+	}else{
+		if(!preg_match("/^[1-9]\d$/",$qq)){
+			return false;
+		}
+	}
+	return true;
+}
+
 function isNil($str){
 	if(empty($str) || "" == $str) return true;
 	return false;

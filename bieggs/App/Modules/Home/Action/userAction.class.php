@@ -8,14 +8,14 @@ class userAction extends loginAction{
 
     public function index(){
     	$this->assign('PAGE_NAVII',0); //基本信息
-        $db_user = D('User');
-        $this->assign("db_user_id",$db_user->getUserSet());
+        $this->assign("db_user",D('User')->getUserSet());
 
         $this->display();
     }
 
     public function edit(){
         $this->assign('PAGE_NAVII',1); //修改资料
+        $this->assign("db_user",D('User')->getUserSet());
         
         $this->display();
     }
@@ -119,6 +119,44 @@ class userAction extends loginAction{
         // }
         // //中间处理一下业务逻辑
         $this->ajaxReturn($id);
+    }
+
+    public function infoMod(){
+        $authInfo = D("User")->getAuthInfo();
+        if ($_POST["nick"] && "" != $_POST["nick"]) {
+            if ("" == $authInfo["nick"]) {
+                D("User")->updateField("nick",$_POST["nick"]);
+            }
+        }
+        if ($_POST["qq"] && "" != $_POST["qq"]) {
+            // if (!verifyPhone($_POST["qq"])) {
+            //     $this->error('操作非法！');
+            //     return;
+            // }
+            if ("" == $authInfo["qq"]) {
+                D("User")->updateField("qq",$_POST["qq"]);
+            }
+        }
+        if ($_POST["phone"] && "" != $_POST["phone"]) {
+            if (!verifyPhone($_POST["phone"])) {
+                $this->error('操作非法！');
+                return;
+            }
+            if ("" == $authInfo["phone"]) {
+                D("User")->updateField("phone",$_POST["phone"]);
+            }
+        }
+        if ($_POST["s_addr"] && "" != $_POST["s_addr"]) {
+            if ("" == $authInfo["s_addr"]) {
+                D("User")->updateField("s_addr",$_POST["s_addr"]);
+            }
+        }
+        if ($_POST["desc"] && "" != $_POST["desc"]) {
+            if ("" == $authInfo["desc"]) {
+                D("User")->updateField("desc",$_POST["desc"]);
+            }
+        }
+        $this->success('信息修改成功！');
     }
     
 }

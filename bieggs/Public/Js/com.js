@@ -80,15 +80,28 @@ function checkEmailNoTip(email){
 	return true;
 }
 
-function showFloatWindow(isShow,from){
+function showFloatWindow(isShow,from,isf_pwd){
 	/**********************************************/
 	/*
 	from注释：
-	1=用户界面（兑奖短信）
-	2=其它（保留，后续添加）
+	{SNUMBER:0 ,IPLIMIT:1 ,SMESSAGE:2, SBANKKEY:3, SMSLOGIN:4, NICKNAME:5,NICK:6 ,DESC:7, S_ADDR:8}; 
 	*/
 	/**********************************************/
 	window.frames["iframe_cont"].document.getElementById("dlg_from").value=from;
+	if (isf_pwd) {
+		document.getElementById("dlg_title").textContent="安全验证";
+		window.frames["iframe_cont"].document.getElementById("second_key").placeholder="如果没有设置请不要填写";
+	}else{
+		document.getElementById("dlg_title").textContent="资料修改";
+		window.frames["iframe_cont"].document.getElementById("second_key").type="text";
+	}
+	if (from == 6) { //modify nick
+		window.frames["iframe_cont"].document.getElementById("second_key_text").textContent="新昵称";
+	}else if(from == 7){  //modify s_addr
+		window.frames["iframe_cont"].document.getElementById("second_key_text").textContent="详细地址（奖品邮寄地址）";
+	}else if(from == 8){  //modyfy desc
+		window.frames["iframe_cont"].document.getElementById("second_key_text").textContent="个性签名（少于75个汉字）";
+	}
 	if (isShow) {
 		document.getElementById("PCShowWindowBg").style.display='';
 		document.getElementById("pc_showloginparent").style.display='';

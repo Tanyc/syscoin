@@ -2,6 +2,10 @@
 
 class pubtplAction extends Action{
     public function nologin(){
+        if(isset($_SESSION[C('USER_AUTH_KEY')])) {
+            redirect(__ROOT__.'/user/index');
+            return;
+        }
     	$this->display();
     }
 
@@ -71,36 +75,57 @@ class pubtplAction extends Action{
     }
 
     public function dlg(){
-        $id = $this->_param('dlg_id');
         $dlg_from = $this->_param('dlg_from');
         $key1 = $this->_param('first_key');
         $key2 = $this->_param('second_key');
         $code = $this->_param('txt_VerifyCode');
-        if ("1" == $id) {
-            if (!verifyKey($key1) || !verifyKey($key2) || !verifyCode($code)) {
+        if (!verifyKey($key1)/* || !verifyKey($key2) */|| !verifyCode($code)) {
+            $this->assign("is_success",'2');
+            $this->assign("error_msg",'你的操作非法！');
+            $this->display('dlg:snumin');
+            return;
+        }
+        if (!isCodeRight($code)){
+            $this->assign("is_success",'2');
+            $this->assign("error_msg",'验证码错误！');
+        } else {
+            $db_user = D('User');
+            $authInfo = $db_user->getAuthInfo();
+            if (md5($key1) != $authInfo['key']) {
                 $this->assign("is_success",'2');
-                $this->assign("error_msg",'你的操作非法！');
-            } else{
-                if (!isCodeRight($code)){
-                    $this->assign("is_success",'2');
-                    $this->assign("error_msg",'验证码错误！');
-                } else {
-                    $db_user = D('User');
-                    $authInfo = $db_user->getAuthInfo();
-                    if (md5($key1) != $authInfo['key'] || md5($key2) != $authInfo['s_key']) {
+                $this->assign("error_msg",'你的密码错误！');
+                $this->display('dlg:snumin');
+                return;
+            }
+            switch ($dlg_from) {
+                case '2':
+                case '4':
+                    if(md5($key2) != $authInfo['s_key']){
                         $this->assign("is_success",'2');
                         $this->assign("error_msg",'你的密码错误！');
-                    }else{
-                        if (1 == $dlg_from) { //modify sms_open
-                            $switch = ($authInfo["s_message"] == 1)? 0 : 1;
-                            $db_user->updateField("s_message",$switch);
-                        }
-                        $this->assign("is_success",'1');
+                        $this->display('dlg:snumin');
+                        return;
                     }
-                }
+                    break;
+                default:
+                    break;
             }
-            $this->display('dlg:snumin');
+            if (2 == $dlg_from) { //modify sms_open
+                $switch = ($authInfo["s_message"] == 1)? 0 : 1;
+                $db_user->updateField("s_message",$switch);
+            } elseif (4 == $dlg_from) {
+                $switch = ($authInfo["sms_login"] == 1)? 0 : 1;
+                $db_user->updateField("sms_login",$switch);
+            } elseif (6 == $dlg_from){
+                $db_user->updateField("nick",$key2);
+            } elseif (7 == $dlg_from){
+                $db_user->updateField("s_addr",$key2);
+            } elseif (8 == $dlg_from){
+                $db_user->updateField("desc",$key2);
+            }
+            $this->assign("is_success",'1');
         }
+        $this->display('dlg:snumin');
     }
 
 }

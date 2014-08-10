@@ -7,6 +7,7 @@
   <load href='__JS__/com.js' />
   <load href='__JS__/Jquery/jquery-1.6.2.min.js'/>
   <load href='__JS__/user/user.js' />
+  <load href='__JS__/user/usercom.js' />
 </head>
 
 <body>
@@ -27,7 +28,7 @@
           <div class="BasicInfoPart1">
             <div class="imgDiv">
               <script type="text/javascript">
-                var headimg = '<img src="__IMAGES__/user/head/' + {$db_user_id.headimg} + '.gif" width="98px">';
+                var headimg = '<img src="__IMAGES__/user/head/' + {$db_user.headimg} + '.gif" width="98px">';
                 document.write(headimg);
               </script>
               <h5>
@@ -39,20 +40,17 @@
                 <tr>
                   <th>昵称：</th>
                   <td>
-                    <b class="orange" style="float:left;">{$db_user_id.nick}</b>
-                    <h5 class="fr">
-                      <a href="#" style="color:#ff6633">修改昵称</a>
-                    </h5>
+                    <b class="orange" style="float:left;">{$db_user.nick}</b>
                   </td>
                   <th>ID：</th>
-                  <td> <b class="orange">{$db_user_id.id}</b>
+                  <td> <b class="orange">{$db_user.id}</b>
                   </td>
                 </tr>
                 <tr>
                   <th>金蛋：</th>
                   <td> <b class="orange">
                     <script type="text/javascript">
-                      document.write(ver({$db_user_id.eggs}));
+                      document.write(ver({$db_user.eggs}));
                     </script>
                   </b>
                   </td>
@@ -60,7 +58,7 @@
                   <td>
                     <b class="orange">
                     <script type="text/javascript">
-                      document.write(ver({$db_user_id.deposit}));
+                      document.write(ver({$db_user.deposit}));
                     </script>
                     </b>
                   </td>
@@ -68,24 +66,24 @@
                 <tr>
                   <th>经验值：</th>
                   <td>
-                    <b class="orange">{$db_user_id.exp}</b>
+                    <b class="orange">{$db_user.exp}</b>
                   </td>
                   <th>经验等级：</th>
                   <td>
                       <script type="text/javascript">
-                        setExpRange({$db_user_id.exp});
+                        setExpRange({$db_user.exp});
                       </script>
                   </td>
                 </tr>
                 <tr>
                   <th>积分：</th>
                   <td>
-                    <b class="orange">{$db_user_id.jifen}</b>
+                    <b class="orange">{$db_user.jifen}</b>
                   </td>
                   <th>积分等级：</th>
                   <td>
                       <script type="text/javascript">
-                        setJifenRange({$db_user_id.jifen});
+                        setJifenRange({$db_user.jifen});
                       </script>
                   </td>
                 </tr>
@@ -93,12 +91,12 @@
                   <th>成长等级：</th>
                   <td>
                       <script type="text/javascript">
-                        setGrowRange({$db_user_id.grow});
+                        setGrowRange({$db_user.grow});
                       </script></td>
                   <th>VIP等级：</th>
                   <td>
                       <script type="text/javascript">
-                        setVipRange({$db_user_id.vip});
+                        setVipRange({$db_user.vip});
                       </script>
                   </td>
                 </tr>
@@ -115,32 +113,32 @@
             <ul>
               <li>
                 <script type="text/javascript">
-                  setSnameMsg({$db_user_id.s_number});
+                  setSnameMsg({$db_user.s_number});
                 </script>
               </li>
               <li>
                 <script type="text/javascript">
-                  setAreaMsg({$db_user_id.iplimit});
+                  setAreaMsg({$db_user.iplimit});
                 </script>
               </li>
               <li>
                 <script type="text/javascript">
-                  setMessageMsg({$db_user_id.s_message});
+                  setMessageMsg({$db_user.s_message});
                 </script>
               </li>
               <li style="background: none;">
                 <script type="text/javascript">
-                  setBankMsg({$db_user_id.s_bankkey});
+                  setBankMsg({$db_user.s_bankkey});
                 </script>
               </li>
               <li>
                 <script type="text/javascript">
-                  setLoginMsg({$db_user_id.sms_login});
+                  setLoginMsg({$db_user.sms_login});
                 </script>
               </li>
               <li>
                 <script type="text/javascript">
-                  var cnt = {$db_user_id.s_number} + {$db_user_id.iplimit} + {$db_user_id.s_message} + {$db_user_id.s_bankkey} + {$db_user_id.sms_login};
+                  var cnt = {$db_user.s_number} + {$db_user.iplimit} + {$db_user.s_message} + {$db_user.s_bankkey} + {$db_user.sms_login};
                   setSafeTipMsg(cnt);
                 </script>
               </li>
@@ -162,5 +160,6 @@
     </div>
   </div>
     <include file="public:footer"/>
+    <include file="public:topDlg"/>
 </body>
 </html>

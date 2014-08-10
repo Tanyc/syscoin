@@ -19,7 +19,7 @@ class UserModel extends Model {
     }
 
     private function isAttrHide($attr){
-    	$u_hide=array("key","s_key","phone","qq","s_name","s_number","s_bankkey"); //lift user info
+    	$u_hide=array("key","s_key","s_name","s_number","s_bankkey"); //lift user info
 		for($x=0;$x<count($u_hide);$x++) {
 		  if ($u_hide[$x] == $attr) {
 		  	return true;

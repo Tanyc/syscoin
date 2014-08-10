@@ -30,7 +30,7 @@ function check(){
 	var sss = window.a;
 	var key1 = $("#first_key").attr("value");
 	var key2 = $("#second_key").attr("value");
-	if(!verifyKey(key1) || !verifyKey(key2)) return false;
+	if(!verifyKey(key1) || isNil(key2)) return false;
 
 	var verify = $("#txt_VerifyCode").attr("value");
 	if(!verifyCode(verify)) return false;

@@ -5,8 +5,13 @@
 	<title>用户中心-专业的广告游戏平台</title>
 	<load href='__CSS__/usercom.css' />
 	<load href='__CSS__/edit.css' />
+	<load href='__JS__/com.js'/>
 	<load href='__JS__/user/usercom.js'/>
 	<load href='__JS__/user/edit.js'/>
+	<script type="text/javascript">
+	    var image_path = '__IMAGES__';
+	    var url_path = '__URL__';
+	</script>
 </head>
 
 <body>
@@ -33,64 +38,82 @@
 				</div>
 				<div id="imfo_edit1" style="padding-top: 10px;">
 					<table width="100%" border="0" cellspacing="0" cellpadding="5">
+					<form name="useredit" method="post" action="__ROOT__/user/infoMod" id="useredit">
 						<tbody>
 							<tr height="32">
-								<td width="20%" align="right">
-									<input name="fromUid" type="hidden" id="fromUid" value="431210">登陆邮箱：</td>
+								<td width="20%" align="right"><span style="color:#FF0000">*</span> 登陆邮箱：</td>
 								<td width="80%" align="left">
-									<div style="float:left; line-height:24px; color:#000; font-weight:bold">dingyong4223@163.com</div>
+									<div style="float:left; line-height:24px; color:#000; font-weight:bold">{$db_user.email}</div>
 								</td>
 							</tr>
 							<tr height="32">
-								<td align="right">昵称：</td>
+								<td height="35" align="right">昵称：</td>
 								<td align="left">
-									<div style="float:left; line-height:24px; color:#000; font-weight:bold">dingyong4223</div>
-									<a href="myinfo.asp?m=chgNn" style="float:left; margin-left:10px;">
-										<img src="/images/nicheng.jpg"></a>
-								</td>
+								<?php if($db_user["nick"] != ""): ?>
+                        			<div style="float:left; line-height:24px; font-weight:bold">{$db_user.nick}</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<script type="text/javascript">
+                        				setVipRange({$db_user.vip});
+                      				</script>
+                      				<div style="float:right; margin-right:20px; "><a href="javascript:safeSetting(6)" class="btn">修改</a></div>
+								<?php else: ?>
+									<input name="nick" type="text" id="nick" size="20" maxlength="12" value=""/>
+									<?php $is_not_fit = 1; ?>
+								<?php endif; ?></td>
 							</tr>
 							<tr height="32">
-								<td align="right">* QQ：</td>
+								<td height="35" align="right"><span style="color:#FF0000">*</span> QQ：</td>
 								<td align="left">
-									<input name="Uqq" type="text" class="input_temp" id="Uqq" onblur="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" value="" maxlength="15"></td>
+								<?php if($db_user["qq"] != ""): ?>
+								<script type="text/javascript">
+                        				hideHalf('{$db_user.qq}');
+                      			</script>
+								<?php else: ?>
+									<input name="qq" type="text" id="qq" size="20" maxlength="12" value=""/>
+									<?php $is_not_fit = 1; ?>
+								<?php endif; ?></td>
 							</tr>
 							<tr height="32">
-								<td height="35" align="right">认证手机：</td>
-								<td align="left">1326707****</td>
-							</tr>
-							<tr height="32">
-								<td height="35" align="right">短信通道：</td>
+								<td height="35" align="right"><span style="color:#FF0000">*</span> 认证手机：</td>
 								<td align="left">
-									<input id="smstd" name="smstd" type="radio" value="1" checked="checked">
-									&nbsp;通道一（默认）&nbsp;&nbsp;
-									<input id="smstd" name="smstd" type="radio" value="2">&nbsp;通道二</td>
-							</tr>
-							<tr height="30">
-								<td height="35" align="right">验证码：</td>
-								<td align="left">
-									<input name="safecode" type="text" id="safecode" class="input_1" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)" style="float:left;margin-right:5px;">
-
-									<span id="sendcode" style="float:left;text-align:center;">
-										<a href="javaScript:void(0);" onclick="javascript:sendcode(1);">
-											<img src="/images/fasong.jpg" align="top"></a>
-									</span>
-									<input name="mobilephone" type="hidden" id="mobilephone" value="13267074323">*内容修改需要发验证码</td>
+								<?php if($db_user["phone"] != ""): ?>
+								<script type="text/javascript">
+                        				hideHalf('{$db_user.phone}');
+                      			</script>
+								<?php else: ?>
+									<input name="phone" type="text" id="phone" size="20" maxlength="12" value=""/>
+									<?php $is_not_fit = 1; ?>
+								<?php endif; ?></td>
 							</tr>
 							<tr height="32">
 								<td align="right">详细地址：</td>
 								<td align="left">
-									<input name="uaddr" type="text" class="input_temp" id="uaddr" size="80" maxlength="100" value=""></td>
+								<?php if($db_user["s_addr"] != ""): ?>
+									{$db_user.s_addr}
+									<div style="float:right; margin-right:20px; "><a href="javascript:safeSetting(7)" class="btn">修改</a></div>
+								<?php else: ?>
+									<input name="s_addr" type="text" id="s_addr" size="70" maxlength="75" value=""/>
+									<?php $is_not_fit = 1; ?>
+								<?php endif; ?>
+								（奖品邮寄地址）</td>
 							</tr>
 							<tr height="32">
 								<td align="right">个性签名：</td>
 								<td align="left">
-									<input name="usign" type="text" class="input_temp" id="usign" value="" size="80" maxlength="80"></td>
+								<?php if($db_user["desc"] != ""): ?>
+									{$db_user.desc}
+									<div style="float:right; margin-right:20px; "><a href="javascript:safeSetting(8)" class="btn">修改</a></div>
+								<?php else: ?>
+									<input name="desc" type="text" id="desc" size="70" maxlength="50" value=""/>
+									<?php $is_not_fit = 1; ?>
+								<?php endif; ?></td>
 							</tr>
 							<tr height="32">
 								<td align="right" style="line-height:30px;">&nbsp;</td>
 								<td align="left">
 									<label>
-										<input type="button" name="Submit" class="frmbtn_2" onclick="return confirm('打*号的填写后不可修改，确定提交吗？')"></label>
+								<?php if($is_not_fit == 1): ?>
+									<input type="submit" name="submit" class="frmbtn_2" value="" onclick="return editSb()"/>
+								<?php endif; ?></label>
 								</td>
 							</tr>
 							<tr height="32">
@@ -102,6 +125,7 @@
 								</td>
 							</tr>
 						</tbody>
+						</form>
 					</table>
 				</div>
 				<div id="imfo_edit2" style="padding-top: 10px; display:none">
@@ -119,9 +143,7 @@
 								<td align="left" valign="top">
 									<span style="margin-left:20px;">新昵称：</span>
 									<label>
-										<input name="nickname" type="text" class="input_temp" id="nickname" size="30"></label>
-									<label>
-										<input name="Submit3" type="submit" class="bnt_submit" value="提 交"></label>
+										<input name="Submit3" type="submit" class="bnt_submit" value="提 交"/></label>
 								</td>
 							</tr>
 						</tbody>
@@ -133,12 +155,13 @@
 						<div class="subimg1">
 							<img src="" id="choice_headimg"></div>
 						<div class="subimg2">
-							<input type="button" name="Submit4" class="frmbtn_2"></div>
+							<input type="button" name="Submit4" class="frmbtn_2"/></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<include file="public:footer"/>
+	<include file="public:topDlg"/>
 </body>
 </html>
