@@ -1,7 +1,38 @@
-﻿function ver(n){
+﻿$(document).ready(function (){
+	$("#txt_VerifyCode").keyup(function(){
+		var varCode = $(this).attr("value");
+		if(varCode.length == 4){
+			checkIfCodeRight(varCode);
+		}else{
+			$("#code_tip").css("display","none");
+		}
+	});
+});
+function checkIfCodeRight(varCode){
+	$.ajax({
+	    type:"get",
+	    url:root_path + "/pubtpl/checkCode?code=" + varCode,
+		error:function(){
+		},
+	    success:function(data, textStatus){
+	    	if("ok" == data){
+	    		$("#code_tip").attr("src",img_path + "/public/i_yes.png");
+	    		$("#code_tip").css("display","");
+	    	}else{
+	    		$("#code_tip").attr("src",img_path + "/public/i_no.png");
+	    		$("#code_tip").css("display","");
+	    	}
+	    }
+	});
+}
+function ver(n){
 	n = n + "";
 	re=/(\d{1,3})(?=(\d{3})+(?:$|\.))/g    
-	return n.replace(re,"$1,")    
+	return n.replace(re,"$1,");
+}
+
+function verdoc(n){
+	document.write(ver(n));
 }
 
 function loginsb(){
@@ -56,9 +87,9 @@ function isNil(str){
 
 function setVipRange(vip){
 	var range = Math.floor(vip / 1000);
-	var doc = '<span><img src="' + image_path + '/user/vip/lv0.png" title="等级:0级"></span>';
+	var doc = '<span><img src="' + img_path + '/user/vip/lv0.png" title="等级:0级"></span>';
 	if (range >= 1) {
-		var doc = '<span><img src="' + image_path + '/user/vip/lv' + range + '.png" title="等级:' + range + '级"></span>';
+		var doc = '<span><img src="' + img_path + '/user/vip/lv' + range + '.png" title="等级:' + range + '级"></span>';
 	}
 	document.write(doc);
 }

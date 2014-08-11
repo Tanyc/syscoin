@@ -8,6 +8,8 @@ class indexAction extends comAction{
         $mActivity  =   D('Activity');
         $this->assign('activity',$mActivity->getList());
         /***************************************/
+        $this->assign("db_user",D('User')->getUserSet());
+        /***************************************/
         $mPrize = D('Prize');
         $this->assign('prize',$mPrize->getList(6,"id,prize_num,name,cost_eggs,swap_num"));
         $this->assign('PAGE_CURID',1);

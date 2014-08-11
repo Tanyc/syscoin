@@ -1,8 +1,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <load href='__CSS__/naviation.css' />
-    <load href='__CSS__/com.css' />
-    <load href='__JS__/com.js' />
 </head>
 
 <div id="header">
@@ -36,12 +34,12 @@
         </div>
         <div id="navi_topr">
             <ul>
-                <?php if($_SESSION["online"] == 1): ?>
+                <?php if($_SESSION["authId"] != ""): ?>
                     <li>
                         <a href="{:U('pubtpl/exitLogin')}" style="cursor:pointer">注销</a>
                     </li>
                     <li class="sheader_line">&nbsp;</li>
-                    <li><span style="color:#ff0000;font-weight:bold;"><?php echo($_SESSION["nick"]) ?></span>，欢迎你的光临！</li>
+                    <li><span style="color:#ff0000;font-weight:bold;"><?php echo($_SESSION["authId"]) ?></span>，欢迎你的光临！</li>
                 <?php else: ?>
                     <li>
                         <a href="{:U('pubtpl/register')}" style="cursor:pointer">注册</a>

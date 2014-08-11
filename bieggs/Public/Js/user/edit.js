@@ -9,6 +9,7 @@ function setHeadImg(){
 function checkhd(i){
 	var img_ch = document.getElementById("choice_headimg");
 	img_ch.src = img_path + '/user/head/' + i + '.gif';
+	document.getElementById("headimg").value=i;
 }
 
 function hideHalf(str){
@@ -20,7 +21,7 @@ function hideHalf(str){
 	}
 }
 
-function editSb(str){
+function editSb(){
 	var qq = document.getElementById("qq");
 	if (qq) {
 		var reg=/^[1-9]\d{5,}$/;
@@ -36,6 +37,14 @@ function editSb(str){
 			alert("手机号码不合法！");
 			return false;
 		}
+	};
+	return true;
+}
+
+function editHI(){
+	if (document.getElementById("headimg").value == "") {
+		alert("请先选择头像");
+		return false;
 	};
 	return true;
 }

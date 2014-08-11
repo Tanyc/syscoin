@@ -121,42 +121,47 @@ class userAction extends loginAction{
         $this->ajaxReturn($id);
     }
 
+    public function secureMod(){
+        
+    }
+
     public function infoMod(){
-        $authInfo = D("User")->getAuthInfo();
-        if ($_POST["nick"] && "" != $_POST["nick"]) {
-            if ("" == $authInfo["nick"]) {
-                D("User")->updateField("nick",$_POST["nick"]);
+        $user_db = D("User");
+        $authInfo = $user_db->getAuthInfo();
+        if ($_POST["headimg"] && "" != $_POST["headimg"]) {
+            $user_db->updateField("headimg",$_POST["headimg"]);
+        } else {
+            if ($_POST["nick"] && "" != $_POST["nick"]) {
+                if ("" == $authInfo["nick"]) {
+                    $user_db->updateField("nick",$_POST["nick"]);
+                }
+            }
+            if ($_POST["qq"] && "" != $_POST["qq"]) {
+                // if (!verifyPhone($_POST["qq"])) {
+                //     $this->error('操作非法！');
+                //     return;
+                // }
+                if ("" == $authInfo["qq"]) {
+                    $user_db->updateField("qq",$_POST["qq"]);
+                }
+            }
+            if ($_POST["phone"] && "" != $_POST["phone"]) {
+                if (!verifyPhone($_POST["phone"])) {
+                    $this->error('操作非法！');
+                    return;
+                }
+                if ("" == $authInfo["phone"]) {
+                   $user_db->updateField("phone",$_POST["phone"]);
+                }
+            }
+            if ($_POST["s_addr"] && "" != $_POST["s_addr"]) {
+                $user_db->updateField("s_addr",$_POST["s_addr"]);
+            }
+            if ($_POST["desc"] && "" != $_POST["desc"]) {
+                $user_db->updateField("desc",$_POST["desc"]);
             }
         }
-        if ($_POST["qq"] && "" != $_POST["qq"]) {
-            // if (!verifyPhone($_POST["qq"])) {
-            //     $this->error('操作非法！');
-            //     return;
-            // }
-            if ("" == $authInfo["qq"]) {
-                D("User")->updateField("qq",$_POST["qq"]);
-            }
-        }
-        if ($_POST["phone"] && "" != $_POST["phone"]) {
-            if (!verifyPhone($_POST["phone"])) {
-                $this->error('操作非法！');
-                return;
-            }
-            if ("" == $authInfo["phone"]) {
-                D("User")->updateField("phone",$_POST["phone"]);
-            }
-        }
-        if ($_POST["s_addr"] && "" != $_POST["s_addr"]) {
-            if ("" == $authInfo["s_addr"]) {
-                D("User")->updateField("s_addr",$_POST["s_addr"]);
-            }
-        }
-        if ($_POST["desc"] && "" != $_POST["desc"]) {
-            if ("" == $authInfo["desc"]) {
-                D("User")->updateField("desc",$_POST["desc"]);
-            }
-        }
-        $this->success('信息修改成功！');
+        $this->success();
     }
     
 }

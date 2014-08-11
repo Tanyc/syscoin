@@ -4,7 +4,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>比蛋-专业的广告游戏平台</title>
   <load href='__CSS__/main.css' />
-  <load href='__JS__/com.js' />
 </head>
   <script type="text/javascript">image_path="__IMAGES__";</script>
 
@@ -51,16 +50,16 @@
         <div class="user_login_title">
           <h2>会员登录</h2>
         </div>
-        <?php if($_SESSION["online"] == 1): ?>
+        <?php if($_SESSION["authId"] != ""): ?>
         <div style="height:50px">
           <div class="index_ar_login_head">
             <a href="{:U('user/edit')}" target="_blank">
-              <img src=<?php echo("__IMAGES__/user/head/" . $_SESSION["headimg"] . ".gif")?>border="0" width="40" height="40"></a>
+              <img src=<?php echo("__IMAGES__/user/head/" . $db_user["headimg"] . ".gif")?> border="0" width="40" height="40"></a>
           </div>
           <div class="index_ar_login">
             我的ID：
             <span class="index_3beta_word_black"> <strong><a href="/pgComUserInfo.aspx?userid=1873372">
-                  <?php echo($_SESSION["id"])?></a></strong> 
+                  <?php echo($db_user["id"])?></a></strong> 
             </span>
             &nbsp;&nbsp;[
             <a href="/Logout.aspx" style="color:#8B8B8B;">退出</a>
@@ -72,22 +71,24 @@
             </span>
             &nbsp;
             <a href="{:U('pubtpl/vipdesc')}" style="" target="_blank">
-              <script type="text/javascript">setVipRange({$_SESSION["vip"]});</script>
+              <script type="text/javascript">setVipRange({$db_user["vip"]});</script>
             </a>
           </div>
         </div>
         <div class="detail" style="color:#c30000;margin-left:5px;font-size:14px;">
-          历史最高金蛋：512,545,885,454
+          历史最高金蛋：<script type="text/javascript">
+            verdoc({$db_user["maxeggs"]});
+          </script>
           <img src="__IMAGES__/public/egg.png"></img>
       </div>
       <div style="margin:10px auto auto 5px;">
-        欢迎登录lucky蛋蛋网，你最近一次登录的信息如下：
+        欢迎登录lucky蛋蛋网，你最近一次登录的信息
         <div class="detail">
           时间：
-          <?php echo($_SESSION["ltime"]) ?></div>
+          <?php echo($db_user["ltime"]) ?></div>
         <div class="detail">
           地点：
-          <?php echo($_SESSION["lip"]) ?></div>
+          <?php echo($db_user["lip"]) ?></div>
       </div>
       <div style="margin:10px auto auto 5px;">
         如有异常，请立即到个人中心修改密码或到“<a href="/services/ser_prize" style="color:#ff0000; font-size:18px; text-decoration: underline;">客服中心</a>”寻求帮助！

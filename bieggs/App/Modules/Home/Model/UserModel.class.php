@@ -1,13 +1,13 @@
 <?php
 class UserModel extends Model {
-    
-    public function getSelfInfo(){
+
+    public function getAuthInfo(){
         $ID = $_SESSION[C('USER_AUTH_KEY')];
-        return $this->where('id='.$ID)->find();
+        return $this-> where('id='.$ID)->find();
     }
 
     public function getUserSet(){
-        $userMsg = $this->getSelfInfo();
+        $userMsg = $this->getAuthInfo();
         foreach ($userMsg as $k => $v) {
         	if ($this->isAttrHide($k)) {
         		if ("" != $userMsg[$k]) {
@@ -30,12 +30,7 @@ class UserModel extends Model {
 
     public function updateField($field,$value){
         $ID = $_SESSION[C('USER_AUTH_KEY')];
-        $this-> where('id='.$ID)->setField($field,$value);
-    }
-
-    public function getAuthInfo(){
-        $ID = $_SESSION[C('USER_AUTH_KEY')];
-        return $this-> where('id='.$ID)->find();
+        return $this->where('id='.$ID)->setField($field,$value);
     }
 
 }

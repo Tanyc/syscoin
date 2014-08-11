@@ -43,7 +43,7 @@ CREATE TABLE `bi_user` (
 -- iplimit:ip地区限制,1=华南，2=华北...
 -- range：用户等级
 -- eggs:财富金蛋值
--- maxeggs:账户最大财富
+-- maxeggs:账户历史最大财富
 -- deposit:存款值
 -- exp:经验值
 -- jifen:积分值

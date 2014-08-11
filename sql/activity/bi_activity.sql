@@ -9,7 +9,7 @@ CREATE TABLE `bi_activity` (
   `url_file` varchar(10) NOT NULL,
   `CTIME` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- is_active:是否正在进行的活动1 = 正在进行  0 = 过期活动
 -- act_time_start：活动开始时间
 -- act_menber：活动参与对象 0 = 普通会员  1 = vip会员等 

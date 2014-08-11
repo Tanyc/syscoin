@@ -16,11 +16,11 @@ function setExpRange(exp){
 	var range = Math.floor(exp / 100);
 	if (range >= 1) {
 		for (var i = 1; i <= range; i++) {
-			var doc = '<span><img src="' + image_path + '/user/star.png" title="等级:' + range + '级"></span>';
+			var doc = '<span><img src="' + img_path + '/user/star.png" title="等级:' + range + '级"></span>';
 			document.write(doc);
 		};
 	} else{
-		var doc = '<span><img src="' + image_path + '/user/star_0.png" title="等级:0级"></span>';
+		var doc = '<span><img src="' + img_path + '/user/star_0.png" title="等级:0级"></span>';
 		document.write(doc);
 	};
 }
@@ -42,9 +42,9 @@ function setGrowRange(grow){
 }
 
 function setMsgShow(title,msg,bntmsg,isimg_yes,linkid){
-	var imgdoc = '<img src="'+ image_path + '/user/no_1.gif" class="ico">';
+	var imgdoc = '<img src="'+ img_path + '/user/no_1.gif" class="ico">';
 	if(isimg_yes){
-		imgdoc = '<img src="'+ image_path + '/user/yes_1.gif" class="ico">';
+		imgdoc = '<img src="'+ img_path + '/user/yes_1.gif" class="ico">';
 		
 	}
 	document.write(imgdoc);
@@ -63,9 +63,9 @@ function setMsgShow(title,msg,bntmsg,isimg_yes,linkid){
 }
 
 function setSafeTip(title,isimg_yes){
-	var imgdoc = '<img src="'+ image_path + '/user/no_1.gif" class="ico">';
+	var imgdoc = '<img src="'+ img_path + '/user/no_1.gif" class="ico">';
 	if(isimg_yes){
-		imgdoc = '<img src="'+ image_path + '/user/yes_1.gif" class="ico">';
+		imgdoc = '<img src="'+ img_path + '/user/yes_1.gif" class="ico">';
 		
 	}
 	document.write(imgdoc);

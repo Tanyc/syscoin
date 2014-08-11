@@ -1,7 +1,4 @@
 <?php
-function mytest(){
-	return "this is a test";
-}
 function verifyName($name){
 	if(isNil($name)){
 		return false;
@@ -55,23 +52,16 @@ function isNil($str){
 }
 
 function setUserInfo($authInfo){
-    $_SESSION['online']           = 1; //1表示在线，0表示离线，给客户端展示
     $_SESSION[C('USER_AUTH_KEY')] = $authInfo['id'];
-    $_SESSION['id']               = $authInfo['id'];
-    $_SESSION['headimg']          = $authInfo['headimg'];
-    $_SESSION['email']            = $authInfo['email'];
-    $_SESSION['nick']             = $authInfo['nick'];
-    $_SESSION['vip']              = $authInfo['vip'];
-    $_SESSION['ltime']            = $authInfo['ltime'];
-    $_SESSION['lip']              = $authInfo['lip'];
+    // $_SESSION['nick']             = $authInfo['nick'];
 }
 
 function updateUserInfo(){
-    $User   =   M('User');
-    $data                   = array();
-    $data['id']             = $_SESSION['id'];
-    $data['ltime']          = time();
-    $data['lip']            = get_client_ip();
+    $User                = M('User');
+    $data                = array();
+    $data['id']          = $_SESSION[C('USER_AUTH_KEY')];
+    $data['ltime']       = time();
+    $data['lip']         = get_client_ip();
     $User->save($data);
 }
 

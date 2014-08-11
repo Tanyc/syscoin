@@ -1,31 +1,3 @@
-$(document).ready(function (){
-	$("#txt_VerifyCode").keyup(function(){
-		var varCode = $(this).attr("value");
-		if(varCode.length == 4){
-			checkIfCodeRight(varCode);
-		}else{
-			$("#code_tip").css("display","none");
-		}
-	});
-});
-function checkIfCodeRight(varCode){
-	$.ajax({
-	    type:"get",
-	    url:root_path + "/pubtpl/checkCode?code=" + varCode,
-		error:function(){
-		},
-	    success:function(data, textStatus){
-	    	if("ok" == data){
-	    		$("#code_tip").attr("src",img_path + "/public/i_yes.png");
-	    		$("#code_tip").css("display","");
-	    	}else{
-	    		$("#code_tip").attr("src",img_path + "/public/i_no.png");
-	    		$("#code_tip").css("display","");
-	    	}
-	    }
-	});
-}
-
 function check(){
 	var sss = window.a;
 	var key1 = $("#first_key").attr("value");
