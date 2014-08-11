@@ -33,17 +33,18 @@ height: 29px;
 line-height: 29px;
 text-decoration: none;
 }
-.frmbtn_2 {
-background: url("../Images/public/submit.gif") no-repeat;
-width: 116px;
-height: 30px;
-font-weight: bold;
-text-align: center;
-}
 .bnt_submit{
 background: url("../Images/public/bnt_submit.gif") no-repeat;
 width: 116px;
 height: 30px;
 font-weight: bold;
 text-align: center;
+}
+.frmbtn_2 {
+background: url("../Images/public/submit.gif") no-repeat;
+width: 116px;
+height: 30px;
+font-weight: bold;
+text-align: center;
+border-width:0px;
 }

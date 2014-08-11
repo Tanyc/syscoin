@@ -1,10 +1,12 @@
-﻿$(document).ready(function (){
+﻿var isCode = false;
+$(document).ready(function (){
 	$("#txt_VerifyCode").keyup(function(){
 		var varCode = $(this).attr("value");
 		if(varCode.length == 4){
 			checkIfCodeRight(varCode);
 		}else{
 			$("#code_tip").css("display","none");
+			isCode = false;
 		}
 	});
 });
@@ -18,6 +20,7 @@ function checkIfCodeRight(varCode){
 	    	if("ok" == data){
 	    		$("#code_tip").attr("src",img_path + "/public/i_yes.png");
 	    		$("#code_tip").css("display","");
+	    		isCode = true;
 	    	}else{
 	    		$("#code_tip").attr("src",img_path + "/public/i_no.png");
 	    		$("#code_tip").css("display","");
@@ -36,15 +39,15 @@ function verdoc(n){
 }
 
 function loginsb(){
+	if (!isCode) {
+		alert("验证码错误");
+		return false;
+	};
 	var name = $("#txt_UserName").attr("value");
 	if(!verifyName(name)) return false;
 
 	var key = $("#txt_PWD").attr("value");
 	if(!verifyKey(key)) return false;
-
-	var verify = $("#txt_VerifyCode").attr("value");
-	if(!verifyCode(verify)) return false;
-
 }
 
 function verifyName(name){
@@ -64,17 +67,6 @@ function verifyKey(key){
 		return false;
 	}else if(key.length < 6 || key.length > 18){
 		alert("密码长度不在范围内，请核实！")
-		return false;
-	}
-	return true;
-}
-
-function verifyCode(code){
-	if(isNil(code)){
-		alert("请输入验证码！")
-		return false;
-	}else if(code.length != 4){
-		alert("验证码长度不合法，请核实！")
 		return false;
 	}
 	return true;

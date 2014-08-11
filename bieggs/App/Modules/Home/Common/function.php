@@ -15,6 +15,11 @@ function verifyKey($key){
 	return true;
 }
 
+function convSeMsg($str,$pL){
+	$re = substr ( $str, 0,$pL);
+	return $re . "******";
+}
+
 function verifyCode($code){
 	if(isNil($code)){
 		return false;
@@ -70,6 +75,24 @@ function isCodeRight($code){
         return false;
     }
     return true;
+}
+
+function checkName($name){
+	if (isNil($name)) {
+		return false;
+	};
+	$reg="/[\w\d]/";
+	if(preg_match($reg,$name)){
+		return false;
+	}
+	return true;
+}
+
+function checkSCard($num){
+	if (isNil($num) || (strlen($num) != 15 && strlen($num) != 18)) {
+		return false;
+	};
+	return true;
 }
 
 ?>

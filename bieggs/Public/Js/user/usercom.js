@@ -18,3 +18,24 @@ function safeSetting(id){
 		showFloatWindow(true,id,false); //first row not show password patten
 	}
 }
+function pwdch(){
+    var oldp = $("#OLDPASSWORD").val();
+    var newp = $("#NEWPASWWORD").val();
+    var renewp = $("#NEWPASWWORD2").val();
+    if (!checkIfPwdRight(oldp)) {
+        alert("输入错误！");
+        return false;
+    };
+    if (!checkIfPwdRight(newp) || newp != renewp) {
+        alert("输入密码错误！");
+        return false;
+    };
+    return true;
+}
+
+function checkIfPwdRight(pwd){
+    if (pwd.length < 6 || pwd.length > 18 || isNil(pwd)) {
+        return false;
+    };
+    return true;
+}

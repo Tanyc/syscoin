@@ -33,4 +33,9 @@ class UserModel extends Model {
         return $this->where('id='.$ID)->setField($field,$value);
     }
 
+    public function updateFields($datas){
+        $ID = $_SESSION[C('USER_AUTH_KEY')];
+        return $this->where('id='.$ID)->data($datas)->save();
+    }
+
 }

@@ -22,7 +22,17 @@ class userAction extends loginAction{
 
     public function secure(){
         $this->assign('PAGE_NAVII',2); //身份认证/绑定手机
-        
+        $authInfo = D('User')->getAuthInfo();
+        if ("" != $authInfo["s_name"]) {
+            $array['s_name'] = convSeMsg($authInfo["s_name"],3); 
+        }
+        if ("" != $authInfo["s_number"]) {
+            $array['s_num']  = convSeMsg($authInfo["s_number"],5); 
+        }
+        if ("" != $authInfo["phone"]) {
+            $array['phone']  = convSeMsg($authInfo["phone"],5); 
+        }
+        $this->assign($array);
         $this->display();
     }
 
@@ -122,7 +132,46 @@ class userAction extends loginAction{
     }
 
     public function secureMod(){
+        if(!isCodeRight($_POST['txt_VerifyCode'])){
+            $this->error('验证码非法！');
+        }
+        $s_name = $_POST["s_name"];
+        $s_num = $_POST["s_num"];
+        if (!checkName($s_name)) {
+            $this->error("姓名输入非法");
+        };
+        if (!checkSCard($s_num)) {
+            $this->error("身份证号输入非法");
+        };
+        $data['s_name'] = $s_name;
+        $data['s_number'] = $s_num;
+        $result = D("User")->updateFields($data);
+        if ($result) {
+            $this->success();
+        }else{
+            $this->error("更新信息失败！");
+        } 
+    }
+
+    public function phCheck(){  //phone security check
         
+    }
+
+    public function pwdchange(){ //password change
+        $oldp = $_POST["OLDPASSWORD"];
+        $newp = $_POST["NEWPASWWORD"];
+        $renewp = $_POST["NEWPASWWORD2"];
+        if (verifyKey($newp) && $newp == $renewp) {
+            $user_db = D("User");
+            $authInfo = $user_db->getAuthInfo();
+            if ($authInfo["key"] != md5($oldp)) {
+                $this->error("你的登录密码不正确！");
+            }
+            $user_db->updateField("key",md5($newp));
+            $this->success();
+        }else{
+            $this->error("输入非法！");
+        }
     }
 
     public function infoMod(){

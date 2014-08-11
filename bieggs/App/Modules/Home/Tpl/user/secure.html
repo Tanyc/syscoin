@@ -5,6 +5,7 @@
 	<title>用户中心-专业的广告游戏平台</title>
 	<include file="public:com"/>
 	<load href='__CSS__/secure.css' />
+	<load href='__JS__/user/secure.js' />
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 					<span>
 						<a href="javascript:setData(1);" id="tab1" class="a_bg1">身份认证</a>
 					</span>
-					<span>
+					<span style="display:">
 						<a href="javascript:setData(2);" id="tab2">手机认证</a>
 					</span>
 				</div>
@@ -31,8 +32,11 @@
 							<tbody>
 								<tr>
 									<td colspan="3" align="center">
+										<?php if("" == $s_num || "" == $s_name): ?>
 										<div class="B_bor c3">以下信息将作为帐号归属的最终判定依据，一经填写保存后将不提供修改功能，请牢记！</div>
-									</td>
+										<?php else: ?>
+										<div class="B_bor c3">恭喜你已经通过身份认证，绝密资料修改请上传身份证复印件并人工核实。</div>
+										<?php endif; ?></td>
 								</tr>
 								<tr height="10">
 									<td colspan="3">&nbsp;</td>
@@ -40,33 +44,51 @@
 								<tr height="30">
 									<td colspan="3" align="left">
 										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">真实姓名：</span>
-										<input name="truename" type="text" class="input_temp" id="truename" size="30" value="">保存后无法修改！</td>
+										<?php if("" != $s_name): ?>
+										{$s_name}
+										<?php else: ?>
+										<input name="s_name" type="text" id="s_name" size="30" placeholder="请输入真实姓名，否则奖品无法寄达" value="">
+										保存后无法修改！
+										<?php endif; ?></td>
 								</tr>
 								<tr height="30">
 									<td colspan="3" align="left">
 										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">身份证号：</span>
-										<input name="idcard" type="text" class="input_temp" id="idcard" size="30" value="">保存后无法修改！</td>
+										<?php if("" != $s_num): ?>
+										{$s_num}
+										<?php else: ?>
+										<input name="s_num" type="text" id="s_num" size="30" placeholder="请输入15位或18位身份证号码" value="">
+										保存后无法修改！
+										<?php endif; ?></td>
 								</tr>
-								<tr height="30">
-									<td colspan="3" align="left">
-										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">验证码：</span>
-										<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" size="10" onKeyup="" value="">
-										<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-5px;" border="0">
-            							<img id="code_tip" src="" style="width:18px; height:18px; display:none"></td>
-								</tr>
-								<tr height="20">
-									<td colspan="3">&nbsp;</td>
-								</tr>
-								<tr>
-									<td colspan="3" align="left">
-										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">&nbsp;</span>
-										<input name="submit" type="submit" class="frmbtn_2" value=""></td>
-								</tr>
-							</tbody>
-						</table>
-					</form>
-				</div>
-				<div id="imfo_edit2" style="padding-top: 10px; display:none">
+								<!-- 								<tr height="30">
+								<td colspan="3" align="left">
+									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">登录密码：</span>
+									<input name="key" type="password" id="login_key" size="30" autocomplete="" value="sss"></td>
+							</tr>
+							-->
+							<?php if("" == $s_num || "" == $s_name): ?>
+							<tr height="30">
+								<td colspan="3" align="left">
+									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">验证码：</span>
+									<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" size="10" maxlength="4" value="">
+									<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-5px;" border="0">
+									<img id="code_tip" src="" style="width:18px; height:18px; display:none"></td>
+							</tr>
+							<tr height="20">
+								<td colspan="3">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="3" align="left">
+									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">&nbsp;</span>
+									<input name="submit" type="submit" class="frmbtn_2" value="" onclick="return securesb()"></td>
+							</tr>
+							<?php endif; ?></tbody>
+					</table>
+				</form>
+			</div>
+			<div id="imfo_edit2" style="padding-top: 10px; display:none">
+				<form id="secureform" name="secureform" method="post" action="__ROOT__/user/phCheck">
 					<table width="100%" border="0" cellspacing="0" cellpadding="5" style="margin-bottom:10px">
 						<tbody>
 							<tr>
@@ -84,19 +106,19 @@
 							<tr height="30">
 								<td colspan="3" align="left">
 									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">当前手机号：</span>
-									<input name="mobilephonetext" type="text" class="input_temp" id="mobilephonetext" size="15" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)" value="1326707****" readonly="">
-									<input name="mobilephone" type="hidden" id="mobilephone" value="13267074323"></td>
+									<?php if("" != $phone): ?>
+										{$phone}
+									<?php else: ?>
+										<input name="phone" type="text" id="phone" size="15" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)" value="">
+									<?php endif; ?></td>
 							</tr>
+						<?php if("" == $phone): ?>
 							<tr height="30">
 								<td colspan="3" align="left">
 									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">当前验证码：</span>
 									<input name="safecode" type="text" style="float:left;" class="input_temp" id="safecode" size="15" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)">
 									&nbsp;
-									<span id="sendcode">
-										<a href="javaScript:void(0);" onclick="javascript:sendcode(1);">
-											<img src="__IMAGES__/public/bnt_check.png" align="top"></a>
-									</span>
-								</td>
+									<input name="submit" type="submit" value="发送验证码"></td>
 							</tr>
 							<tr height="20">
 								<td colspan="3">&nbsp;</td>
@@ -104,14 +126,23 @@
 							<tr>
 								<td colspan="3" align="left">
 									<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">&nbsp;</span>
-									<input class="frmbtn_2" name="Submit3" type="button"/></td>
+									<input class="frmbtn_2" name="Submit3" type="button"/>
+								</td>
 							</tr>
+						<?php else: ?>
+							<tr>
+								<td colspan="3" align="left">
+									<div style="margin-left:43px; color:#00aa00">你已经通过手机安全验证，在你登录，换取礼品时可以设置短信验证确保账号安全。<br>如果更换手机，请及时重新验证，点击左侧“修改密码/密保”项，或到“<a href="/services/ser_prize" style="color:#ff0000; font-size:18px; text-decoration: underline;">客服中心</a>”联系客服寻求帮助。</div>
+								</td>
+							</tr>
+						<?php endif; ?>
 						</tbody>
 					</table>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 <include file="public:footer"/>
 </body>
