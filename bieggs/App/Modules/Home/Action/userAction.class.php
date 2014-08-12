@@ -236,5 +236,18 @@ class userAction extends loginAction{
         }
         $this->success();
     }
+
+    public function addAddr(){
+        $db_user_addr = M("UserAddr");
+        $data['UID']      = $_SESSION[C('USER_AUTH_KEY')];
+        $data['NAME']     = $_POST["NAME"];
+        $data['PROVINCE'] = $_POST["PROVINCE"];
+        $data['CITY']     = $_POST["CITY"];
+        $data['ADDRESS']  = $_POST["ADDRESS"];
+        $data['PCODE']    = $_POST["PCODE"];
+        $data['TEL']      = $_POST["TEL"];
+        $db_user_addr->add($data);
+        $this->success();
+    }
     
 }

@@ -49,3 +49,29 @@ function showPState(stat){
         document.write('<span style="color:#00aa00">已发货<span>');
     }
 }
+
+function checkAddr(){ //myprize页验证表单
+    if (isNil($("#NAME").val())) {
+        alert("请输入姓名！");
+        return false;
+    }else if (isNil($("#PROVINCE").val())) {
+        alert("请选择省份！");
+        return false;
+    }else if (isNil($("#CITY").val())) {
+        alert("请选择城市！");
+        return false;
+    }else if (isNil($("#ADDRESS").val())) {
+        alert("请填写详细地址！");
+        return false;
+    }else if (isNil($("#PCODE").val()) || $("#PCODE").val().length != 6) {
+        alert("邮编填写错误！");
+        return false;
+    }else if (isNil($("#TEL").val()) || $("#TEL").val().length < 11) {
+        alert("电话号码输入错误！");
+        return false;
+    }else if (!isCode) {
+        alert("验证码错误！");
+        return false;
+    };
+    return true;
+}
