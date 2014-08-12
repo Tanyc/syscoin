@@ -34,26 +34,27 @@
 								<td width="20%" align="center" class="tdstyle">状态</td>
 								<td width="15%" align="center" class="tdstyle">时间</td>
 							</tr>
-
+							<volist name="db_duijiang" id="vo">
 							<tr class="font_bgrave" height="30">
-								<td height="20" align="center" bgcolor="#FFFFFF">500元话费</td>
+								<td height="20" align="center" bgcolor="#FFFFFF">{$vo.p_name}</td>
 								<td align="center" bgcolor="#FFFFFF">
-									<span class="c1 b1">10,121,154</span>
+									<span class="c1 b1"><script type="text/javascript">verdoc({$vo.cost})</script></span>
 									&nbsp;
-									<img src="../static/style/guobi.gif"></td>
+									<img src="__IMAGES__/public/egg.png"></td>
 								<td align="center" bgcolor="#FFFFFF">
-									<span class="c1 b1">已发货</span>
+									<span class="c1 b1">
+										<script type="text/javascript">
+										showPState({$vo.state});
+										</script>
+									</span>
 									&nbsp;
 									<img src="../static/style/guobi.gif"></td>
 								<td align="center" bgcolor="#FFFFFF">2014-7-14 12:55:48</td>
 							</tr>
-
+						</volist>
 						</tbody>
 					</table>
-					<div id="spage" style="width:98%">
-						<span>总记录数:1条</span>
-						<a href="/user/account.asp?m=&amp;page=1" id="spage_hv">1</a>
-					</div>
+					<include file="public:pagebot"/>
 				</div>
 				<div id="imfo_edit2" style="display:none">
 					<div class="account_right_messeage_titlered">&nbsp;&nbsp;新增邮寄地址</div>

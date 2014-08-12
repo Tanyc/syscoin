@@ -1,7 +1,7 @@
 -- 该文件为所有用户的详细投注结果，某个用户在某一期投注了**
 DROP TABLE IF EXISTS `bi_user_bets28`;
 CREATE TABLE `bi_user_bets28` (
-  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `UID` int(11) NOT NULL,
   `LID` varchar(10) NOT NULL,
   `ALLSMONEY` varchar(200) NOT NULL,

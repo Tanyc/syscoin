@@ -2,7 +2,7 @@
 class Pc28Model extends Model {
     const PERPAGE = 20;
     public function getResultByPage($page = 1){
-        if (is_nil($page)) {
+        if (isNil($page)) {
             $page = 1;
         }
         return $this->order('id DESC')->page($page,$this::PERPAGE)->select();

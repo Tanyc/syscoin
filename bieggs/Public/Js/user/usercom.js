@@ -39,3 +39,13 @@ function checkIfPwdRight(pwd){
     };
     return true;
 }
+
+function showPState(stat){
+    if (-1 == stat) {
+        document.write('<span style="color:#ff0000">未发货<span>');
+    }else if (0 == stat) {
+        document.write('<span style="color:#0000ff">发货中<span>');
+    }else{
+        document.write('<span style="color:#00aa00">已发货<span>');
+    }
+}

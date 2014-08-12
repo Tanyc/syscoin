@@ -46,13 +46,37 @@ class userAction extends loginAction{
     	$this->assign('PAGE_NAVII',4); //账号明细
     	$sub_tab = ("" == $this->_param("sub_tab"))? 0 : $this->_param("sub_tab");
     	$this->assign('SUB_TAB',$sub_tab); //重属tab
-    	
+
+        $UID = $_SESSION[C('USER_AUTH_KEY')];
+
+        $db_user_eggs = M("UserEggs");
+        $data = $db_user_eggs->where('UID='.$UID)->select();
+    	$this->assign('db_user_eggs',$data); //重属tab
+
+        $index = isNil($this->_param("pg"))? 1 : $this->_param("pg");
+        $pagedata = $db_user_eggs->page($index,10)->select();
+        $this->assign('db_user_pageeggs',$pagedata); //所有金蛋
+
+        $this->initCom($db_user_eggs->count(),$index);
         $this->display();
+    }
+
+    private function initCom($db_data_cnt, $cur_pg){
+        $array['db_data_cnt'] = $db_data_cnt;    //总数
+        $array['cur_pg']      = $cur_pg; //当前页
+        $array['items']      = 10; //每页显示的条数
+        $this->assign($array);
     }
 
     public function myprize(){
         $this->assign('PAGE_NAVII',5); //我的兑奖
         
+        $prize = M("Duijiang");
+        $index = isNil($this->_param("pg"))? 1 : $this->_param("pg");
+        $pagedata = $prize->order("state ASC")->page($index,10)->select();
+        $this->assign('db_duijiang',$pagedata); //所有金蛋
+
+        $this->initCom($prize->count(),$index);
         $this->display();
     }
 

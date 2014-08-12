@@ -1,7 +1,7 @@
 ﻿//载入开奖时间
 function initpsBets(){
 	genNumItem();
-	$(".open_num").attr("src",img_path + '/game/nums/number_' + open_num + '.gif');
+	$(".open_num").attr("src",img_path + '/game/nums/number_' + open_num + '.png');
 	$(".time").text(time);
 	$(".LID").text(LID);
 	$(".mydown").text(("" == SMONEYSUM)? 0 : ver(SMONEYSUM));
@@ -16,7 +16,7 @@ function genNumItem(){
 	for (var i = 0; i <= 13; i++) {
 		tou = ("" != self_in && "" != self_in[i])? ver(self_in[i]) : "-";
 		kai = (i == open_num)? ver(GMONEYSUM) : "-";
-		leftHtml += '<tr align="center" bgcolor="#FFFFFF" height="27"><td><img src="' + img_path + '/game/nums/number_' + i + '.gif" width="25" height="25" style="cursor: pointer;"></td><td>' + cis[i] + '</td><td>' + tou + '</td><td>' + kai + '</td></tr>';
+		leftHtml += '<tr align="center" bgcolor="#FFFFFF" height="27"><td><img src="' + img_path + '/game/nums/number_' + i + '.png" width="25" height="25" style="cursor: pointer;"></td><td>' + cis[i] + '</td><td>' + tou + '</td><td>' + kai + '</td></tr>';
 	};
 	$(".left_table").append(leftHtml);
 
@@ -24,7 +24,7 @@ function genNumItem(){
 	for (var i = 27; i >= 14; i--) {
 		tou = ("" != self_in && "" != self_in[i])? ver(self_in[i]) : "-";
 		kai = (i == open_num)? ver(GMONEYSUM) : "-";
-		rightHtml += '<tr align="center" bgcolor="#FFFFFF" height="27"><td><img src="' + img_path + '/game/nums/number_' + i + '.gif" width="25" height="25" style="cursor: pointer;"></td><td>' + cis[i] + '</td><td>' + tou + '</td><td>' + kai + '</td></tr>';
+		rightHtml += '<tr align="center" bgcolor="#FFFFFF" height="27"><td><img src="' + img_path + '/game/nums/number_' + i + '.png" width="25" height="25" style="cursor: pointer;"></td><td>' + cis[i] + '</td><td>' + tou + '</td><td>' + kai + '</td></tr>';
 	};
 	$(".right_table").append(rightHtml);
 }
