@@ -1,21 +1,19 @@
 .cardshow{
 	float: left;
 	width: 230px;
-	/*border: 1px solid #f1cb95;*/
 }
 .formdiv{
 	display: inline;
 	float: right;
 	width: 532px;
-	/*border: 1px solid #f1cb95;*/
 }
 .cardimg, .vipcard{
 margin: 10px;
 width: 150px;
 height: 83px;
 }
-.dcard{
-	width: 100%;
+.dcard1, .dcard2, .dcard3, .dcard4{
+	width: 100%; display: none;
 }
 .dcardimgdiv, .dvipcardimgdiv{
 	width: 290px;
@@ -35,4 +33,4 @@ float:left;margin:30px auto auto 10px;
 #imfo_edit2 ul li{
 	display:inline;
 }
-.dvipcard{border-top:1px solid #f1cb95 }
+.dvipcard1, .dvipcard2, .dvipcard3, .dvipcard4{border-top:1px solid #f1cb95; display: none }
