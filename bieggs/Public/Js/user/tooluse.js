@@ -6,7 +6,9 @@ $(document).ready(function(){
 
         var srcimg = $(this).attr("src");
         $('.dcardimg').attr("src",srcimg);
-        $('.dcard').show();
+        $('.dcardimg').show();
+        showTipI($(this).attr("opt"));
+        
         $('.B_bor').hide();
 
     });
@@ -16,9 +18,22 @@ $(document).ready(function(){
 
         var srcimg = $(this).attr("src");
         $('.dvipcardimg').attr("src",srcimg);
-        $('.dvipcard').show();
+        $('.dvipcardimg').show();
 
+        showTipI($(this).attr("opt"));
     });
     $('.dcard').hide();
     $('.dvipcard').hide();
 });
+
+function showTipI(k){
+    for (var i = 1; i <= 4; i++) {
+        $('.dvipcard' + i).hide();
+    };
+    $('.dvipcard' + k).show();
+
+    for (var i = 1; i <= 4; i++) {
+        $('.dcard' + i).hide();
+    };
+    $('.dcard' + k).show();
+}

@@ -87,50 +87,44 @@ class userAction extends loginAction{
         $this->display();
     }
 
-    public function putad(){
-        $this->assign('PAGE_NAVII',6); //修改密码
-        
-        $this->display();
-    }
-
     public function myad(){
-        $this->assign('PAGE_NAVII',7); //投放广告
+        $this->assign('PAGE_NAVII',6); //投放广告
         
         $this->display();
     }
 
-    public function descad(){
-        $this->assign('PAGE_NAVII',8); //我的广告
+    public function desad(){
+        $this->assign('PAGE_NAVII',7); //广告介绍
         
         $this->display();
     }
 
     public function tooluse(){
-        $this->assign('PAGE_NAVII',9); //道具使用
+        $this->assign('PAGE_NAVII',8); //道具使用
         
         $this->display();
     }
 
     public function vipget(){
-        $this->assign('PAGE_NAVII',10); //vip每日领取
+        $this->assign('PAGE_NAVII',9); //vip每日领取
         
         $this->display();
     }
 
     public function salary(){
-        $this->assign('PAGE_NAVII',11); //工资领取
+        $this->assign('PAGE_NAVII',10); //工资领取
         
         $this->display();
     }
 
     public function myfriend(){
-        $this->assign('PAGE_NAVII',12); //工资领取
+        $this->assign('PAGE_NAVII',11); //工资领取
         
         $this->display();
     }
 
     public function invite(){
-        $this->assign('PAGE_NAVII',13); //工资领取
+        $this->assign('PAGE_NAVII',12); //工资领取
         
         $this->display();
     }
