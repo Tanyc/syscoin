@@ -81,3 +81,15 @@ function checkAddr(){ //myprize页验证表单
     };
     return true;
 }
+
+function modAddrI(i){
+    $("#ISMODE").val(data["ID" + i]);
+    $("#addrEdit").css("display","");
+    $("#NAME").val(data["NAME" + i]);
+    $("#PROVINCE").val(data["PROVINCE" + i]);
+    ChangeCity(data["PROVINCE" + i],'');
+    $("#CITY").val(data["CITY" + i]);
+    $("#ADDRESS").val(data["ADDRESS" + i]);
+    $("#PCODE").val(data["PCODE" + i]);
+    $("#TEL").val(data["TEL" + i]);
+}

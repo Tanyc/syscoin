@@ -240,6 +240,8 @@ class userAction extends loginAction{
 
     public function addAddr(){
         $db_user_addr = M("UserAddr");
+        $UID              = $_SESSION[C('USER_AUTH_KEY')];
+
         $data['UID']      = $_SESSION[C('USER_AUTH_KEY')];
         $data['NAME']     = $_POST["NAME"];
         $data['PROVINCE'] = $_POST["PROVINCE"];
@@ -247,7 +249,11 @@ class userAction extends loginAction{
         $data['ADDRESS']  = $_POST["ADDRESS"];
         $data['PCODE']    = $_POST["PCODE"];
         $data['TEL']      = $_POST["TEL"];
-        $db_user_addr->add($data);
+        if (isset($_POST["ISMODE"])) {
+            $db_user_addr->where("id=".$_POST["ISMODE"]." and UID=".$UID)->save($data);
+        }else{
+            $db_user_addr->add($data);
+        }
         $this->success();
     }
 

@@ -6,12 +6,12 @@
 	<include file="public:com"/>
 	<load href='__CSS__/myprize.css'/>
 <script type="text/javascript">
-var a = {
-	NAME1:"",PROVINCE1:"",CITY1:"",ADDRESS1:"",PCODE1:"",TEL1:"",DEFAULT1:"",
-	NAME2:"",PROVINCE2:"",CITY2:"",ADDRESS2:"",PCODE2:"",TEL2:"",DEFAULT2:"",
-	NAME3:"",PROVINCE3:"",CITY3:"",ADDRESS3:"",PCODE3:"",TEL3:"",DEFAULT3:"",
+var index = 1;
+var data = {
+	ID1:"",NAME1:"",PROVINCE1:"",CITY1:"",ADDRESS1:"",PCODE1:"",TEL1:"",DEFAULT1:"",
+	ID2:"",NAME2:"",PROVINCE2:"",CITY2:"",ADDRESS2:"",PCODE2:"",TEL2:"",DEFAULT2:"",
+	ID3:"",NAME3:"",PROVINCE3:"",CITY3:"",ADDRESS3:"",PCODE3:"",TEL3:"",DEFAULT3:"",
 };
-alert(a["y"]); 
 </script>
 </head>
 
@@ -71,6 +71,7 @@ alert(a["y"]);
 						<div class="account_right_messeage_titlered">&nbsp;&nbsp;新增邮寄地址</div>
 						<div class="account_right_messeageL"></div>
 						<form name="useredit" method="post" action="__ROOT__/user/addAddr" id="useredit">
+						<input name="ISMODE" type="hidden" id="ISMODE" value="">
 							<table width="770px" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 								<tbody>
 									<tr>
@@ -145,6 +146,16 @@ alert(a["y"]);
 								<td align="center" width="4%">操作</td>
 							</tr>
 							<volist name="db_user_addr" id="vo">
+								<script type="text/javascript">
+									data["ID" + index] = '{$vo.id}';
+									data["NAME" + index] = '{$vo.NAME}';
+									data["PROVINCE" + index] = '{$vo.PROVINCE}';
+									data["CITY" + index] = '{$vo.CITY}';
+									data["ADDRESS" + index] = '{$vo.ADDRESS}';
+									data["PCODE" + index] = '{$vo.PCODE}';
+									data["TEL" + index] = '{$vo.TEL}';
+									data["DEFAULT" + index++] = '{$vo.DEFAULT}';
+								</script>
 								<tr height="30">
 									<td height="20" align="center" bgcolor="#FFFFFF">{$vo.NAME}</td>
 									<td align="center" bgcolor="#FFFFFF">{$vo.PROVINCE}</td>
@@ -153,7 +164,10 @@ alert(a["y"]);
 									<td align="center" bgcolor="#FFFFFF">{$vo.PCODE}</td>
 									<td align="center" bgcolor="#FFFFFF">{$vo.TEL}</td>
 									<td align="center" bgcolor="#FFFFFF">
-										<a style="color:#00aa00" href=<?php echo "__ROOT__/user/modaddr?id=".$vo["id"]; ?>>修改</a>
+									<script type="text/javascript">
+									var doc = '<a style="color:#00aa00" href="javascript:modAddrI(' + (index - 1) + ')">修改</a>';
+									document.write(doc);
+									</script>
 										&nbsp
 										<a style="color:#ff0000" href=<?php echo "__ROOT__/user/deladdr?id=".$vo["id"]; ?>>删除</a>
 									</td>
