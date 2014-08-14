@@ -5,6 +5,14 @@
 	<title>用户中心-专业的广告游戏平台</title>
 	<include file="public:com"/>
 	<load href='__CSS__/myprize.css'/>
+<script type="text/javascript">
+var a = {
+	NAME1:"",PROVINCE1:"",CITY1:"",ADDRESS1:"",PCODE1:"",TEL1:"",DEFAULT1:"",
+	NAME2:"",PROVINCE2:"",CITY2:"",ADDRESS2:"",PCODE2:"",TEL2:"",DEFAULT2:"",
+	NAME3:"",PROVINCE3:"",CITY3:"",ADDRESS3:"",PCODE3:"",TEL3:"",DEFAULT3:"",
+};
+alert(a["y"]); 
+</script>
 </head>
 
 <body>
@@ -35,7 +43,7 @@
 								<td width="15%" align="center" class="tdstyle">时间</td>
 							</tr>
 							<volist name="db_duijiang" id="vo">
-								<tr class="font_bgrave" height="30">
+								<tr height="30">
 									<td height="20" align="center" bgcolor="#FFFFFF">{$vo.p_name}</td>
 									<td align="center" bgcolor="#FFFFFF">
 										<span class="c1 b1">
@@ -48,7 +56,9 @@
 											<script type="text/javascript">showPState({$vo.state});</script>
 										</span>
 										&nbsp;
-										<img src="../static/style/guobi.gif"></td>
+										<?php if($vo["state"] == "1"): ?>
+										<a href="#">查看</a>
+										<?php endif; ?></td>
 									<td align="center" bgcolor="#FFFFFF">2014-7-14 12:55:48</td>
 								</tr>
 							</volist>
@@ -57,99 +67,131 @@
 					<include file="public:pagebot"/>
 				</div>
 				<div id="imfo_edit2" style="display:none">
-					<div class="account_right_messeage_titlered">&nbsp;&nbsp;新增邮寄地址</div>
-					<div style="width: 770px">
+					<div id="addrEdit">
+						<div class="account_right_messeage_titlered">&nbsp;&nbsp;新增邮寄地址</div>
 						<div class="account_right_messeageL"></div>
 						<form name="useredit" method="post" action="__ROOT__/user/addAddr" id="useredit">
-						<table width="770px" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-							<tbody>
-								<tr>
-									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">姓名：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width: 529px;"><input name="NAME" type="text" id="NAME" maxlength="6" value=""></td>
-								</tr>
-								<tr>
-									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">所在城市：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width: 529px"><load href='__JS__/Area.js'/>市
-										<span style="color: Red">*</span>
-									</td>
-								</tr>
-								<tr>
-									<td width="200" height="60px" align="right" bgcolor="#f4f4f4">街道地址：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width: 529px">
-									<textarea name="ADDRESS" id="ADDRESS" style="width: 300px;height:50px;margin-left:2px;"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">邮政编码：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width: 529px">
-									<input name="PCODE" type="text" id="PCODE" maxlength="6" value="" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,"")"><span style="color:Red">*</span>大陆以外可不填写
-									</td>
-								</tr>
-								<tr valign="middle">
-									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">联系电话：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width: 529px" valign="center">
-										<div style="width:400px;float:left;padding-top:5px;">
-											<span id="span_tel1">
-												<input name="TEL" type="text" id="TEL" maxlength="11" placeholder="请输入手机号或固定电话" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)"><span style="color:Red;">*</span>请确保电话正确，否则快递无法送达</span>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td width="200" height="36px" align="right" bgcolor="#f4f4f4">验证码：</td>
-									<td align="left" bgcolor="#FFFFFF" style="width:529px;">
-									<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" maxlength="10" style=" width:80px;margin-left:2px;" value="">&nbsp;
-									<img src="/syscoin/bieggs/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-5px;" border="0"><img id="code_tip" src="" style="width:18px; height:18px; display:none"></td>
-								</tr>
-								<tr>
-									<td colspan="2" height="50" bgcolor="#f4f4f4" align="center">&nbsp;&nbsp;<input type="submit" name="submit" class="frmbtn_2" value="" onclick="return checkAddr()"></td>
-								</tr>
-							</tbody>
-						</table>
+							<table width="770px" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+								<tbody>
+									<tr>
+										<td width="200" height="36px" align="right" bgcolor="#f4f4f4">姓名：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width: 529px;">
+											<input name="NAME" type="text" id="NAME" maxlength="6" value=""></td>
+									</tr>
+									<tr>
+										<td width="200" height="36px" align="right" bgcolor="#f4f4f4">所在城市：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width: 529px">
+											<load href='__JS__/Area.js'/>
+											市
+											<span style="color: Red">*</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="200" height="60px" align="right" bgcolor="#f4f4f4">街道地址：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width: 529px">
+											<textarea name="ADDRESS" id="ADDRESS" style="width: 300px;height:50px;margin-left:2px;"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td width="200" height="36px" align="right" bgcolor="#f4f4f4">邮政编码：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width: 529px">
+											<input name="PCODE" type="text" id="PCODE" maxlength="6" value="" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,"")">
+											<span style="color:Red">*</span>
+											大陆以外可不填写
+										</td>
+									</tr>
+									<tr valign="middle">
+										<td width="200" height="36px" align="right" bgcolor="#f4f4f4">联系电话：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width: 529px" valign="center">
+											<div style="width:400px;float:left;padding-top:5px;">
+												<span id="span_tel1">
+													<input name="TEL" type="text" id="TEL" maxlength="11" placeholder="请输入手机号或固定电话" onkeyup="this.value=this.value.replace(/[^0-9.]/gi,&quot;&quot;)">
+													<span style="color:Red;">*</span>
+													请确保电话正确，否则快递无法送达
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td width="200" height="36px" align="right" bgcolor="#f4f4f4">验证码：</td>
+										<td align="left" bgcolor="#FFFFFF" style="width:529px;">
+											<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" maxlength="10" style=" width:80px;margin-left:2px;" value="">
+											&nbsp;
+											<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-5px;" border="0">
+											<img id="code_tip" src="" style="width:18px; height:18px; display:none"></td>
+									</tr>
+									<tr>
+										<td colspan="2" height="50" bgcolor="#f4f4f4" align="center">
+											&nbsp;&nbsp;
+											<input type="submit" name="submit" class="frmbtn_2" value="" onclick="return checkAddr()"></td>
+									</tr>
+								</tbody>
+							</table>
 						</form>
-						<div class="account_right_messeage_titlered">&nbsp;&nbsp;已保存的邮寄地址</div>
-						<table width="770px" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="border:#cfcfcf 1px solid;">
-							<tbody>
-								<tr class="H_top" height="10px">
-									<td align="center" width="5%">收货人</td>
-									<td align="center" width="5%">所在城市</td>
-									<td align="center" width="10%">街道地址</td>
-									<td align="center" width="5%">邮编</td>
-									<td align="center" width="8%">手机电话</td>
-									<td align="center" width="5%"></td>
-									<td align="center" width="5%">操作</td>
-								</tr>
-							</tbody>
-						</table>
-						<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td align="left" height="30">
-										*最多保存 <font color="red">3</font>
-										条有效地址
+					</div>
+					<script type="text/javascript">
+						hAddrEdit({$db_user_addr_cnt});
+					</script>
+					<div class="account_right_messeage_titlered">&nbsp;&nbsp;已保存的邮寄地址</div>
+					<table width="770px" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="border:#cfcfcf 1px solid;">
+						<tbody>
+							<tr class="H_top" height="10px">
+								<td align="center" width="3%">收货人</td>
+								<td align="center" width="4%">所在省份</td>
+								<td align="center" width="4%">所在城市</td>
+								<td align="center" width="15%">街道地址</td>
+								<td align="center" width="3%">邮编</td>
+								<td align="center" width="6%">手机电话</td>
+								<td align="center" width="4%">操作</td>
+							</tr>
+							<volist name="db_user_addr" id="vo">
+								<tr height="30">
+									<td height="20" align="center" bgcolor="#FFFFFF">{$vo.NAME}</td>
+									<td align="center" bgcolor="#FFFFFF">{$vo.PROVINCE}</td>
+									<td align="center" bgcolor="#FFFFFF">{$vo.CITY}</td>
+									<td align="center" bgcolor="#FFFFFF">{$vo.ADDRESS}</td>
+									<td align="center" bgcolor="#FFFFFF">{$vo.PCODE}</td>
+									<td align="center" bgcolor="#FFFFFF">{$vo.TEL}</td>
+									<td align="center" bgcolor="#FFFFFF">
+										<a style="color:#00aa00" href=<?php echo "__ROOT__/user/modaddr?id=".$vo["id"]; ?>>修改</a>
+										&nbsp
+										<a style="color:#ff0000" href=<?php echo "__ROOT__/user/deladdr?id=".$vo["id"]; ?>>删除</a>
 									</td>
 								</tr>
-							</tbody>
-						</table>
-						<div class="account_right_messeage_jg33"></div>
-						<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td align="left" height="80">
-										备注：
-										<br>
-										1、QQ号码在您兑换虚拟奖品时使用，请保证QQ号码的正确。
-										<br>
-										<br>
-										2、联系电话和手机在您兑换实物奖品时使用，快递公司通过您填写的电话与您联系，错误的电话可能导致您无法收到奖品。
-										<br></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+
+							</volist>
+						</tbody>
+					</table>
+					<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td align="left" height="30">
+									*最多保存 <font color="red">3</font>
+									条有效地址
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="account_right_messeage_jg33"></div>
+					<table width="770px" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td align="left" height="80">
+									备注：
+									<br>
+									1、QQ号码在您兑换虚拟奖品时使用，请保证QQ号码的正确。
+									<br>
+									<br>
+									2、联系电话和手机在您兑换实物奖品时使用，快递公司通过您填写的电话与您联系，错误的电话可能导致您无法收到奖品。
+									<br></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
-	<include file="public:footer"/>
+</div>
+<include file="public:footer"/>
 </body>
 </html>

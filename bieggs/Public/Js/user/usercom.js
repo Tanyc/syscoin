@@ -50,6 +50,12 @@ function showPState(stat){
     }
 }
 
+function hAddrEdit(cnt){
+    if (cnt >= 3) {
+        $("#addrEdit").css("display","none");
+    };
+}
+
 function checkAddr(){ //myprize页验证表单
     if (isNil($("#NAME").val())) {
         alert("请输入姓名！");

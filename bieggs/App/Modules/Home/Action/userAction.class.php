@@ -70,13 +70,20 @@ class userAction extends loginAction{
 
     public function myprize(){
         $this->assign('PAGE_NAVII',5); //我的兑奖
+        $UID = $_SESSION[C('USER_AUTH_KEY')];
         
-        $prize = M("Duijiang");
+        $db_duijiang = M("Duijiang");
         $index = isNil($this->_param("pg"))? 1 : $this->_param("pg");
-        $pagedata = $prize->order("state ASC")->page($index,10)->select();
-        $this->assign('db_duijiang',$pagedata); //所有金蛋
+        $pagedata = $db_duijiang->where("user_id=".$UID)->order("state ASC")->page($index,10)->select();
+        $this->assign('db_duijiang',$pagedata); 
+        $this->initCom($db_duijiang->count(),$index);
 
-        $this->initCom($prize->count(),$index);
+        $db_user_addr = M("UserAddr");
+        $addrdata = $db_user_addr->where("UID=".$UID)->select();
+        $cnt = $db_user_addr->where("UID=".$UID)->count();
+        $this->assign('db_user_addr',$addrdata);
+        $this->assign('db_user_addr_cnt',$cnt);
+
         $this->display();
     }
 
@@ -247,6 +254,21 @@ class userAction extends loginAction{
         $data['PCODE']    = $_POST["PCODE"];
         $data['TEL']      = $_POST["TEL"];
         $db_user_addr->add($data);
+        $this->success();
+    }
+
+    public function modaddr(){
+        $db_user_addr = M("UserAddr");
+        $addrdata = $db_user_addr->where("UID=".$UID)->select();
+        $this->assign('db_user_addr',$addrdata);
+    }
+
+    public function deladdr(){
+        $id = $this->_param("id");
+        $UID = $_SESSION[C('USER_AUTH_KEY')];
+
+        $db_user_addr = M("UserAddr");
+        $addrdata = $db_user_addr->where("id=".$id." and UID=".$UID)->delete();
         $this->success();
     }
     
