@@ -57,3 +57,6 @@ padding: 5px;
 line-height: 24px;
 text-align: center;
 }
+.tip{
+	font-size:12px;color:#00aa00;text-align: left;
+}

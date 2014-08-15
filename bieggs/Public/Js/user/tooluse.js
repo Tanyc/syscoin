@@ -36,4 +36,5 @@ function showTipI(k){
         $('.dcard' + i).hide();
     };
     $('.dcard' + k).show();
+    $('.tip').show();
 }
