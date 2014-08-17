@@ -38,6 +38,10 @@ function verdoc(n){
 	document.write(ver(n));
 }
 
+function dever(str){ 
+	return str.replace(/,/g,"");
+}
+
 function loginsb(){
 	if (!isCode) {
 		alert("验证码错误");
@@ -132,4 +136,12 @@ function showFloatWindow(isShow,from,isf_pwd){
 		document.getElementById("PCShowWindowBg").style.display='none';
 		document.getElementById("pc_showloginparent").style.display='none';
 	}
+}
+
+function checkIfPlusNum(str){
+	var reg=/^[1-9]\d*$/gi;
+	if(reg.test(str)){
+		return true;
+	}
+	return false;
 }

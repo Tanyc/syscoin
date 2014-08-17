@@ -105,26 +105,35 @@ class userAction extends loginAction{
         $this->display();
     }
 
-    public function vipget(){
-        $this->assign('PAGE_NAVII',9); //vip每日领取
+    public function salary(){
+        $this->assign('PAGE_NAVII',9); //工资领取
         
+        $authInfo = D('User')->getAuthInfo();
+        $data["eggs"] = $authInfo["eggs"];
+        $data["deposit"] = $authInfo["deposit"];
+        $this->assign($data);
+
+        $UID = $_SESSION[C('USER_AUTH_KEY')];
+        $db_deposit = M("Deposit");
+        $index = isNil($this->_param("pg"))? 1 : $this->_param("pg");
+        $this->assign("db_deposit",$db_deposit->where("UID=".$UID)->page($index,10)->select());
+        $this->initCom($db_deposit->where("UID=".$UID)->count(),$index); //翻页
+
+        if ("" != $this->_param("pg")) {
+            $this->assign("deftab",3);
+        }
+
         $this->display();
     }
 
-    public function salary(){
+    public function myfriend(){
         $this->assign('PAGE_NAVII',10); //工资领取
         
         $this->display();
     }
 
-    public function myfriend(){
-        $this->assign('PAGE_NAVII',11); //工资领取
-        
-        $this->display();
-    }
-
     public function invite(){
-        $this->assign('PAGE_NAVII',12); //工资领取
+        $this->assign('PAGE_NAVII',11); //工资领取
         
         $this->display();
     }
@@ -211,10 +220,9 @@ class userAction extends loginAction{
                 }
             }
             if ($_POST["qq"] && "" != $_POST["qq"]) {
-                // if (!verifyPhone($_POST["qq"])) {
-                //     $this->error('操作非法！');
-                //     return;
-                // }
+                if (!verifyQQ($_POST["qq"])) {
+                    $this->error('操作非法！');
+                }
                 if ("" == $authInfo["qq"]) {
                     $user_db->updateField("qq",$_POST["qq"]);
                 }
@@ -222,7 +230,6 @@ class userAction extends loginAction{
             if ($_POST["phone"] && "" != $_POST["phone"]) {
                 if (!verifyPhone($_POST["phone"])) {
                     $this->error('操作非法！');
-                    return;
                 }
                 if ("" == $authInfo["phone"]) {
                    $user_db->updateField("phone",$_POST["phone"]);
@@ -270,6 +277,63 @@ class userAction extends loginAction{
         $db_user_addr = M("UserAddr");
         $addrdata = $db_user_addr->where("id=".$id." and UID=".$UID)->delete();
         $this->success();
+    }
+
+    public function handegg(){
+        $eggs = dever($_POST["cashbox"]);
+        $UID = $_SESSION[C('USER_AUTH_KEY')];
+        if (!checkIfPlusNum($eggs)) {
+            $this->error("输入数字非法！");
+        }
+        $authInfo = D('User')->getAuthInfo();
+        if (0 == $_POST["optype"]) { //put
+            if ($authInfo["eggs"] < $eggs) {
+                $this->error("账户金蛋不足！"); //账户金蛋不足
+            }
+            $data['eggs'] = $authInfo["eggs"] - $eggs;
+            $data['deposit'] = $authInfo["deposit"] + $eggs;
+        }else{ //get
+            if ($authInfo["s_key"] != md5($_POST["cashpassword"])) {
+                $this->error("金库密码错误！");
+            }
+            if ($authInfo["deposit"] < $eggs) {
+                $this->error("金库金蛋不足！"); //账户金蛋不足
+            }
+            $data['eggs'] = $authInfo["eggs"] + $eggs;
+            $data['deposit'] = $authInfo["deposit"] - $eggs;
+        }
+        /***************record*****************/
+        $deposit           = array();
+        $deposit["UID"]    = $UID;
+        $deposit["TYPE"]   = $_POST["optype"];
+        $deposit["DMONEY"] = $eggs;
+        $deposit["SMONEY"] = $data['deposit'];
+        $deposit["CTIME"]  = time();
+        M("Deposit")->add($deposit);
+
+        $result = D("User")->updateFields($data);
+        $this->success("操作成功！");
+    }
+
+    public function modskey(){
+        if (!checkKey($_POST["pass_new"]) || !checkKey($_POST["pass2"]) || $_POST["pass_new"] != $_POST["pass2"]) {
+            $this->error("操作非法");
+        }
+        $authInfo = D('User')->getAuthInfo();
+        if ("" == $_POST["pass_old"]) { //not set key
+            if ("" != $authInfo["s_key"]) {
+                $this->error("请输入旧密码！");
+            }
+        }else{ //set key
+            if ($_POST["pass_old"] == $_POST["pass_new"]) {
+                $this->error("输入非法，新密码与就旧密码一样！");
+            }
+            if (md5($_POST["pass_old"]) != $authInfo["s_key"]) {
+                $this->error("旧密码输入错误！");
+            }
+        }
+        D('User')->updateField("s_key",md5($_POST["pass_new"]));
+        $this->success("密码修改成功，请妥善保管！");
     }
     
 }

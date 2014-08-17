@@ -40,11 +40,15 @@ function verifyPhone($phone){
 	return true;
 }
 
+function dever($str){ 
+	return str_replace(",","",$str);
+}
+
 function verifyQQ($qq){ //此函数好像有问题
 	if(strlen($qq) < 5){
 		return false;
 	}else{
-		if(!preg_match("/^[1-9]\d$/",$qq)){
+		if(!preg_match("/^[1-9]\d*$/",$qq)){
 			return false;
 		}
 	}
@@ -90,6 +94,20 @@ function checkName($name){
 
 function checkSCard($num){
 	if (isNil($num) || (strlen($num) != 15 && strlen($num) != 18)) {
+		return false;
+	};
+	return true;
+}
+
+function checkIfPlusNum($str){
+	if(preg_match("/^[1-9]\d*$/",$str)){
+		return true;
+	}
+	return false;
+}
+
+function checkKey($key){
+	if (isNil($key) || strlen($key) < 6) {
 		return false;
 	};
 	return true;

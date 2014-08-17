@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS `bi_user`;
 CREATE TABLE `bi_user` (
   `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(40) NOT NULL,
+  `key` varchar(18) NOT NULL,
   `status` smallint(1),
-  `s_key` varchar(40) NOT NULL,
+  `s_key` varchar(18) NOT NULL,
   `nick` varchar(10),
   `desc` varchar(100),
   `headimg` int(2),
@@ -11,10 +11,10 @@ CREATE TABLE `bi_user` (
   `phone` varchar(12),
   `qq` varchar(12),
   `iplimit` int(1),
-  `range` int(8) unsigned NOT NULL,
-  `eggs` int(12) unsigned NOT NULL,
-  `maxeggs` int(12) unsigned NOT NULL,
-  `deposit` int(12) unsigned NOT NULL,
+  `range` int(1) unsigned NOT NULL,
+  `eggs` varchar(12) NOT NULL,
+  `maxeggs` varchar(13) NOT NULL,
+  `deposit` varchar(12) NOT NULL,
   `exp` int(4) unsigned NOT NULL,
   `jifen` int(5) unsigned NOT NULL,
   `grow` int(4) unsigned NOT NULL,
@@ -59,4 +59,4 @@ CREATE TABLE `bi_user` (
 -- sms_login：登录是否需要短信验证
 -- addr:个人地址
 
-INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第一', '我游戏，我快乐，我要赚钱养家！','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","");
+INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第一', '我游戏，我快乐，我要赚钱养家！','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451254','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","");

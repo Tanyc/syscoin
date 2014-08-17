@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>晒奖-专业的广告游戏平台</title>
+    <include file="public:com"/>
+    <load href='__CSS__/grule.css'/>
+    <load href='__JS__/glory/addnew.js'/>
+</head>
+<body>
+    <include file="public:header"/>
+    <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+    <div id="body_content">
+        <include file="public:textrun"/>
+        <div class="doc">
+            <include file="public:glorynavi"/>
+            <div class="tlq_beta3_main_box_wxts">
+                <div class="tlq_item">
+                    <span class="title">晒奖标题：</span>
+                    <input type="text" class="tlq_item_bd" value="" id="subject">
+                    <span class="tlq_beta3_g12">
+                        &nbsp;&nbsp;* 标题不能超过&nbsp;
+                        <span class="tlq_beta3_red12b">25</span>
+                        &nbsp;个汉字
+                    </span>
+                </div>
+                <div class="tlq_item">
+                    <div>
+                        <span class="title">晒奖感言：</span>
+                    </div>
+                    <textarea id="content" maxlength="300" class="tlq_main_content"></textarea>
+                </div>
+                <div class="tlq_item">
+                    <span class="title">上传图片：</span>
+                    共可上传&nbsp;
+                    <span class="title">6</span>
+                    &nbsp;张图片，亲要把握好机会，把最美的图片发给大家看哦。
+                </div>
+                <div class="tlq_main" style="height:60px;">
+                    <iframe frameborder="0" scrolling="no" src="./upload.html" height="60" width="740"></iframe>
+                </div>
+                <div class="subimg">
+                    <a onclick="submitvaluet()" style="cursor:pointer">
+                        <img src="__IMAGES__/glory/tlq_fbsj.gif"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="public:footer"/>
+</body>
+</html>

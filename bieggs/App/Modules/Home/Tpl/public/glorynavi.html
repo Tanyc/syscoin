@@ -1,0 +1,33 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <load href='__CSS__/glorynavi.css'/>
+</head>
+<div class="layout_wz">
+  <img src="__IMAGES__/glory/sj_topt.jpg">
+</div>
+<div class="layout_nav">
+    <div class="layout_nav_l">
+        <ul>
+            <li class="glory_tab_0">
+                <a href="{:U('index')}">玩家晒奖</a>
+            </li>
+            <li class="line">|</li>
+            <li class="glory_tab_1">
+                <a href="{:U('index?extra1=1')}">我的晒奖</a>
+            </li>
+        </ul>
+    </div>
+    <div class="layout_nav_r">
+        <ul>
+            <li class="glory_tab_4">
+                <a href="{:U('rule')}">
+            <img src="__IMAGES__/glory/gz_an.gif"></a>
+            </li>
+            <li class="glory_tab_3">
+                <a href="{:U('addnew')}">
+            <img src="__IMAGES__/glory/sj_an.gif"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<style type="text/css">.glory_tab_<?php echo (($m_tab)? $m_tab : 0); ?>{background:url(__IMAGES__/glory/sj_nav_xzbg.png) center bottom no-repeat; height:51px;font-weight:bold;}</style>

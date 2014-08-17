@@ -14,62 +14,178 @@
 		<div class="wal">
 			<include file="public:usernavi"/>
 			<div class="content_r">
-				<div class="H_top"> <b>工资领取</b>
+				<div class="H_top"> <b>金库账户管理</b>
 				</div>
 				<div class="H_l_top">
 					<span>
-						<a href="javascript:setData(1);" id="tab1" class="a_bg1">工资领取</a>
+						<a href="javascript:setData(1);" id="tab1" class="a_bg1">金蛋存取</a>
 					</span>
 					<span>
-						<a href="javascript:setData(2);" id="tab2">存取款操作</a>
+						<a href="javascript:setData(2);" id="tab2">金库密码修改</a>
 					</span>
 					<span>
-						<a href="javascript:setData(3);" id="tab3">工资介绍</a>
+						<a href="javascript:setData(3);" id="tab3">操作记录</a>
 					</span>
 				</div>
 				<div id="imfo_edit1" style="padding-top: 10px;">
-					<form id="form3" name="form3" method="post" action="?m=do" onsubmit="return checkup()">
-						<table width="100%" border="0" cellspacing="0" cellpadding="5" style="margin-bottom:10px">
+					<div class="B_bor" style="width:80%;">
+						您的当前帐户总金额为
+						<span style="color: Red">
+							<script type="text/javascript">verdoc({$eggs} + {$deposit})</script>
+						</span>
+						<img src="__IMAGES__/public/egg.png" width="10" height="12">
+						， 其中小金库存款为
+						<span style="color: Red">
+							<script type="text/javascript">verdoc('{$deposit}');var KEGGS = {$deposit};</script>
+						</span>
+						<img src="__IMAGES__/public/egg.png" width="10" height="12">
+						<a href="#"></a>
+						，流动资金为
+						<span style="color: Red">
+							<script type="text/javascript">verdoc('{$eggs}');var LEGGS = {$eggs};</script>
+						</span>
+						<img src="__IMAGES__/public/egg.png" width="10" height="12">。小金库帮您保存账号中的金蛋，平时存入，需要的时候再取出，有小金库密码作为安全保障。</div>
+					<p>&nbsp;</p>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+						<form name="handegg" method="post" action="__ROOT__/user/handegg" id="handegg">
 							<tbody>
 								<tr>
-									<td colspan="3" align="center">
-										<div class="B_bor c3">请输入道具卡详细信息，道具相关功能在系统确认后立即生效。</div>
+									<td height="36" align="right" bgcolor="#f8f8f8">选择操作&nbsp;</td>
+									<td align="left" bgcolor="#FFFFFF">
+										<div style="margin-left: 10px;">
+											<select name="optype" id="optype" onchange="changebox(this.value);">
+												<option value="0">存入金蛋</option>
+												<option value="1">取出金蛋</option>
+											</select>
+											选择您要存入金蛋还是取出金蛋
+										</div>
 									</td>
 								</tr>
-								<tr height="10">
-									<td colspan="3">&nbsp;</td>
+								<tr>
+									<td width="40%" height="36" align="right" bgcolor="#f8f8f8">输入金蛋数&nbsp;</td>
+									<td width="60%" align="left" bgcolor="#FFFFFF" class="pdl10"> <strong><input type="text" name="cashbox" id="cashbox" class="input_text" maxlength="15" style="width: 180px" onkeyup="this.value=ver(this.value.replace(/[^0-9]/gi,&quot;&quot;))"></strong>
+									</td>
 								</tr>
-								<tr height="30">
-									<td colspan="3" align="left">
-										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">卡号：</span>
-										<input name="truename" type="text" class="input_temp" id="truename" size="15" value="">请输入卡号！</td>
-								</tr>
-								<tr height="30">
-									<td colspan="3" align="left">
-										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">密码：</span>
-										<input name="idcard" type="text" class="input_temp" id="idcard" size="15" value="">请输入卡号对应密码！</td>
-								</tr>
-								<tr height="20">
-									<td colspan="3">&nbsp;</td>
+								<tr id="box_psw" style="display:none">
+									<td height="36" align="right" bgcolor="#f8f8f8">输入金库密码&nbsp;</td>
+									<td height="30" align="left" bgcolor="#FFFFFF" class="pdl10"> <strong><input type="password" name="cashpassword" id="cashpassword" class="input_text" style="width: 180px"></strong>
+										&nbsp;&nbsp;
+										请确保金库密码已设置！
+									</td>
 								</tr>
 								<tr>
-									<td colspan="3" align="left">
-										<span style="margin-left:30px;width:85px;text-align:right;float:Left;line-height:23px;">&nbsp;</span>
-										<input name="Submit3" type="button" class="frmbtn_2"></td>
+									<td height="63" colspan="2" align="center" bgcolor="#FFFFFF">
+										<input type="submit" name="submit" class="frmbtn_2" value="" onclick="return subHandEgg()"/>
+									</td>
+								</tr>
+							</form>
+						</tbody>
+					</table>
+				</div>
+				<div id="imfo_edit2" style="padding-top: 10px; display:none">
+					<form name="handegg" method="post" action="__ROOT__/user/modskey" id="modskey">
+						<table width="100%" border="0" cellspacing="0" cellpadding="5">
+							<tbody>
+								<tr>
+									<td align="left" style="line-height: 24px; border: dashed 1px #ccc; color: #cd0000">
+										<div class="B_bor">提示：金库密码长度应该在6～18位之间，金库密码为你的财产安全提供保障，修改后请妥善保管。</div>
+									</td>
 								</tr>
 							</tbody>
 						</table>
-					</form>
-				</div>
-				<div id="imfo_edit2" style="padding-top: 10px; display:none">
-					工资的存取款
-				</div>
-				<div id="imfo_edit3" style="padding-top: 10px; display:none">
-					工资的介绍
-				</div>
-			</div>
+						<p>&nbsp;</p>
+						<div id="Panel1"></div>
+						<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+							<tbody>
+								<tr>
+									<td width="38%" height="36" align="right" bgcolor="#F8f8f8">输入旧金库密码&nbsp;</td>
+									<td width="62%" align="left" bgcolor="#FFFFFF" class="pdl10">
+										<input name="pass_old" type="password" id="pass_old" maxlength="20" style="width: 180px" placeholder="没有设置请不要输入" class="input_text">
+										&nbsp;
+										<a href="/myaccount/CashboxPsw_forget.aspx" style="color:#325e7f">忘记小金库密码？</a>
+									</td>
+								</tr>
+
+								<tr>
+									<td width="38%" height="36" align="right" bgcolor="#F8f8f8">设置金库密码&nbsp;</td>
+									<td width="62%" align="left" bgcolor="#FFFFFF" class="pdl10">
+										<input name="pass_new" type="password" id="pass_new" maxlength="20" style="width: 180px" class="input_text">&nbsp;</td>
+								</tr>
+								<tr>
+									<td height="36" align="right" bgcolor="#F8f8f8">重新输入金库密码&nbsp;</td>
+									<td height="30" align="left" bgcolor="#FFFFFF" class="pdl10">
+										<strong>
+											<input name="pass2" type="password" id="pass2" maxlength="20" style="width: 180px" class="input_text"></strong>
+									</td>
+								</tr>
+								<!-- 							<tr>
+								<td height="36" align="right" bgcolor="#F8f8f8">验证码&nbsp;</td>
+								<td height="30" align="left" bgcolor="#FFFFFF" class="pdl10">
+									<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" size="10" maxlength="4" value="">
+									<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-5px;" border="0">
+									<img id="code_tip" src="" style="width:18px; height:18px; display:none"></td>
+							</td>
+						</tr>
+						-->
+						<tr>
+							<td height="56" colspan="2" align="center" bgcolor="#FFFFFF">
+								<input type="submit" name="submit" class="frmbtn_2" value="" onclick="return modS_Key()"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div id="imfo_edit3" style="padding-top: 10px; display:none">
+			<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
+				<tbody>
+					<tr align="center" height="33px">
+						<td width="20%" align="center" class="tdstyle">金蛋获取/消费</td>
+						<td width="25%" align="center" class="tdstyle">存取数量</td>
+						<td width="25%" align="center" class="tdstyle">金库余额</td>
+						<td width="20%" align="center" class="tdstyle">时间</td>
+					</tr>
+					<volist name="db_deposit" id="vo">
+						<tr class="font_bgrave" height="30">
+							<td align="center" bgcolor="#FFFFFF">
+							<script type="text/javascript">
+								if (0 == {$vo.TYPE}) {
+									document.write("存入");
+								}else{
+									document.write("取出");
+								}
+							</script>
+							</td>
+							<td align="center" bgcolor="#FFFFFF">
+							<script type="text/javascript">
+							verdoc({$vo.DMONEY});</script>
+							</td>
+							<td align="center" bgcolor="#FFFFFF"><script type="text/javascript">
+							verdoc({$vo.SMONEY});</script></td>
+							<td align="center" bgcolor="#FFFFFF">{$vo.CTIME}</td>
+						</tr>
+					</volist>
+				</tbody>
+			</table>
+			<script type="text/javascript">
+			if (3 == {$deftab}) {
+				var n = 3;
+			    for (var i = 1; i <= 3; i++){
+			        if (i == n) {
+			            $("#tab" + i).addClass("a_bg1");
+			            $("#imfo_edit" + i).css("display", "");
+			        } else {
+			            $("#tab" + i).removeClass("a_bg1");
+			            $("#imfo_edit" + i).css("display", "none");
+			        }
+			    }
+			};
+			</script>
+			<include file="public:pagebot"/>
 		</div>
 	</div>
+</div>
+</div>
 </div>
 <include file="public:footer"/>
 </body>

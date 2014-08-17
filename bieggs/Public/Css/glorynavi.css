@@ -1,0 +1,8 @@
+.layout_wz{ width:980px; height:126px; margin:0 auto;}
+.layout_nav{width:970px; height:49px; margin:0 auto; line-height:50px; border-bottom:2px solid #C30000; margin-bottom:10px;}
+.layout_nav_l{ float:left; width:400px; height:51px;}
+.layout_nav_l ul li{ float:left; padding:0px 14px; font-size:14px;}
+
+.layout_nav_r{ float:right; width:400px; height:51px;}
+.layout_nav_r ul li{ float:right; padding:0px 14px; font-size:14px;}
+.layout_nav_r img{margin-top:12px;}

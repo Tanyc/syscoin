@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户中心-专业的广告游戏平台</title>
 	<include file="public:com"/>
-	<load href='__CSS__/account.css' />
 	<load href='__JS__/user/usercom.js'/>
 </head>
 
@@ -38,6 +37,7 @@
 						<tr align="center" height="33px">
 							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
 							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
+							<td width="20%" align="center" class="tdstyle">账户余额</td>
 							<td width="15%" align="center" class="tdstyle">时间</td>
 						</tr>
 						<volist name="db_user_pageeggs" id="vo">
@@ -52,8 +52,10 @@
 							</if>
 							</td>
 							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1"><script type="text/javascript">verdoc({$vo.SMONEY})</script></span>
-								&nbsp;
+								<script type="text/javascript">verdoc({$vo.SMONEY})</script>
+								<img src="__IMAGES__/public/egg.png"></td>
+							<td align="center" bgcolor="#FFFFFF">
+								<script type="text/javascript">verdoc({$vo.ALLMONEY})</script>
 								<img src="__IMAGES__/public/egg.png"></td>
 							<td align="center" bgcolor="#FFFFFF">{$vo.CTIME}</td>
 						</tr>
@@ -68,6 +70,7 @@
 						<tr align="center" height="33px">
 							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
 							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
+							<td width="20%" align="center" class="tdstyle">账户余额</td>
 							<td width="15%" align="center" class="tdstyle">时间</td>
 						</tr>
 						<volist name="db_user_eggs" id="vo">
@@ -75,10 +78,12 @@
 						<tr class="font_bgrave" height="30">
 							<td height="20" align="center" bgcolor="#FFFFFF">{$vo.NAME}</td>
 							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1"><script type="text/javascript">
+								<script type="text/javascript">
 								verdoc({$vo.SMONEY});
-								</script></span>
-								&nbsp;
+								</script>
+								<img src="__IMAGES__/public/egg.png"></td>
+								<td align="center" bgcolor="#FFFFFF">
+								<script type="text/javascript">verdoc({$vo.ALLMONEY})</script>
 								<img src="__IMAGES__/public/egg.png"></td>
 							<td align="center" bgcolor="#FFFFFF">{$vo.CTIME}</td>
 						</tr>
@@ -91,6 +96,7 @@
 						<tr align="center" height="33px">
 							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
 							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
+							<td width="20%" align="center" class="tdstyle">账户余额</td>
 							<td width="15%" align="center" class="tdstyle">时间</td>
 						</tr>
 						<volist name="db_user_eggs" id="vo">
@@ -98,10 +104,12 @@
 						<tr class="font_bgrave" height="30">
 							<td height="20" align="center" bgcolor="#FFFFFF">{$vo.NAME}</td>
 							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1"><script type="text/javascript">
+								<script type="text/javascript">
 								verdoc({$vo.SMONEY});
-								</script></span>
-								&nbsp;
+								</script>
+								<img src="__IMAGES__/public/egg.png"></td>
+								<td align="center" bgcolor="#FFFFFF">
+								<script type="text/javascript">verdoc({$vo.ALLMONEY})</script>
 								<img src="__IMAGES__/public/egg.png"></td>
 							<td align="center" bgcolor="#FFFFFF">{$vo.CTIME}</td>
 						</tr>
@@ -114,6 +122,7 @@
 						<tr align="center" height="33px">
 							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
 							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
+							<td width="20%" align="center" class="tdstyle">账户余额</td>
 							<td width="15%" align="center" class="tdstyle">时间</td>
 						</tr>
 						<volist name="db_user_eggs" id="vo">
@@ -121,10 +130,12 @@
 						<tr class="font_bgrave" height="30">
 							<td height="20" align="center" bgcolor="#FFFFFF">{$vo.NAME}</td>
 							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1"><script type="text/javascript">
+								<script type="text/javascript">
 								verdoc({$vo.SMONEY});
-								</script></span>
-								&nbsp;
+								</script>
+								<img src="__IMAGES__/public/egg.png"></td>
+								<td align="center" bgcolor="#FFFFFF">
+								<script type="text/javascript">verdoc({$vo.ALLMONEY})</script>
 								<img src="__IMAGES__/public/egg.png"></td>
 							<td align="center" bgcolor="#FFFFFF">{$vo.CTIME}</td>
 						</tr>

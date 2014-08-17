@@ -38,4 +38,9 @@ class UserModel extends Model {
         return $this->where('id='.$ID)->data($datas)->save();
     }
 
+    public function getFiledByUID($UID,$field){
+        $result = $this->where("id=".$UID)->find();
+        return $result[$field];
+    }
+
 }

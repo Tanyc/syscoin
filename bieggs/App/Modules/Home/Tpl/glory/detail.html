@@ -4,137 +4,79 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>晒奖-专业的广告游戏平台</title>
 	<include file="public:com"/>
-	<load href='__CSS__/glory.css' />
 	<load href='__CSS__/detail.css' />
-	<load href='__JS__/detail.js' />
+	<load href='__JS__/glory/glory.js' />
 </head>
 
 <body>
 	<include file="public:header"/>
 	<style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
-	<script type="text/javascript">img_path = '__IMAGES__';</script>
 	<div id="body_content">
 		<include file="public:textrun"/>
 		<div class="doc">
-			<div class="layout_wz">
-				<img src="__IMAGES__/glory/sj_topt.jpg"></div>
-			<div class="layout_nav">
-				<div class="layout_nav_l">
-					<ul>
-						<li class="glory_tab_0">
-							<a href="{:U('')}">玩家晒奖</a>
-						</li>
-						<li class="line">|</li>
-						<li class="glory_tab_1">
-							<a href="{:U('?extra1=1')}">我的晒奖</a>
-						</li>
-					</ul>
-				</div>
-				<div class="layout_nav_r">
-					<a href="http://www.pceggs.com/ShowPrize/ShowAdd.aspx">
-						<img src="__IMAGES__/glory/sj_an.gif"></a>
-					&nbsp;&nbsp;
-					<a href="http://www.pceggs.com/ShowPrize/showrule.aspx">
-						<img src="__IMAGES__/glory/gz_an.gif"></a>
-				</div>
-			</div>
+			<include file="public:glorynavi"/>
 			<div class="bbs_floor">
 				<div class="side">
-					<div class="author">
-						<div class="uname">
-							<a href="/pgComUserInfo.aspx?userid=15050175" class=" linkblue_a1">南方</a>
-						</div>
+					<div class="author" style="font-weight:bold">
+						<a href="/pgComUserInfo.aspx?userid=15050175" class=" linkblue_a1">{$nick}</a>
 					</div>
 					<div class="uavatar">
 						<a href="/pgComUserInfo.aspx?userid=15050175">
-							<img src="/img/tx_face/b_mt_05.jpg"></a>
+							<script type="text/javascript">
+								document.write('<img src="' + img_path + '/user/head/' + <?php echo($headimg? $headimg : 0) ?> + '.gif">');</script>
+						</a>
 					</div>
-					<p class="uabout">
-						<a href="/FriendInfor/Friendatten.aspx?userid=15050175"> <em>0</em>
-							关注
-						</a>
-						<a href="/FriendInfor/Friendfans.aspx?userid=15050175"> <em>0</em>
-							粉丝
-						</a>
-						<a href="/FriendInfor/FriendPrize.aspx?userid=15050175">
-							<em>13</em>
-							兑奖
-						</a>
-					</p>
-					<div style="width:130px; height:22px; padding-left:32px; padding-top:15px;">
-						<a href="javascript:Att_User(15050175,0);">
-							<img src="/img/ShowPrize/grzy_beta3_box_l_an_gzt.jpg" width="55" height="20"></a>
-						&nbsp;&nbsp;
-						<a href="/MyacCount/MsgSendTo.aspx?userid=15050175">
-							<img src="/img/ShowPrize/grzy_beta3_box_l_an_fxx.jpg" width="55" height="20"></a>
+					<div>
+						<div>
+							<p class="uabout">
+								<a href="">个人</a>
+								<a href="">游戏战绩</a>
+								<a href="">兑奖</a>
+							</p>
+						</div>
+						<div>
+							<a class="send_msg" href="/MyacCount/MsgSendTo.aspx?userid=15050175">
+								<img src="__IMAGES__/public/sendmsg.jpg" width="55" height="20"></a>
+						</div>
 					</div>
 				</div>
 				<div class="floor_r">
 					<div class="sider_topbt ">
 						<ul>
 							<li>
-								<span>我第一次实物兑奖的感受</span>
+								<span>{$db_glory.title}</span>
 							</li>
 							<li id="div_goodimg">
-								<img src="/nbbs/images/pink_2.gif" width="21px" height="20px"></li>
-							<li class="r">晒奖时间：2014-07-10 22:29</li>
+								<img src="__IMAGES__/public/jing.gif" width="21px" height="20px"></li>
+							<li style="float:right">晒奖时间：{$db_glory.CTIME}</li>
 						</ul>
 					</div>
 					<div class="tlq_beta3_sj_xuxian"></div>
 					<div class="sider ">
-						<div class="sider_wz">
-							从注册蛋蛋到今天为止，已经有1022天了。记得在去年的这个时候，玩幸运28正是高潮的时候，一天就得了2000多w，以后可想而知，心态乱了，最终都归了。痛并快乐着，因此我更喜欢蛋蛋，每一次在失败和成功中轮回。今天收到了玩蛋蛋以来兑换的第一件实物---先锋16GB手机内存卡，刚到我就迫不及待的打开安装到我的手机上，那种心情不予言表。我会继续玩下去，也衷心祝愿蛋蛋的明天更美好！！
-						</div>
+						<div class="sider_wz">{$db_glory.content}</div>
 						<div class="sider_wzpl">
 							<ul>
 								<li class="l"></li>
 								<li class="r">
-									<div class="tlq_beta3_sj_box_w_r_bottom_r_b ">
-										<a class="z_an" id="z_an" href="javascript:AddPraise('8002546','10')">
-											<span>赞(10)</span>
-										</a>
-										&nbsp;&nbsp;&nbsp;
-										<a class="pl_an" href="#fatie">
-											<span>评论(3)</span>
-										</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="tlq_beta3_sj_bgimg">
-							<img src="http://fs.pceggs.com/pic/2014-07-10/201407102224543046462.jpg_b.jpg" width="600px"></div>
-
-						<div class="tlq_beta3_sj_bgimg">
-							<img src="http://fs.pceggs.com/pic/2014-07-10/201407102227146896757.jpg_b.jpg" width="600px"></div>
-
-						<div class="tlq_beta3_sj_bgimg">
-							<img src="http://fs.pceggs.com/pic/2014-07-10/201407102229160496171.jpg_b.jpg" width="600px"></div>
-
-						<div class="tlq_beta3_sj_bgimg">
-							<img src="http://fs.pceggs.com/pic/2014-07-10/201407102230148519804.jpg_b.jpg" width="600px"></div>
+									<div class="tlq_beta3">
+										<!-- 										<a class="pl_an" href="javascript:zan()">
+										<span>
+											点赞(
+											<span id="dianzan">{$db_glory.bbs_num}</span>
+											)
+										</span>
+									</a>
+									-->
+								</div>
+							</li>
+						</ul>
 					</div>
+					<script type="text/javascript">showImageList('{$db_glory.imgs}');</script>
 				</div>
 			</div>
-
-
-			<div class="bbs_pltop">
-
-     <ul>
-        <li class="l" id="plnr" style="display: list-item;">评论内容：</li>
-            <li class="r"><a href="#fatie"><img src="/img/ShowPrize/wypl_an.png" width="86" height="25"></a></li>
-      </ul>
-
-    </div>
-
-
-
-    		<div class="bbs_plcon clearall" id="UserReplyList"><div class="bbs_plconev" id="div_12321"><ul><li><div class="bbs_plconevtextl"><div class="bbs_plconevtextl"><div class="bbs_plconevword_rb"> &nbsp;评论时间：07-12 15:38 </div> <div class="bbs_plconevtext">赞啊啊啊</div> </div> </div></li> <li><div class="bbs_plconevgr"><div class="bbs_plconevimg"><img src="/img/tx_face/s_mt_68.jpg" width="32px" height="32px"></div><div class="bbs_plconevword"><a href="/pgComUserInfo.aspx?userid=17044806" class="linkblue_a1">++++++++++划过悲伤河流。</a></div></div></li></ul></div><div class="bbs_plconev" id="div_12298"><ul><li><div class="bbs_plconevtextl"><div class="bbs_plconevtextl"><div class="bbs_plconevword_rb"> &nbsp;评论时间：07-11 18:20 </div> <div class="bbs_plconevtext">楚游玩玩 = 免费兑话费,赚Q币,还可以领取现金 网址： http://wanwan.npckk.com/ 加入QQ群：302166685</div> </div> </div></li> <li><div class="bbs_plconevgr"><div class="bbs_plconevimg"><img src="/img/tx_face/s_mt_80.jpg" width="32px" height="32px"></div><div class="bbs_plconevword"><a href="/pgComUserInfo.aspx?userid=17825329" class="linkblue_a1">yunjie1114</a></div></div></li></ul></div><div class="bbs_plconev" id="div_12289"><ul><li><div class="bbs_plconevtextl"><div class="bbs_plconevtextl"><div class="bbs_plconevword_rb"> &nbsp;评论时间：07-10 22:31 </div> <div class="bbs_plconevtext"><img src="/ShowPrize/images/bq_s/pceggs_19.gif" border="0">第二件实物已经下单，来的时候继续晒晒。</div> </div> </div></li> <li><div class="bbs_plconevgr"><div class="bbs_plconevimg"><img src="/img/tx_face/s_mt_05.jpg" width="32px" height="32px"></div><div class="bbs_plconevword"><a href="/pgComUserInfo.aspx?userid=15050175" class="linkblue_a1">南方</a></div></div></li></ul></div></div>
-
-
-			<include file="public:pagebot"/>
 		</div>
 	</div>
-	<script type="text/javascript">document.getElementById("extra1").value={$m_tab};</script>
-	<include file="public:footer"/>
+</div>
+<include file="public:footer"/>
 </body>
 </html>

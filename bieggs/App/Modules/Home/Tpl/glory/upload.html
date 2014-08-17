@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>讨论区－PC蛋蛋</title>
+	<script language="JavaScript">
+		var isup = false;
+		function validate(theform){
+          if(Form1.photofile.value== "") {
+          alert("请选择上传文件。");
+           return false;
+           }
+           return ShowImg(document.getElementById("photofile"));
+           
+           return true;
+         }
+         function ShowImg(obj){
+	        if(obj.value=="") return false;
+	        if(obj.value.search(/\.jpg|\.jpeg|\.bmp|\.gif|\.emf|\.wmf|\.xbm|\.png$/i) == -1) {
+		        alert("文件格式不正确");		       
+		        return false;
+	        }
+	        isup = true;
+	        return true;
+	    }
+        function checkup(){
+            parent.testimg();
+            if(isup){
+         document.getElementById("uptx_msg").innerHTML = "";
+            }
+        }
+		</script>
+</head>
+<body>
+	<form name="Form1" method="post" action="./讨论区－PC蛋蛋_files/讨论区－PC蛋蛋.htm" id="Form1" enctype="multipart/form-data" onsubmit="return validate(this)">
+		<div></div>
+
+		<div style="width:500px;float:left;height:35px;line-height:35px;padding-top:6px;">
+			<input name="photofile" id="photofile" type="file" class="txt" style="border:1px solid #7c9eba; height:22px; line-height:22px; padding-left:2px;width:480px;" onchange="ShowImg(this)"></div>
+		<div style="width:150px;float:left;height:35px;line-height:35px;">
+			<input type="image" name="BtUpLoad" id="BtUpLoad" src="__IMAGES__/glory/tlq_upimg.gif" onclick="checkup();" style="height:32px;width:112px;border-width:0px;cursor:pointer"></div>
+		<div style="clear:both;width:600px; text-align:right;">
+			<span id="uptx_msg" style="color:Red;"></span>
+		</div>
+	</form>
+
+</body>
+</html>

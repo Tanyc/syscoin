@@ -34,7 +34,7 @@ position: relative;
 height: 38px;
 overflow: hidden;
 padding-top: 15px;
-margin-left: 30px;
+margin-left: 15px;
 margin-bottom: 8px;
 margin-top: -5px;
 }
@@ -52,15 +52,13 @@ width: 120px;
 height: 120px;
 }
 .uabout a {
-position: relative;
 float: left;
 margin-left: -1px;
 padding: 0 6px;
-height: 36px;
+height: 20px;
 text-align: center;
 border: 1px solid #f9f9f9;
 border-left-color: #e8a9a9;
-color: #666;
 }
 .uabout a em, .uabout a:hover em {
 display: block;
@@ -100,11 +98,10 @@ height: 20px;
 margin-bottom: 30px;
 }
 .tlq_beta3_sj_bgimg {
-clear: both;
 text-align: center;
 margin: 0 auto;
 margin-top: 20px;
-width: 604px;
+width: 750px;
 }
 .bbs_pltop {
 height: 26px;
@@ -139,7 +136,7 @@ width: 86px;
 display: inline-block;
 background: url(../Images/glory/zan_an.png) no-repeat right 0px;
 height: 25px;
-padding-left: 30px;
+padding-left: 40px;
 padding-right: 5px;
 }
 .pl_an {
@@ -193,3 +190,7 @@ padding-right: 15px;
 padding-top: 20px;
 padding-bottom: 20px;
 }
+.tlq_beta3{
+	float: right;
+}
+.send_msg{width:130px; height:22px; margin-left: 55px;}

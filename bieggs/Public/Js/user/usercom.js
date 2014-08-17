@@ -93,3 +93,49 @@ function modAddrI(i){
     $("#PCODE").val(data["PCODE" + i]);
     $("#TEL").val(data["TEL" + i]);
 }
+
+function changebox(val){
+    if (1 == val) {
+        $("#box_psw").show();
+    }else{
+        $("#box_psw").hide();
+    }
+}
+
+function subHandEgg(){
+    var ch = $("#optype").val();
+    var eggs = dever($("#cashbox").val());
+    if (!checkIfPlusNum(eggs) || 0 == eggs) {
+        alert("输入错误！");
+        return false;
+    }
+    if (0 == ch && eggs > LEGGS) {
+        alert("超过流动金蛋！");
+        return false;
+    }else if (1 == ch && $("#cashpassword").val().length < 6) {
+        alert("输入密码错误！");
+        return false;
+    }else if (1 == ch && eggs > KEGGS) {
+        alert("金库金蛋不足！");
+        return false;
+    };
+    return true;
+}
+
+function modS_Key(){
+    var oldk = $("#pass_old").val();
+    var newk = $("#pass_new").val();
+    var renewk = $("#pass2").val();
+    if (oldk == newk) {
+        alert("新密码不能与旧密码一样！");
+        return false;
+    };
+    if (oldk.length < 6 || newk.length < 6 || renewk.length < 6) {
+        alert("密码不符合规范！");
+        return false;
+    }else if (newk != renewk) {
+        alert("新密码不一致！");
+        return false;
+    }
+    return true;
+}

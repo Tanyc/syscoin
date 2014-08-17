@@ -4,54 +4,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>晒奖-专业的广告游戏平台</title>
     <include file="public:com"/>
-    <load href='__CSS__/glory.css' />
-    <load href='__JS__/glory.js' />
+    <load href='__CSS__/glory.css'/>
+    <load href='__JS__/glory/glory.js'/>
 </head>
-
 <body>
     <include file="public:header"/>
     <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
-    <script type="text/javascript">
-        img_path = '__IMAGES__';
-    </script>
     <div id="body_content">
         <include file="public:textrun"/>
         <div class="doc">
-            <div class="layout_wz">
-                <img src="__IMAGES__/glory/sj_topt.jpg"></div>
-            <div class="layout_nav">
-                <div class="layout_nav_l">
-                    <ul>
-                        <li class="glory_tab_0">
-                            <a href="{:U('')}">玩家晒奖</a>
-                        </li>
-                        <li class="line">|</li>
-                        <li class="glory_tab_1">
-                            <a href="{:U('?extra1=1')}">我的晒奖</a>
-                        </li>
-                    </ul>
-                </div>
-                <style type="text/css">.glory_tab_{$m_tab}{background:url(__IMAGES__/glory/sj_nav_xzbg.png) center bottom no-repeat; height:51px;font-weight:bold;}</style>
-                <div class="layout_nav_r">
-                    <a href="http://www.pceggs.com/ShowPrize/ShowAdd.aspx">
-                        <img src="__IMAGES__/glory/sj_an.gif"></a>
-                    &nbsp;&nbsp;
-                    <a href="http://www.pceggs.com/ShowPrize/showrule.aspx">
-                        <img src="__IMAGES__/glory/gz_an.gif"></a>
-                </div>
-            </div>
+            <include file="public:glorynavi"/>
             <div class="bbs_layout_dbg clearall">
                 <div id="PanelList">
                     <div class="list-tab">
                         <volist name="db_glorylist" id="vo">
                             <div class="tlq_beta3_sj_box_w">
                                 <div class="tlq_beta3_sj_box_w_l">
-                                    <div class="tlq_beta3_sj_box_w_l_img">
-                                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">
-                                            <img src="/bidan/bieggs/Public/Images/glory/b_mt_01.jpg"></a>
+                                    <div class="author">
+                                        <a href="/pgComUserInfo.aspx?userid=15050175">用户ID:&nbsp{$vo.UID}</a>
                                     </div>
-                                    <div class="tlq_beta3_sj_box_w_l_name">
-                                        <a class="linkblue_a1" href="http://www.pceggs.com/pgComUserInfo.aspx?userid=15337153">雷诺越</a>
+                                    <div class="uabout">
+                                        <a href="">个人</a>
+                                        <a href="">游戏战绩</a>
+                                        <a href="">兑奖</a>
                                     </div>
                                 </div>
                                 <div class="tlq_beta3_sj_box_w_r">
@@ -61,15 +36,16 @@
                                                 <span>{$vo.title}</span>
                                             </div>
                                         </div>
-                                        <div class="tlq_beta3_sj_box_w_r_top_r">发表时间：<span>{$vo.CTIME}</span></div>
+                                        <div class="tlq_beta3_sj_box_w_r_top_r">
+                                            发表时间：
+                                            <span>{$vo.CTIME}</span>
+                                        </div>
                                     </div>
                                     <div class="tlq_beta3_sj_xuxian"></div>
                                     <div class="tlq_beta3_sj_box_w_r_bottom">
                                         <div class="tlq_beta3_sj_box_w_r_bottom_l">
                                             <span style="color:black">
-                                                <script type="text/javascript">
-                                                    shortDesc('{$vo.content}');
-                                                </script>
+                                                <script type="text/javascript">shortDesc('{$vo.content}');</script>
                                             </span>
                                             <br>
                                             <a href="{:U('detail')}?id={$vo.id}">[详细]</a>
@@ -77,9 +53,7 @@
                                         <div class="tlq_beta3_sj_box_w_r_bottom_r">
                                             <div class="tlq_beta3_sj_box_w_r_bottom_r_t">
                                                 <ul>
-                                                    <script type="text/javascript">
-                                                        showShortImgs('{$vo.imgs}','{$vo.id}');
-                                                    </script>
+                                                    <script type="text/javascript">showShortImgs('{$vo.imgs}','{$vo.id}');</script>
                                                 </ul>
                                             </div>
                                         </div>
@@ -93,9 +67,7 @@
             <include file="public:pagebot"/>
         </div>
     </div>
-    <script type="text/javascript">
-        document.getElementById("extra1").value={$m_tab};
-    </script>
+    <script type="text/javascript">document.getElementById("extra1").value={$m_tab};</script>
     <include file="public:footer"/>
 </body>
 </html>

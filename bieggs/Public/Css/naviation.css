@@ -11,10 +11,10 @@ UL, LI {
 
 a {text-decoration:NONE;}
 a:link {
-	color: #000;
+	color: #009900;
 	text-decoration: none;
 }
-a:hover {color:#00f;}
+a:hover {color:#0000ff;}
 
 /*页面头*/
 #header{

@@ -1,0 +1,38 @@
+.tlq_beta3_main_box_wxts {
+background: #fafafa;
+border-top: 1px solid #d0d0d0;
+width: 750px;
+margin:auto 10px auto 10px;
+padding: 50px 107px;
+color: #333333;
+font-size: 12px;
+}
+.tlq_beta3_main_box_wxtstl {
+width: 760px;
+line-height: 22px;
+clear: both;
+margin-bottom: 14px;
+}
+.title{font-weight: bold; font-size:18px;}
+.subtip{color: #a23f3f;display: block;}
+p{font-size: 15px;}
+
+.tlq_item_bd {
+height: 20px;
+line-height: 20px;
+border: #c1c1bb 1px solid;
+width: 464px;
+}
+.tlq_main_content {
+height: 165px;
+line-height: 20px;
+border: #c1c1bb 1px solid;
+width: 643px;
+text-align: left;
+vertical-align: top;
+}
+.subimg{
+	text-align:center;
+	margin-top: 20px;
+}
+.tlq_item{margin-top: 10px;}

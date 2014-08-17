@@ -10,15 +10,14 @@ $(document).ready(function(){
         showTipI($(this).attr("opt"));
         
         $('.B_bor').hide();
-
     });
     $('.vipcard').click(function(i){
     	$('.vipcard').css('border', 'none');
         $(this).css('border', '2px solid #ff0000');
 
         var srcimg = $(this).attr("src");
-        $('.dvipcardimg').attr("src",srcimg);
-        $('.dvipcardimg').show();
+        $('.dvipcardimg').attr("src",srcimg).show();
+        $('.dcardimg').attr("src",srcimg).show();
 
         showTipI($(this).attr("opt"));
     });
