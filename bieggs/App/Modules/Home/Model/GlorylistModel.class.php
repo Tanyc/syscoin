@@ -45,4 +45,9 @@ class GlorylistModel extends Model {
         $dian = $this->getFiledById($id,"yes");
         $this->updateFiledById($id,"yes",$dian + 1);
     }
+
+    public function addOneItem($data){
+        return $this->add($data);
+    }
+
 }

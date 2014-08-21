@@ -1,5 +1,5 @@
 <?php
-class gloryAction extends loginAction{
+class gloryAction extends comAction{
     function _initialize() {
         parent::_initialize();
         $this->assign('PAGE_CURID',8);
@@ -8,6 +8,7 @@ class gloryAction extends loginAction{
     public function index(){
     	$m_tab = $this->_param("extra1");
     	$tab = (is_nil($m_tab))? 0: $m_tab;
+        if (1 == $tab) checkIsLogin();
         $this->assign("m_tab",$tab);
 
         $pg = $this->_param('pg');
@@ -56,8 +57,67 @@ class gloryAction extends loginAction{
     }
 
     public function addnew(){
-        $this->assign("m_tab",3);
-        $this->display();
+        if (checkIsLogin()) {
+            $this->assign("m_tab",3);
+            $this->display();
+        }
+    }
+
+    public function newGlory(){
+        if (checkIsLogin()) {
+            if (!empty($_FILES)) {
+                $this->_upload();
+            }else{
+                $this->error("请选择上传文件");
+            }
+        }
+    }
+
+    // 文件上传
+    protected function _upload() {
+        import('@.ORG.Util.UploadFile');
+        $upload = new UploadFile();
+        $upload->maxSize            = 3292200;
+        $upload->allowExts          = explode(',', 'jpg,gif,png,jpeg');
+        $upload->savePath           = './Uploads/Images/';
+        $upload->thumb              = true;
+        $upload->imageClassPath     = '@.ORG.Util.Image';
+        $upload->thumbPrefix        = 'm_,s_'; 
+        $upload->thumbMaxWidth      = '400,100';
+        $upload->thumbMaxHeight     = '400,100';
+        $upload->saveRule           = 'uniqid';
+        $upload->thumbRemoveOrigin  = true;
+        if (!$upload->upload()) {
+            $this->error($upload->getErrorMsg());
+        } else {
+            $uploadList = $upload->getUploadFileInfo();
+            import('@.ORG.Util.Image');
+            $path = $uploadList[0]['savepath'];
+            $files = "";
+            foreach ($uploadList as $s_file) {
+                $fileName = 'm_' . $s_file['savename'];
+                if ("" != $fileName) {
+                    Image::water($path . $fileName, './Public/logo/logo.png');
+                    $files .= $fileName . ":";
+                }
+            }
+            //save glorylist
+
+            $db_glory = D("Glorylist");
+            $data            = array();
+            $data['UID']     = $_SESSION[C('USER_AUTH_KEY')];
+            $data['title']   = $_POST["subject"];
+            $data['content'] = $_POST["content"];
+            $data['imgs']    = substr($files, 0, -1);
+            $data['CTIME']   = time();
+            $isadd = $db_glory->addOneItem($data);
+            if ($isadd !== false) {
+                $this->success('晒奖成功！');
+            } else {
+                $this->error('晒奖失败!');
+            }
+            
+        }
     }
 
 }

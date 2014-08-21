@@ -15,12 +15,13 @@
         <div class="doc">
             <include file="public:glorynavi"/>
             <div class="tlq_beta3_main_box_wxts">
+            <form name="Form" method="post" action="./newGlory" id="Form" enctype="multipart/form-data" onsubmit="return validate(this)">
                 <div class="tlq_item">
                     <span class="title">晒奖标题：</span>
-                    <input type="text" class="tlq_item_bd" value="" id="subject">
+                    <input type="text" name="subject" class="tlq_item_bd" maxlength="20" value="" id="subject">
                     <span class="tlq_beta3_g12">
                         &nbsp;&nbsp;* 标题不能超过&nbsp;
-                        <span class="tlq_beta3_red12b">25</span>
+                        <span class="tlq_beta3_red12b">20</span>
                         &nbsp;个汉字
                     </span>
                 </div>
@@ -28,21 +29,33 @@
                     <div>
                         <span class="title">晒奖感言：</span>
                     </div>
-                    <textarea id="content" maxlength="300" class="tlq_main_content"></textarea>
+                    <textarea name="content" id="content" maxlength="300" class="tlq_main_content"></textarea>
                 </div>
                 <div class="tlq_item">
                     <span class="title">上传图片：</span>
                     共可上传&nbsp;
                     <span class="title">6</span>
-                    &nbsp;张图片，亲要把握好机会，把最美的图片发给大家看哦。
+                    &nbsp;张图片，你已经选择了&nbsp<span class="title" id="num_pic" style="color:#FF0000;">0</span>&nbsp张。
                 </div>
-                <div class="tlq_main" style="height:60px;">
-                    <iframe frameborder="0" scrolling="no" src="./upload.html" height="60" width="740"></iframe>
+                <div class="tlq_main">
+                        <div class="up1">
+                        <input name="upfile1" id="upfile1" type="file" class="txt" onchange="checkImg(this)">&nbsp第1张</div>
+                        <div class="up1">
+                        <input name="upfile2" id="upfile2" type="file" class="txt" onchange="checkImg(this)">&nbsp第2张</div>
+                        <div class="up1">
+                        <input name="upfile3" id="upfile3" type="file" class="txt" onchange="checkImg(this)">&nbsp第3张</div>
+                        <div class="up1">
+                        <input name="upfile4" id="upfile4" type="file" class="txt" onchange="checkImg(this)">&nbsp第4张</div>
+                        <div class="up1">
+                        <input name="upfile5" id="upfile5" type="file" class="txt" onchange="checkImg(this)">&nbsp第5张</div>
+                        <div class="up1">
+                        <input name="upfile6" id="upfile6" type="file" class="txt" onchange="checkImg(this)">&nbsp第6张</div>
                 </div>
                 <div class="subimg">
-                    <a onclick="submitvaluet()" style="cursor:pointer">
-                        <img src="__IMAGES__/glory/tlq_fbsj.gif"></a>
+                <input type="submit" name="submit" class="frmbtn_2" value="" onclick="return submitvaluet()">
+                <div class="B_bor">提示：晒奖之前，请在左边选择要上传的图片，没有照片将不能晒奖！</div>
                 </div>
+            </form>
             </div>
         </div>
     </div>

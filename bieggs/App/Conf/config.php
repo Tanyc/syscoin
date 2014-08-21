@@ -16,6 +16,7 @@ return array(
 
     'TMPL_PARSE_STRING'         =>  array(
         '__IMAGES__'            =>  __ROOT__.'/Public/Images',// 站点公共图像目录
+        '__UPIMAGES__'          =>  __ROOT__.'/Uploads/Images',// 站点公共图像目录
         '__JS__'                =>  __ROOT__.'/Public/Js',// 站点公共js目录
         '__CSS__'               =>  __ROOT__.'/Public/Css',// 站点公共css目录
         '__HOME__'              =>  __ROOT__.'/App/Modules/Home',// 站点公共home目录

@@ -33,6 +33,29 @@ vertical-align: top;
 }
 .subimg{
 	text-align:center;
-	margin-top: 20px;
+	margin: 20px auto auto 80px;
+	float: left;
+	width: 200px;
 }
 .tlq_item{margin-top: 10px;}
+
+.up1{width:500px;float:left;height:30px;}
+.txt{border:1px solid #7c9eba; height:20px; padding-left:2px;width:350px;}
+.tlq_main{float: left; width: 352px;}
+.B_bor {
+overflow: hidden;
+margin: 10px auto 5px;
+background: #f5f9fc;
+border: 1px solid #98c5e3;
+padding: 5px;
+line-height: 24px;
+text-align: center;
+}
+.frmbtn_2 {
+background: url("../Images/public/submit.gif") no-repeat;
+width: 116px;
+height: 30px;
+font-weight: bold;
+text-align: center;
+border-width: 0px;
+}
