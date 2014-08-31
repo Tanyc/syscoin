@@ -12,13 +12,14 @@ class gloryAction extends comAction{
         $this->assign("m_tab",$tab);
 
         $pg = $this->_param('pg');
-        $glorylist = D("Glorylist");
+
+        $db_blogview = D("GloryView");
         if (0 == $tab) { //全部晒奖
-            $this->initCom($glorylist->getAllCount(),("" == $pg)? 1 : $pg);
-            $this->assign("db_glorylist",$glorylist->getAllResultByPage($pg));
+            $this->initCom($db_blogview->getAllCount(),("" == $pg)? 1 : $pg);
+            $this->assign("db_glorylist",$db_blogview->getAllResultByPage($pg));
         } else {         //我的晒奖
-            $this->initCom($glorylist->getMyCount(),("" == $pg)? 1 : $pg);
-            $this->assign("db_glorylist",$glorylist->getMyResultByPage($pg));
+            $this->initCom($db_blogview->getMyCount(),("" == $pg)? 1 : $pg);
+            $this->assign("db_glorylist",$db_blogview->getMyResultByPage($pg));
         }
         $this->display();
     }

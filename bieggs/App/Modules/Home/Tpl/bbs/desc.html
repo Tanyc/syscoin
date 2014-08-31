@@ -13,187 +13,178 @@
     <div id="body_content">
         <include file="public:textrun"/>
         <include file="public:bbs_navi"/>
-            <div>
-        <div class="bbs_floor clearall">
-            <div class="side" style="height:auto; margin-bottom:5px;">
-
-                <div class="author">
-
-                    <div class="uname">
-                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank" class="fb linkblue_a1">打死不28</a>
-                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank" class="linkgray_a2">(17185924)</a>
+        <div>
+            <div class="bbs_floor clearall">
+                <div class="author_item">
+                    <div class="author">{$db_bbs.nick}</div>
+                    <div class="headimg">
+                        <a href="/pgComUserInfo.aspx?userid=15050175">
+                            <img src=<?php echo("__IMAGES__/user/head/" . $db_bbs["headimg"] . ".gif") ?>width="100px" height="100px"></a>
                     </div>
-
-                </div>
-
-                <div class="uavatar">
-
-                    <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/b_mt_55.jpg" width="120"></a>
-
-                    <p class="say"></p>
-                </div>
-                <p class="uabout">
-                    <a href="http://www.pceggs.com/FriendInfor/Friendatten.aspx?userid=17185924"> <em>5</em>
-                        关注
-                    </a>
-                    <a href="http://www.pceggs.com/FriendInfor/Friendfans.aspx?userid=17185924"> <em><span id="att_0">9</span></em> 
-                        粉丝
-                    </a>
-                    <a href="http://www.pceggs.com/FriendInfor/FriendPrize.aspx?userid=17185924">
-                        <em>4</em>
-                        兑奖
-                    </a>
-                </p>
-                <dl class="color9 uinfo clearall">
-                    <dt>城市：</dt>
-                    <dd class="color6">山东 菏泽</dd>
-                    <dd class="color6" style=" width:auto; overflow:auto; line-height:30px; height:auto">
-                        <a href="http://www.pceggs.com/myaccount/myaccount_wdry.aspx">
-                            <img src="./作为新人的一点点建议_PC蛋蛋_files/lv2.gif" align="middle" title="成就等级：LV2"></a>
-                        <span class="GUserMedalList">
-
-                            <a href="http://www.pceggs.com/FriendInfor/FriendMedalList.aspx?userid=17185924">
-                                <img src="./作为新人的一点点建议_PC蛋蛋_files/gamesw_1.gif" name="试玩新秀" rm="1" type="0" style="width:22px; height:22px;"></a>
-
-                        </span>
-                    </dd>
-
-                </dl>
-
-                <div style="width:150px; height:22px; padding-left:12px; padding-top:5px;">
-                    <a href="http://www.pceggs.com/MyacCount/MsgSendTo.aspx?userid=17185924">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/fxx_an.png" border="0"></a>
-                    &nbsp;
-                    <a href="javascript:Att_User(17185924,1873372,0);">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/gzt_an.png" border="0"></a>
-                </div>
-
-            </div>
-
-            <div class="bbs_floor_fr">
-                <div class="view-hd">
-                    <h1 class="fl f14 link6">作为新人的一点点建议</h1>
-                </div>
-                <div class="cont-hd" id="low_0">
-                    <p class="fl link3">发表于2014-02-28 11:05</p>
-                    <a class="fr yahei floor-num">楼主</a>
-                </div>
-                <div class="cont-bd">
-                    <div class="link0 view-cont">
-                        <table class="view-data" cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="thread-cont" style="min-height:235px;_height:235px;">
-                                            <div align="left" style="width:750px;overflow:hidden;">
-                                                我是2013年下半年接触到PC蛋蛋的，到现在不到一年的时间，算是一个很新的新人</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="uabout">
+                        <a href="">个人</a>
+                        <a href="">游戏战绩</a>
+                        <a href="">兑奖</a>
                     </div>
+                </div>
 
-                    <!--用户为楼主-->
-                    <div class="view-ft">
-
-                        <div class="user-sign">一个人的战役，我依然在继续。</div>
-                        <div class="link1 user-option">
-                            <a href="javascript:void(0)" onclick="jubao('17185924','18003836')">举报</a>
+                <div class="bbs_floor_fr">
+                    <div class="view-hd">
+                        <div class="blog_title">
+                            <span style="color:#000000">【楼主】</span>
+                            {$db_bbs.title}
+                        </div>
+                        <div class="blog_CTIME">
+                            发表于
+                            <span>{$db_bbs.CTIME}</span>
                         </div>
                     </div>
-                    <!--用户兑奖--> </div>
-            </div>
-        </div>
+                    <div class="cont-bd">
+                        <div class="link0 view-cont">
+                            <table class="view-data" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="thread-cont" style="min-height:120px;_height:235px;">
+                                                <div align="left" style="width:750px;overflow:hidden;">{$db_bbs.content}</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="view-ft">
 
-        <div class="bbs_floor clearall">
-            <div class="side" style="height:auto; margin-bottom:5px;">
-
-                <div class="author">
-
-                    <div class="uname">
-                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank" class="fb linkblue_a1">打死不28</a>
-                        <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank" class="linkgray_a2">(17185924)</a>
-                    </div>
-
-                </div>
-
-                <div class="uavatar">
-
-                    <a href="http://www.pceggs.com/pgComUserInfo.aspx?userid=17185924" target="_blank">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/b_mt_55.jpg" width="120"></a>
-
-                    <p class="say"></p>
-                </div>
-
-                <p class="uabout">
-
-                    <a href="http://www.pceggs.com/FriendInfor/Friendatten.aspx?userid=17185924">
-                        <em>5</em>
-                        关注
-                    </a>
-                    <a href="http://www.pceggs.com/FriendInfor/Friendfans.aspx?userid=17185924">
-                        <em><span id="att_1">9</span></em> 
-                        粉丝
-                    </a>
-                    <a href="http://www.pceggs.com/FriendInfor/FriendPrize.aspx?userid=17185924">
-                        <em>4</em>
-                        兑奖
-                    </a>
-                </p>
-
-                <dl class="color9 uinfo clearall">
-                    <dt>城市：</dt>
-                    <dd class="color6">山东 菏泽</dd>
-                    <dd class="color6" style=" width:auto; overflow:auto; line-height:30px; height:auto">
-                        <a href="http://www.pceggs.com/myaccount/myaccount_wdry.aspx">
-                            <img src="./作为新人的一点点建议_PC蛋蛋_files/lv2.gif" align="middle" title="成就等级：LV2"></a>
-                        <span class="GUserMedalList">
-                            <a href="http://www.pceggs.com/FriendInfor/FriendMedalList.aspx?userid=17185924">
-                                <img src="./作为新人的一点点建议_PC蛋蛋_files/gamesw_1.gif" name="试玩新秀" rm="1" type="0" style="width:22px; height:22px;"></a>
-                        </span>
-                    </dd>
-                </dl>
-                <div style="width:150px; height:22px; padding-left:12px; padding-top:5px;">
-                    <a href="http://www.pceggs.com/MyacCount/MsgSendTo.aspx?userid=17185924">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/fxx_an.png" border="0"></a>
-                    &nbsp;
-                    <a href="javascript:Att_User(17185924,1873372,1);">
-                        <img src="./作为新人的一点点建议_PC蛋蛋_files/gzt_an.png" border="0"></a>
-                </div>
-
-            </div>
-            <div class="bbs_floor_fr">
-                <div class="cont-hd" id="low_1">
-                    <p class="fl link3">发表于2014-02-28 11:07</p>
-                    <a class="fr yahei floor-num">1#</a>
-                </div>
-                <div class="cont-bd">
-                    <div class="link0 view-cont">
-                        <table class="view-data" cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="thread-cont" style="min-height:235px;_height:235px;">
-                                            <div align="left" style="width:750px;overflow:hidden;">。。。网络不好，传图老失败，只好跟帖了</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--用户为楼主-->
-                    <div class="view-ft">
-                        <div class="user-sign">一个人的战役，我依然在继续。</div>
-                        <div class="link1 user-option">
-                            <a href="javascript:void(0)" onclick="jubao('17185924','18003837')">举报</a>
+                            <div class="user-sign">{$db_bbs.selfdes}</div>
+                            <div class="link1 user-option">
+                                <a href="javascript:void(0)" onclick="jubao('17185924','18003836')">举报</a>
+                            </div>
                         </div>
                     </div>
-                 </div>
+                </div>
             </div>
+
+            <foreach name="db_ans" item="vo">
+                <div class="bbs_floor clearall">
+                    <div class="author_item">
+                        <div class="author">{$vo.nick}</div>
+                        <div class="headimg">
+                            <a href="/pgComUserInfo.aspx?userid=15050175">
+                                <img src=<?php echo("__IMAGES__/user/head/" . $vo["headimg"] . ".gif") ?>width="100px" height="100px"></a>
+                        </div>
+                        <div class="uabout">
+                            <a href="">个人</a>
+                            <a href="">游戏战绩</a>
+                            <a href="">兑奖</a>
+                        </div>
+                    </div>
+                    <div class="bbs_floor_fr">
+                        <div class="view-hd" style="background: #ddffdd">
+                            <div class="blog_title" style="color:#000000">
+                                【
+                                <span>
+                                    <?php echo($key + 1); ?></span>
+                                楼】
+                            </div>
+                            <div class="blog_CTIME">发表于{$vo.CTIME}</div>
+                        </div>
+                        <div class="cont-bd">
+                            <div class="link0 view-cont">
+                                <table class="view-data" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="thread-cont" style="min-height:120px;_height:235px;">
+                                                    <div align="left" style="width:750px;overflow:hidden;">{$vo.content}</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="view-ft">
+                                <div class="user-sign">{$vo.selfdes}</div>
+                                <div class="link1 user-option">
+                                    <a href="javascript:void(0)" onclick="jubao('17185924','18003837')">举报</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </foreach>
+
+
+
+
+
+
+            <div class="post-mod">
+                <ul class="post-bd">
+                    <li class="post-to">
+                        <!--=S post-to-mod -->
+                        <div class="post-to-mod">
+                            <span class="post-label" style="font-size:14px; font-weight:700; color:#525252;">回复本帖</span>
+                        </div>
+                    </li>
+                    <li class="ue-editor">
+                        <div class="post_wby" id="text_an">
+                            <div class="post_fbtb_an" id="an1">
+                                <img src="images/bq_tb.gif" border="0" style="cursor:pointer;"></div>
+                            <div class="post_fbtb_an_xz" id="an2">
+                                <img src="images/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                            <div class="post_fbtb_an" id="an3">
+                                <img src="images/clj_tb.gif" border="0" style="cursor:pointer;"></div>
+                        </div>
+                        <!--上传图片层-->
+                        <div class="dis_fc_bq fc_img" id="uploadimg" style="height: 230px; left: 56px; display: none;">
+                            <div class="dis_fcgban" style="padding-left:372px;*padding-left:364px;">
+                                <img src="images/pceggs_bq/dis_fc_gban.gif" border="0" style="cursor:pointer;" onclick="closec()"></div>
+                            <div style="width:376px; margin:0 auto;*margin-left:8px;">
+                                <div class="dis_fc_tbkj" style=" margin-top: 14px;*margin-top:0px;">
+                                    <div class="dis_fc_tab-hd clearall">
+                                        <p class="fc_tab-item">
+                                            <a class="selected" id="up1" onclick="up(1)">
+                                                <span>本地上传</span>
+                                            </a>
+                                            <a id="up2" onclick="up(2)">
+                                                <span>网络上传</span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="dis_fc_table_p">
+                                    <div style="padding-left:10px; float:left; padding-top:5px;width:100%;line-height:25px;">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
+                                    <div style="height:140px;line-height:36px;margin-top:10px;display:none;text-align:center;" id="addimgs1">
+                                        <div style="height:36px;line-height:36px;">
+                                            网址1&nbsp;&nbsp;
+                                            <input name="upimg" type="text" id="upimg1" size="40" value="http://"></div>
+                                        <div style="height:36px;line-height:36px;">
+                                            网址2&nbsp;&nbsp;
+                                            <input name="upimg" type="text" id="upimg2" size="40" value="http://"></div>
+                                        <div style="height:36px;line-height:36px;">
+                                            网址3&nbsp;&nbsp;
+                                            <input name="upimg" type="text" id="upimg3" size="40" value="http://"></div>
+                                        <div style="width:100px;">
+                                            <a class="red_enter" onclick="addaddress();">
+                                                <span>上传图片</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea class="self_ans" id="content" name="content"></textarea>
+                    </li>
+                </ul>
+                <p class="post-ft">
+                    <input type="submit" name="submit" class="comfirm_bnt" value="" onclick="return editSb()">
+                </p>
+            </div>
+
+
+
+
         </div>
-    </div>
     </div>
     <include file="public:footer"/>
 </body>

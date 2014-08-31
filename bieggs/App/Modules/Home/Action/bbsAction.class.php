@@ -11,11 +11,11 @@ class bbsAction extends comAction{
         $page     = $this->_param("pg") ? $this->_param("pg") : 1;
         $this->assign("navi_tab",$type);
 
-        $db_bbs   = D("Bbs");
-        $result = $db_bbs->getPageResultByType($type,$page);
+        $blog_view = D("BlogView");
+        $result = $blog_view->getPageResultByType($type,$page);
         $this->assign("db_bbs",$result);
 
-        $this->initCom($db_bbs->getCountByType($type),$page);
+        $this->initCom($blog_view->getCountByType($type),$page);
 
         $this->display();
     }
@@ -25,15 +25,24 @@ class bbsAction extends comAction{
         if (isNil($id)) {
             $this->error("错误！");
         }
-        $db_bbs   = D("Bbs");
-        $result = $db_bbs->getResultById($id);
+
+        $blog_view = D("BlogView");
+        $result = $blog_view->getResultById($id);
         if (isNil($result)) {
             $this->error("查无此帖");
         }
         $this->assign("navi_tab",$result["type"]);
         $this->assign("db_bbs",$result);
 
+        //评论
+        $ans_view = D("AnsView");
+        $pg = $this->_param('pg')? $this->_param('pg') : 1;
+        $ans_result = $ans_view->getPageResultsByBlogId($id,$pg);
+        $this->assign("db_ans",$ans_result);
+
         $this->display();
+
+        // var_dump($result);
     }
 
     private function initCom($db_data_cnt, $cur_pg){

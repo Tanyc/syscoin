@@ -20,8 +20,10 @@
                         <volist name="db_glorylist" id="vo">
                             <div class="tlq_beta3_sj_box_w">
                                 <div class="tlq_beta3_sj_box_w_l">
-                                    <div class="author">
-                                        <a href="/pgComUserInfo.aspx?userid=15050175">用户ID:&nbsp{$vo.UID}</a>
+                                    <div class="author">{$vo.u_nick}</div>
+                                    <div class="headimg">
+                                        <a href="/pgComUserInfo.aspx?userid=15050175">
+                                        <img src=<?php echo("__IMAGES__/user/head/" . $vo["headimg"] . ".gif") ?> width="100px" height="100px"></a>
                                     </div>
                                     <div class="uabout">
                                         <a href="">个人</a>

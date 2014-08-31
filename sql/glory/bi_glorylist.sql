@@ -4,7 +4,7 @@ CREATE TABLE `bi_glorylist` (
 `UID` int(8) NOT NULL,
 `is_im` smallint(1) NOT NULL,
 `title` varchar(40) NOT NULL,
-`content` varchar(600) NOT NULL,
+`content` BLOB(600) NOT NULL,
 `imgs` varchar(150),
 `yes` smallint(1) NOT NULL DEFAULT 0,
 `bbs_num` smallint(1) NOT NULL DEFAULT 0,

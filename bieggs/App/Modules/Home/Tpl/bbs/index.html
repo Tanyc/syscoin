@@ -20,8 +20,7 @@
                     <div class="list-tab">
                         <div class="list-tab-hd">
                             <ul class="link1" id="tabbar">
-                                <li class="current">帖子
-                                </li>
+                                <li class="current">帖子</li>
                                 <li>
                                     <a href="http://www.pceggs.com/nbbs/bbsMain.aspx?topicid=3&amp;goodtype=1&amp;z=1">精华</a>
                                 </li>
@@ -37,9 +36,9 @@
                                 <thead>
                                     <tr>
                                         <th colspan="2" class="data-orderby">标题</th>
-                                        <th width="10" class="author">作者</th>
-                                        <th width="68" class="num">回复</th>
-                                        <th width="68" class="lastpost">最后回复</th>
+                                        <th width="100" class="author">作者</th>
+                                        <th width="60" class="num">回复</th>
+                                        <th width="80" class="lastpost">发表时间</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -52,91 +51,88 @@
                                             '>
                                             <td width="32" class="icon">
                                                 <div>
-                                                    <img src="__IMAGES__/bbs/stick_2.gif"></div>
-                                            </td>
-                                            <th width="492" class="title">
-                                                <a href="{:U('desc')}?id={$vo.id}">
-                                                    <?php echo($vo["title"]); ?></a>
-                                            </th>
-                                            <td class="author">
-                                                <a href="http://www.pceggs.com/pgComUserInfo.aspx?USERID=1002">
-                                                    <?php echo($vo["nick"]); ?></a>
-                                                <br>
-                                                <span class="color9">
-                                                    <?php echo($vo["CTIME"]); ?></span>
-                                            </td>
-                                            <td class="num numeral"> <em>&nbsp;</em>
-                                                <span>
-                                                    <?php echo($vo["ans_num"]); ?></span>
-                                            </td>
-                                            <td class="lastpost">
-                                                <a href="http://www.pceggs.com/pgComUserInfo.aspx?USERID=17155890">
-                                                    <?php echo($vo["last_ans_nick"]); ?></a>
-                                            </br>
-                                            <span class="numeral">
-                                                <?php echo($vo["last_ans_time"]); ?></span>
-                                        </td>
-                                    </tr>
-                                </volist>
-                            </tbody>
-                        </table>
+                                                    <img src=<?php if(1 == $vo["is_ding"]) {
+                                                    echo "__IMAGES__/bbs/stick_2.gif";
+                                                } else {
+                                                    echo "__IMAGES__/bbs/pttz.gif";
+                                                }
+                                                ?>></td>
+                                                <th width="492" class="title">
+                                                    <a href="{:U('desc')}?id={$vo.id}">
+                                                        <?php echo($vo["title"]); ?></a>
+                                                </th>
+                                                <td class="author">
+                                                    <img style="margin-bottom:0px;" src=<?php echo('__IMAGES__/user/head/' . $vo["headimg"] . '.gif'); ?> width="20px" height="20px">
+                                                    <a href="http://www.pceggs.com/pgComUserInfo.aspx?USERID=1002">
+                                                        <?php echo($vo["nick"]); ?></a>
+                                                    <br></td>
+                                                <td class="num numeral"> <em>&nbsp;</em>
+                                                    <span>
+                                                        <?php echo($vo["ans_num"]); ?></span>
+                                                </td>
+                                                <td class="lastpost">
+                                                    <?php echo($vo["CTIME"]); ?></td>
+                                            </tr>
+                                        </volist>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <include file="public:pagebot"/>
+                        <div class="post-mod" style="position:relative;top:0px;">
+                            <ul class="post-bd">
+                                <li class="post-to">
+                                    <div class="post-to-mod">
+                                        <span class="post-label">发&nbsp;帖&nbsp;到：</span>
+                                        <select name="hitpid" id="hitpid" onchangecontentline-height:22px; width:100px;text-align:center;>
+                                            <option value="">请选择</option>
+                                            <option value="1">游戏交流</option>
+                                            <option value="2">兑奖</option>
+                                            <option value="3">问题反馈</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="post-title">
+                                    <label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
+                                    <input type="text" name="subject" class="txt" value="" id="subject"></li>
+                                <li class="ue-editor">
+                                    <div class="post_wby" id="text_an">
+                                        <div class="post_fbtb_an" id="an1">
+                                            <img src="__IMAGES__/bbs/bq_tb.gif" border="0" style="cursor:pointer;"></div>
+                                        <div class="post_fbtb_an" id="an2">
+                                            <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                                        <div class="post_fbtb_an" id="an3">
+                                            <img src="__IMAGES__/bbs/clj_tb.gif" border="0" style="cursor:pointer;"></div>
+                                    </div>
+                                    <textarea id="content" name="content" style="width:650px; border:1px solid #dddddd; padding:15px; padding-top:10px; line-height:24px;"></textarea>
+                                </li>
+                                <li>
+                                    精华帖的奖励：
+                                    <img src="__IMAGES__/bbs/pink_red-j.gif" width="21" height="20">
+                                    ：奖
+                                    <span class="color4">500,000</span>
+                                    金蛋&nbsp;
+                                    <img src="__IMAGES__/bbs/pink_green-j.gif">
+                                    ：奖
+                                    <span class="color4">300,000</span>
+                                    金蛋&nbsp;
+                                    <img src="__IMAGES__/bbs/pink_blue-j.gif">
+                                    ：奖
+                                    <span class="color4">100,000</span>
+                                    金蛋&nbsp;
+                                    <a href="http://www.pceggs.com/nbbs/bbsPost.aspx?PostID=242289" class="linkgray_a1">详细说明</a>
+                                </li>
+                            </ul>
+                            <p class="post-ft">
+                                <a class="red_enter" onclick="submitvaluet()">
+                                    <span>写好了，发布</span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <include file="public:pagebot"/>
-                <div class="post-mod" style="position:relative;top:0px;">
-                    <ul class="post-bd">
-                        <li class="post-to">
-                            <div class="post-to-mod">
-                                <span class="post-label">发&nbsp;帖&nbsp;到：</span>
-                                <select name="hitpid" id="hitpid" onchangecontentline-height:22px; width:100px;text-align:center;>
-                                    <option value="">请选择</option>
-                                    <option value="1">游戏交流</option>
-                                    <option value="2">兑奖</option>
-                                    <option value="3">问题反馈</option>
-                                </select>
-                            </div>
-                        </li>
-                        <li class="post-title">
-                            <label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
-                            <input type="text" name="subject" class="txt" value="" id="subject"></li>
-                        <li class="ue-editor">
-                            <div class="post_wby" id="text_an">
-                                <div class="post_fbtb_an" id="an1">
-                                    <img src="__IMAGES__/bbs/bq_tb.gif" border="0" style="cursor:pointer;"></div>
-                                <div class="post_fbtb_an" id="an2">
-                                    <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
-                                <div class="post_fbtb_an" id="an3">
-                                    <img src="__IMAGES__/bbs/clj_tb.gif" border="0" style="cursor:pointer;"></div>
-                            </div>
-                            <textarea id="content" name="content" style="width:650px; border:1px solid #dddddd; padding:15px; padding-top:10px; line-height:24px;"></textarea>
-                        </li>
-                        <li>
-                            精华帖的奖励：
-                            <img src="__IMAGES__/bbs/pink_red-j.gif" width="21" height="20">
-                            ：奖
-                            <span class="color4">500,000</span>
-                            金蛋&nbsp;
-                            <img src="__IMAGES__/bbs/pink_green-j.gif">
-                            ：奖
-                            <span class="color4">300,000</span>
-                            金蛋&nbsp;
-                            <img src="__IMAGES__/bbs/pink_blue-j.gif">
-                            ：奖
-                            <span class="color4">100,000</span>
-                            金蛋&nbsp;
-                            <a href="http://www.pceggs.com/nbbs/bbsPost.aspx?PostID=242289" class="linkgray_a1">详细说明</a>
-                        </li>
-                    </ul>
-                    <p class="post-ft">
-                        <a class="red_enter" onclick="submitvaluet()">
-                            <span>写好了，发布</span>
-                        </a>
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<include file="public:footer"/>
+        <include file="public:footer"/>
 </body>
-</html>
+    </html>

@@ -1,1 +1,9 @@
 #body_content{width:980px;margin: 12px auto auto;overflow:hidden;border: 1px solid #f1cb95; padding-bottom: 5px;}
+.comfirm_bnt {
+background: url("../Images/public/submit.gif") no-repeat;
+width: 116px;
+height: 30px;
+font-weight: bold;
+text-align: center;
+border-width: 0px;
+}
