@@ -55,4 +55,8 @@ class bbsAction extends comAction{
     public function pjudge(){
         $this->display();
     }
+
+    public function newAns(){
+        var_dump("zheshi ");
+    }
 }

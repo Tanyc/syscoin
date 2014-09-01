@@ -5,6 +5,7 @@
     <title>团购-专业的广告游戏平台</title>
     <include file="public:com"/>
     <load href='__CSS__/bbs_desc.css' />
+    <load href='__JS__/bbs/bbs.js' />
 </head>
 
 <body>
@@ -113,76 +114,57 @@
                 </div>
             </foreach>
 
+            <form name="Form" method="post" action="./newAns" id="Form1" enctype="multipart/form-data">
+                <div class="post-mod">
+                    <ul class="post-bd">
+                        <li class="post-to">
+                            <div class="post-to-mod">
+                                <span class="post-label" style="font-size:14px; font-weight:700; color:#525252;">回复本帖</span>
+                            </div>
+                        </li>
+                        <li class="ue-editor">
+                            <div class="post_wby" id="text_an">
+                                <div class="post_fbtb_an" id="an1">
+                                    <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                            </div>
 
-
-
-
-
-            <div class="post-mod">
-                <ul class="post-bd">
-                    <li class="post-to">
-                        <!--=S post-to-mod -->
-                        <div class="post-to-mod">
-                            <span class="post-label" style="font-size:14px; font-weight:700; color:#525252;">回复本帖</span>
-                        </div>
-                    </li>
-                    <li class="ue-editor">
-                        <div class="post_wby" id="text_an">
-                            <div class="post_fbtb_an" id="an1">
-                                <img src="images/bq_tb.gif" border="0" style="cursor:pointer;"></div>
-                            <div class="post_fbtb_an_xz" id="an2">
-                                <img src="images/img_tb.gif" border="0" style="cursor:pointer;"></div>
-                            <div class="post_fbtb_an" id="an3">
-                                <img src="images/clj_tb.gif" border="0" style="cursor:pointer;"></div>
-                        </div>
-                        <!--上传图片层-->
-                        <div class="dis_fc_bq fc_img" id="uploadimg" style="height: 230px; left: 56px; display: none;">
-                            <div class="dis_fcgban" style="padding-left:372px;*padding-left:364px;">
-                                <img src="images/pceggs_bq/dis_fc_gban.gif" border="0" style="cursor:pointer;" onclick="closec()"></div>
-                            <div style="width:376px; margin:0 auto;*margin-left:8px;">
-                                <div class="dis_fc_tbkj" style=" margin-top: 14px;*margin-top:0px;">
-                                    <div class="dis_fc_tab-hd clearall">
-                                        <p class="fc_tab-item">
-                                            <a class="selected" id="up1" onclick="up(1)">
-                                                <span>本地上传</span>
-                                            </a>
-                                            <a id="up2" onclick="up(2)">
-                                                <span>网络上传</span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="dis_fc_table_p">
-                                    <div style="padding-left:10px; float:left; padding-top:5px;width:100%;line-height:25px;">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
-                                    <div style="height:140px;line-height:36px;margin-top:10px;display:none;text-align:center;" id="addimgs1">
-                                        <div style="height:36px;line-height:36px;">
-                                            网址1&nbsp;&nbsp;
-                                            <input name="upimg" type="text" id="upimg1" size="40" value="http://"></div>
-                                        <div style="height:36px;line-height:36px;">
-                                            网址2&nbsp;&nbsp;
-                                            <input name="upimg" type="text" id="upimg2" size="40" value="http://"></div>
-                                        <div style="height:36px;line-height:36px;">
-                                            网址3&nbsp;&nbsp;
-                                            <input name="upimg" type="text" id="upimg3" size="40" value="http://"></div>
-                                        <div style="width:100px;">
-                                            <a class="red_enter" onclick="addaddress();">
-                                                <span>上传图片</span>
-                                            </a>
+                            <div class="dis_fc_bq" id="uploadimg" style="left:110px; display:none">
+                            <div class="fl_top">
+                                <div class="fl_top_l">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
+                                <div style="float:right">
+                                    <img src="__IMAGES__/public/close.png" border="0" style="cursor:pointer;" onclick="closec()"></div>
+                            </div>
+                                <div style="width:376px; margin:0 auto;*margin-left:8px;">
+                                    <div class="dis_fc_table_p">
+                                        <div style="height:140px;line-height:36px;margin-top:10px;display:;text-align:center;" id="addimgs1">
+                                            <table width="316" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input name="textfield" type="file" id="blogImage1" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input name="textfield" type="file" id="blogImage2" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input name="textfield" type="file" id="blogImage3" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;overflow-x:hidden;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <textarea class="self_ans" id="content" name="content"></textarea>
-                    </li>
-                </ul>
-                <p class="post-ft">
-                    <input type="submit" name="submit" class="comfirm_bnt" value="" onclick="return editSb()">
-                </p>
-            </div>
 
-
-
+                            <textarea class="self_ans" id="content" name="content" onfocus="closec()"></textarea>
+                        </li>
+                    </ul>
+                    <p class="post-ft">
+                        <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return submitCheck()"></p>
+                </div>
+            </form>
 
         </div>
     </div>

@@ -1,0 +1,14 @@
+js中常用的技巧
+var ret = !!a
+等价于三元运算符：
+var ret = a? true : false;
+
+此外还有如下
+var1+""转为string
+~~var1转为int
+1*var1转为float
+[var1]转为array
+
+其实 +'123' 也是可以转换为 int 型的 123
+
+而 +new Data() 则等于 (new Date()).getTime()

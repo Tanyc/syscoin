@@ -60,10 +60,7 @@ margin-bottom: 10px;
 padding-bottom: 1px;
 zoom: 1;
 }
-/*.post-bd .ue-editor {
-position: relative;
-z-index: 7;
-}*/
+
 .post_wby {
 width: 800px;
 height: 36px;
@@ -92,28 +89,7 @@ margin-right: 5px;
 background: #FFFFFF;
 border: 1px solid #fbaf5d;
 }
-/*.dis_bq_l {
-width: 98px;
-height: 98px;
-border: 1px solid #ff9000;
-line-height: 98px;
-position: absolute;
-left: 350px;
-top: 80px;
-z-index: 999;
-}*/
-/*.dis_fc_bq {
-width: 332px;
-height: 180px;
-border: 1px solid #cbcbcb;
-border-right: 2px solid #cbcbcb;
-border-bottom: 2px solid #cbcbcb;
-position: absolute;
-top: 38px;
-margin-left: -20px;
-background-color: #fff;
-z-index: 999;
-}*/
+
 .dis_fc_tbkj {
 width: 100%;
 margin: 0 auto;
@@ -127,12 +103,7 @@ font-size: 12px;
 margin-top: 3px;
 _margin-top: -4px;
 }
-/*.dis_fc_tbkj .dis_fc_tab-hd {
-margin-bottom: 6px;
-border-bottom: 1px solid #bebebe;
-height: 26px;
-padding-top: 0px;
-}*/
+
 .dis_fc_table table {
 width: 100%;
 border: 0px;
@@ -150,19 +121,7 @@ height: 32px;
 width: 32px;
 border: 0px;
 }
-.fc_img {
-width: 392px;
-height: 200px;
-}
-.dis_fcgban {
-position: absolute;
-z-index: 50px;
-width: 18px;
-height: 18px;
-float: right;
-padding-left: 308px;
-padding-top: 6px;
-}
+
 .dis_fc_table_p {
 width: 100%;
 margin: 0 auto;
@@ -172,16 +131,7 @@ color: #868686;
 margin-top: -14px;
 text-align: left;
 }
-/*.dis_fc_tbkj .fc_tab-item {
-font-size: 12px;
-margin-top: -6px;
-}
-.dis_fc_tbkj .fc_tab-item .selected {
-cursor: default;
-position: relative;
-top: 1px;
-background-position: 0 0;
-}*/
+
 .post-ft {
 padding: 25px 0;
 text-align: center;
@@ -194,11 +144,22 @@ padding-left: 14px;
 color: #FFFFFF;
 cursor: pointer;
 }
-/*.red_enter span {
-display: inline-block;
-background: url(../img/public_img/bg_anniu.gif) no-repeat right -30px;
-height: 22px;
-padding-right: 14px;
-line-height: 22px;
-}*/
+
 .self_ans{width:770px; height:150px; border:1px solid #dddddd; padding:15px; padding-top:10px; line-height:24px;margin-left: 90px;}
+.fl_top{width:100%;height:30px;background:#E6E6E6}
+.fl_top_l{padding-left:10px; float:left; padding-top:5px;line-height:25px;}
+
+/*以下两项布局使文件选择框悬浮*/
+.ue-editor{position:relative;z-index:7;}
+.dis_fc_bq {
+width: 400px;
+height: 160px;
+border: 1px solid #cbcbcb;
+border-right: 2px solid #cbcbcb;
+border-bottom: 2px solid #cbcbcb;
+position: absolute;
+top: 38px;
+margin-left: -20px;
+background-color: #fff;
+z-index: 999;
+}

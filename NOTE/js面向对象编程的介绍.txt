@@ -1,0 +1,247 @@
+在使用了一段时间nodejs后，也有一些心得，其中最大的心得就是NodeJS中的面向对象编程，在这里和大家分享一下，不是技术含量很高的东西，算是比较实用的。
+在刚开始使用nodejs的时候，也是很随意的写一些函数，然后从上至下执行这些函数。如果需要其他js文件中的函数，就require那个文件。这在编写一些比较简单的程序的时候是行得通，并且是简单的。但是如果当程序的逻辑变得复杂，变量很多并且有不同的作用的时候，过程式的编程方式就会变得非常麻烦。况且nodejs中require进一个js文件时，是会先执行那个文件，所以这样一来多个js文件之间相互调用函数就会使得程序变得很复杂并且不可维护。
+正是由于这个原因，我后来的开发全部都是基于面向对象的思想。将功能和变量都封装起来，像在Java中一样，需要的时候就新建一个对象。这样整个程序的逻辑就会相对清楚很多，下面介绍一下这种面向对象的JS编程方式，相信对一些初学者来说是有借鉴意义的（我一开始就对如何去设计整个程序感到比较迷茫）。
+
+
+
+下面就用一个简单的类来说明如何使用JS来支持面向对象的编程思想：
+
+
+//person.js
+
+
+
+var num = 0;
+
+exports.Person = function(pName){
+    //private
+    var pri = {
+        pName : "",
+        pAge : 0
+    }
+    //public
+    var pub = {
+        setName : function(pName){
+            pri.pName = pName;
+        },
+        getName : function(){
+            return pri.pName;
+        }
+    }
+//construct code
+    pri.pName = pName;
+    return pub;
+
+}
+
+如上面看到的，在pri中定义了一些变量，在pub中定义了一些方法，而Person类返回pub引用，所以外部只能访问pub中的方法或者变量。这样就将一些私有的方法和变量封装了起来，很符合OO的思想。如果是很简单的类和方法，并不需要隐藏类的一些功能的话，完全可以不需要将类中的元素分为两类（即不需要pri和pub，直接定义各种方法和变量即可）。
+
+这里有几点说明：
+1.pri中定义私有变量，pub中定义共有变量，外界只能访问pub中的内容。
+2.在pub中使用私有变量时，需要加上pri前缀，不然无法访问私有变量。
+3.可以看到文件开头有一个变量申明（var num = 0;）这个num变量可以看做是Person类的static变量，如果把num申明为export.num的话，则可以直接访问。这里我们又能感受到一个js文件就编写一个类的好处，一个js文件内部所有的变量都是围绕着这个类的，无论是不是在类定义内部。
+4.在文件靠后的部分（注释//construct code）的地方可以编写构造函数，利用传进来的参数进行初始化。这是因为在new一个新对象的时候，会把整个类内部代码跑一遍，那构造代码能写在类定义开头吗？不行，因为这时候还没有定义pri和pub中的变量，因此初始化会失败。
+5.Person前的exports是用来给其他js文件require的，这也是面向对象设计很关键的一点。
+如果可以将程序完全按照面向对象来编程（类似Java，所有都是对象），则可以把require直接看成 Java中的import（这点是很重要的，因为一个文件require多遍和一遍是一样的，并且在函数体内部require是很容易出现问题的，建议将require都放在文件的头部）。
+但这里有个问题是，这样子的实现的确可以将函数进行分类，让外界只能访问public中的函数，但是对象的继承就变得不是很容易了。这是因为JavaScript中的继承机制并不是像Java那样直接使用extends就可以了，而是完全由自己来实现的，这种继承的实现往往是通过复制基类内的组成元素（在JavaScript中，变量和方法都看成是一样的组成元素）来完成的。而上述这种面向对象的设计其实只允许外部访问一部分函数，完全不能涉及到私有变量，所以不能做到完全复制，这样继承就显得比较困难了。
+
+而如果类的设计本身没有区分私有和共有的问题，则可以使用很方便的方法进行继承，如下：
+
+function parent(){
+    this.x=10;
+    this.print = function(){console.log("parent");}
+}
+
+function child(){
+    var parentObj=new parent();
+    for(var p in parentObj)this[p]=parentObj[p];
+    this.printSelf = function(){console.log("child");}
+}
+
+var childObj=new child();
+childObj.print();//print "parent"
+childObj.printSelf();//print "child"
+
+parent是父类，child是子类
+我们可以看到，在child类中，每次实例化一个类，都会将父类中的元素全部复制，然后可以加上自己的元素，如果名字相同，则会覆盖。其实原理很简单，就是把父类的东西全部复制过来，然后加上自己的一些东西，或者修改父类的元素（变量或者方法）。
+所以在类的继承方面和封装方面两者很难同时满足，可以根据需要进行选择。
+事实证明，面向对象的思想很简单，但在开发过程中非常实用。这样的设计能更好地支持程序的模块化，同时增加程序的可读性。
+分享到微博
+5 回复
+pengchunpengchun 1楼?2011-2-11 09:55
+这里有一篇文章，对JS的面向对象方法有比较全面的总结：
+
+http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html
+
+yixuan yixuan 2011-2-11 14:34
+恩，在写完这篇文章之后，我也再去了解了一些js对象相关的东西，包括prototype的使用。感觉js面向对象的思想并不是那么简单的，值得仔细研究。
+
+anonymousanonymous 2楼?2011-6-1 10:17
+var parent = function(name){
+
+var that = {};
+
+that.name = name;
+
+return that;
+
+};
+
+
+
+var child = function(name,age){
+
+var that = parent(name);
+
+that.age = age;
+
+return that;
+
+};
+
+snoopysnoopy 3楼?2011-7-25 09:37
+java不清楚，本人写前端OOjavascript一般是这么写的：
+
+var s1 = function(){
+
+}
+
+s1.prototype.getName = function(){alert(this.name)};
+
+var s2 = function(){
+
+}
+
+s2.prototype =new s1();
+
+s2.prototype.getSex = function(){alert(this.sex)};
+
+var s3 = function(){
+
+}
+
+s3.prototype = new s2()
+
+s3.prototype.getAge = function(){alert(this.age)};
+
+var s = new s3();
+
+s.name = 'jack';
+
+s.sex = 'male';
+
+s.age = '22';
+
+s.getName();  //jack
+
+s.getSex();    //male
+
+s.getAge();    //22
+
+
+
+或者
+
+
+
+
+
+var s1 = function(name){
+
+this.name = name;
+
+}
+
+var s2 = function(sex){
+
+this.sex = sex;
+
+}
+
+var s3 = function(age){
+
+this.age = age;
+
+}
+
+var Student = function(name, sex, age, score){
+
+s1.call(this, name);
+
+s2.call(this, sex);
+
+s3.call(this, age);
+
+this.score = score;
+
+}
+
+var s = new Student('jack', 'male', '12', '100');
+
+
+
+alert(s.name);   //jack
+
+alert(s.sex);     //male
+
+alert(s.age);    //12
+
+alert(s.score);   //100
+
+snoopysnoopy 4楼?2011-7-25 09:38
+或者2者结合起来：
+
+var s1 = function(name){
+
+this.name = name;
+
+}
+
+s1.prototype.getName = function(){alert(this.name)};
+
+var s2 = function(sex){
+
+this.sex = sex;
+
+}
+
+s2.prototype =new s1();
+
+s2.prototype.getSex = function(){alert(this.sex)};
+
+var s3 = function(age){
+
+this.age = age
+
+}
+
+s3.prototype = new s2();
+
+s3.prototype.getAge = function(){alert(this.age)};
+
+
+
+var s4 = function(name, sex, age){
+
+s1.call(this, name);
+
+s2.call(this, sex);
+
+s3.call(this, age);
+
+}
+
+s4.prototype = new s3();
+
+var s = new s4('jack', 'male', '25');
+
+s.getName();   //jack
+
+s.getSex();    //male
+
+s.getAge();    //25
+
+rogicalrogical 5楼?2011-9-15 14:18
+http://www.cnblogs.com/leadzen/archive/2008/02/25/1073404.html
+
+这个悟透javascript 说了些用原型来实现面向对象， 里面还做了一些优劣比较
