@@ -115,9 +115,8 @@ class gloryAction extends comAction{
             if ($isadd !== false) {
                 $this->success('晒奖成功！');
             } else {
-                $this->error('晒奖失败!');
+                $this->error('系统繁忙，请稍后再试!');
             }
-            
         }
     }
 

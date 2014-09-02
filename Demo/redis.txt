@@ -1,0 +1,2 @@
+redis-server.exe redis.conf  --启动redis服务
+redis-cli.exe -h 127.0.0.1 -p 6379 --客户端连接redis服务器

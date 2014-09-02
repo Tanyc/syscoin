@@ -135,4 +135,12 @@ function checkIsLogin(){
     return true;
 }
 
+//将bbs内容转换成标准网页模式
+function covBBSContent($content){
+	/*注意：以下两条语句不能颠倒顺序，否则换行符处理不了，原因未知*/
+	$re = preg_replace("/\r\n+/", "<br>",$content);
+	$re = preg_replace("/\s+/", "&nbsp;",$re);
+	return $re;
+}
+
 ?>

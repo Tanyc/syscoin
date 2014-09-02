@@ -25,26 +25,5 @@ function submitCheck() {
         alert("帖子内容不能大于300个字");
         return false;
     }
-    if (getImgs() == 0 || getImgs() > 6) {
-        alert("必须上传1-6张图片！");
-        return false;
-    }
     return true;
-    // $.ajax({
-    //     dataType: "json",
-    //     type: "POST",
-    //     data: {'action': 'submitcontent', 'imgs': encodeURIComponent(imgs.join(";")), 'bname': encodeURIComponent(bname), 'replycontent': encodeURIComponent(replycontent) },
-    //     url: "show_ajax.aspx",
-    //     dataType: "json",
-    //     error: function () {
-    //         alert("发帖失败");
-    //     },
-    //     success: function (data, textStatus) {
-    //         if (data.result == 0) {
-    //             window.location.href = "/ShowPrize/ShowInfo.aspx?tid=" + data.tid;
-    //         } else {
-    //             alert(data.msg);
-    //         }
-    //     }
-    // });
 }

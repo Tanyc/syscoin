@@ -115,6 +115,7 @@
             </foreach>
 
             <form name="Form" method="post" action="./newAns" id="Form1" enctype="multipart/form-data">
+                <input name="blog_id" type="hidden" id="blog_id" value="{$blog_id}">
                 <div class="post-mod">
                     <ul class="post-bd">
                         <li class="post-to">
@@ -136,20 +137,20 @@
                             </div>
                                 <div style="width:376px; margin:0 auto;*margin-left:8px;">
                                     <div class="dis_fc_table_p">
-                                        <div style="height:140px;line-height:36px;margin-top:10px;display:;text-align:center;" id="addimgs1">
+                                        <div id="addimgs">
                                             <table width="316" border="0" align="center">
                                                 <tbody>
                                                     <tr>
                                                         <td height="30">
-                                                            <input name="textfield" type="file" id="blogImage1" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;"></td>
+                                                            <input class="upfile" name="upfile1" type="file" id="upfile1" size="30"></td>
                                                     </tr>
                                                     <tr>
                                                         <td height="30">
-                                                            <input name="textfield" type="file" id="blogImage2" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;"></td>
+                                                            <input class="upfile" name="upfile2" type="file" id="upfile2" size="30"></td>
                                                     </tr>
                                                     <tr>
                                                         <td height="30">
-                                                            <input name="textfield" type="file" id="blogImage3" size="30" style="height:20px;border:1px solid #7f9db9;width:300px;overflow-x:hidden;"></td>
+                                                            <input class="upfile" name="upfile3" type="file" id="upfile3" size="30"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

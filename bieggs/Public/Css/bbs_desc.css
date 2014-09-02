@@ -163,3 +163,6 @@ margin-left: -20px;
 background-color: #fff;
 z-index: 999;
 }
+
+.upfile{height:20px;border:1px solid #7f9db9;width:300px;}
+#addimgs{height:140px;line-height:36px;margin-top:10px;display:;text-align:center;}
