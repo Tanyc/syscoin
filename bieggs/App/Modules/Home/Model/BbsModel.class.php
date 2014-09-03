@@ -14,9 +14,6 @@ class BbsModel extends Model {
         return $this->where("id=".$id)->find();
     }
 
-
-
-
     public function addOneItem($data){
         return $this->add($data);
     }

@@ -80,7 +80,7 @@ class gloryAction extends comAction{
         $upload = new UploadFile();
         $upload->maxSize            = 3292200;
         $upload->allowExts          = explode(',', 'jpg,gif,png,jpeg');
-        $upload->savePath           = './Uploads/Images/';
+        $upload->savePath           = './Uploads/Images/glory/';
         $upload->thumb              = true;
         $upload->imageClassPath     = '@.ORG.Util.Image';
         $upload->thumbPrefix        = 'm_,s_'; 

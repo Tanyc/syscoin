@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>团购-专业的广告游戏平台</title>
+    <title>BBS-专业的广告游戏平台</title>
     <include file="public:com"/>
     <load href='__CSS__/bbs_desc.css' />
     <load href='__JS__/bbs/bbs.js' />
+    <load href='__JS__/jquery-ui-1.8.16.custom.min.js' />
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                     <div class="author">{$db_bbs.nick}</div>
                     <div class="headimg">
                         <a href="/pgComUserInfo.aspx?userid=15050175">
-                            <img src=<?php echo("__IMAGES__/user/head/" . $db_bbs["headimg"] . ".gif") ?>width="100px" height="100px"></a>
+                            <img width="100px" height="100px" src=<?php echo("__IMAGES__/user/head/" . $db_bbs["headimg"] . ".gif") ?>></a>
                     </div>
                     <div class="uabout">
                         <a href="">个人</a>
@@ -46,8 +47,9 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <div class="thread-cont" style="min-height:120px;_height:235px;">
+                                            <div class="thread-cont" style="min-height:120px;">
                                                 <div align="left" style="width:750px;overflow:hidden;">{$db_bbs.content}</div>
+                                                <script type="text/javascript">showImageList('{$db_bbs.imgs}',"BBS");</script>
                                             </div>
                                         </td>
                                     </tr>
@@ -57,10 +59,11 @@
                         <div class="view-ft">
 
                             <div class="user-sign">{$db_bbs.selfdes}</div>
+                            <?php if($_SESSION["authId"] != ""): ?>
                             <div class="link1 user-option">
-                                <a href="javascript:void(0)" onclick="jubao('17185924','18003836')">举报</a>
+                                <a href="javascript:void(0)" onclick="jubao('{$db_bbs.id}','1')">举报</a>
                             </div>
-                        </div>
+                            <?php endif; ?></div>
                     </div>
                 </div>
             </div>
@@ -71,7 +74,7 @@
                         <div class="author">{$vo.nick}</div>
                         <div class="headimg">
                             <a href="/pgComUserInfo.aspx?userid=15050175">
-                                <img src=<?php echo("__IMAGES__/user/head/" . $vo["headimg"] . ".gif") ?>width="100px" height="100px"></a>
+                                <img width="100px" height="100px" src=<?php echo("__IMAGES__/user/head/" . $vo["headimg"] . ".gif") ?>></a>
                         </div>
                         <div class="uabout">
                             <a href="">个人</a>
@@ -105,15 +108,22 @@
                             </div>
                             <div class="view-ft">
                                 <div class="user-sign">{$vo.selfdes}</div>
+                                <?php if($_SESSION["authId"] != ""): ?>
                                 <div class="link1 user-option">
-                                    <a href="javascript:void(0)" onclick="jubao('17185924','18003837')">举报</a>
+                                    <a href="javascript:void(0)" onclick="jubao('{$vo.id}','2')">举报</a>
                                 </div>
-                            </div>
+                                <?php endif; ?></div>
                         </div>
                     </div>
                 </div>
             </foreach>
-
+            <?php if($_SESSION["authId"] == ""): ?>
+            <div class="main-tip">
+                您还没有登录，您需要
+                <a style="font-weight:bold;font-size:20px;color:#0000ff" href="{:U('pubtpl/nologin')}">&nbsp登录&nbsp</a>
+                后才可以回帖。
+            </div>
+            <?php else: ?>
             <form name="Form" method="post" action="./newAns" id="Form1" enctype="multipart/form-data">
                 <input name="blog_id" type="hidden" id="blog_id" value="{$blog_id}">
                 <div class="post-mod">
@@ -124,51 +134,51 @@
                             </div>
                         </li>
                         <li class="ue-editor">
-                            <div class="post_wby" id="text_an">
-                                <div class="post_fbtb_an" id="an1">
-                                    <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
-                            </div>
-
-                            <div class="dis_fc_bq" id="uploadimg" style="left:110px; display:none">
+                        <!--<div class="post_wby" id="text_an">
+                            <div class="post_fbtb_an" id="an1">
+                                <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                        </div>-->
+                        <div class="dis_fc_bq" id="uploadimg" style="left:110px; display:none">
                             <div class="fl_top">
                                 <div class="fl_top_l">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
                                 <div style="float:right">
                                     <img src="__IMAGES__/public/close.png" border="0" style="cursor:pointer;" onclick="closec()"></div>
                             </div>
-                                <div style="width:376px; margin:0 auto;*margin-left:8px;">
-                                    <div class="dis_fc_table_p">
-                                        <div id="addimgs">
-                                            <table width="316" border="0" align="center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td height="30">
-                                                            <input class="upfile" name="upfile1" type="file" id="upfile1" size="30"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="30">
-                                                            <input class="upfile" name="upfile2" type="file" id="upfile2" size="30"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="30">
-                                                            <input class="upfile" name="upfile3" type="file" id="upfile3" size="30"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                            <div style="width:376px; margin:0 auto;*margin-left:8px;">
+                                <div class="dis_fc_table_p">
+                                    <div id="addimgs">
+                                        <table width="316" border="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="30">
+                                                        <input class="upfile" name="upfile1" type="file" id="upfile1" size="30"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30">
+                                                        <input class="upfile" name="upfile2" type="file" id="upfile2" size="30"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30">
+                                                        <input class="upfile" name="upfile3" type="file" id="upfile3" size="30"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <textarea class="self_ans" id="content" name="content" onfocus="closec()"></textarea>
-                        </li>
-                    </ul>
-                    <p class="post-ft">
-                        <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return submitCheck()"></p>
-                </div>
-            </form>
-
-        </div>
-    </div>
-    <include file="public:footer"/>
+                        <textarea class="self_ans" id="content" name="content" onfocus="closec()"></textarea>
+                    </li>
+                </ul>
+                <p class="post-ft">
+                    <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return contentCheck()"></p>
+            </div>
+        </form>
+        <?php endif; ?></div>
+    <div class="ui-widget-overlay" id="ui-widget-overlay" style="z-index: 1000;"></div>
+    <div id="jubaodlg" class="dlg"></div>
+</div>
+<include file="public:footer"/>
 </body>
 </html>

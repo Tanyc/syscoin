@@ -103,5 +103,5 @@ text-align: center;
 
 #pc_showloginparent{display: ; left: 50%; margin-left: -207px; top: 50%; margin-top: -247px; position: fixed; width: 428px; height: 497px; z-index: 891208;}
 .load_fc_bd_top{margin-left:20px; width: 416px; height: 30px; padding: 0px; border-width: 1px; overflow-y: hidden; overflow-x: auto; background-color: #FF9C00;}
-#PCShowWindowBg{position: absolute; height: 2566px; opacity: 0.5; width: 100%; left: 0px; top: 0px; z-index: 870618; display: ; background: rgb(0, 0, 0);}
+#PCShowWindowBg{position: absolute; height: 2000px; opacity: 0.5; width: 100%; left: 0px; top: 0px; z-index: 870618; background: rgb(0, 0, 0);}
 #dlg_title{float:left; margin-left:170px; font-size:20px;}

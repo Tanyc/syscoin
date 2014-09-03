@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>团购-专业的广告游戏平台</title>
+    <title>BBS-专业的广告游戏平台</title>
     <include file="public:com"/>
     <load href='__CSS__/bbs.css' />
+    <load href='__JS__/bbs/bbs.js' />
 </head>
 
 <body>
@@ -18,20 +19,8 @@
             <div class="layout_wz">
                 <div id="main-wrap">
                     <div class="list-tab">
-                        <div class="list-tab-hd">
-                            <ul class="link1" id="tabbar">
-                                <li class="current">帖子</li>
-                                <li>
-                                    <a href="http://www.pceggs.com/nbbs/bbsMain.aspx?topicid=3&amp;goodtype=1&amp;z=1">精华</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.pceggs.com/nbbs/bbsMain.aspx?topicid=3&amp;userid=1873372&amp;z=2">我发表的帖子</a>
-                                </li>
-                            </ul>
-
-                        </div>
                         <div class="list-tab-bd">
-                            <input type="hidden" name="fid" value="9">
+                            <!-- <input type="hidden" name="fid" value="9"> -->
                             <table class="list-data" cellpadding="10" border="0" cellspacing="0">
                                 <thead>
                                     <tr>
@@ -62,7 +51,8 @@
                                                         <?php echo($vo["title"]); ?></a>
                                                 </th>
                                                 <td class="author">
-                                                    <img style="margin-bottom:0px;" src=<?php echo('__IMAGES__/user/head/' . $vo["headimg"] . '.gif'); ?> width="20px" height="20px">
+                                                    <img style="margin-bottom:0px;" src=<?php echo('__IMAGES__/user/head/' . $vo["headimg"] . '.gif'); ?>
+                                                    width="20px" height="20px">
                                                     <a href="http://www.pceggs.com/pgComUserInfo.aspx?USERID=1002">
                                                         <?php echo($vo["nick"]); ?></a>
                                                     <br></td>
@@ -79,58 +69,97 @@
                             </div>
                         </div>
                         <include file="public:pagebot"/>
-                        <div class="post-mod" style="position:relative;top:0px;">
-                            <ul class="post-bd">
-                                <li class="post-to">
-                                    <div class="post-to-mod">
-                                        <span class="post-label">发&nbsp;帖&nbsp;到：</span>
-                                        <select name="hitpid" id="hitpid" onchangecontentline-height:22px; width:100px;text-align:center;>
-                                            <option value="">请选择</option>
-                                            <option value="1">游戏交流</option>
-                                            <option value="2">兑奖</option>
-                                            <option value="3">问题反馈</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="post-title">
-                                    <label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
-                                    <input type="text" name="subject" class="txt" value="" id="subject"></li>
-                                <li class="ue-editor">
-                                    <div class="post_wby" id="text_an">
-                                        <div class="post_fbtb_an" id="an1">
-                                            <img src="__IMAGES__/bbs/bq_tb.gif" border="0" style="cursor:pointer;"></div>
-                                        <div class="post_fbtb_an" id="an2">
-                                            <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
-                                        <div class="post_fbtb_an" id="an3">
-                                            <img src="__IMAGES__/bbs/clj_tb.gif" border="0" style="cursor:pointer;"></div>
-                                    </div>
-                                    <textarea id="content" name="content" style="width:650px; border:1px solid #dddddd; padding:15px; padding-top:10px; line-height:24px;"></textarea>
-                                </li>
-                                <li>
-                                    精华帖的奖励：
-                                    <img src="__IMAGES__/bbs/pink_red-j.gif" width="21" height="20">
-                                    ：奖
-                                    <span class="color4">500,000</span>
-                                    金蛋&nbsp;
-                                    <img src="__IMAGES__/bbs/pink_green-j.gif">
-                                    ：奖
-                                    <span class="color4">300,000</span>
-                                    金蛋&nbsp;
-                                    <img src="__IMAGES__/bbs/pink_blue-j.gif">
-                                    ：奖
-                                    <span class="color4">100,000</span>
-                                    金蛋&nbsp;
-                                    <a href="http://www.pceggs.com/nbbs/bbsPost.aspx?PostID=242289" class="linkgray_a1">详细说明</a>
-                                </li>
-                            </ul>
-                            <p class="post-ft">
-                                <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return editSb()">
-                            </p>
-                        </div>
+                        <?php if($_SESSION["authId"] == ""): ?>
+                            <div class="main-tip">您还没有登录，您需要<a style="font-weight:bold;font-size:20px;color:#0000ff" href="{:U('pubtpl/nologin')}">&nbsp登录&nbsp</a>后才可以发帖。</div>
+                        <?php else: ?>
+                        <form name="Form" method="post" action="__URL__/wBbs" id="Form1" enctype="multipart/form-data">
+                            <div class="main-tip">发布新帖</div>
+                            <div class="post-mod" style="position:relative;top:0px;">
+                                <ul class="post-bd">
+                                    <li class="post-to">
+                                        <div class="post-to-mod">
+                                            <span class="post-label">发&nbsp;帖&nbsp;到：</span>
+                                            <select name="type" id="seltype">
+                                                <option value="">请选择</option>
+                                                <option value="1">游戏交流</option>
+                                                <option value="2">兑奖</option>
+                                                <option value="3">问题反馈</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="post-title">
+                                        <label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
+                                        <input type="text" name="subject" class="txt" value="" id="subject"></li>
+                                    <li class="ue-editor">
+                                        <div class="post_wby" id="text_an">
+                                            <div class="post_fbtb_an" id="an1">
+                                                <img src="__IMAGES__/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                                        </div>
+
+                                        <div class="dis_fc_bq" id="uploadimg" style="left:20px; display:none">
+                                            <div class="fl_top">
+                                                <div class="fl_top_l">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
+                                                <div style="float:right">
+                                                    <img src="__IMAGES__/public/close.png" border="0" style="cursor:pointer;" onclick="closec()"></div>
+                                            </div>
+                                            <div style="width:376px; margin:0 auto;*margin-left:8px;">
+                                                <div class="dis_fc_table_p">
+                                                    <div id="addimgs">
+                                                        <table width="316" border="0" align="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="30">
+                                                                        <input class="upfile" name="upfile1" type="file" id="upfile1" size="30"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="30">
+                                                                        <input class="upfile" name="upfile2" type="file" id="upfile2" size="30"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="30">
+                                                                        <input class="upfile" name="upfile3" type="file" id="upfile3" size="30"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="30">
+                                                                    <span style="color:#ff0000">请尽可能上传高清大图片，图片太小将影响视觉效果。</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <textarea class="bbs_content" id="content" name="content" onfocus="closec()"></textarea>
+                                    </li>
+                                    <li>
+                                        精华帖的奖励：
+                                        <img src="__IMAGES__/bbs/pink_red-j.gif" width="21" height="20">
+                                        ：奖
+                                        <span class="color4">500,000</span>
+                                        金蛋&nbsp;
+                                        <img src="__IMAGES__/bbs/pink_green-j.gif">
+                                        ：奖
+                                        <span class="color4">300,000</span>
+                                        金蛋&nbsp;
+                                        <img src="__IMAGES__/bbs/pink_blue-j.gif">
+                                        ：奖
+                                        <span class="color4">100,000</span>
+                                        金蛋&nbsp;
+                                        <a href="http://www.pceggs.com/nbbs/bbsPost.aspx?PostID=242289" class="linkgray_a1">详细说明</a>
+                                    </li>
+                                </ul>
+                                <p class="post-ft">
+                                    <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return submitCheck()"></p>
+                            </div>
+                        </form>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
-        <include file="public:footer"/>
+    </div>
+    <include file="public:footer"/>
 </body>
-    </html>
+</html>

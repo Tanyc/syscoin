@@ -8,7 +8,7 @@ CREATE TABLE `bi_bbs` (
 `imgs` varchar(150),
 `is_ding` smallint(1) NOT NULL DEFAULT 0,
 `is_good` smallint(1) NOT NULL DEFAULT 0,
-`ans_num` int(4),
+`ans_num` int(4) NOT NULL DEFAULT 0,
 `CTIME` varchar(11) NOT NULL,
 PRIMARY KEY (`id`)
 )DEFAULT CHARSET =utf8;

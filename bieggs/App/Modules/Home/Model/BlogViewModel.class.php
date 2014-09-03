@@ -1,8 +1,8 @@
 <?php
 class BlogViewModel extends ViewModel {
-	const PERPAGE = 10;
+	const PERPAGE = 15;
     public $viewFields = array(
-     	'Bbs'=>array('id','type','title','content','is_ding','is_good','ans_num','CTIME','_type'=>'LEFT'),
+     	'Bbs'=>array('id','type','title','content','imgs','is_ding','is_good','ans_num','CTIME','_type'=>'LEFT'),
      	'User'=>array('nick','headimg','selfdes','_on'=>'Bbs.UID=User.id'),
     );
 

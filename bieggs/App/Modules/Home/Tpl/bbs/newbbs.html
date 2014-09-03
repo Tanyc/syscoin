@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BBS-专业的广告游戏平台</title>
+    <include file="public:com"/>
+    <load href='__CSS__/bbs.css' />
+    <load href='__JS__/bbs/bbs.js' />
+</head>
+
+<body>
+    <include file="public:header"/>
+    <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
+    <div id="body_content">
+        <include file="public:textrun"/>
+        <div class="doc">
+            <include file="public:bbs_navi"/>
+            <form name="Form" method="post" action="__URL__/wBbs" id="Form1" enctype="multipart/form-data">
+                <div class="post-mod" style="position:relative;top:0px;">
+                    <ul class="post-bd">
+                        <li class="post-to">
+                            <div class="post-to-mod">
+                                <span class="post-label">发&nbsp;帖&nbsp;到：</span>
+                                <select name="type" id="seltype">
+                                    <option value="">请选择</option>
+                                    <option value="1">游戏交流</option>
+                                    <option value="2">兑奖</option>
+                                    <option value="3">问题反馈</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="post-title">
+                            <label for="title">标&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
+                            <input type="text" name="subject" class="txt" value="" id="subject"></li>
+                        <li class="ue-editor">
+                            <div class="post_wby" id="text_an">
+                                <div class="post_fbtb_an" id="an1">
+                                    <img src="/bidan/bieggs/Public/Images/bbs/img_tb.gif" border="0" style="cursor:pointer;"></div>
+                            </div>
+
+                            <div class="dis_fc_bq" id="uploadimg" style="left:20px; display:none">
+                                <div class="fl_top">
+                                    <div class="fl_top_l">注：每张照片大小不能超过5M，支持 .jpeg .jpg .gif .png 格式</div>
+                                    <div style="float:right">
+                                        <img src="/bidan/bieggs/Public/Images/public/close.png" border="0" style="cursor:pointer;" onclick="closec()"></div>
+                                </div>
+                                <div style="width:376px; margin:0 auto;*margin-left:8px;">
+                                    <div class="dis_fc_table_p">
+                                        <div id="addimgs">
+                                            <table width="316" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input class="upfile" name="upfile1" type="file" id="upfile1" size="30"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input class="upfile" name="upfile2" type="file" id="upfile2" size="30"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30">
+                                                            <input class="upfile" name="upfile3" type="file" id="upfile3" size="30"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <textarea class="bbs_content" id="content" name="content" onfocus="closec()"></textarea>
+                        </li>
+                        <li>
+                            精华帖的奖励：
+                            <img src="/bidan/bieggs/Public/Images/bbs/pink_red-j.gif" width="21" height="20">
+                            ：奖
+                            <span class="color4">500,000</span>
+                            金蛋&nbsp;
+                            <img src="/bidan/bieggs/Public/Images/bbs/pink_green-j.gif">
+                            ：奖
+                            <span class="color4">300,000</span>
+                            金蛋&nbsp;
+                            <img src="/bidan/bieggs/Public/Images/bbs/pink_blue-j.gif">
+                            ：奖
+                            <span class="color4">100,000</span>
+                            金蛋&nbsp;
+                            <a href="http://www.pceggs.com/nbbs/bbsPost.aspx?PostID=242289" class="linkgray_a1">详细说明</a>
+                        </li>
+                    </ul>
+                    <p class="post-ft">
+                        <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return submitCheck()"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <include file="public:footer"/>
+</body>
+</html>

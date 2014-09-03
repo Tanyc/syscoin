@@ -11,7 +11,7 @@ UL, LI {
 
 a {text-decoration:NONE;}
 a:link {
-	color: #009900;
+	color: #000000;
 	text-decoration: none;
 }
 a:hover {color:#0000ff;}
@@ -19,7 +19,6 @@ a:hover {color:#0000ff;}
 /*页面头*/
 #header{
 width:100%;
-/*height: 200px;*/
 margin: 0 auto;
 overflow:hidden;
 }
@@ -90,7 +89,7 @@ overflow:hidden;
 	height: 38px;
 	margin: 0 auto;
 	overflow:hidden;
-	background-image: url(../images/navi/navi_bg.gif);
+	background-image: url(../Images/navi/navi_bg.gif);
 	background-repeat: repeat-x repeat-y;
 }
 #navi_bottom_content{

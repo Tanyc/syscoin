@@ -5,26 +5,66 @@
 .post-bd .ue-editor{position:relative;z-index:7;}
 .post-bd .post-tag{position:relative;z-index:8;}
 .post-title .txt {width:420px; border:1px solid #abadb3; height:18px; line-height:18px; padding-left:3px;}
-#content {height:120px;}
 .post-ft {padding:25px 0;text-align:center;}
-.post_wby{width:680px; height:36px; background-color:#f7f7f7; border:1px solid #dddddd; border-bottom:0px;}
 .post_fbtb_an{float:left; width:20px; margin-left:5px; margin-right:5px;padding-top:10px;}
-#main-wrap {float:right;width:770px;border:1px solid #f1cb95;}
+#main-wrap {float:right;width:770px;border:1px solid #f1cb95;min-height: 800px}
 .list-tab-hd {padding:4px 5px 0 7px;height:30px;background:url(../Images/glory/yellow_j.png) repeat-x;}
 .list-tab-hd li {float:left;padding:0 18px;height:28px;font-size:14px;}
-.list-tab-bd {clear:both;width:770px;overflow:hidden;}
 .glytj_img{ width:170px; height:135px; margin:0 auto; border:1px solid #e0e0e0; margin-top:12px;}
 .glytj_word_m{width:170px; height:30px; color:#0657b2; line-height:30px; text-align:center; margin:0 auto;}
 .glytj_word_l{ text-align:left;}
 .glytj_word_l p{line-height:24px;}
-span.dot_tb{background:url(../images/dot.gif) no-repeat center center; width:4px; padding-right:15px;}
-.list-data {width:100%;margin-top: 10px;}
+.list-data {width:100%;}
 .list-data .icon {width:33px;text-align:right; padding-right:5px;}
 .list-data th {font-weight:400;text-align:left;}
 .list-data thead th {height:30px;border-bottom:1px solid #dedede;background: url(../Images/glory/yellow_j.png) repeat-x;color:#666;}
-.title {font-size:14px;}
 .current{background-color: #ffffff;font-weight: bold;border-top: 2px solid #ff9910;border-left: 2px solid #ff9910;border-right: 2px solid #ff9910;}
 .tlq_beta3_sj_bgimg {text-align: center;margin: 0 auto;margin-top: 20px;width: 750px;}
 .bbs-tab{height:40px;background:url(../Images/glory/yellow_j.png) repeat-x;border-bottom: 1px dashed #dd0000;vertical-align: center;}
 
 .cont-hd {margin-bottom: 10px;line-height: 5px;overflow: hidden;}
+.post_wby {
+width: 700px;
+height: 36px;
+border: 1px solid #dddddd;
+border-bottom: 0px;
+}
+.bbs_content{width:670px; height:150px; border:1px solid #dddddd; padding:15px; padding-top:10px; line-height:24px;}
+.ue-editor{position:relative;z-index:7;}
+.dis_fc_bq {
+width: 400px;
+height: 180px;
+border: 1px solid #cbcbcb;
+border-right: 2px solid #cbcbcb;
+border-bottom: 2px solid #cbcbcb;
+position: absolute;
+top: 38px;
+margin-left: -20px;
+background-color: #fff;
+z-index: 999;
+}
+.upfile{height:20px;border:1px solid #7f9db9;width:300px;}
+#addimgs{height:140px;line-height:36px;margin-top:10px;display:;text-align:center;}
+.fl_top{width:100%;height:30px;background:#E6E6E6}
+.fl_top_l{padding-left:10px; float:left; padding-top:5px;line-height:25px;}
+
+.tlq_beta3_main_box_wxts {
+background: #fafafa;
+border-top: 1px solid #d0d0d0;
+width: 750px;
+margin: auto 10px auto 10px;
+padding: 50px 107px;
+color: #333333;
+font-size: 12px;
+}
+
+.title {
+font-weight: bold;
+font-size: 18px;
+}
+
+.subtip {
+color: #a23f3f;
+display: block;
+}
+.main-tip{font-size:18px;margin-left:10px;font-weight: bold;}
