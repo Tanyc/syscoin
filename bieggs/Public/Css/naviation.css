@@ -1,56 +1,46 @@
 @charset "utf-8";
-BODY {
-	FONT: 12px/1.5 'lucida grande',tahoma,arial,'bitstream vera sans',helvetica,sans-serif;
-	background-color: #FFF; margin: 10px 0px 0px 0px;
-}
+BODY {FONT: 12px/1.5 'lucida grande',tahoma,arial,'bitstream vera sans',helvetica,sans-serif;background-color: #FFF; margin: 10px 0px 0px 0px;}
 UL, LI {LIST-STYLE-TYPE: none; margin: 0px; padding: 0px;}
 a {text-decoration:NONE;}
 a:link,a:visited {color: #000000;text-decoration: none;}
 a:hover {color:#0000ff;}
-
 /*页面头*/
-#header{
-width:100%;
-margin: 0 auto;
-overflow:hidden;
-}
-#navi_top{
-width:980px;
-height: 20px;
-margin: 0 auto 5px auto;
-overflow:hidden;
-}
-#navi_topl{
-float:left;
-text-align:center;
-position: relative;
-}
+#header{width:100%;margin: 0 auto;overflow:hidden;}
+#navi_top{width:980px;height: 20px;margin: 0 auto 5px auto;overflow:hidden;}
+.navi_topl{float:left;text-align:center;position: relative;}
 .navi_top_img_phone {PADDING-LEFT: 18px; BACKGROUND: url(../images/public/phone.png) no-repeat left center}
+.navi_topr{float:right;}
+.navi_topr LI{float: right;}
+.navi_topmenu a:link, .navi_topmenu a:visited{
+display:block;
+text-align:center;
+padding: 0 5px;
+text-decoration:none;
+text-transform:uppercase;
+}
+
 #main_nav{overflow:hidden;font-size:16px;float: left;}
-#main_nav li,#navi_topl li{float:left;margin-top: 3px;}
+#main_nav li,.navi_topl li{float:left;}
 #navi_bottom_content a:link, #navi_bottom_content a:visited{
 display:block;
 width:78px;
 font-weight:bold;
 color:#ffffff;
 text-align:center;
-padding:4px;
+padding:7px;
 text-decoration:none;
 text-transform:uppercase;
 }
 #navi_bottom_content a:hover, a:active{background-color:#770000;}
-#navi_topr{float:right;}
-#main_navr LI,#navi_topr LI{float: right;font-size:14px;margin-top: 5px;}
-#main_navr a:link,#main_navr a:visited{width:68px;}
+#main_navr LI{float: right;font-size:12px;margin-top: 5px;}
+#main_navr a:link,#main_navr a:visited{width:58px;}
 
-.sheader_line {width: 1px;height:28px;background-image: url('../images/public/sheader_bg_line.gif');}
-/*******************/
-#navi_mid{
-width:980px;
-height: 72px;
-margin: 0 auto;
-overflow:hidden;
-}
+#navi_mid{width:980px;height: 72px;margin: 0 auto;overflow:hidden;}
+
+.sheader_line,.slash_line {width: 1px;height:25px;background-image: url('../images/public/sheader_bg_line.gif');margin-top: 4px;}
+.slash_line {height:12px;}
+#navi_mid{width:980px;height: 72px;margin: 0 auto;overflow:hidden;}
+
 #navi_midl{
         width: 168px;
         height: 72px;

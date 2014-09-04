@@ -1,70 +1,67 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>团购-专业的广告游戏平台</title>
-    <include file="public:com"/>
-    <load href='__CSS__/activity.css' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>活动中心-专业的广告游戏平台</title>
+  <include file="public:com"/>
+  <load href='__CSS__/activity.css' />
 </head>
-
 <body>
-    <include file="public:header"/>
-    <div id="body_content">
-        <include file="public:textrun"/>
-        <include file="public:activitytab"/>
-        <div class="act_list">
-            <ul>
-                <volist name="db_activity" id="vo">
-                    <li>
-                    <div class="li_list_item">
-                        <div class="li_act_l">
-<script language="javascript" type="text/javascript">
+  <include file="public:header"/>
+  <div id="body_content">
+    <include file="public:textrun"/>
+    <include file="public:activitytab"/>
+    <div class="act_list">
+      <ul>
+        <volist name="db_activity" id="vo">
+          <li>
+            <div class="li_list_item">
+              <div class="li_act_l">
+                <script language="javascript" type="text/javascript">
     var img_name = "{$vo.img_name}";
     var url_file = "__URL__" + "/{$vo.url_file}";
     var con = '<a class="act_href" href=' + url_file + ' ><img src=__IMAGES__/activity/' + img_name + '></a>';
     document.write(con);
 </script>
-                            <if condition='$vo.is_active eq 1'>
-                                <div class="title">{$vo.title }</div>
-                            <else />
-                                <div class="passtitle">{$vo.title }</div>
-                            </if>
-                        </div>
-                        <div class="li_act_m">
-                            活动时间：
-                            <span>{$vo.act_time_start}</span>
-                            <br>
-                            参加对象：
-                            <span>
-                            <if condition='$vo.act_menber eq 0'>
-                                所有认证会员
-                            <else />
-                                特殊会员
-                            </if>
-                            </span>
-                            <br>
-                            活动详情：
-<script language="javascript" type="text/javascript">
+                <if condition='$vo.is_active eq 1'>
+                  <div class="title">{$vo.title }</div>
+                  <else />
+                  <div class="passtitle">{$vo.title }</div>
+                </if>
+              </div>
+              <div class="li_act_m">
+                活动时间：
+                <span>{$vo.act_time_start}</span>
+                <br>
+                参加对象：
+                <span>
+                  <if condition='$vo.act_menber eq 0'>
+                    所有认证会员
+                    <else />
+                    特殊会员
+                  </if>
+                </span>
+                <br>
+                活动详情：
+                <script language="javascript" type="text/javascript">
     var con = '<a class="act_detail" href=' + url_file + '>点击查看活动详情 &gt;&gt;</a>';
     document.write(con);
 </script>
-                        </div>
-                        <if condition='$ACT_TAB eq 1'>
-<script language="javascript" type="text/javascript">
+              </div>
+              <if condition='$ACT_TAB eq 1'>
+                <script language="javascript" type="text/javascript">
     var con = '<a class="li_act_r" href=' + url_file + ' ><img src="__IMAGES__/activity/btn1.gif"></a>';
     document.write(con);
 </script>
-                        </if>
-                    </div>
-                    </li>
-<script language="javascript" type="text/javascript">
-    
-</script>
-                    <li class="slash"></li>
-                </volist>
-            </ul>
-        </div>
+              </if>
+            </div>
+          </li>
+          <script language="javascript" type="text/javascript"></script>
+          <li class="slash"></li>
+        </volist>
+      </ul>
     </div>
-    <include file="public:footer"/>
+  </div>
+  <include file="public:footer"/>
 </body>
 </html>
