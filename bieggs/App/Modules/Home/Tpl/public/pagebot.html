@@ -18,6 +18,9 @@
     }
     var allpage = calcAllPg({$db_data_cnt},true);
     function onsubmit(cur_pg){
+      //extra作为预留值，作其它控制
+        document.getElementById("extra1").value = '{$extra1}';
+        document.getElementById("extra2").value = '{$extra2}';
         document.getElementById("pg").value = cur_pg;
         document.getElementById("pgindex").submit();
     }

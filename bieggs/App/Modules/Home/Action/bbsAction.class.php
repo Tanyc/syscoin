@@ -23,31 +23,29 @@ class bbsAction extends comAction{
     public function desc(){
         $id = $this->_param("id");
         if (isNil($id)) {
-            $this->error("错误！");
+            $id = $this->_param("extra1");
+            if (isNil($id)) {
+                $this->error("非法查询!");
+            }
         }
-
-        $blog_view = D("BlogView");
-        $result = $blog_view->getResultById($id);
-        if (isNil($result)) {
-            $this->error("查无此帖");
+        $pg = $this->_param('pg')? $this->_param('pg') : 1;
+        if (1 == $pg) { //仅仅首页显示楼主信息
+            $blog_view = D("BlogView");
+            $result = $blog_view->getResultById($id);
+            if (isNil($result)) {
+                $this->error("查无此帖");
+            }
+            $this->assign("navi_tab",$result["type"]);
+            $this->assign("db_bbs",$result);
         }
-        $this->assign("navi_tab",$result["type"]);
-        $this->assign("db_bbs",$result);
-
         //评论
         $ans_view = D("AnsView");
-        $pg = $this->_param('pg')? $this->_param('pg') : 1;
         $ans_result = $ans_view->getPageResultsByBlogId($id,$pg);
         $this->assign("db_ans",$ans_result);
-
-        $this->assign("blog_id",$id);
+        $this->initCom($ans_view->getCountByBlogId($id),$pg);
+        $this->assign("extra1",$id);  //extra1作为pagebot和评论的双重标识
 
         $this->display();
-
-        // $test = "this           is
-        //  a test";
-        // $re = covBBSContent($test);
-        // var_dump($re);
     }
 
     public function newbbs(){
@@ -66,10 +64,10 @@ class bbsAction extends comAction{
         $this->display();
     }
 
-    private function initCom($db_data_cnt, $cur_pg){
+    private function initCom($db_data_cnt, $cur_pg, $per_num = 15){
         $array['db_data_cnt'] = $db_data_cnt;    //总数
         $array['cur_pg']      = $cur_pg; //当前页
-        $array['items']      = 15; //每页显示的条数
+        $array['items']       = $per_num; //每页显示的条数
         $this->assign($array);
     }
 
@@ -193,7 +191,11 @@ class bbsAction extends comAction{
         $data = array();
         $data["s_type"] = $this->_param("s_type");
         $data["type"]   = $this->_param("type");
+        $data["BUID"]   = $this->_param("BUID");
         $data["UID"]    = $UID;
+        if ($data["BUID"] == $data["UID"]) {
+            $this->ajaxReturn("举报失败\n你不能举报你自己！");
+        }
         $data["content"]= $this->_param("content");
         $data["CTIME"]  = time();
         $re = $db_jubao->add($data);

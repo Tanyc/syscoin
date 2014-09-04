@@ -5,17 +5,18 @@
     <title>BBS-专业的广告游戏平台</title>
     <include file="public:com"/>
     <load href='__CSS__/bbs_desc.css' />
-    <load href='__JS__/bbs/bbs.js' />
     <load href='__JS__/jquery-ui-1.8.16.custom.min.js' />
+    <load href='__JS__/bbs/bbs.js' />
+    <load href='__JS__/bbs/bbs_desc.js' />
 </head>
 
 <body>
     <include file="public:header"/>
-    <style type="text/css">.navibar_{$PAGE_CURID}{color: #ff0000; font-weight:bold;}</style>
     <div id="body_content">
         <include file="public:textrun"/>
         <include file="public:bbs_navi"/>
         <div>
+        <?php if(isset($db_bbs)): ?>
             <div class="bbs_floor clearall">
                 <div class="author_item">
                     <div class="author">{$db_bbs.nick}</div>
@@ -61,13 +62,13 @@
                             <div class="user-sign">{$db_bbs.selfdes}</div>
                             <?php if($_SESSION["authId"] != ""): ?>
                             <div class="link1 user-option">
-                                <a href="javascript:void(0)" onclick="jubao('{$db_bbs.id}','1')">举报</a>
+                                <a href="javascript:void(0)" onclick="jubao('{$db_bbs.id}','1','{$db_bbs.UID}')">举报</a>
                             </div>
                             <?php endif; ?></div>
                     </div>
                 </div>
             </div>
-
+        <?php endif; ?>
             <foreach name="db_ans" item="vo">
                 <div class="bbs_floor clearall">
                     <div class="author_item">
@@ -87,7 +88,7 @@
                             <div class="blog_title" style="color:#000000">
                                 【
                                 <span>
-                                    <?php echo($key + 1); ?></span>
+                                    <?php echo(($cur_pg - 1) * $items + $key + 1); ?></span>
                                 楼】
                             </div>
                             <div class="blog_CTIME">发表于{$vo.CTIME}</div>
@@ -110,13 +111,14 @@
                                 <div class="user-sign">{$vo.selfdes}</div>
                                 <?php if($_SESSION["authId"] != ""): ?>
                                 <div class="link1 user-option">
-                                    <a href="javascript:void(0)" onclick="jubao('{$vo.id}','2')">举报</a>
+                                    <a href="javascript:void(0)" onclick="jubao('{$vo.id}','2','{$vo.u_id}')">举报</a>
                                 </div>
                                 <?php endif; ?></div>
                         </div>
                     </div>
                 </div>
             </foreach>
+            <include file="public:pagebot"/>
             <?php if($_SESSION["authId"] == ""): ?>
             <div class="main-tip">
                 您还没有登录，您需要
@@ -125,12 +127,13 @@
             </div>
             <?php else: ?>
             <form name="Form" method="post" action="./newAns" id="Form1" enctype="multipart/form-data">
-                <input name="blog_id" type="hidden" id="blog_id" value="{$blog_id}">
+                <input name="blog_id" type="hidden" id="blog_id" value="{$extra1}">
                 <div class="post-mod">
                     <ul class="post-bd">
                         <li class="post-to">
                             <div class="post-to-mod">
                                 <span class="post-label" style="font-size:14px; font-weight:700; color:#525252;">回复本帖</span>
+                                <span style="font-size:8px; color:#ff0000;">（请用词文明，回复字数限制在50个汉字之内）</span>
                             </div>
                         </li>
                         <li class="ue-editor">
@@ -172,7 +175,7 @@
                     </li>
                 </ul>
                 <p class="post-ft">
-                    <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return contentCheck()"></p>
+                    <input type="submit" name="submit" class="blog_write_bnt" value="" onclick="return contentCheck(5,50)"></p>
             </div>
         </form>
         <?php endif; ?></div>

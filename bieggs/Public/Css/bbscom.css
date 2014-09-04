@@ -1,7 +1,7 @@
 #side-wrap {float:left;width:206px;border:1px solid #ECECEC;background-color:#F4F4F4;}
 .tab_bbs_tl{font-size:14px;background: url(../Images/public/bar_bg.gif) repeat-x;height:38px; margin:0 auto;margin-bottom:5px; width:980px;}
 .tab_bbs_tl ul li{ float:left;margin-left:4px; margin-right:4px;line-height:38px;text-align:center }
-.tab_bbs_tl ul li.selected{font-weight:bold;margin-top:2px;font-size:14px;background:url(../Images/glory/yellow_j.png) repeat ; float:left;line-height:38px;height:35px;text-align:center;}
+.tab_bbs_tl ul li.selected{font-weight:bold;margin-top:2px;font-size:14px;background:url(../Images/glory/yellow_bg.png) repeat ; float:left;line-height:38px;height:35px;text-align:center;}
 .topmargin{height:21px;width:2px;margin-top:10px;background:url(../Images/public/red_dot.png) repeat-y;}
 .discuss_ggw{position:relative;margin:0 auto;width:980px;overflow:hidden;height:50px;}
 .discuss_ft{height:45px; width:980px;}
