@@ -10,7 +10,7 @@ PRIMARY KEY (`id`)
 )DEFAULT CHARSET =utf8;
 
 -- ----------------------------
--- id:晒奖id
+-- id:回复id
 -- blog_id:blog的id
 -- UID:用户id
 -- content:内容，100字以下
