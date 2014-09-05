@@ -34,6 +34,7 @@ text-transform:uppercase;
 #navi_bottom_content a:hover, a:active{background-color:#770000;}
 #main_navr LI{float: right;font-size:12px;margin-top: 5px;}
 #main_navr a:link,#main_navr a:visited{width:58px;}
+#navibar_home{background: url("../images/navi/home_tb.gif") no-repeat 5px center;}
 
 #navi_mid{width:980px;height: 72px;margin: 0 auto;overflow:hidden;}
 
