@@ -24,10 +24,8 @@ class pubtplAction extends Action{
     
     function login(){
         if($_SESSION['online'] == 1){
-            Log::record("dingyong's test............11");
             $this->error('已经登录');
         }
-        Log::record("dingyong's test............");
         if(!verifyName($_POST['txt_UserName'])) {
             $this->error('用户名不合法，请核实！');
         }elseif (!verifyKey($_POST['txt_PWD'])){
@@ -54,8 +52,8 @@ class pubtplAction extends Action{
             }
             setUserInfo($authInfo); //save info to seesion
             updateUserInfo();       //update login info
-            // redirect(__ROOT__.'/user/index');
-            $this->success('登录成功！',__ROOT__.'/user/index');
+            redirect(__ROOT__.'/game/index');
+            // $this->success('恭喜，登录成功！');
         }
     }
 

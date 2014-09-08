@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `bi_user`;
 CREATE TABLE `bi_user` (
-  `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(8) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(32) NOT NULL,
   `status` smallint(1),
   `s_key` varchar(32) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE `bi_user` (
   `exp` int(4) unsigned NOT NULL,
   `jifen` int(5) unsigned NOT NULL,
   `grow` int(4) unsigned NOT NULL,
-  `vip` int(4) unsigned NOT NULL,
+  `vip` int(1) unsigned NOT NULL DEFAULT 0,
   `ltime` int(11) unsigned,
   `lip` varchar(15),
   `s_name` varchar(8),
@@ -27,6 +27,9 @@ CREATE TABLE `bi_user` (
   `s_bankkey` varchar(10),
   `sms_login` int(1),
   `s_addr` varchar(150),
+  `reTIME` varchar(11),
+  `bossID` varchar(10) UNIQUE,
+  `tui_score` INT(4) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -48,7 +51,7 @@ CREATE TABLE `bi_user` (
 -- exp:经验值
 -- jifen:积分值
 -- grow:成长经验值
--- vip:vip经验值
+-- vip:vip等级，vip初步分成6个等级（第六个等级为龙）
 -- ltime:最后登录时间
 -- lip:最后登录ip
 -- iscommit：账户是否认证：0=未认证  1=认证
@@ -58,6 +61,9 @@ CREATE TABLE `bi_user` (
 -- s_bankkey:银行安全密码
 -- sms_login：登录是否需要短信验证
 -- addr:个人地址
+-- reTIME:注册时间
+-- bossID:自己上线id，每个用户有且仅有一个上线
+-- tui_score:给邀请上线的提成分（推广分）
 
-INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第一', '我游戏，我快乐，我要赚钱养家！','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451254','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","");
-INSERT INTO `bi_user` VALUES ('1254845', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第3', '我游戏，我快乐，我要赚钱养家！','1','dingyong4224@163.com','13267074354','394276418','1','5','255454124','5845845451254','10000000','120','80','100','100','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","");
+INSERT INTO `bi_user` VALUES ('1873372', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第一', '我游戏，我快乐，我要赚钱养家！','1','dingyong4223@163.com','13267074323','394276418','1','5','255454124','5845845451254','10000000','120','80','100','0','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","","1400473645","1873371","121");
+INSERT INTO `bi_user` VALUES ('1254845', 'fb31f5692a1ab9a09fe6b0193c4512c1', '1', 'fb31f5692a1ab9a09fe6b0193c4512c1', '天下第3', '我游戏，我快乐，我要赚钱养家！','1','dingyong4224@163.com','13267074354','394276418','1','5','255454124','5845845451254','10000000','120','80','100','0','1400473645','192.168.1.101','张三','510824198411153611','0',"pp6854","","","1400473658","1873372","254");

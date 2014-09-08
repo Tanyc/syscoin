@@ -133,8 +133,21 @@ class userAction extends loginAction{
     }
 
     public function invite(){
-        $this->assign('PAGE_NAVII',11); //工资领取
-        
+        $this->assign('PAGE_NAVII',11); //个人推广
+        $id = $this->_param("id");
+        if (!isNil($id)) {
+            $this->assign("ini_tab",$id);
+        }
+        /***********个人推广信息*************/
+        $db_invite = D("Invite");
+        $result    = $db_invite->getMyInvite();
+        $this->assign("db_invite",$result);
+        $BUIDS     = $result["BUIDS"];
+        $db_user   = D("User");
+        $map['id'] = array('in',$BUIDS);
+        $db_BUIDS  = $db_user->getInviteUsersByCon($map);
+        $this->assign("db_BUIDS",$db_BUIDS);
+
         $this->display();
     }
 
@@ -334,6 +347,15 @@ class userAction extends loginAction{
         }
         D('User')->updateField("s_key",md5($_POST["pass_new"]));
         $this->success("密码修改成功，请妥善保管！");
+    }
+
+    /***********推广体现和兑换**************/
+    public function withdraw(){
+        
+    }
+
+    public function duieggs(){
+
     }
     
 }

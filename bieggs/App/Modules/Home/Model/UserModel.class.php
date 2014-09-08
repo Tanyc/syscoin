@@ -43,4 +43,10 @@ class UserModel extends Model {
         return $result[$field];
     }
 
+    //根据条件查询被邀请好友的信息
+    public function getInviteUsersByCon($con){
+        $fields = "id,status,nick,vip,ltime,reTIME,tui_score";
+        return $this->where($con)->getField($fields);
+    }
+
 }

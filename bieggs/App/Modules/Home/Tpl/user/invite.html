@@ -4,6 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户中心-专业的广告游戏平台</title>
 	<include file="public:com"/>
+	<load href='__JS__/invite/invite.js'/>
+	<load href='__CSS__/invite.css'/>
 </head>
 
 <body>
@@ -17,70 +19,298 @@
 				</div>
 				<div class="H_l_top">
 					<span>
-						<a href="javascript:setData(1);" id="tab1">我的帐户</a>
+						<a href="javascript:setData(1);" id="tab1">我的推广详情</a>
 					</span>
 					<span>
-						<a href="javascript:setData(2);" id="tab2">游戏明细</a>
+						<a href="javascript:setData(2);" id="tab2">提&nbsp&nbsp现</a>
 					</span>
 					<span>
-						<a href="javascript:setData(3);" id="tab3">获取明细</a>
+						<a href="javascript:setData(3);" id="tab3">兑换金蛋</a>
 					</span>
 					<span>
-						<a href="javascript:setData(4);" id="tab4">消费明细</a>
+						<a href="javascript:setData(4);" id="tab4">好友推广计划</a>
 					</span>
-					<span>
-						<a href="javascript:setData(5);" id="tab5">其他记录</a>
-					</span>
-					<span>
-						<a href="javascript:setData(6);" id="tab6">其他经验</a>
-					</span>
-					<span>
-						<a href="javascript:setData(7);" id="tab7">有效股票</a>
-					</span>
-
 				</div>
-				<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
-					<tbody>
-						<tr align="center" height="33px">
-							<td width="25%" align="center" class="tdstyle">金蛋获取/消费</td>
-							<td width="20%" align="center" class="tdstyle">金蛋数量</td>
-							<td width="20%" align="center" class="tdstyle">账户余额</td>
-							<td width="15%" align="center" class="tdstyle">时间</td>
-						</tr>
 
-						<tr class="font_bgrave" height="30">
-							<td height="20" align="center" bgcolor="#FFFFFF">签到获得吧币!送2积分</td>
-							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1">10</span>
-								&nbsp;
-								<img src="../static/style/guobi.gif"></td>
-							<td align="center" bgcolor="#FFFFFF">
-								<span class="c1 b1">50</span>
-								&nbsp;
-								<img src="../static/style/guobi.gif"></td>
-							<td align="center" bgcolor="#FFFFFF">2014-7-14 12:55:48</td>
-						</tr>
+				<div id="imfo_edit1" style="padding-top: 10px; display:none">
+					<div class="wdrynr_tg_table">
+						<div class="wdrynr_tg_table_wdtggk">
+							<table width="582" border="0" cellspacing="0" cellpadding="0" align="center">
+								<tbody>
+									<tr>
+										<td width="291" height="28">
+											邀请好友：
+											<span class="word_red" id="my_yq">{$db_invite.b_num}</span>
+										</td>
+										<td>
+											当前推广分：
+											<span class="word_red" id="my_jf">
+												<script type="text/javascript">verdoc('{$db_invite.score}');</script>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td height="28">
+											已提现：
+											<span class="word_red" id="my_ytx">
+												<script type="text/javascript">docMoney({$db_invite.p_money});</script>
+											</span>
+											（
+											<span id="my_ytx_jf">
+												<script type="text/javascript">verdoc({$db_invite.p_money} * 100);</script>
+											</span>
+											推广分）
+										</td>
+										<td>
+											已消费推广分：
+											<span class="word_red" id="my_yteggs">
+												<script type="text/javascript">verdoc({$db_invite.p_score});</script>
+											</span>
+											（包括提现和兑换金蛋）
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
+						</div>
+					</div>
+					<div class="title">详细推广列表>></div>
+					<table width="770" border="1" cellpadding="0" cellspacing="0" class="datatableK center mt10" bordercolor="#f1cb95">
+						<tbody>
+							<tr align="center" height="33px">
+								<td width="20%" align="center" class="tdstyle">昵&nbsp称</td>
+								<td width="20%" align="center" class="tdstyle">VIP等级</td>
+								<td width="20%" align="center" class="tdstyle">活跃度</td>
+								<td width="20%" align="center" class="tdstyle">注册时间</td>
+								<td width="20%" align="center" class="tdstyle">获得推广分</td>
+							</tr>
+							<volist name="db_BUIDS" id="vo">
+								<tr class="font_bgrave" height="30">
+									<td height="20" align="center" bgcolor="#FFFFFF">
+										<a href="#">{$vo.nick}</a>
+									</td>
+									<td align="center" bgcolor="#FFFFFF">
+										<!-- <span class="c1 b1">{$vo.range}</span>
+									-->
+									<script type="text/javascript">setVipRange({$vo.vip})</script>
+								</td>
+								<td align="center" bgcolor="#FFFFFF">
+									<span class="c1 b1">{$vo.ltime}</span>
+								</td>
+								<td align="center" bgcolor="#FFFFFF">
+									<span class="c1 b1">{$vo.reTIME}</span>
+								</td>
+								<td align="center" bgcolor="#FFFFFF">{$vo.tui_score}</td>
+							</tr>
+						</volist>
 					</tbody>
 				</table>
-				<div id="spage" style="width:98%">
-					<span>总记录数:1条</span>
-					<a href="/user/account.asp?m=&amp;page=1" id="spage_hv">1</a>
+			</div>
+			<div id="imfo_edit2" style="padding-top: 10px; display:none">
+				<div class="wdrynr_tg_table" style=" margin-bottom:12px;">
+					<div class="wdrynr_tg_table_wdtggk">
+						<p class="title">提现规则>></p>
+						<p class="wdrynr_wdtg_txgzsm">
+							<span>1.</span>
+							推广积分与现金的比例：
+							<span class="word_red">100</span>
+							推广积分=
+							<span class="word_red">1.00</span>
+							元人民币。
+							<br>
+							<span>2.</span>
+							只有通过身份认证的用户才可以进行提现申请。
+							<br>
+							<span>3.</span>
+							用户在提现时请仔细核支付宝账户和账户名对应一致。
+							<br>
+							<span>4.</span>
+							暂时只支持支付宝体现，不收取任何手续费；支付宝
+							<span class="word_red">50</span>
+							元起提。
+							<br>
+							<span>5.</span>
+							客服每日会处理当日
+							<span class="word_red">12:00</span>
+							前的提现申请，审核通过的提现申请将在
+							<span class="word_red">1-2</span>
+							个工作日内付款，付款成功将给用户发送站内消息，请主意查看。
+							<br>
+						</p>
+					</div>
+				</div>
+				<div class="title">
+					提现到支付宝
+					<span class="im_tip">(请谨慎填写账号信息，错误的信息将不能到账。)</span>
+				</div>
+				<form name="form1" method="post" action="user/withdraw" id="form1">
+					<div class="wdrynr_wdtg_txwbd" style="display: none;">
+						您绑定的支付宝账号：
+						<span style="font-weight:normal;"></span>
+						<a href="javascript:ReBangAlipay();" class="lj_bluebg_140110">重新绑定支付宝</a>
+					</div>
+					<div class="wdrynr_wdtg_txgzcon_nr" style="">
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">支付宝收款人：</li>
+								<li>
+									<input id="inp_account1" name="" type="text" class="txgzcon_nrinput_zh" onblur="CheckAlipay_zh()"></li>
+								<li id="need_account" class="txgzcon_nrev_ts">请确保与支付宝账户对应</li>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">支付宝账号：</li>
+								<li>
+									<input id="inp_account1" name="" type="text" class="txgzcon_nrinput_zh" onblur="CheckAlipay_zh()"></li>
+								<li id="need_account" class="txgzcon_nrev_ts">
+									请输入
+									<span class="im_tip">手机号码</span>
+									或
+									<span class="im_tip">电子邮箱</span>
+								</li>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">确认支付宝账号：</li>
+								<li>
+									<input id="inp_account2" name="" type="text" class="txgzcon_nrinput_zh"></li>
+								<li id="sure_account" class="txgzcon_nrev_ts">请再次确认账号</li>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">请输入提现金额：</li>
+								<li>
+									<input id="inp_account2" name="" type="text" class="txgzcon_nrinput_zh"></li>
+								<li id="sure_account" class="txgzcon_nrev_ts">
+									账户可用余额：
+									<span class="word_red">
+										<script type="text/javascript">docMoney({$db_invite.p_money});</script>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">验证码：</li>
+								<div class="load_fc_bdinput_d">
+									<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" tabindex="3" maxlength="4">
+									&nbsp;
+									<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-3px;" border="0">
+									<img id="code_tip" src="" style="width:18px; height:18px; display:none"></div>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nran">
+							<ul>
+								<li class="gn_anniu">
+									<a href="javascript:AlipayBang();">填好了，提吧</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="imfo_edit3" style="padding-top: 10px; display:none">
+				<div class="wdrynr_tg_table" style=" margin-bottom:12px;">
+					<div class="wdrynr_tg_table_wdtggk">
+						<p class="title">兑换规则>></p>
+						<p class="wdrynr_wdtg_txgzsm">
+							<span>1.</span>
+							推广积分与金蛋的兑换比例：
+							<span class="word_red">100</span>
+							推广积分=
+							<span class="word_red">10,000</span>
+							<img src="__IMAGES__/public/egg.png" width="9px" height="12px" />
+							。
+							<br>
+							<span>2.</span>
+							只有通过身份认证的用户才可以进行兑换申请。
+							<br>
+							<span>3.</span>
+							兑换为单向的，一旦将推广分兑换成金蛋，将不可再将金蛋兑换成推广分。
+							<br>
+							<span>4.</span>
+							兑换由系统自动完成，当你的推广分低于
+							<span class="word_red">1</span>
+							分时，将不可兑换，兑换的最低分数为1推广分。
+						</p>
+					</div>
+				</div>
+				<div class="title">
+					兑换成金蛋
+					<span class="im_tip">(提交成功后将扣除相应推广分。)</span>
+				</div>
+				<form name="form1" method="post" action="user/duieggs" id="form1">
+					<div class="wdrynr_wdtg_txwbd" style="display: none;">
+						您绑定的支付宝账号：
+						<span style="font-weight:normal;"></span>
+						<a href="javascript:ReBangAlipay();" class="lj_bluebg_140110">重新绑定支付宝</a>
+					</div>
+					<div class="wdrynr_wdtg_txgzcon_nr" style="">
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">兑换积分值：</li>
+								<li>
+									<input id="inp_account1" name="" type="text" class="txgzcon_nrinput_zh" onblur="CheckAlipay_zh()"></li>
+								<li id="need_account" class="txgzcon_nrev_ts">
+									账户可用积分：
+									<span class="word_red">
+										<script type="text/javascript">verdoc({$db_invite.score});</script>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nrev">
+							<ul>
+								<li class="txgzcon_nrev1">验证码：</li>
+								<div class="load_fc_bdinput_d">
+									<input name="txt_VerifyCode" type="text" id="txt_VerifyCode" tabindex="3" maxlength="4">
+									&nbsp;
+									<img src="__ROOT__/pubtpl/verify" onclick="this.src=this.src" style="cursor:pointer;margin-bottom:-3px;" border="0">
+									<img id="code_tip" src="" style="width:18px; height:18px; display:none"></div>
+							</ul>
+						</div>
+						<div class="wdrynr_wdtg_txgzcon_nran">
+							<ul>
+								<li class="gn_anniu">
+									<a href="javascript:AlipayBang();">填好了，兑换</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="imfo_edit4" style="padding-top: 10px; display:none">
+				<div class="account_right_top2"></div>
+				<div class="invite_desc">
+					邀请好友加入Lucky蛋蛋，好友玩游戏、参加团购或者参加活动，你就可以获得推广积分。推广积分可以兑换现金，也可以兑换金蛋。好友数量不限，邀请关系保持一年，一次邀请一年收益。赶快邀请身边的朋友，带他们玩转蛋蛋，你就坐等收现金吧！
+				</div>
+				<div>
+					<div class="title" style="float:left">我的推广规则>></div>
+					<div class="to_detail" style="float:right">
+						<a href="{:U('invest/index')}">马上开始推广</a>
+					</div>
+				</div>
+				<div class="invite_desc">
+				<p>1. 推广是用户邀请好友加入本网站的一种方法，推广分是根据用户推广用户的多少，获得的一种<span class="word_red">积分奖励</span>。</p>
+				<p>2. 推广分可以兑换成<span class="word_red">人民币</span>，也可以兑换成<span class="word_red">金蛋</span>。</p>
+				<p>3. 将带有推广信息的<span class="word_red"><a href="{:U('invest/index')}#TOLINK">&nbsp链接&nbsp</a></span>转发给他人，他人点击注册后，将自动成为您推广的用户。</p>
+				<p>4. 被推广用户在领取<span class="word_red">新人奖励</span>、参与<span class="word_red">团购</span>、首次<span class="word_red">充值</span>VIP等活动时，推广人将获得不同程度的奖励积分（推广分）。</p>
+				<p>5. <span class="word_red">100</span>推广积分=<span class="word_red">1.00元人民币</span>&nbsp或&nbsp10,000<img src="__IMAGES__/public/egg.png" width="9px" height="12px" /></p>
+				<p>6. 当前暂时只支持<span class="word_red">支付宝</span>提现，后期将会加入银行卡提现功能，支付宝<span class="word_red">50</span>元起提，不收取任何手续费。</p>
+				<p>7. 如果在推广中有违规注册行为，会扣除推广积分，严重者将被取消推广资格。</p>
 				</div>
 			</div>
 		</div>
 	</div>
-<script>
-$(document).ready(function(){
-	var sub_tab = {$SUB_TAB};
-    $(".H_l_top span a").each(function(i){
-    if (sub_tab == i) {
-      $(this).attr("class", "a_bg1");
-      $(this).attr("href", "");
-    }
-  });
-});
-</script>
-	<include file="public:footer"/>
+</div>
+<?php if(isset($ini_tab)): ?>
+	<script>setData({$ini_tab}); </script>
+<?php else: ?>
+	<script>setData(1); </script>
+<?php endif; ?>
+<include file="public:footer"/>
 </body>
 </html>

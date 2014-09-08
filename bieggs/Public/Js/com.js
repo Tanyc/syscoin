@@ -10,6 +10,19 @@ $(document).ready(function (){
 		}
 	});
 });
+
+function test(chr){
+alert(a.toFixed(2));
+	document.write(formatFloat(chr,2));
+}
+
+function docMoney(chr,num){
+	if (isNil(num)) {
+		num = 2;
+	};
+	document.write("￥" + chr.toFixed(num));
+}
+
 function checkIfCodeRight(varCode){
 	$.ajax({
 	    type:"get",
@@ -82,11 +95,7 @@ function isNil(str){
 }
 
 function setVipRange(vip){
-	var range = Math.floor(vip / 1000);
-	var doc = '<span><img src="' + img_path + '/user/vip/lv0.png" title="等级:0级"></span>';
-	if (range >= 1) {
-		var doc = '<span><img src="' + img_path + '/user/vip/lv' + range + '.png" title="等级:' + range + '级"></span>';
-	}
+	var doc = '<span><img src="' + img_path + '/user/vip/lv' + vip + '.png" title="等级:' + vip + '级"></span>';
 	document.write(doc);
 }
 

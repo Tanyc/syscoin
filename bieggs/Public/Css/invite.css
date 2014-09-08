@@ -1,0 +1,79 @@
+.wdrynr_tg_table {
+width: 770px;
+margin: 0 auto;
+}
+.wdrynr_tg_table_wdtggk {
+width: 768px;
+border: 1px solid #c6c6c6;
+padding: 10px 0px;
+background-color: #efefef;
+}
+.wdrynr_tg_table_wdtggk table tr td {
+color: #797979;
+font-size: 12px;
+}
+.word_red {
+color: #cd0000;
+font-weight: bold;
+}
+.title{margin: 10px auto;font-weight: bold;font-size: 16px;}
+
+.wdrynr_wdtg_txgzsm{
+	margin-left: 10px;
+	line-height: 20px;
+}
+
+.wdrynr_wdtg_txgzcon_nr {
+width: 516px;
+padding-left: 150px;
+}
+.wdrynr_wdtg_txgzcon_nrev {
+width: 516px;
+height: 34px;
+clear: both;
+color: #333333;
+}
+.wdrynr_wdtg_txgzcon_nrev ul li.txgzcon_nrev1 {
+width: 116px;
+text-align: right;
+padding-right: 4px;
+}
+.wdrynr_wdtg_txgzcon_nrev ul li {
+float: left;
+line-height: 34px;
+}
+
+.wdrynr_wdtg_txgzcon_nran{padding-left:100px; padding-top: 10px;}
+
+.wdrynr_wdtg_txgzcon_nran ul li.gn_anniu {
+width: 174px;
+text-align: center;
+}
+.wdrynr_wdtg_txgzcon_nran ul li {
+float: left;
+color: #cd0000;
+width: 165px;
+}
+.wdrynr_wdtg_txgzcon_nran ul li.gn_anniu a {
+color: #fff;
+font-size: 14px;
+background-color: #b40000;
+padding: 4px 44px;
+text-decoration: none;
+}
+.im_tip{color: #ff0000;font-size: 10px;}
+.account_right_top2 {
+width: 768px;
+background: url(../Images/invest/honer_topbg.jpg) no-repeat;
+height: 135px;
+overflow: hidden;
+}
+.invite_desc{width: 768;padding: 20px;margin-top: 20px;}
+
+.to_detail{
+z-index: 50;
+background-color: #fff1e4;
+border: 1px solid #f3c28e;
+padding: 4px;
+line-height: 12px;
+}

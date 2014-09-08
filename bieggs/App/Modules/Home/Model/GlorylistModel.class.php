@@ -3,6 +3,9 @@ class GlorylistModel extends Model {
 	const PERPAGE = 10;
 	public function getResultByPage($page = 1,$isMy){
         $UID = $_SESSION[C('USER_AUTH_KEY')];
+        if (isNil($UID)) {
+            return null;
+        }
         if ($isMy) {
             return $this->where("UID=".$UID)->page($page,$this::PERPAGE)->select();
         }
@@ -25,6 +28,9 @@ class GlorylistModel extends Model {
 
     public function getMyCount(){
         $UID = $_SESSION[C('USER_AUTH_KEY')];
+        if (isNil($UID)) {
+            return null;
+        }
         return $this->where("UID=".$UID)->count();
     }
 

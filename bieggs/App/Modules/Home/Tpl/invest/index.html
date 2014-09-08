@@ -5,33 +5,22 @@
     <title>邀请好友-专业的广告游戏平台</title>
     <include file="public:com"/>
     <load href='__CSS__/invest.css' />
+    <load href='__JS__/invite/invest.js' />
 </head>
 
 <body>
     <include file="public:header"/>
     <div id="body_content">
         <include file="public:textrun"/>
-        <div style="width:950px;background:#FFFFFF; margin:0 auto">
-            <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="top8">
+        <div style="width:980px;background:#FFFFFF; margin:0 auto">
+            <div class="top_img">
+                <img src="__IMAGES__/invest/tgv3_index_top.jpg" width="100%" height="200"></div>
+            <div class="top_img">
+                <img src="__IMAGES__/invest/share.jpg" width="980" height="45"></div>
+            <table width="980" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="top8">
                 <tbody>
                     <tr>
-                        <td height="137">
-                            <img src="__IMAGES__/invest/20130511180157-uKlrDTNdDl.jpg" width="950" height="200"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="top8">
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="__IMAGES__/invest/20120711172845-gM2U2wBccG.jpg" width="950" height="43" border="0" usemap="#Map"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="top8">
-                <tbody>
-                    <tr>
-                        <td width="743" height="333" align="left" valign="top">
+                        <td width="753" height="333" align="left" valign="top">
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="border1 top1">
                                 <tbody>
                                     <tr>
@@ -43,46 +32,29 @@
                                             <div class="py_info">
                                                 <div class="xingqu"> <strong style="float:left;line-height:35px; background:url(http://cache.adm.cnzz.net/ad_images/2012/2012-07-11/20120711173148-BHR6b5V4zv.jpg) no-repeat; height:35px; width:180px; padding-left:40px">选择朋友最感兴趣的：</strong>
                                                     <ul>
-                                                        <li id="py1" onclick="setTab(&#39;py&#39;,1,4);document.getElementById(&#39;copy_content&#39;).value=document.getElementById(&#39;con_py_1&#39;).innerHTML;" class="current">竞猜游戏</li>
-                                                        <li id="py2" onclick="setTab(&#39;py&#39;,2,4);document.getElementById(&#39;copy_content&#39;).value=document.getElementById(&#39;con_py_2&#39;).innerHTML;">体验游戏</li>
-                                                        <li id="py3" onclick="setTab(&#39;py&#39;,3,4);document.getElementById(&#39;copy_content&#39;).value=document.getElementById(&#39;con_py_3&#39;).innerHTML;">兼职网赚</li>
-                                                        <li id="py4" onclick="setTab(&#39;py&#39;,4,4);document.getElementById(&#39;copy_content&#39;).value=document.getElementById(&#39;con_py_4&#39;).innerHTML;">购物返利</li>
+                                                        <li id="py1" onclick="setTab(1)" class="current">竞猜游戏</li>
+                                                        <li id="py2" onclick="setTab(2)">体验游戏</li>
+                                                        <li id="py3" onclick="setTab(3)">兼职网赚</li>
+                                                        <li id="py4" onclick="setTab(4)">购物返利</li>
                                                     </ul>
                                                 </div>
                                                 <div class="py_tit">
                                                     <h4>方法一：邀请链接</h4>
-                                                    <div class="padd">
+                                                    <div class="padd" id="TOLINK">
                                                         <p>通过QQ、MSN、电子邮件发送邀请链接给你的朋友</p>
                                                         <table width="615" cellspacing="0" cellpadding="0" border="0" class="tab">
                                                             <tbody>
                                                                 <tr>
                                                                     <td width="428">
-                                                                        <div class="py_fuzhi" id="con_py_1">
-                                                                            幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！
-                        http://www.aoyene.cc/recom.php?userID=1104444
-                                                                        </div>
-                                                                        <div class="py_fuzhi" id="con_py_2" style="display:none">
-                                                                            体验试玩游戏，试用软件，送q币，话费，iphone4s，你的意见将改变世界
-                        http://www.aoyene.cc/recom.php?userID=1104444
-                                                                        </div>
-                                                                        <div class="py_fuzhi" id="con_py_3" style="display:none">
-                                                                            在家兼职试用软件，试玩游戏，日赚500，如果网络只会让你花钱不能让你赚钱真是互联网的悲哀
-                        http://www.aoyene.cc/recom.php?userID=1104444
-                                                                        </div>
-                                                                        <div class="py_fuzhi" id="con_py_4" style="display:none">
-                                                                            淘宝购物返利,反正是要在淘宝买的东西，来这里登记一下换积分，就有能再多赚q币，话费，iphone4s
-                        http://www.aoyene.cc/recom.php?userID=1104444
-                                                                        </div>
+                                                                        <div class="py_fuzhi" id="con_py_x"></div>
                                                                     </td>
                                                                     <td width="107">
-                                                                        <input id="copy_content" type="hidden" value="幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444">
-                                                                        <input id="fe_text" type="hidden" value="http://www.aoyene.cc/recom.php?userID=1104444">
-                                                                        <div id="d_clip_container" style="position:relative">
-                                                                            <div id="d_clip_button" class="my_clip_button"> <b>复制链接</b>
-                                                                            </div>
-                                                                            <div style="position: absolute; left: 10px; top: 0px; width: 172px; height: 37px; z-index: 99;">
-                                                                                <embed id="ZeroClipboardMovie_1" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="172" height="37" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=172&amp;height=37" wmode="transparent"></div>
-                                                                        </div>
+                                                                        <div class="fzlja">
+                                                                        <?php if($_SESSION["authId"] != ""): ?>
+                                                                            <a id="copytest" style="color:#ffffff" href="javascript:void(0)" onclick="copyurl();">复制链接</a>
+                                                                        <?php else: ?>
+                                                                            <a style="color:#ffffff" href="{:U('pubtpl/nologin')}">复制链接</a>
+                                                                        <?php endif; ?></div>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -91,65 +63,44 @@
                                                 </div>
                                                 <div class="py_tit" style="height:80px">
                                                     <h4>方法二：分享到</h4>
-                                                    <style>                 
-            #jiathis_style_32x32 .jtico{text-align:left;overflow:hidden;display:block!important;height:32px!important;line-height:32px!important;padding-left:36px!important;background:url(http://v2.jiathis.com/code_mini/images/jiathis_ico_32x32.png) no-repeat left;cursor:pointer}                    
-            #jiathis_style_32x32 .jtico_tsina{background-position:0px 0px}                  
-            #jiathis_style_32x32 .jtico_qzone{background-position:0px -32px}                    
-            #jiathis_style_32x32 .jtico_renren{background-position:0px -64px}                   
-            #jiathis_style_32x32 .jtico_xiaoyou{background-position:0px -1856px}                    
-            #ckepop  .jtico_fanfou{background-position:0px -1440px}                 
-            #jiathis_style_32x32 .jtico_kaixin001{background-position:0px -192px}                   
-            #jiathis_style_32x32 .jtico_douban{background-position:0px -224px}                  
-            #jiathis_style_32x32 .jtico:hover{opacity:0.8;}                 
-            #jiathis_style_32x32 .jiathis_txt{float:left;font-size:22px;text-decoration:none;line-height:32px!important;}                   
-            #jiathis_style_32x32 .jtico_fanfou{background-position:0px -544px}                  
-            #jiathis_style_32x32 .jtico_tqq{background-position:0px -1760px}                    
-        </style>
-
                                                     <div class="padd">
                                                         <div id="jiathis_style_32x32">
-                                                            <script language="javascript">                              
-                    function share(_atitle,_webid){                                 
-                        document.write('<a class="jiathis_button_'+_webid+'" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=\'http://www.jiathis.com/send/?webid='+_webid+'&url=http://www.aoyene.cc/recom.php?userID=1104444&title='+document.getElementById('copy_content').value+'&uid=0\';"><span class="jiathis_txt jtico jtico_'+_webid+'"></span></a>');                             
-                    }                               
-                    share('分享到QQ空间','qzone');                               
-                    share('分享到新浪微博','tsina');                               
-                    share('分享到腾讯微博','tqq');                             
-                    share('分享到人人网','renren');                               
-                    share('分享到腾讯朋友','xiaoyou');                             
-                    share('分享到饭否','fanfou');                                
-                    share('分享到开心网','kaixin001');                            
-                </script>
-                                                            <a class="jiathis_button_qzone" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=qzone&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=这是我的测试链接！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_qzone"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_tsina" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=tsina&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=这是我的测试链接！http://www.yongding.com/recom.php?userID=11011&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_tsina"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_tqq" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=tqq&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_tqq"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_renren" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=renren&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_renren"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_xiaoyou" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=xiaoyou&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_xiaoyou"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_fanfou" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=fanfou&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_fanfou"></span>
-                                                            </a>
-                                                            <a class="jiathis_button_kaixin001" title="分享到QQ空间" href="javascript:void();" onclick="javascript:window.location.href=&#39;http://www.jiathis.com/send/?webid=kaixin001&amp;url=http://www.aoyene.cc/recom.php?userID=1104444&amp;title=幸运28，极速11，三方游戏众多，奖池稳定超大，三方开奖公平公正，投资竞猜娱乐最佳选择！http://www.aoyene.cc/recom.php?userID=1104444&amp;uid=0&#39;;">
-                                                                <span class="jiathis_txt jtico jtico_kaixin001"></span>
-                                                            </a>
+                                                            <script type="text/javascript">
+                                                                share('分享到QQ空间','qzone');
+                                                                share('分享到新浪微博','tsina');
+                                                                share('分享到腾讯微博','tqq');
+                                                                share('分享到人人网','renren');
+                                                                share('分享到腾讯朋友','xiaoyou');
+                                                                share('分享到饭否','fanfou'); 
+                                                                share('分享到开心网','kaixin001');
+                                                                var JS_UID = '{$_SESSION["authId"]}';
+                                                                setTab(1);
+                                                            </script>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="plan_text">
+                                <p class="title">推广计划</p>
+                                <p class="duan">
+                                    邀请好友加入Lucky蛋蛋，好友玩游戏、购物或者参加各类活动，你就可以获得推广分。推广分可以兑换成金蛋，也可以直接兑换成现金。好友活跃度越高，你获得的推广分越多；邀请的好友越多，你获得的推广分越多。
+                                </p>
+                                <p class="duan">
+                                    当被你推广的好友获得不同等级时，你也将获得相应推广分奖励，除此之外，当被你推广的好友首次充值VIP时，你也将获得不同程度的金蛋奖励；邀请的好友越多，你获得的奖励越多。上不封顶！
+                                </p>
+                                <p class="tgv3_index_yjjh_jl">
+                                    你成功邀请 <strong>1</strong>
+                                    个好友，好友等级达到VIP2时，你将获得
+                                    <strong>1,000推广分</strong>
+                                    (100推广分=1元)和
+                                    <strong>30,000</strong>
+                                    金蛋
+                                </p>
+                            </div>
 
                             <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#F1CB95" style="margin-top: 10px">
                                 <tbody>
@@ -159,27 +110,27 @@
                                         </td>
                                     </tr>
                                     <tr align="center" height="34px">
-                                        <td background="__IMAGES__/invest/lefttitlebg.gif">等级</td>
-                                        <td background="__IMAGES__/invest/lefttitlebg.gif">积分</td>
+                                        <td background="__IMAGES__/invest/lefttitlebg.gif">好友等级</td>
+                                        <td background="__IMAGES__/invest/lefttitlebg.gif">奖励推广分</td>
                                         <td background="__IMAGES__/invest/lefttitlebg.gif">升级奖励</td>
-                                        <td background="__IMAGES__/invest/lefttitlebg.gif">充值奖励</td>
+                                        <td background="__IMAGES__/invest/lefttitlebg.gif">充VIP奖励</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
                                         <td>
                                             <img src="__IMAGES__/invest/vip_0.gif"></td>
                                         <td>0</td>
                                         <td>
-                                            0&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
-                                        <td>2%</td>
+                                            0&nbsp
+                                            <img src="__IMAGES__/public/egg.png"></td>
+                                        <td>0%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
                                         <td>
                                             <img src="__IMAGES__/invest/vip_1.gif"></td>
-                                        <td>200-999</td>
+                                        <td>测试推广分值</td>
                                         <td>
                                             10,000&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
+                                            <img src="__IMAGES__/public/egg.png"></td>
                                         <td>2%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
@@ -188,7 +139,7 @@
                                         <td>1000-2999</td>
                                         <td>
                                             30,000&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
+                                            <img src="__IMAGES__/public/egg.png"></td>
                                         <td>2%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
@@ -197,7 +148,7 @@
                                         <td>3000-7999</td>
                                         <td>
                                             80,000&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
+                                            <img src="__IMAGES__/public/egg.png"></td>
                                         <td>2%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
@@ -206,7 +157,7 @@
                                         <td>8000-19999</td>
                                         <td>
                                             160,000&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
+                                            <img src="__IMAGES__/public/egg.png"></td>
                                         <td>2%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
@@ -215,22 +166,24 @@
                                         <td>20000-49999</td>
                                         <td>
                                             300,000&nbsp;
-                                            <img src="__IMAGES__/invest/star.png"></td>
+                                            <img src="__IMAGES__/public/egg.png"></td>
                                         <td>2%</td>
                                     </tr>
                                     <tr bgcolor="#FFFFFF" align="center" height="30px">
                                         <td>
-                                            <img src="__IMAGES__/invest/vip_6.gif"></td>
-                                        <td>50000以上</td>
-                                        <td>日盈利</td>
-                                        <td>0.5%</td>
+                                            <img src="__IMAGES__/invest/vip_5.gif"></td>
+                                        <td>50000-99999</td>
+                                        <td>
+                                            600,000&nbsp;
+                                            <img src="__IMAGES__/public/egg.png"></td>
+                                        <td>2%</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </td>
-                        <td width="8"></td>
-                        <td width="199" valign="top">
-                            <table width="199" border="0" cellpadding="0" cellspacing="0" background="__IMAGES__/invest/20120711173720-BtjGqji7ox.jpg">
+                        <td width="5"></td>
+                        <td width="226" valign="top">
+                            <table width="226" border="0" cellpadding="0" cellspacing="0" background="__IMAGES__/invest/20120711173720-BtjGqji7ox.jpg">
                                 <tbody>
                                     <tr>
                                         <td height="36" colspan="3" valign="top">&nbsp;</td>
@@ -239,7 +192,7 @@
                                         <td height="10" colspan="3" valign="top"></td>
                                     </tr>
                                     <tr>
-                                        <td height="151" colspan="3" align="center" valign="top">
+                                        <td height="171" colspan="3" align="center" valign="top">
                                             <table width="80%" border="0" cellspacing="3" cellpadding="0">
                                                 <tbody>
                                                     <tr>
@@ -253,157 +206,80 @@
                                                         <td width="23%">个</td>
                                                     </tr>
                                                     <tr>
-                                                        <td height="25" align="right">
-                                                            昨日获得奖励：
-                                                            <span class="red14">0</span>
+                                                        <td height="25" colspan="2" align="right">
+                                                            总推广推广分：
+                                                            <span class="red14">1,251,154,254</span>
                                                         </td>
-                                                        <td>
-                                                            <img src="__IMAGES__/invest/star.png" width="14" height="14"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="25" align="right">
-                                                            累计获得奖励：
-                                                            <span class="red14">0</span>
-                                                        </td>
-                                                        <td>
-                                                            <img src="__IMAGES__/invest/star.png" width="14" height="14"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div style="height:20px; width:90%; margin-top:10px">
+                                                <ul>
+                                                    <li class="tgv3_r_wdtg_lj_wl linkli">
+                                                        <a style="color:#FFFFFF" href="{:U('user/invite')}?id=2">我要提现</a>
+                                                    </li>
+                                                    <li class="tgv3_r_wdtg_lj_wr linkli">
+                                                        <a style="color:#FFFFFF" href="{:U('user/invite')}?id=3">我要换蛋</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <table width="197" border="0" align="center" cellpadding="0" cellspacing="0" class="border1">
+                            <table width="226" border="0" align="center" cellpadding="0" cellspacing="0" class="border1">
                                 <tbody>
                                     <tr>
                                         <td height="34" align="right" background="__IMAGES__/invest/lefttitlebg.gif">
                                             <img src="__IMAGES__/invest/yaoqingjldt.png" width="197" height="34"></td>
                                     </tr>
                                     <tr>
-                                        <td height="320" valign="top">
+                                        <td height="305" valign="top">
                                             <div class="n_g" id="yqjlmq" style="height: 300px;overflow: hidden;">
                                                 <ul class="slider" id="slider">
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">110</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">250</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">440</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">340</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">250</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">280</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">210</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">460</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">380</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">130</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
+                                                    <volist name="db_newer10" id="vo">
+                                                    <script type="text/javascript">
+                                                        var index = {$key} + 1;
+                                                        var UID   = {$vo["UID"]};
+                                                        var nick  = UID;
+                                                        var last_score = {$vo["last_score"]};
+                                                        writeOneSliderItem(UID,nick,last_score)
+                                                    </script>
+                                                    </volist>
                                                 </ul>
-
                                                 <ul class="slider" id="slider">
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">110</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">250</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">440</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">340</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">250</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">280</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">210</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">460</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">380</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
-                                                    <li>
-                                                        <a href="http://www.aoyene.cc/user_detail.php?uid=" target="_blank" class="blue"></a>
-                                                        &nbsp;&nbsp;获得&nbsp;&nbsp;
-                                                        <span class="red14">130</span>
-                                                        <img src="__IMAGES__/invest/star.png" width="14" height="14" class="star"></li>
+                                                    <volist name="db_newer10" id="vo">
+                                                    <script type="text/javascript">
+                                                        var index = {$key} + 1;
+                                                        var UID   = {$vo["UID"]};
+                                                        var nick  = UID;
+                                                        var last_score = {$vo["last_score"]};
+                                                        writeOneSliderItem(UID,nick,last_score)
+                                                    </script>
+                                                    </volist>
                                                 </ul>
                                             </div>
-                                            <script>
-                                    var yqjl = document.getElementById("yqjlmq"); //滚动对象
-                                    var iLineHeight = 33; //单行高度，像素
-                                    var iLineCount = 10; //实际行数
-                                    var iScrollAmount = 1; //每次滚动高度，像素
-                                    function runyqjl() {
-                                        yqjl.scrollTop += iScrollAmount;
-                                    if ( yqjl.scrollTop == iLineCount * iLineHeight )
-                                        yqjl.scrollTop = 0;
-                                    if ( yqjl.scrollTop % iLineHeight == 0 ) {
-                                    window.setTimeout( "runyqjl()", 2000 );} else {
-                                    window.setTimeout( "runyqjl()", 2 );}}
-                                    yqjl.innerHTML += yqjl.innerHTML;
-                                    window.setTimeout( "runyqjl()", 2000 );
-                                </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table width="197" border="1" bordercolor="#f1cb95" rules="none" align="center" margin-top="20px" cellpadding="0" cellspacing="0" class="border1">
+                                <tbody>
+                                    <tr>
+                                        <td height="34" align="right" background="__IMAGES__/invest/lefttitlebg.gif">
+                                            <img src="__IMAGES__/invest/tuitop.png" width="197" height="34"></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="323" valign="top">
+                                        <volist name="db_top10" id="vo">
+                                            <script type="text/javascript">
+                                                var index = {$key} + 1;
+                                                var UID   = {$vo["UID"]};
+                                                var nick  = UID;
+                                                var score = {$vo["score"]};
+                                                writeOneTopItem(index,UID,nick,score);
+                                            </script>
+                                        </volist>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -413,8 +289,114 @@
                 </tbody>
             </table>
         </div>
-        <!-- InstanceEndEditable --> </div>
+        <script type="text/javascript">
+            window.setTimeout( "runyqjl()", 2000 );
+        </script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;uid=1964308" charset="utf-8"></script>
+        <div class="tgv3_indexcon clearfix" name="TGGZ" id="TGGZ">
+            <div class="tgv3_indextggz_l">
+                <div class="tgv3_index_bqnav">
+                    <ul>
+                        <li style="font-size:14px;">推广规则</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tgv3_indextggz_l">
+                <div class="tgv3_index_bqnav">
+                    <ul>
+                        <li style="font-size:14px;">提现规则</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tgv3_indexcon clearfix">
+            <div class="tgv3_indextggz clearfix">
+                <div class="tgv3_indextggzll">
+                    <span class="tgv3_word_bla">1.</span>
+                    正常情况下推广产生的好友关系保持
+                    <span class="tgv3_word_hs">360</span>
+                    天，
+                    <span class="tgv3_word_hs">360</span>
+                    天后自动断开。
+                    <br>
+                    <span class="tgv3_word_bla">2.</span>
+                    好友连续
+                    <span class="tgv3_word_hs">90</span>
+                    天没有登录PC蛋蛋，好友关系自动断开。
+                    <br>
+                    <span class="tgv3_word_bla">3.</span>
+                    推广人有违规行为，视违规情况给予处罚；冻结处罚期间不能收到任何推广积
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;分奖励；情况严重的取消推广资格，断开所有好友关系。
+                    <br>
+                    <span class="tgv3_word_bla">4.</span>
+                    好友有违规行为，扣除好友给推广人带来的推广分，并断开该好友关系。
+                    <br>
+                    <span class="tgv3_word_bla">5.</span>
+                    严禁推广人在商家平台发布推广信息，发现后先给予警告，若再次违规直接扣
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;除推广所得推广分并取消推广资格。
+                    <br>
+                    <span class="tgv3_word_bla">6.</span>
+                    好友通过游戏试玩额外奖励、游戏充值返利、参与网站活动获得的金蛋不参与
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;推广分奖励。
+                    <br>
+                    <span class="tgv3_word_bla">7.</span>
+                    如有游戏试玩或广告体验获得的金蛋不参与推广分奖励的，以实际页面说明
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;为准。
+                    <br>
+                    <span class="tgv3_word_bla">8.</span>
+                    推广资格被取消后，自动断开所有好友关系，并再不能加入新的好友，永不恢
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;复。</div>
+                <div class="tgv3_indextggzmm"></div>
+                <div class="tgv3_indextggzrr">
+                    <span class="tgv3_word_bla">1.</span>
+                    推广分与现金的比例：
+                    <span class="tgv3_word_hs">100</span>
+                    推广分=
+                    <span class="tgv3_word_hs">1.00</span>
+                    元人民币。
+                    <br>
+                    <span class="tgv3_word_bla">2.</span>
+                    只有通过手机认证的用户可以进行提现申请。
+                    <br>
+                    <span class="tgv3_word_bla">3.</span>
+                    用户在提现前请确认已经绑定了支付宝账号或者银行账号，支付宝及银行账
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;号的真实姓名必须和PC蛋蛋帐号中的真实姓名一致。
+                    <br>
+                    <span class="tgv3_word_bla">4.</span>
+                    支持支付宝和银行卡提现，不收取任何手续费；支付宝
+                    <span class="tgv3_word_hs">50元</span>
+                    起提，银行
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;卡
+                    <span class="tgv3_word_hs">100元</span>
+                    起提。
+                    <br>
+                    <span class="tgv3_word_bla">5.</span>
+                    每个用户每个月限提现
+                    <span class="tgv3_word_hs">4</span>
+                    次。
+                    <br>
+                    <span class="tgv3_word_bla">6.</span>
+                    蛋蛋客服每日会处理当日
+                    <span class="zdtz_bzred">12:00前</span>
+                    的提现申请，审核通过的提现申请将在
+                    <span class="zdtz_bzred">1-2</span>
+                    个工作日内付款，付款成功将给用户发送站内消息和手机短信，请保持手机联系畅通。
+                    <br>
+                    <span class="tgv3_word_bla">7.</span>
+                    在一笔提现未完成前不可再进行提现操作。
+                    <br>
+                    <span class="tgv3_word_bla">8.</span>
+                    提现前请确认自己的收款账号无误，我们只支付一次，支付后由于收款账号
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;问题造成的资金冻结、消失本站概不负责。</div>
+            </div>
+        </div>
+    </div>
     <include file="public:footer"/>
 </body>
-    <!-- InstanceEnd -->
 </html>

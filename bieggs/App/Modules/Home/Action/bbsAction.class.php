@@ -98,11 +98,15 @@ class bbsAction extends comAction{
     }
 
     private function saveBbs($files){
-        $db_bbs = D("Bbs");
+        $db_bbs          = D("Bbs");
         $data            = array();
-        $data['type'] = $_POST["type"];
+        $type = $_POST["type"];
+        if ($type < 1 || $type > 3) {
+            $this->error("你的操作非法！");
+        }
+        $data['type']    = $type;
         $data['UID']     = $_SESSION[C('USER_AUTH_KEY')];
-        $data['title'] = covBBSContent($_POST["subject"]);
+        $data['title']   = covBBSContent($_POST["subject"]);
         $data['content'] = covBBSContent($_POST["content"]);
         if (!isNil($files)) {
             $data['imgs']    = substr($files, 0, -1);
@@ -140,6 +144,7 @@ class bbsAction extends comAction{
         }
         $data['CTIME']   = time();
         $isadd = $db_ans->add($data);
+        D("Bbs")->ansNumPlus($_POST["blog_id"]);
         if ($isadd !== false) {
             $this->success('评论成功！');
         } else {
