@@ -1,0 +1,53 @@
+@charset "utf-8";
+.kfv3_help_banner{ width:980px; height:130px; background:url('../Images/help/kfv3_help_banner.jpg') no-repeat;}
+ul{margin:0;padding:0;}
+dl,dt,dd,ul,li,p,h1,img,form {list-style:none;border:none;}
+ul {list-style-type:none}
+li{list-style:none;}
+.kfv3_all{ width:980px; margin:0 auto; margin-bottom:20px;}
+.kfv3_help_main{ width:980px;}
+.kfv3_title{ height:54px; line-height:54px; font-size:14px; color:#272727;}
+.kfv3_box{ width:978px; border:#e3e3e3 1px solid; padding:24px 0 24px 0; }
+.kfv3_box_left{ width:188px; float:left; font-size:14px; margin-top:10px; position:absolute; }
+.kfv3_box_left ul li{ height:46px; line-height:46px; text-align:left;width:134px; padding-left:54px; }
+.kfv3_box_left ul li.on{ height:38px; width:146px; line-height:38px;  background:url("../Images/help/help_on.png") no-repeat;  }
+.kfv3_box_left ul li a.info{ color:#fff;font-size:14px; font-weight:normal; }
+.kfv3_box_left ul li a{text-decoration:none;}
+.kfv3_box_right{ width:789px; float:right;  }
+.kfv3_box_right_r{ width:735px; padding-top:10px;  padding-left:24px; font-size:14px; background:url("../Images/help/bz_line_bg.jpg") repeat-y; min-height:600px;*+height:100%;_height:600px;  }
+.kfv3_box_right_r_title{ font-size:14px; font-weight:bold; color:#272727; margin-bottom:10px;}
+.kfv3_quse{width:20px; height:20px; background:url("../Images/help/kfv3_help_q.jpg") no-repeat; float:left; margin-top:12px;}
+.kfv3_mr{ float:left; text-indent:10px; line-height:42px;}
+.kfv3_mr a{ color:#1e68a4;}
+.kfv3_anse{width:20px; height:20px; background:url("../Images/help/kfv3_help_a.jpg") no-repeat; float:left; margin-top:4px; }
+.kfv3_mr_anse{ font-size:12px; line-height:26px; width:684px; margin-left:10px; float:left; background-color: #efefef}
+.kfv3_box_right_r ul li span.kfv3_help_q{ width:20px; height:20px; background:url("../Images/help/kfv3_help_q.jpg") no-repeat;}
+.kfv3_box_right_r_main{ width:734px; font-size:14px;}
+.kfv3_box_right_r_main ul li{ width:734px; clear:both;}
+.kfv3_box_right_r_main a {color: #236da9;text-decoration: none;}
+
+.kfv3_box_right_r_main_bt {
+font-size: 14px;
+color: #1e68a4;
+line-height: 46px;
+width: 734px;
+margin-top: 10px;
+}
+.kfv3_box_right_r_main_nrwz {
+font-size: 12px;
+padding-left: 24px;
+width: 710px;
+line-height: 24px;
+color: #666666;
+}
+.kfv3_box_right_r_main_wggz {
+font-size: 14px;
+color: #666666;
+line-height: 26px;
+width: 734px;
+margin-top: 10px;
+margin-bottom: 14px;
+}
+.kfv3_box_right_r_main table tr td {
+padding-left: 12px;
+}
